@@ -1,0 +1,7 @@
+data/
+runs/
+wandb/
+.venv/
+__pycache__/
+*.pyc
+results.csv
