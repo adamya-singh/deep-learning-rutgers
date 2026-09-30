@@ -65,3 +65,32 @@ Reproduce from this directory:
   --lr 0.01 --seed 0 --epochs 10 --group tuned \
   --run-name 'Throughput tuned: batch 512' --output-dir runs/tuned-b512
 ```
+
+## Fairer comparison: train batch 512 longer
+
+The initial 10-epoch batch-512 run made only 980 optimizer updates, versus
+7,820 for the template baseline. To compare at nearly the same update count,
+we trained [batch 512 for 80 epochs](https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/5j92g6cx)
+with the same seed and learning rate. Eighty epochs yield 7,840 updates, 20
+more than the baseline. Each update uses eight times as many images, so this
+comparison also processes eight times as many total image passes.
+
+| Comparison point | Test accuracy | Train/eval time | Optimizer updates |
+| --- | ---: | ---: | ---: |
+| Baseline, batch 64 at epoch 10 | 63.68% | 22.39 s | 7,820 |
+| Batch 512 at epoch 42, first crossing baseline accuracy | 64.41% | 19.91 s | 4,116 |
+| Batch 512 at epoch 48, stays above baseline accuracy afterward | 64.67% | 22.58 s | 4,704 |
+| Batch 512 at epoch 80, nearly matched updates | 67.67% | 36.85 s | 7,840 |
+
+The first threshold crossing is 2.48 seconds faster than baseline, but the
+test curve briefly dips below the threshold afterward. By the more stable
+epoch-48 point, time to baseline-level accuracy is essentially tied. At nearly
+matched updates, batch 512 gains 3.99 accuracy points but takes 1.65 times as
+long. These are descriptive comparisons of one seeded run per setting; the
+test set was not used to select a new learning rate or model.
+
+```bash
+.venv/bin/python cifar_cnn.py --device cuda --precision fp32 --batch-size 512 \
+  --lr 0.01 --seed 0 --epochs 80 --group tuned \
+  --run-name 'Batch 512: matched optimizer updates' --output-dir runs/step-matched-b512
+```
