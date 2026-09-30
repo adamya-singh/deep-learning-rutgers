@@ -1,0 +1,2 @@
+run,params,epochs,lr,train_acc,test_acc,seconds
+"Claude: 2x1024 BN, aug, AdamW, single MLP",1867786,50,0.002,99.71,99.41,98.9
