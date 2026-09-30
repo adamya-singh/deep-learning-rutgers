@@ -7,11 +7,11 @@ GPU when available, reports throughput, saves an epoch checkpoint, and logs to
 
 ## Setup
 
-Use Python 3.10 or later and a compatible CUDA driver. For the tested RTX 3090
+Use Python 3.12 and a compatible CUDA driver. For the tested RTX 3090
 environment:
 
 ```bash
-uv venv .venv --python python3
+uv venv .venv --python 3.12
 uv pip install --python .venv/bin/python -r requirements.lock
 ```
 
@@ -56,3 +56,6 @@ the complete runs for the final speed result. The training script also supports
 W&B groups the baseline and tuned runs and charts learning metrics, performance,
 system measurements, and final class diagnostics. The script records training
 batch accuracy separately from accuracy computed across the entire training set.
+The curated [workspace](https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity?nw=sno1vf8ff7t)
+can be updated with `.venv/bin/python organize_wandb.py`. The measured results,
+tradeoff, run links, and exact commands are in [BENCHMARKS.md](BENCHMARKS.md).

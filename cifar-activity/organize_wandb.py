@@ -32,18 +32,22 @@ def main():
             line("Power and temperature", "epoch", "system/gpu_power_w", "system/gpu_temperature_c"),
         ], is_open=False),
         workspaces.Section(name="Diagnostics", panels=[
-            charts.MediaBrowser(media_keys=["diagnostics/confusion_matrix", "diagnostics/misclassified"]),
+            charts.MediaBrowser(media_keys=["diagnostics/confusion_matrix_table", "diagnostics/misclassified"]),
         ], is_open=False),
         workspaces.Section(name="Comparison", panels=[
             line("Test accuracy", "epoch", "eval/test_accuracy"),
             line("Elapsed time", "epoch", "performance/elapsed_seconds"),
             line("Optimizer updates", "epoch", "performance/optimizer_steps"),
+            charts.MediaBrowser(media_keys=["benchmarks/results"]),
         ], is_open=True),
     ]
     workspace = workspaces.Workspace.from_url(WORKSPACE_URL)
     workspace.sections = sections
     workspace.runset_settings = workspaces.RunsetSettings(
-        filters='Group != "smoke" and Group != "benchmark"')
+        filters='Group != "smoke"',
+        pinned_columns=["run:displayName", "config:batch_size.value",
+                        "summary:final/test_accuracy", "summary:final/elapsed_seconds",
+                        "summary:final/optimizer_steps"])
     workspace.save()
     print(workspace.url)
 
