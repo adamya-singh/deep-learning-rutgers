@@ -12,6 +12,7 @@ Outputs:
   out/cifar-journey.srt, .vtt           captions
 """
 import asyncio
+import difflib
 import math
 import hashlib
 import json
@@ -86,6 +87,21 @@ def time_tokens(text, words, dur):
         out.append((t, dur * i / total))
         pos = i + len(t)
     return out
+
+
+def time_tokens_say(text, say, words, dur):
+    """Display text differs from the spoken text (pronunciation overrides such as
+    CIFAR → SIFAR ten): time the spoken tokens from the word boundaries, then
+    carry those times over to the display tokens by sequence alignment."""
+    spoken = time_tokens(say, words, dur)
+    disp = text.split()
+    sm = difflib.SequenceMatcher(a=[norm(t) for t in disp], b=[norm(t) for t, _ in spoken], autojunk=False)
+    times = [None] * len(disp)
+    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+        for k in range(i1, i2):
+            j = j1 + (k - i1) if tag == "equal" else min(j1, len(spoken) - 1)
+            times[k] = spoken[j][1]
+    return list(zip(disp, times))
 
 
 def chunks(timed, end, max_chars=72):
@@ -175,7 +191,7 @@ async def main():
             used.add(mp3.name)
             used.add(meta.name)
             dur = m["duration"]
-            timed = time_tokens(s["text"], m["words"] if not s["say"] else [], dur)
+            timed = time_tokens_say(s["text"], spoken, m["words"], dur) if s["say"] else time_tokens(s["text"], m["words"], dur)
             caps = chunks(timed, dur)
             seg = {"id": s["id"], "audio": f"audio/{mp3.name}", "start": round(t, 3), "duration": round(dur, 3),
                    "text": s["text"], "words": [[tok, round(t + tt, 3)] for tok, tt in timed],

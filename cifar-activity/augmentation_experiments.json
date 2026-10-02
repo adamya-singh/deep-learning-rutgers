@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "description": "Fixed exploratory augmentation suite; report epoch 80 for every recipe.",
+  "epochs": 80,
+  "batch_size": 512,
+  "eval_batch_size": 1024,
+  "lr": 0.01,
+  "precision": "fp32",
+  "layout": "contiguous",
+  "seeds": [0, 1, 2],
+  "recipes": [
+    "crop-flip", "none", "flip", "crop", "color-jitter", "rotation",
+    "erasing", "mixup", "cutmix", "randaugment", "resized-crop",
+    "affine", "grayscale", "blur", "autoaugment"
+  ]
+}

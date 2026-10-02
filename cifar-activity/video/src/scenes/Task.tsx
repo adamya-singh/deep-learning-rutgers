@@ -32,9 +32,9 @@ export const Task: React.FC = () => {
   // Pixel view.
   const gridO = prog(f, s2 + 30, 24);
   const r0 = 13, c0 = 14, k = 4; // inspected 4x4 block (row, col)
-  const insetO = Math.min(prog(f, s2 + 50, 24), 1 - prog(f, word(2, '32', 0) - 6, 18));
+  const insetO = Math.min(prog(f, s2 + 50, 24), 1 - prog(f, word(2, '32', 2) - 6, 18));
   const px = Cc.s / 32;
-  const tSplit = word(2, '32', 0);
+  const tSplit = word(2, '32', 2);
   const split = prog(f, tSplit, 36);
   const slabO = prog(f, tSplit - 10, 20);
   const countO = prog(f, word(2, '3,072'), 18);

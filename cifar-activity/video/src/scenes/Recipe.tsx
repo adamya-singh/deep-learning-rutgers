@@ -24,7 +24,7 @@ export const Recipe: React.FC = () => {
   const lr = R.depth.lr_schedule;
   const lb = {x: 220, y: 300, w: 820, h: 400};
   const lsc = scales(lb.x, lb.y, lb.w, lb.h, [1, 160], [0, 0.105]);
-  const lrDraw = prog(f, word(1, 'warmup') - 6, 70);
+  const lrDraw = prog(f, word(1, 'warms') - 6, 70);
 
   // Beat C: three seeds, final-10 window
   const seedO = window(f, s[2] - 2, s[3] + 4, 16);
@@ -73,7 +73,7 @@ export const Recipe: React.FC = () => {
             xLabel="epoch" yLabel="learning rate" />
           <DrawPath d={linePath(lr.map((v, i) => [lsc.sx(i + 1), lsc.sy(v)]))} p={lrDraw} stroke={C.amber} width={3.5} />
         </Svg>
-        <Txt x={lsc.sx(5) + 12} y={lsc.sy(0.1) - 34} w={300} size={18} font="mono" color={C.amber} o={prog(f, word(1, 'warmup'), 14)}>warmup 0.01 → 0.1</Txt>
+        <Txt x={lsc.sx(5) + 12} y={lsc.sy(0.1) - 34} w={300} size={18} font="mono" color={C.amber} o={prog(f, word(1, 'warms'), 14)}>warmup 0.01 → 0.1</Txt>
         <Txt x={lsc.sx(160) - 300} y={lsc.sy(0) - 40} w={300} align="right" size={18} font="mono" color={C.amber} o={prog(f, word(1, 'cosine'), 14)}>cosine → 0.0001 at 160</Txt>
         <Tag x={lb.x} y={lb.y - 50} kind="measured">optimizer/lr per epoch, ../runs/depth/plain/conv-2/seed-0/metrics.jsonl</Tag>
         <Panel x={1140} y={300} w={600} h={330} o={prog(f, s[1] + 4, 16)}>

@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "seeds": [0, 1, 2],
+  "winner_augmentations": ["none", "flip", "crop-flip"],
+  "resnet_augmentation": "crop-flip",
+  "resnet_epochs": 200
+}

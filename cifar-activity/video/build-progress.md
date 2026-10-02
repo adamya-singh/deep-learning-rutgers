@@ -21,3 +21,15 @@ GPU queue is untouched (read-only checks of `../runs/followup/*` only). Video to
 - [x] Parent repo status unchanged (identical to session start); training queue never touched.
 
 Note: `out/contact-sheet-*.jpg` were made from the pre-refresh timeline (only ResNet/End differed; those were re-rendered and rechecked). `out/mp4-contact-sheet.jpg` is decoded from the final MP4. The trailer's six excerpts contain no numbers that changed in the refresh.
+
+## Narration revision (2026-10-02, Claude Code, Claude Opus 5.5)
+- [x] 02:29 EDT: Content plan saved before any drafting (`script/teaching-plan.md`). Sources: sources.md, results/static JSON, previous script, all scenes, review notes, training code.
+- [x] Then read the write-as-adamya skill (SKILL.md) and its complete corpus (`references/style-prompt.txt`, one Read, first and last bytes checked against the file). Drafted with the current model straight from the plan. No corpus text is in the repository.
+- [x] The narration lives in `tools/build_script.py` (2,530 words). Redundancy was cut from a 15.3-minute natural draft, which brought it to 14.6 minutes. Corrections from review: the aug1-2 uniqueness claim, batch-2 now framed as a hypothesis, the resnet-3 resolution path. The skill's review-before-return step caught two overstated lines (end-3, depth-5), and each was revised once. Notes: `script/voice-revision-notes.md`.
+- [x] Scene cues re-keyed for the new wording, and the End/Batch/Aug2/Depth on-screen text adjusted. A script check confirmed every `word()` cue resolves. `npx tsc --noEmit` is clean.
+- [x] `tools/tts.py`: pronunciation-override lines are now timed by aligning the displayed tokens with the spoken word boundaries. 60 clips regenerated; `public/audio` holds only the 120 files the timeline references.
+- [x] QA:
+  - 60 segment stills plus contact sheets inspected.
+  - Seven narrated excerpt clips (conv sweep, loss slice, depth chart, augmentation curves, ResNet build, final result, input split) sampled and checked for cue timing.
+  - `tools/make_trailer.py` now takes its frame ranges from segment IDs.
+- [x] Full render to `out/cifar-journey.new.mp4` (20.7 min CPU). Full decode clean, `verify_render.py` all PASS (874.05 s against 874.03 s), then the new file replaced `out/cifar-journey.mp4`. Its audio matches the revised clips (envelope correlation ≥ 0.97). Trailer rebuilt (132.9 s) and verified.

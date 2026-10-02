@@ -77,14 +77,14 @@ export const Aug2: React.FC = () => {
           {[0, 1, 2].map((seed) => {
             const pts = CANDS.map((c, i) => [1670 + i * 75, sy(fu(c.id).per_seed.find((p) => p.seed === seed)!.final10)] as [number, number]);
             return (
-              <g key={seed} opacity={prog(f, word(1, 'held') - 4, 16)}>
+              <g key={seed} opacity={prog(f, word(1, 'improved') - 4, 16)}>
                 <path d={linePath(pts)} stroke={C.dim} strokeWidth={1.5} fill="none" />
                 {pts.map(([x, y], i) => <circle key={i} cx={x} cy={y} r={6} fill={CANDS[i].color} />)}
               </g>
             );
           })}
         </Svg>
-        <Txt x={1600} y={sy(80)} w={300} size={18} font="mono" color={C.muted} o={prog(f, word(1, 'held'), 14)} align="left">
+        <Txt x={1600} y={sy(80)} w={300} size={18} font="mono" color={C.muted} o={prog(f, word(1, 'improved'), 14)} align="left">
           lines = paired seeds<br />(final-10 mean)
         </Txt>
         <Tag x={ch.x} y={ch.y - 50} kind="validation">residual 32 · seed-mean curves · ../runs/followup/winner-*/seed-*/metrics.jsonl</Tag>
@@ -105,8 +105,8 @@ export const Aug2: React.FC = () => {
             <div style={{fontSize: 22, color: C.muted}}>crop + flip vs none · stricter recipe · 160 epochs</div>
           </div>
         </Panel>
-        <Txt x={960} y={620} w={1500} align="center" size={32} font="serif" italic o={prog(f, word(2, 'Plausibly') - 4, 16)}>
-          Plausibly: more capacity + a stronger recipe can use the variety.
+        <Txt x={960} y={620} w={1500} align="center" size={32} font="serif" italic o={prog(f, word(2, 'guess') - 4, 16)}>
+          Best guess: more capacity + a stronger recipe can use the variety.
         </Txt>
         <Txt x={960} y={690} w={1500} align="center" size={24} font="mono" color={C.muted} o={prog(f, word(2, 'prove') - 4, 16)}>
           not proven · model, recipe, and split all changed together

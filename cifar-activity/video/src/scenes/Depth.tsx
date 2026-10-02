@@ -51,7 +51,7 @@ export const Depth: React.FC = () => {
   const shrink = prog(f, s[3], 30);
   const reveal = [
     prog(f, word(2, 'Two'), 14), prog(f, word(2, 'Four'), 14), prog(f, word(2, 'Eight'), 14),
-    prog(f, word(2, 'Sixteen'), 14), prog(f, word(2, 'drops'), 18),
+    prog(f, word(2, 'Sixteen'), 14), prog(f, word(2, 'dropped'), 18),
   ];
   const cx = lerp(380, 170, shrink), cw = lerp(1160, 760, shrink), cy = 290, chh = lerp(470, 430, shrink);
 
@@ -139,8 +139,8 @@ export const Depth: React.FC = () => {
         <Txt x={cb.x} y={cb.y + cb.h + 64} w={700} size={20} font="mono" color={C.muted} o={prog(f, s[3] + 40, 14)}>
           final clean train accuracy: {DEPTHS.every((d) => dep('plain', d).final_train >= 99.95) ? '100.0% at all five depths' : DEPTHS.map((d) => dep('plain', d).final_train.toFixed(1)).join(' · ')}
         </Txt>
-        <Txt x={cb.x} y={cb.y + cb.h + 100} w={760} size={28} font="serif" italic o={prog(f, word(3, 'fitting'), 14)}>
-          Fitting the training set isn't generalizing.
+        <Txt x={cb.x} y={cb.y + cb.h + 100} w={760} size={28} font="serif" italic o={prog(f, word(3, 'fit'), 14)}>
+          Fitting the training set doesn't guarantee doing well on new images.
         </Txt>
       </Abs>
 
@@ -151,7 +151,7 @@ export const Depth: React.FC = () => {
             <div style={{marginTop: 8}}>Deeper plain nets had <span style={{color: C.amber}}>higher training error</span>: an optimization problem.</div>
             <div style={{fontFamily: F.mono, fontSize: 18, color: C.muted, letterSpacing: 1.2, marginTop: 28, opacity: prog(f, word(4, 'ours'), 14)}}>OUR SWEEP</div>
             <div style={{marginTop: 8, opacity: prog(f, word(4, 'ours'), 14)}}>Training ≈ 100% at every depth. The decline shows up in <span style={{color: C.cyan}}>validation</span>. Cause not diagnosed; no gradient measurements.</div>
-            <div style={{marginTop: 28, fontFamily: F.serif, fontStyle: 'italic', fontSize: 28, opacity: prog(f, word(4, 'Residuals'), 14)}}>
+            <div style={{marginTop: 28, fontFamily: F.serif, fontStyle: 'italic', fontSize: 28, opacity: prog(f, word(4, 'Residual'), 14)}}>
               Residual connections: a plausible fix to <span style={{color: C.amber, fontStyle: 'normal'}}>test</span>, not a diagnosis.
             </div>
           </div>

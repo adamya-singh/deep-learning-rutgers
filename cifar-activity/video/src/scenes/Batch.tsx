@@ -65,7 +65,10 @@ export const Batch: React.FC = () => {
           );
         })}
         <Tag x={360} y={720} kind="measured" o={prog(f, s[0] + 30, 14)}>train+eval time, RTX 3090 · ../BENCHMARKS.md</Tag>
-        <Txt x={960} y={780} w={1400} align="center" size={32} font="serif" italic o={prog(f, word(1, 'Turns') - 4, 16)}>
+        <Txt x={1000} y={724} w={560} size={18} font="mono" color={C.muted} o={prog(f, s[0] + 40, 14)}>
+          mean GPU utilization: 41.6% (b64) · 89.4% (b512)
+        </Txt>
+        <Txt x={960} y={780} w={1400} align="center" size={32} font="serif" italic o={prog(f, word(1, 'eight') - 4, 16)}>
           Same learning rate, <span style={{color: C.amber}}>8× fewer steps</span>.
         </Txt>
       </Abs>

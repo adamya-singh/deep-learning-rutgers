@@ -1,0 +1,842 @@
+{
+  "augmentation/crop-flip/seed-0": {
+    "entry": "notes/research-log/01-crop-flip-seed-0.md",
+    "record_hash": "c0dbfe5c2ebf1814b7c30a77c31d9274b89f816c11cbbefea474874da8e43339",
+    "figures": {
+      "svg": "figures/experiments/augmentation-crop-flip-seed-0.svg",
+      "png": "figures/experiments/augmentation-crop-flip-seed-0.png",
+      "pdf": "figures/experiments/augmentation-crop-flip-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/crop-flip/seed-1": {
+    "entry": "notes/research-log/02-crop-flip-seed-1.md",
+    "record_hash": "4b18da2538369fcaa44faccf41771a9dadac3a616fcd602259c1bc776fc1daf8",
+    "figures": {
+      "svg": "figures/experiments/augmentation-crop-flip-seed-1.svg",
+      "png": "figures/experiments/augmentation-crop-flip-seed-1.png",
+      "pdf": "figures/experiments/augmentation-crop-flip-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/crop-flip/seed-2": {
+    "entry": "notes/research-log/03-crop-flip-seed-2.md",
+    "record_hash": "d3b428aaa12856472e5e3e71ac957da6b2b42a5cd51663f3f92b0d4def713112",
+    "figures": {
+      "svg": "figures/experiments/augmentation-crop-flip-seed-2.svg",
+      "png": "figures/experiments/augmentation-crop-flip-seed-2.png",
+      "pdf": "figures/experiments/augmentation-crop-flip-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/none/seed-0": {
+    "entry": "notes/research-log/04-none-seed-0.md",
+    "record_hash": "807ae1a1e3a2c7052af51e19110840e50195c22bf9c86dd8de6df74803b2e635",
+    "figures": {
+      "svg": "figures/experiments/augmentation-none-seed-0.svg",
+      "png": "figures/experiments/augmentation-none-seed-0.png",
+      "pdf": "figures/experiments/augmentation-none-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/none/seed-1": {
+    "entry": "notes/research-log/05-none-seed-1.md",
+    "record_hash": "148bc21ba9ab7190c0e03346fd656bf632b755c102f67320ccb98913a30be0dc",
+    "figures": {
+      "svg": "figures/experiments/augmentation-none-seed-1.svg",
+      "png": "figures/experiments/augmentation-none-seed-1.png",
+      "pdf": "figures/experiments/augmentation-none-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/none/seed-2": {
+    "entry": "notes/research-log/06-none-seed-2.md",
+    "record_hash": "1c1ca29e6a5f88faa845395fd4ee649e5e27ce6bd3b588c1fa8b384977476158",
+    "figures": {
+      "svg": "figures/experiments/augmentation-none-seed-2.svg",
+      "png": "figures/experiments/augmentation-none-seed-2.png",
+      "pdf": "figures/experiments/augmentation-none-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/flip/seed-0": {
+    "entry": "notes/research-log/07-flip-seed-0.md",
+    "record_hash": "ebba7d6d2741b926f19b718e63167f3bed577f47d540f3db3f530e804092acc8",
+    "figures": {
+      "svg": "figures/experiments/augmentation-flip-seed-0.svg",
+      "png": "figures/experiments/augmentation-flip-seed-0.png",
+      "pdf": "figures/experiments/augmentation-flip-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/flip/seed-1": {
+    "entry": "notes/research-log/08-flip-seed-1.md",
+    "record_hash": "a89f11120a3d0dd7aa3cdffdb29b19898d3107742ca669c3586606099bd6d30b",
+    "figures": {
+      "svg": "figures/experiments/augmentation-flip-seed-1.svg",
+      "png": "figures/experiments/augmentation-flip-seed-1.png",
+      "pdf": "figures/experiments/augmentation-flip-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/flip/seed-2": {
+    "entry": "notes/research-log/09-flip-seed-2.md",
+    "record_hash": "59087a1f2268cc5ecb057756455ad815cb5f91345c94f45087f6406ad2af7fba",
+    "figures": {
+      "svg": "figures/experiments/augmentation-flip-seed-2.svg",
+      "png": "figures/experiments/augmentation-flip-seed-2.png",
+      "pdf": "figures/experiments/augmentation-flip-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/crop/seed-0": {
+    "entry": "notes/research-log/10-crop-seed-0.md",
+    "record_hash": "85b859cdb2bf4755f35e8bfb6d74ccf688d20d3d7ebfe09a924d45ccf30da9dc",
+    "figures": {
+      "svg": "figures/experiments/augmentation-crop-seed-0.svg",
+      "png": "figures/experiments/augmentation-crop-seed-0.png",
+      "pdf": "figures/experiments/augmentation-crop-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/crop/seed-1": {
+    "entry": "notes/research-log/11-crop-seed-1.md",
+    "record_hash": "ad857efba69e4ec4f92c9f27dd19c0407be4cbdeba27c67422ad9a4c08a617a9",
+    "figures": {
+      "svg": "figures/experiments/augmentation-crop-seed-1.svg",
+      "png": "figures/experiments/augmentation-crop-seed-1.png",
+      "pdf": "figures/experiments/augmentation-crop-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/crop/seed-2": {
+    "entry": "notes/research-log/12-crop-seed-2.md",
+    "record_hash": "1a5573b920b4c932c8bac7bf30f3e862fc774badae57e6eb2229263642fb9393",
+    "figures": {
+      "svg": "figures/experiments/augmentation-crop-seed-2.svg",
+      "png": "figures/experiments/augmentation-crop-seed-2.png",
+      "pdf": "figures/experiments/augmentation-crop-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/color-jitter/seed-0": {
+    "entry": "notes/research-log/13-color-jitter-seed-0.md",
+    "record_hash": "d959eba3555b01022948351bb1992b94b91860249705201e4ed85cfb4ce206cd",
+    "figures": {
+      "svg": "figures/experiments/augmentation-color-jitter-seed-0.svg",
+      "png": "figures/experiments/augmentation-color-jitter-seed-0.png",
+      "pdf": "figures/experiments/augmentation-color-jitter-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/color-jitter/seed-1": {
+    "entry": "notes/research-log/14-color-jitter-seed-1.md",
+    "record_hash": "4175776b1e25636e0d853c141abe6ad1aa301f397979bafeeed3e2d4cc916916",
+    "figures": {
+      "svg": "figures/experiments/augmentation-color-jitter-seed-1.svg",
+      "png": "figures/experiments/augmentation-color-jitter-seed-1.png",
+      "pdf": "figures/experiments/augmentation-color-jitter-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/color-jitter/seed-2": {
+    "entry": "notes/research-log/15-augmentation-color-jitter-seed-2.md",
+    "record_hash": "d4d8932d53ee33a69f212f8f263ac8dee7924072b82c606d28642324d16fb33e",
+    "figures": {
+      "svg": "figures/experiments/augmentation-color-jitter-seed-2.svg",
+      "png": "figures/experiments/augmentation-color-jitter-seed-2.png",
+      "pdf": "figures/experiments/augmentation-color-jitter-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/rotation/seed-0": {
+    "entry": "notes/research-log/16-augmentation-rotation-seed-0.md",
+    "record_hash": "6d4b65540694be6d32da93ce68a13fb86d8877988bafec2485a3290df2d36424",
+    "figures": {
+      "svg": "figures/experiments/augmentation-rotation-seed-0.svg",
+      "png": "figures/experiments/augmentation-rotation-seed-0.png",
+      "pdf": "figures/experiments/augmentation-rotation-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/rotation/seed-1": {
+    "entry": "notes/research-log/17-augmentation-rotation-seed-1.md",
+    "record_hash": "37b812181ecd860bcd14b741fe456f48259dd81773e80cc04eda25938257f25d",
+    "figures": {
+      "svg": "figures/experiments/augmentation-rotation-seed-1.svg",
+      "png": "figures/experiments/augmentation-rotation-seed-1.png",
+      "pdf": "figures/experiments/augmentation-rotation-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/rotation/seed-2": {
+    "entry": "notes/research-log/18-augmentation-rotation-seed-2.md",
+    "record_hash": "a1026db498d133a3af8339c0e6d989794bb2357372827d7c86dab23a7994b433",
+    "figures": {
+      "svg": "figures/experiments/augmentation-rotation-seed-2.svg",
+      "png": "figures/experiments/augmentation-rotation-seed-2.png",
+      "pdf": "figures/experiments/augmentation-rotation-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/erasing/seed-0": {
+    "entry": "notes/research-log/19-augmentation-erasing-seed-0.md",
+    "record_hash": "89c74bd12bd1f99fce4d95a303731ddd476f30ed8b983611b4bac0800405a062",
+    "figures": {
+      "svg": "figures/experiments/augmentation-erasing-seed-0.svg",
+      "png": "figures/experiments/augmentation-erasing-seed-0.png",
+      "pdf": "figures/experiments/augmentation-erasing-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/erasing/seed-1": {
+    "entry": "notes/research-log/20-augmentation-erasing-seed-1.md",
+    "record_hash": "b563eb8155d840647bb3f0db556445b7dbe305edb66cb11a039f8dd277bcbf22",
+    "figures": {
+      "svg": "figures/experiments/augmentation-erasing-seed-1.svg",
+      "png": "figures/experiments/augmentation-erasing-seed-1.png",
+      "pdf": "figures/experiments/augmentation-erasing-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/erasing/seed-2": {
+    "entry": "notes/research-log/21-augmentation-erasing-seed-2.md",
+    "record_hash": "2d46c0a7b166adac368f2e7b67f0655f26633fd906b10493caef97a7da6f6d65",
+    "figures": {
+      "svg": "figures/experiments/augmentation-erasing-seed-2.svg",
+      "png": "figures/experiments/augmentation-erasing-seed-2.png",
+      "pdf": "figures/experiments/augmentation-erasing-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/mixup/seed-0": {
+    "entry": "notes/research-log/22-augmentation-mixup-seed-0.md",
+    "record_hash": "b16ef1fa1701c4081141c9417dfadad5a917a757a4182111e158764f131ea668",
+    "figures": {
+      "svg": "figures/experiments/augmentation-mixup-seed-0.svg",
+      "png": "figures/experiments/augmentation-mixup-seed-0.png",
+      "pdf": "figures/experiments/augmentation-mixup-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/mixup/seed-1": {
+    "entry": "notes/research-log/23-augmentation-mixup-seed-1.md",
+    "record_hash": "39db5374caa07cd44b1e149897b557670cfdcf454defa14fb5e30cc35b7abedf",
+    "figures": {
+      "svg": "figures/experiments/augmentation-mixup-seed-1.svg",
+      "png": "figures/experiments/augmentation-mixup-seed-1.png",
+      "pdf": "figures/experiments/augmentation-mixup-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/mixup/seed-2": {
+    "entry": "notes/research-log/24-augmentation-mixup-seed-2.md",
+    "record_hash": "eb2bea3937d046b305ddc1dd1b0060abc4173c983d27b94437d2a96b380d5787",
+    "figures": {
+      "svg": "figures/experiments/augmentation-mixup-seed-2.svg",
+      "png": "figures/experiments/augmentation-mixup-seed-2.png",
+      "pdf": "figures/experiments/augmentation-mixup-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/cutmix/seed-0": {
+    "entry": "notes/research-log/25-augmentation-cutmix-seed-0.md",
+    "record_hash": "19427319e1308e2b067754dcf4188b8e3807075c1f55add383f329c5e2726d79",
+    "figures": {
+      "svg": "figures/experiments/augmentation-cutmix-seed-0.svg",
+      "png": "figures/experiments/augmentation-cutmix-seed-0.png",
+      "pdf": "figures/experiments/augmentation-cutmix-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/cutmix/seed-1": {
+    "entry": "notes/research-log/26-augmentation-cutmix-seed-1.md",
+    "record_hash": "5bf43ac4899c58eea74615864a155e3aaa484df7fa362f29c8f3c25d8001bae6",
+    "figures": {
+      "svg": "figures/experiments/augmentation-cutmix-seed-1.svg",
+      "png": "figures/experiments/augmentation-cutmix-seed-1.png",
+      "pdf": "figures/experiments/augmentation-cutmix-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/cutmix/seed-2": {
+    "entry": "notes/research-log/27-augmentation-cutmix-seed-2.md",
+    "record_hash": "3b6cd5fd5dcb785221d6e2612119ce13a7bc6d492ab08fb08a9d0fd46062cba3",
+    "figures": {
+      "svg": "figures/experiments/augmentation-cutmix-seed-2.svg",
+      "png": "figures/experiments/augmentation-cutmix-seed-2.png",
+      "pdf": "figures/experiments/augmentation-cutmix-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/randaugment/seed-0": {
+    "entry": "notes/research-log/28-augmentation-randaugment-seed-0.md",
+    "record_hash": "a6f5c042a3f1e2f77e401a879e4b9d06de71ec52e9a6761116d6dded02d48ea9",
+    "figures": {
+      "svg": "figures/experiments/augmentation-randaugment-seed-0.svg",
+      "png": "figures/experiments/augmentation-randaugment-seed-0.png",
+      "pdf": "figures/experiments/augmentation-randaugment-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/randaugment/seed-1": {
+    "entry": "notes/research-log/29-augmentation-randaugment-seed-1.md",
+    "record_hash": "fd119db32c3180a5c95d0c464e407ee4f34477bc988431f1947e1e665aa381f3",
+    "figures": {
+      "svg": "figures/experiments/augmentation-randaugment-seed-1.svg",
+      "png": "figures/experiments/augmentation-randaugment-seed-1.png",
+      "pdf": "figures/experiments/augmentation-randaugment-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/randaugment/seed-2": {
+    "entry": "notes/research-log/30-augmentation-randaugment-seed-2.md",
+    "record_hash": "6be655f1ef03cd1377fa23343d927704733337c92fcb2f0fbab269a19ffb3487",
+    "figures": {
+      "svg": "figures/experiments/augmentation-randaugment-seed-2.svg",
+      "png": "figures/experiments/augmentation-randaugment-seed-2.png",
+      "pdf": "figures/experiments/augmentation-randaugment-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/resized-crop/seed-0": {
+    "entry": "notes/research-log/31-augmentation-resized-crop-seed-0.md",
+    "record_hash": "a724a53b15db04ebf2d2a4921b76bec98bc434ebc616755e1eba624b2a088ce8",
+    "figures": {
+      "svg": "figures/experiments/augmentation-resized-crop-seed-0.svg",
+      "png": "figures/experiments/augmentation-resized-crop-seed-0.png",
+      "pdf": "figures/experiments/augmentation-resized-crop-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/resized-crop/seed-1": {
+    "entry": "notes/research-log/32-augmentation-resized-crop-seed-1.md",
+    "record_hash": "b6be810aa5d3fdb4a28f4baeab794ca1bbdb56e82104af43bb9ada4b71314a6c",
+    "figures": {
+      "svg": "figures/experiments/augmentation-resized-crop-seed-1.svg",
+      "png": "figures/experiments/augmentation-resized-crop-seed-1.png",
+      "pdf": "figures/experiments/augmentation-resized-crop-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/resized-crop/seed-2": {
+    "entry": "notes/research-log/33-augmentation-resized-crop-seed-2.md",
+    "record_hash": "76f88f8e9e924924ecc1c9d1271f7a76f3b972f970f83c598e9c24afa91790e8",
+    "figures": {
+      "svg": "figures/experiments/augmentation-resized-crop-seed-2.svg",
+      "png": "figures/experiments/augmentation-resized-crop-seed-2.png",
+      "pdf": "figures/experiments/augmentation-resized-crop-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/affine/seed-0": {
+    "entry": "notes/research-log/34-augmentation-affine-seed-0.md",
+    "record_hash": "e1d9986af03789c52341cf00c680059cde69124bcd19b85e2b6f3d4f735f5423",
+    "figures": {
+      "svg": "figures/experiments/augmentation-affine-seed-0.svg",
+      "png": "figures/experiments/augmentation-affine-seed-0.png",
+      "pdf": "figures/experiments/augmentation-affine-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/affine/seed-1": {
+    "entry": "notes/research-log/35-augmentation-affine-seed-1.md",
+    "record_hash": "77fa27dccaa7d5930d3dbc4add011d8601e56199808c10c069f433ba6f6975ad",
+    "figures": {
+      "svg": "figures/experiments/augmentation-affine-seed-1.svg",
+      "png": "figures/experiments/augmentation-affine-seed-1.png",
+      "pdf": "figures/experiments/augmentation-affine-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/affine/seed-2": {
+    "entry": "notes/research-log/36-augmentation-affine-seed-2.md",
+    "record_hash": "801d518bf4a3ca6f44299200c0928a9f4fc9cb7b1866a59ce0b9a72823bd9a84",
+    "figures": {
+      "svg": "figures/experiments/augmentation-affine-seed-2.svg",
+      "png": "figures/experiments/augmentation-affine-seed-2.png",
+      "pdf": "figures/experiments/augmentation-affine-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/grayscale/seed-0": {
+    "entry": "notes/research-log/37-augmentation-grayscale-seed-0.md",
+    "record_hash": "17e3a65dc23244725f6cdc9397d06e2ee0576d9f9b7cbac3712253b2c6cca9c1",
+    "figures": {
+      "svg": "figures/experiments/augmentation-grayscale-seed-0.svg",
+      "png": "figures/experiments/augmentation-grayscale-seed-0.png",
+      "pdf": "figures/experiments/augmentation-grayscale-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/grayscale/seed-1": {
+    "entry": "notes/research-log/38-augmentation-grayscale-seed-1.md",
+    "record_hash": "221e76e89bfcd78a9fb32a7b6fe2f908febc7b8991268f7b3b6a24c17f944b40",
+    "figures": {
+      "svg": "figures/experiments/augmentation-grayscale-seed-1.svg",
+      "png": "figures/experiments/augmentation-grayscale-seed-1.png",
+      "pdf": "figures/experiments/augmentation-grayscale-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/grayscale/seed-2": {
+    "entry": "notes/research-log/39-augmentation-grayscale-seed-2.md",
+    "record_hash": "2b0d389305d8549a7d8195b8f007321d268efdf4dfb1b5a27daea693b1fd64bf",
+    "figures": {
+      "svg": "figures/experiments/augmentation-grayscale-seed-2.svg",
+      "png": "figures/experiments/augmentation-grayscale-seed-2.png",
+      "pdf": "figures/experiments/augmentation-grayscale-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/blur/seed-0": {
+    "entry": "notes/research-log/40-augmentation-blur-seed-0.md",
+    "record_hash": "38f4d70f49430d17a701d5f3d441580a328da3e9029776e3a988f31ed9c68913",
+    "figures": {
+      "svg": "figures/experiments/augmentation-blur-seed-0.svg",
+      "png": "figures/experiments/augmentation-blur-seed-0.png",
+      "pdf": "figures/experiments/augmentation-blur-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/blur/seed-1": {
+    "entry": "notes/research-log/41-augmentation-blur-seed-1.md",
+    "record_hash": "79a117e7582245ecbb133f664d9c051d7da4ed07370dad6d93d98e5f335450b2",
+    "figures": {
+      "svg": "figures/experiments/augmentation-blur-seed-1.svg",
+      "png": "figures/experiments/augmentation-blur-seed-1.png",
+      "pdf": "figures/experiments/augmentation-blur-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/blur/seed-2": {
+    "entry": "notes/research-log/42-augmentation-blur-seed-2.md",
+    "record_hash": "f3a5d4061cf55072a32e9818fe046287df7ec898dd6d2eb4e53131b30b4c932a",
+    "figures": {
+      "svg": "figures/experiments/augmentation-blur-seed-2.svg",
+      "png": "figures/experiments/augmentation-blur-seed-2.png",
+      "pdf": "figures/experiments/augmentation-blur-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/autoaugment/seed-0": {
+    "entry": "notes/research-log/43-augmentation-autoaugment-seed-0.md",
+    "record_hash": "6776ba845f591ee4d59b72b2a31482775230147a20966e0b197bfe04ee4dcc77",
+    "figures": {
+      "svg": "figures/experiments/augmentation-autoaugment-seed-0.svg",
+      "png": "figures/experiments/augmentation-autoaugment-seed-0.png",
+      "pdf": "figures/experiments/augmentation-autoaugment-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/autoaugment/seed-1": {
+    "entry": "notes/research-log/44-augmentation-autoaugment-seed-1.md",
+    "record_hash": "bc5df5deb4c4a2f17c2ba7de50aeba555aa671223e8fd3bed92713f8a8d1085c",
+    "figures": {
+      "svg": "figures/experiments/augmentation-autoaugment-seed-1.svg",
+      "png": "figures/experiments/augmentation-autoaugment-seed-1.png",
+      "pdf": "figures/experiments/augmentation-autoaugment-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "augmentation/autoaugment/seed-2": {
+    "entry": "notes/research-log/45-augmentation-autoaugment-seed-2.md",
+    "record_hash": "7a1a863d7372b08869f53380692fab68e94ccd354331f5f900c4fc262d4b9534",
+    "figures": {
+      "svg": "figures/experiments/augmentation-autoaugment-seed-2.svg",
+      "png": "figures/experiments/augmentation-autoaugment-seed-2.png",
+      "pdf": "figures/experiments/augmentation-autoaugment-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "historical/baseline": {
+    "entry": "notes/research-log/46-historical-baseline.md",
+    "record_hash": "b38f266ed785f019516a96380b22e6e669aa618c9648b496e8f989aa8d14672e",
+    "figures": {
+      "svg": "figures/experiments/historical-baseline.svg",
+      "png": "figures/experiments/historical-baseline.png",
+      "pdf": "figures/experiments/historical-baseline.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "historical/tuned-b512": {
+    "entry": "notes/research-log/47-historical-tuned-b512.md",
+    "record_hash": "cf60db118ccdb3ff9a61b253e0d848c239c4a2ba57a7211db6e2bbe2355d2abd",
+    "figures": {
+      "svg": "figures/experiments/historical-tuned-b512.svg",
+      "png": "figures/experiments/historical-tuned-b512.png",
+      "pdf": "figures/experiments/historical-tuned-b512.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "historical/step-matched-b512": {
+    "entry": "notes/research-log/48-historical-step-matched-b512.md",
+    "record_hash": "2f315b8ed28d33ce022a6372e3083ffa496331ca3b6dfa4c30472d246d3418dc",
+    "figures": {
+      "svg": "figures/experiments/historical-step-matched-b512.svg",
+      "png": "figures/experiments/historical-step-matched-b512.png",
+      "pdf": "figures/experiments/historical-step-matched-b512.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-2/seed-0": {
+    "entry": "notes/research-log/49-depth-plain-conv-2-seed-0.md",
+    "record_hash": "5e6ab83969b31db848d0e51b934486f8cb13e4b5ece47ca77c51b31a63cada12",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-2-seed-0.svg",
+      "png": "figures/experiments/depth-plain-conv-2-seed-0.png",
+      "pdf": "figures/experiments/depth-plain-conv-2-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-2/seed-1": {
+    "entry": "notes/research-log/50-depth-plain-conv-2-seed-1.md",
+    "record_hash": "365a49870f8ced74208c64e3347886bc8264872d8e4334c6c3ab360514d44d1b",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-2-seed-1.svg",
+      "png": "figures/experiments/depth-plain-conv-2-seed-1.png",
+      "pdf": "figures/experiments/depth-plain-conv-2-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-2/seed-2": {
+    "entry": "notes/research-log/51-depth-plain-conv-2-seed-2.md",
+    "record_hash": "17952978d072b7f814a1b15687eb9e4e42d9068e92fdfe6637b4b03d0a4ca81e",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-2-seed-2.svg",
+      "png": "figures/experiments/depth-plain-conv-2-seed-2.png",
+      "pdf": "figures/experiments/depth-plain-conv-2-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-4/seed-0": {
+    "entry": "notes/research-log/52-depth-plain-conv-4-seed-0.md",
+    "record_hash": "f95d16b17ffdc31699926ad2d812e47b43c81bed160b39491ff7eb6477b172c4",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-4-seed-0.svg",
+      "png": "figures/experiments/depth-plain-conv-4-seed-0.png",
+      "pdf": "figures/experiments/depth-plain-conv-4-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-4/seed-1": {
+    "entry": "notes/research-log/53-depth-plain-conv-4-seed-1.md",
+    "record_hash": "2a4e27d2d3b2910aec2bb636d69ab4ec1236b5d59d5c19e22ae44190b9757663",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-4-seed-1.svg",
+      "png": "figures/experiments/depth-plain-conv-4-seed-1.png",
+      "pdf": "figures/experiments/depth-plain-conv-4-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-4/seed-2": {
+    "entry": "notes/research-log/54-depth-plain-conv-4-seed-2.md",
+    "record_hash": "c674c2a3495082d4b3363007d7818d86bc9220bb142004aa2caed7372cb67dbb",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-4-seed-2.svg",
+      "png": "figures/experiments/depth-plain-conv-4-seed-2.png",
+      "pdf": "figures/experiments/depth-plain-conv-4-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-8/seed-0": {
+    "entry": "notes/research-log/55-depth-plain-conv-8-seed-0.md",
+    "record_hash": "59fccb4f164161fabc59d32730095b07ea0bc8f44b7e2c106f327639d1ef4392",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-8-seed-0.svg",
+      "png": "figures/experiments/depth-plain-conv-8-seed-0.png",
+      "pdf": "figures/experiments/depth-plain-conv-8-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-8/seed-1": {
+    "entry": "notes/research-log/56-depth-plain-conv-8-seed-1.md",
+    "record_hash": "def91d2def6764128e276e6c982a9e2262e7678dd38b3ae7e374dc1404741c73",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-8-seed-1.svg",
+      "png": "figures/experiments/depth-plain-conv-8-seed-1.png",
+      "pdf": "figures/experiments/depth-plain-conv-8-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-8/seed-2": {
+    "entry": "notes/research-log/57-depth-plain-conv-8-seed-2.md",
+    "record_hash": "e0d643d0efc6e01d449720b0e3e7bf61c115c1d66638202d30c6590383670df0",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-8-seed-2.svg",
+      "png": "figures/experiments/depth-plain-conv-8-seed-2.png",
+      "pdf": "figures/experiments/depth-plain-conv-8-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-16/seed-0": {
+    "entry": "notes/research-log/58-depth-plain-conv-16-seed-0.md",
+    "record_hash": "a8a291a9ba3f22410f42f00a68043eb9128baa9bf35172636266b5fc7b1ff0d9",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-16-seed-0.svg",
+      "png": "figures/experiments/depth-plain-conv-16-seed-0.png",
+      "pdf": "figures/experiments/depth-plain-conv-16-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-16/seed-1": {
+    "entry": "notes/research-log/59-depth-plain-conv-16-seed-1.md",
+    "record_hash": "48540302bb551d0153a900771fc4cc27827d46f6370b47ca5eae6aafcc870d2f",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-16-seed-1.svg",
+      "png": "figures/experiments/depth-plain-conv-16-seed-1.png",
+      "pdf": "figures/experiments/depth-plain-conv-16-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-16/seed-2": {
+    "entry": "notes/research-log/60-depth-plain-conv-16-seed-2.md",
+    "record_hash": "c0f2f64394bd1e6ea19ad9d794af50493a848fa71200cd2cdf988f8886bc0032",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-16-seed-2.svg",
+      "png": "figures/experiments/depth-plain-conv-16-seed-2.png",
+      "pdf": "figures/experiments/depth-plain-conv-16-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-32/seed-0": {
+    "entry": "notes/research-log/61-depth-plain-conv-32-seed-0.md",
+    "record_hash": "b688061c45c48bef1521814c988b8e60197892d63a041303c0928457057d0198",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-32-seed-0.svg",
+      "png": "figures/experiments/depth-plain-conv-32-seed-0.png",
+      "pdf": "figures/experiments/depth-plain-conv-32-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-32/seed-1": {
+    "entry": "notes/research-log/62-depth-plain-conv-32-seed-1.md",
+    "record_hash": "49a324caa0f6a3a16a3389aa323649f6369d09965245889b60ea1a3291357008",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-32-seed-1.svg",
+      "png": "figures/experiments/depth-plain-conv-32-seed-1.png",
+      "pdf": "figures/experiments/depth-plain-conv-32-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/plain/conv-32/seed-2": {
+    "entry": "notes/research-log/63-depth-plain-conv-32-seed-2.md",
+    "record_hash": "cc59b7790a8634fd8eff75c5a00694f46ed7d6b7bfa57f1c9c791bdf52be8a8f",
+    "figures": {
+      "svg": "figures/experiments/depth-plain-conv-32-seed-2.svg",
+      "png": "figures/experiments/depth-plain-conv-32-seed-2.png",
+      "pdf": "figures/experiments/depth-plain-conv-32-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-4/seed-0": {
+    "entry": "notes/research-log/64-depth-residual-conv-4-seed-0.md",
+    "record_hash": "301c365bdeb0dd941d5bb4bc8616bb38d5988a3518fe3aa953bbedd822f367b4",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-4-seed-0.svg",
+      "png": "figures/experiments/depth-residual-conv-4-seed-0.png",
+      "pdf": "figures/experiments/depth-residual-conv-4-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-4/seed-1": {
+    "entry": "notes/research-log/65-depth-residual-conv-4-seed-1.md",
+    "record_hash": "59c1fbd4c651516ac960446247b4105f705471e209851e6be656aed98c612ecc",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-4-seed-1.svg",
+      "png": "figures/experiments/depth-residual-conv-4-seed-1.png",
+      "pdf": "figures/experiments/depth-residual-conv-4-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-4/seed-2": {
+    "entry": "notes/research-log/66-depth-residual-conv-4-seed-2.md",
+    "record_hash": "296b71c8b12d86dc25209583f0a53e3a554e540212b74d5f59f163b34f9e886f",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-4-seed-2.svg",
+      "png": "figures/experiments/depth-residual-conv-4-seed-2.png",
+      "pdf": "figures/experiments/depth-residual-conv-4-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-8/seed-0": {
+    "entry": "notes/research-log/67-depth-residual-conv-8-seed-0.md",
+    "record_hash": "0dcb17ddd900861e9bbdc3e53ab091bc3dd93a8c1136381554f28589d241663c",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-8-seed-0.svg",
+      "png": "figures/experiments/depth-residual-conv-8-seed-0.png",
+      "pdf": "figures/experiments/depth-residual-conv-8-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-8/seed-1": {
+    "entry": "notes/research-log/68-depth-residual-conv-8-seed-1.md",
+    "record_hash": "72bb23e0c1a3381387dce410de3b70b2cc98a5cf317e820151b179e3fec72f14",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-8-seed-1.svg",
+      "png": "figures/experiments/depth-residual-conv-8-seed-1.png",
+      "pdf": "figures/experiments/depth-residual-conv-8-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-8/seed-2": {
+    "entry": "notes/research-log/69-depth-residual-conv-8-seed-2.md",
+    "record_hash": "c3027de2d00f3ca42615a12489fa21997e909ca3c54b64e5059c098a844bb3af",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-8-seed-2.svg",
+      "png": "figures/experiments/depth-residual-conv-8-seed-2.png",
+      "pdf": "figures/experiments/depth-residual-conv-8-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-16/seed-0": {
+    "entry": "notes/research-log/70-depth-residual-conv-16-seed-0.md",
+    "record_hash": "216c180125956d4af08f31f2c186fc7c2f92539bd303c8dee42755ae5dd34d34",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-16-seed-0.svg",
+      "png": "figures/experiments/depth-residual-conv-16-seed-0.png",
+      "pdf": "figures/experiments/depth-residual-conv-16-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-16/seed-1": {
+    "entry": "notes/research-log/71-depth-residual-conv-16-seed-1.md",
+    "record_hash": "c17602b554539907c04760fb390f3fceb1de9ecb84e22664e4d5afc6001692a6",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-16-seed-1.svg",
+      "png": "figures/experiments/depth-residual-conv-16-seed-1.png",
+      "pdf": "figures/experiments/depth-residual-conv-16-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-16/seed-2": {
+    "entry": "notes/research-log/72-depth-residual-conv-16-seed-2.md",
+    "record_hash": "a78aa8a3f4cc6557f099e1e7d15dc03ce2c93d6502382e0915636bd49e7b7adb",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-16-seed-2.svg",
+      "png": "figures/experiments/depth-residual-conv-16-seed-2.png",
+      "pdf": "figures/experiments/depth-residual-conv-16-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-32/seed-0": {
+    "entry": "notes/research-log/73-depth-residual-conv-32-seed-0.md",
+    "record_hash": "b4824126bc03874970d2d21b5c365795083559251c9e2752293ab9a7093e266e",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-32-seed-0.svg",
+      "png": "figures/experiments/depth-residual-conv-32-seed-0.png",
+      "pdf": "figures/experiments/depth-residual-conv-32-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-32/seed-1": {
+    "entry": "notes/research-log/74-depth-residual-conv-32-seed-1.md",
+    "record_hash": "6fc1b64c5fe7a1ee37c9b10eecf154cdff62b87dbd78dfb908c677e4a0164255",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-32-seed-1.svg",
+      "png": "figures/experiments/depth-residual-conv-32-seed-1.png",
+      "pdf": "figures/experiments/depth-residual-conv-32-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "depth/residual/conv-32/seed-2": {
+    "entry": "notes/research-log/75-depth-residual-conv-32-seed-2.md",
+    "record_hash": "a11f318c7cc1f8b29cfdbd06e2785480839bf318d30801dcdb38b686dab21e78",
+    "figures": {
+      "svg": "figures/experiments/depth-residual-conv-32-seed-2.svg",
+      "png": "figures/experiments/depth-residual-conv-32-seed-2.png",
+      "pdf": "figures/experiments/depth-residual-conv-32-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "followup/winner-flip/seed-0": {
+    "entry": "notes/research-log/76-followup-winner-flip-seed-0.md",
+    "record_hash": "c57aab47a6dcd6471ba7c014b945ef2980be4c30a34d2ebd8663357cb009595a",
+    "figures": {
+      "svg": "figures/experiments/followup-winner-flip-seed-0.svg",
+      "png": "figures/experiments/followup-winner-flip-seed-0.png",
+      "pdf": "figures/experiments/followup-winner-flip-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "followup/winner-flip/seed-1": {
+    "entry": "notes/research-log/77-followup-winner-flip-seed-1.md",
+    "record_hash": "8ca103c0b27893c4b8ce52b5f50ea194a1fdbe6fbc7dabc68effa7ebce21cc60",
+    "figures": {
+      "svg": "figures/experiments/followup-winner-flip-seed-1.svg",
+      "png": "figures/experiments/followup-winner-flip-seed-1.png",
+      "pdf": "figures/experiments/followup-winner-flip-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "followup/winner-flip/seed-2": {
+    "entry": "notes/research-log/78-followup-winner-flip-seed-2.md",
+    "record_hash": "98237c8b79c96fcbf1f799a8955b5f8652ba1587727b80235a62b144edc0e9c3",
+    "figures": {
+      "svg": "figures/experiments/followup-winner-flip-seed-2.svg",
+      "png": "figures/experiments/followup-winner-flip-seed-2.png",
+      "pdf": "figures/experiments/followup-winner-flip-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "followup/winner-crop-flip/seed-0": {
+    "entry": "notes/research-log/79-followup-winner-crop-flip-seed-0.md",
+    "record_hash": "153b4b3f8eadfd4542e36f8a16da6b63308f56995a55436b9f145e3ac84d6863",
+    "figures": {
+      "svg": "figures/experiments/followup-winner-crop-flip-seed-0.svg",
+      "png": "figures/experiments/followup-winner-crop-flip-seed-0.png",
+      "pdf": "figures/experiments/followup-winner-crop-flip-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "followup/winner-crop-flip/seed-1": {
+    "entry": "notes/research-log/80-followup-winner-crop-flip-seed-1.md",
+    "record_hash": "adbfc78b8181ea65a69ba274e4b1793308ce5ea89d2129570eec5072654ca5dc",
+    "figures": {
+      "svg": "figures/experiments/followup-winner-crop-flip-seed-1.svg",
+      "png": "figures/experiments/followup-winner-crop-flip-seed-1.png",
+      "pdf": "figures/experiments/followup-winner-crop-flip-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "followup/winner-crop-flip/seed-2": {
+    "entry": "notes/research-log/81-followup-winner-crop-flip-seed-2.md",
+    "record_hash": "b9eac28a5a795c46fafa9385ea2c6a30b818c32cdd74de31f34d4b4d1435ee12",
+    "figures": {
+      "svg": "figures/experiments/followup-winner-crop-flip-seed-2.svg",
+      "png": "figures/experiments/followup-winner-crop-flip-seed-2.png",
+      "pdf": "figures/experiments/followup-winner-crop-flip-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "followup/resnet18-crop-flip/seed-0": {
+    "entry": "notes/research-log/82-followup-resnet18-crop-flip-seed-0.md",
+    "record_hash": "7585f33ebb0a113ccde21d4835a80b418613f2630d870280499ad2c4340fb56f",
+    "figures": {
+      "svg": "figures/experiments/followup-resnet18-crop-flip-seed-0.svg",
+      "png": "figures/experiments/followup-resnet18-crop-flip-seed-0.png",
+      "pdf": "figures/experiments/followup-resnet18-crop-flip-seed-0.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "followup/resnet18-crop-flip/seed-1": {
+    "entry": "notes/research-log/83-followup-resnet18-crop-flip-seed-1.md",
+    "record_hash": "e4afd07e78e9027068440e4746ba3fc0d7ef462445dc7cceb7b9936e987e09a7",
+    "figures": {
+      "svg": "figures/experiments/followup-resnet18-crop-flip-seed-1.svg",
+      "png": "figures/experiments/followup-resnet18-crop-flip-seed-1.png",
+      "pdf": "figures/experiments/followup-resnet18-crop-flip-seed-1.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  },
+  "followup/resnet18-crop-flip/seed-2": {
+    "entry": "notes/research-log/84-followup-resnet18-crop-flip-seed-2.md",
+    "record_hash": "f9bdd70ba184b7c2a7def12c38dcc2e55840019c960dbd9b2be87bdd7e09fc5b",
+    "figures": {
+      "svg": "figures/experiments/followup-resnet18-crop-flip-seed-2.svg",
+      "png": "figures/experiments/followup-resnet18-crop-flip-seed-2.png",
+      "pdf": "figures/experiments/followup-resnet18-crop-flip-seed-2.pdf"
+    },
+    "skill": "summarize-experiment-as-adamya"
+  }
+}

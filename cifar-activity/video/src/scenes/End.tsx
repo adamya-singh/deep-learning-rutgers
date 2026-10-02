@@ -36,10 +36,10 @@ export const End: React.FC = () => {
   const scopeO = window(f, s[2] + 4, s[3] + 4, 16);
 
   const lessons = [
-    ['Count optimizer steps, not just epochs.', 'Count'],
-    ['Decide on validation, across seeds.', 'Decide'],
-    ['A smaller gap isn’t better performance.', 'smaller'],
-    ['A technique’s value depends on everything around it.', 'technique'],
+    ['Compare runs by optimizer steps, not just epochs.', 'comparing'],
+    ['Decide on validation, across seeds.', 'deciding'],
+    ['A smaller train–test gap isn’t an improvement by itself.', 'smaller'],
+    ['Retest a technique when the model or recipe changes.', 'retesting'],
   ];
   const lessonO = window(f, s[3] - 2, s[4] + 4, 16);
   const finalO = prog(f, s[4] - 4, 20);
@@ -112,16 +112,16 @@ export const End: React.FC = () => {
             </React.Fragment>
           );
         })}
-        <Tag x={960} y={244} kind="note" anchor="center" o={prog(f, word(1, 'story') - 6, 14)}>mixed metrics: a story, not a leaderboard</Tag>
+        <Tag x={960} y={244} kind="note" anchor="center" o={prog(f, word(1, 'leaderboard') - 6, 14)}>mixed metrics: the order things happened, not a leaderboard</Tag>
       </Abs>
 
       <Abs x={0} y={0} o={scopeO}>
         <Txt x={960} y={360} w={1500} align="center" size={50} font="serif">
-          Strongest <span style={{color: C.cyan}}>we've measured</span> ≠ best ResNet that exists
+          Strongest result <span style={{color: C.cyan}}>measured here</span>, not the best ResNet
         </Txt>
         <Txt x={960} y={470} w={1300} align="center" size={26} color={C.muted} lh={1.5} o={prog(f, word(2, 'Wider') - 4, 14)}>
           Wider and deeper residual networks and other training recipes report higher CIFAR-10 accuracy.
-          These experiments establish no state of the art.
+          These experiments make no state-of-the-art claim.
         </Txt>
         <Txt x={960} y={600} w={1300} align="center" size={18} font="mono" color={C.dim} o={prog(f, word(2, 'Wider'), 14)}>
           e.g. Wide Residual Networks, arxiv.org/abs/1605.07146
@@ -140,7 +140,10 @@ export const End: React.FC = () => {
 
       <Abs x={0} y={0} o={finalO}>
         <Txt x={960} y={350} w={1500} align="center" size={72} font="serif">
-          Design <span style={{color: C.amber}}>+</span> recipe, together.
+          {R.classroom.baseline_b64[9].test.toFixed(2)}% <span style={{color: C.amber}}>→</span> {R.followup.test_results_available ? `${R.followup.test_mean?.toFixed(2)}%` : `${rn.mean.toFixed(2)}%`} <span style={{fontSize: 34, color: C.muted}}>{R.followup.test_results_available ? 'test' : 'validation'}</span>
+        </Txt>
+        <Txt x={960} y={460} w={1500} align="center" size={24} font="mono" color={C.muted} o={prog(f, s[4] + 20, 16)}>
+          recipe · depth + shortcuts · augmentation · architecture · contributions not separated
         </Txt>
         <Panel x={460} y={560} w={1000} h={226} o={prog(f, s[4] + 30, 20)} border={C.line}>
           <div style={{padding: '22px 30px', fontFamily: F.mono, fontSize: 17, color: C.muted, lineHeight: 1.75}}>

@@ -1,0 +1,12128 @@
+{
+ "fps": 30,
+ "voice": "en-US-AndrewNeural",
+ "rate": "+15%",
+ "snapshot_utc": "2026-10-02T01:27:30Z",
+ "chapters": [
+  {
+   "id": "task",
+   "title": "The input: 3,072 numbers",
+   "start": 0.0,
+   "end": 48.884,
+   "segments": [
+    {
+     "id": "task-1",
+     "audio": "audio/task-1-5c4f822551.mp3",
+     "start": 0.9,
+     "duration": 9.961,
+     "text": "This is a frog from the CIFAR-10 test set. We wanted a neural network that could look at images like this and say what's in them, even though it never really sees a picture, it only sees numbers.",
+     "words": [
+      [
+       "This",
+       0.987
+      ],
+      [
+       "is",
+       1.172
+      ],
+      [
+       "a",
+       1.28
+      ],
+      [
+       "frog",
+       1.335
+      ],
+      [
+       "from",
+       1.683
+      ],
+      [
+       "the",
+       1.813
+      ],
+      [
+       "CIFAR-10",
+       1.889
+      ],
+      [
+       "test",
+       2.617
+      ],
+      [
+       "set.",
+       2.9
+      ],
+      [
+       "We",
+       3.585
+      ],
+      [
+       "wanted",
+       3.661
+      ],
+      [
+       "a",
+       3.878
+      ],
+      [
+       "neural",
+       3.922
+      ],
+      [
+       "network",
+       4.28
+      ],
+      [
+       "that",
+       4.661
+      ],
+      [
+       "could",
+       4.78
+      ],
+      [
+       "look",
+       4.933
+      ],
+      [
+       "at",
+       5.117
+      ],
+      [
+       "images",
+       5.215
+      ],
+      [
+       "like",
+       5.585
+      ],
+      [
+       "this",
+       5.791
+      ],
+      [
+       "and",
+       6.161
+      ],
+      [
+       "say",
+       6.291
+      ],
+      [
+       "what's",
+       6.541
+      ],
+      [
+       "in",
+       6.802
+      ],
+      [
+       "them,",
+       6.911
+      ],
+      [
+       "even",
+       7.454
+      ],
+      [
+       "though",
+       7.607
+      ],
+      [
+       "it",
+       7.748
+      ],
+      [
+       "never",
+       7.857
+      ],
+      [
+       "really",
+       8.237
+      ],
+      [
+       "sees",
+       8.487
+      ],
+      [
+       "a",
+       8.726
+      ],
+      [
+       "picture,",
+       8.78
+      ],
+      [
+       "it",
+       9.541
+      ],
+      [
+       "only",
+       9.607
+      ],
+      [
+       "sees",
+       9.802
+      ],
+      [
+       "numbers.",
+       10.063
+      ]
+     ],
+     "captions": [
+      {
+       "text": "This is a frog from the CIFAR-10 test set.",
+       "start": 0.987,
+       "end": 3.585
+      },
+      {
+       "text": "We wanted a neural network that could look at images",
+       "start": 3.585,
+       "end": 5.585
+      },
+      {
+       "text": "like this and say what's in them,",
+       "start": 5.585,
+       "end": 7.454
+      },
+      {
+       "text": "even though it never really sees a picture, it only sees numbers.",
+       "start": 7.454,
+       "end": 10.861
+      }
+     ]
+    },
+    {
+     "id": "task-2",
+     "audio": "audio/task-2-10a940e406.mp3",
+     "start": 10.97,
+     "duration": 12.961,
+     "text": "CIFAR-10 has 60,000 tiny color photos split across ten classes, things like airplanes, cats, frogs, and trucks. The official split gives us 50,000 images to train on and keeps 10,000 aside for testing.",
+     "words": [
+      [
+       "CIFAR-10",
+       11.068
+      ],
+      [
+       "has",
+       11.644
+      ],
+      [
+       "60,000",
+       11.851
+      ],
+      [
+       "tiny",
+       12.699
+      ],
+      [
+       "color",
+       13.014
+      ],
+      [
+       "photos",
+       13.296
+      ],
+      [
+       "split",
+       13.655
+      ],
+      [
+       "across",
+       13.97
+      ],
+      [
+       "ten",
+       14.34
+      ],
+      [
+       "classes,",
+       14.536
+      ],
+      [
+       "things",
+       15.275
+      ],
+      [
+       "like",
+       15.503
+      ],
+      [
+       "airplanes,",
+       15.655
+      ],
+      [
+       "cats,",
+       16.373
+      ],
+      [
+       "frogs,",
+       17.003
+      ],
+      [
+       "and",
+       17.666
+      ],
+      [
+       "trucks.",
+       17.764
+      ],
+      [
+       "The",
+       18.612
+      ],
+      [
+       "official",
+       18.688
+      ],
+      [
+       "split",
+       19.09
+      ],
+      [
+       "gives",
+       19.449
+      ],
+      [
+       "us",
+       19.666
+      ],
+      [
+       "50,000",
+       19.796
+      ],
+      [
+       "images",
+       20.525
+      ],
+      [
+       "to",
+       20.873
+      ],
+      [
+       "train",
+       20.96
+      ],
+      [
+       "on",
+       21.275
+      ],
+      [
+       "and",
+       21.742
+      ],
+      [
+       "keeps",
+       21.84
+      ],
+      [
+       "10,000",
+       22.133
+      ],
+      [
+       "aside",
+       22.775
+      ],
+      [
+       "for",
+       23.112
+      ],
+      [
+       "testing.",
+       23.22
+      ]
+     ],
+     "captions": [
+      {
+       "text": "CIFAR-10 has 60,000 tiny color photos split across ten classes,",
+       "start": 11.068,
+       "end": 15.275
+      },
+      {
+       "text": "things like airplanes, cats, frogs, and trucks.",
+       "start": 15.275,
+       "end": 18.612
+      },
+      {
+       "text": "The official split gives us 50,000 images to",
+       "start": 18.612,
+       "end": 20.96
+      },
+      {
+       "text": "train on and keeps 10,000 aside for testing.",
+       "start": 20.96,
+       "end": 23.931
+      }
+     ]
+    },
+    {
+     "id": "task-3",
+     "audio": "audio/task-3-95f2406bfe.mp3",
+     "start": 24.052,
+     "duration": 16.993,
+     "text": "If you zoom in on the frog, it's really just a 32 by 32 grid of pixels, and each pixel is three numbers between 0 and 255 for how much red, green, and blue it has. So every image is 32 times 32 times 3, which is 3,072 numbers.",
+     "words": [
+      [
+       "If",
+       24.139
+      ],
+      [
+       "you",
+       24.247
+      ],
+      [
+       "zoom",
+       24.334
+      ],
+      [
+       "in",
+       24.519
+      ],
+      [
+       "on",
+       24.606
+      ],
+      [
+       "the",
+       24.693
+      ],
+      [
+       "frog,",
+       24.78
+      ],
+      [
+       "it's",
+       25.334
+      ],
+      [
+       "really",
+       25.465
+      ],
+      [
+       "just",
+       25.715
+      ],
+      [
+       "a",
+       25.932
+      ],
+      [
+       "32",
+       25.986
+      ],
+      [
+       "by",
+       26.573
+      ],
+      [
+       "32",
+       26.736
+      ],
+      [
+       "grid",
+       27.302
+      ],
+      [
+       "of",
+       27.508
+      ],
+      [
+       "pixels,",
+       27.595
+      ],
+      [
+       "and",
+       28.367
+      ],
+      [
+       "each",
+       28.584
+      ],
+      [
+       "pixel",
+       28.758
+      ],
+      [
+       "is",
+       29.171
+      ],
+      [
+       "three",
+       29.302
+      ],
+      [
+       "numbers",
+       29.552
+      ],
+      [
+       "between",
+       29.889
+      ],
+      [
+       "0",
+       30.204
+      ],
+      [
+       "and",
+       30.9
+      ],
+      [
+       "255",
+       30.997
+      ],
+      [
+       "for",
+       32.15
+      ],
+      [
+       "how",
+       32.28
+      ],
+      [
+       "much",
+       32.41
+      ],
+      [
+       "red,",
+       32.639
+      ],
+      [
+       "green,",
+       33.313
+      ],
+      [
+       "and",
+       33.954
+      ],
+      [
+       "blue",
+       34.041
+      ],
+      [
+       "it",
+       34.28
+      ],
+      [
+       "has.",
+       34.345
+      ],
+      [
+       "So",
+       35.128
+      ],
+      [
+       "every",
+       35.345
+      ],
+      [
+       "image",
+       35.628
+      ],
+      [
+       "is",
+       35.976
+      ],
+      [
+       "32",
+       36.117
+      ],
+      [
+       "times",
+       36.65
+      ],
+      [
+       "32",
+       37.16
+      ],
+      [
+       "times",
+       37.671
+      ],
+      [
+       "3,",
+       38.041
+      ],
+      [
+       "which",
+       38.65
+      ],
+      [
+       "is",
+       38.802
+      ],
+      [
+       "3,072",
+       38.921
+      ],
+      [
+       "numbers.",
+       40.291
+      ]
+     ],
+     "captions": [
+      {
+       "text": "If you zoom in on the frog, it's really just a 32 by",
+       "start": 24.139,
+       "end": 26.736
+      },
+      {
+       "text": "32 grid of pixels, and each pixel is three numbers between",
+       "start": 26.736,
+       "end": 30.204
+      },
+      {
+       "text": "0 and 255 for how much red, green, and blue it has.",
+       "start": 30.204,
+       "end": 35.128
+      },
+      {
+       "text": "So every image is 32 times 32 times 3, which is 3,072 numbers.",
+       "start": 35.128,
+       "end": 41.044
+      }
+     ]
+    },
+    {
+     "id": "task-4",
+     "audio": "audio/task-4-3ca699e5b6.mp3",
+     "start": 41.246,
+     "duration": 6.697,
+     "text": "The rest of this goes through the experiments we ran to figure out what makes a network better at turning those numbers into the right label.",
+     "words": [
+      [
+       "The",
+       41.343
+      ],
+      [
+       "rest",
+       41.42
+      ],
+      [
+       "of",
+       41.691
+      ],
+      [
+       "this",
+       41.778
+      ],
+      [
+       "goes",
+       41.952
+      ],
+      [
+       "through",
+       42.256
+      ],
+      [
+       "the",
+       42.42
+      ],
+      [
+       "experiments",
+       42.485
+      ],
+      [
+       "we",
+       43.137
+      ],
+      [
+       "ran",
+       43.267
+      ],
+      [
+       "to",
+       43.561
+      ],
+      [
+       "figure",
+       43.659
+      ],
+      [
+       "out",
+       44.006
+      ],
+      [
+       "what",
+       44.246
+      ],
+      [
+       "makes",
+       44.441
+      ],
+      [
+       "a",
+       44.691
+      ],
+      [
+       "network",
+       44.735
+      ],
+      [
+       "better",
+       45.235
+      ],
+      [
+       "at",
+       45.637
+      ],
+      [
+       "turning",
+       45.724
+      ],
+      [
+       "those",
+       46.061
+      ],
+      [
+       "numbers",
+       46.267
+      ],
+      [
+       "into",
+       46.822
+      ],
+      [
+       "the",
+       46.985
+      ],
+      [
+       "right",
+       47.072
+      ],
+      [
+       "label.",
+       47.3
+      ]
+     ],
+     "captions": [
+      {
+       "text": "The rest of this goes through the experiments we ran to figure out what",
+       "start": 41.343,
+       "end": 44.441
+      },
+      {
+       "text": "makes a network better at turning those numbers into the right label.",
+       "start": 44.441,
+       "end": 47.942
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cnn",
+   "title": "The starting network",
+   "start": 48.884,
+   "end": 156.315,
+   "segments": [
+    {
+     "id": "cnn-1",
+     "audio": "audio/cnn-1-9ae4446c51.mp3",
+     "start": 49.784,
+     "duration": 9.361,
+     "text": "The network we started with is a small convolutional network from class, with 545,098 trainable parameters, which are the numbers it adjusts while it learns.",
+     "words": [
+      [
+       "The",
+       49.882
+      ],
+      [
+       "network",
+       49.958
+      ],
+      [
+       "we",
+       50.284
+      ],
+      [
+       "started",
+       50.382
+      ],
+      [
+       "with",
+       50.719
+      ],
+      [
+       "is",
+       51.034
+      ],
+      [
+       "a",
+       51.143
+      ],
+      [
+       "small",
+       51.197
+      ],
+      [
+       "convolutional",
+       51.567
+      ],
+      [
+       "network",
+       52.23
+      ],
+      [
+       "from",
+       52.599
+      ],
+      [
+       "class,",
+       52.752
+      ],
+      [
+       "with",
+       53.436
+      ],
+      [
+       "545,098",
+       53.567
+      ],
+      [
+       "trainable",
+       55.719
+      ],
+      [
+       "parameters,",
+       56.121
+      ],
+      [
+       "which",
+       56.936
+      ],
+      [
+       "are",
+       57.078
+      ],
+      [
+       "the",
+       57.143
+      ],
+      [
+       "numbers",
+       57.23
+      ],
+      [
+       "it",
+       57.567
+      ],
+      [
+       "adjusts",
+       57.643
+      ],
+      [
+       "while",
+       58.099
+      ],
+      [
+       "it",
+       58.306
+      ],
+      [
+       "learns.",
+       58.382
+      ]
+     ],
+     "captions": [
+      {
+       "text": "The network we started with is a small convolutional",
+       "start": 49.882,
+       "end": 52.23
+      },
+      {
+       "text": "network from class, with 545,098 trainable parameters,",
+       "start": 52.23,
+       "end": 56.936
+      },
+      {
+       "text": "which are the numbers it adjusts while it learns.",
+       "start": 56.936,
+       "end": 59.145
+      }
+     ]
+    },
+    {
+     "id": "cnn-2",
+     "audio": "audio/cnn-2-c283353560.mp3",
+     "start": 59.257,
+     "duration": 14.521,
+     "text": "Before anything else, every pixel value gets divided by 255, and then each color channel has its dataset average subtracted and gets divided by its standard deviation, which puts the channels on a similar scale around zero and usually makes training better behaved.",
+     "words": [
+      [
+       "Before",
+       59.355
+      ],
+      [
+       "anything",
+       59.692
+      ],
+      [
+       "else,",
+       60.029
+      ],
+      [
+       "every",
+       60.583
+      ],
+      [
+       "pixel",
+       60.855
+      ],
+      [
+       "value",
+       61.192
+      ],
+      [
+       "gets",
+       61.507
+      ],
+      [
+       "divided",
+       61.703
+      ],
+      [
+       "by",
+       62.137
+      ],
+      [
+       "255,",
+       62.344
+      ],
+      [
+       "and",
+       63.735
+      ],
+      [
+       "then",
+       63.79
+      ],
+      [
+       "each",
+       64.007
+      ],
+      [
+       "color",
+       64.181
+      ],
+      [
+       "channel",
+       64.474
+      ],
+      [
+       "has",
+       64.79
+      ],
+      [
+       "its",
+       64.974
+      ],
+      [
+       "dataset",
+       65.105
+      ],
+      [
+       "average",
+       65.583
+      ],
+      [
+       "subtracted",
+       65.887
+      ],
+      [
+       "and",
+       66.703
+      ],
+      [
+       "gets",
+       66.811
+      ],
+      [
+       "divided",
+       67.018
+      ],
+      [
+       "by",
+       67.453
+      ],
+      [
+       "its",
+       67.594
+      ],
+      [
+       "standard",
+       67.724
+      ],
+      [
+       "deviation,",
+       68.126
+      ],
+      [
+       "which",
+       69.029
+      ],
+      [
+       "puts",
+       69.17
+      ],
+      [
+       "the",
+       69.398
+      ],
+      [
+       "channels",
+       69.485
+      ],
+      [
+       "on",
+       69.844
+      ],
+      [
+       "a",
+       69.996
+      ],
+      [
+       "similar",
+       70.05
+      ],
+      [
+       "scale",
+       70.474
+      ],
+      [
+       "around",
+       70.768
+      ],
+      [
+       "zero",
+       71.04
+      ],
+      [
+       "and",
+       71.67
+      ],
+      [
+       "usually",
+       71.779
+      ],
+      [
+       "makes",
+       72.159
+      ],
+      [
+       "training",
+       72.409
+      ],
+      [
+       "better",
+       72.79
+      ],
+      [
+       "behaved.",
+       73.018
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Before anything else, every pixel value gets divided by 255,",
+       "start": 59.355,
+       "end": 63.735
+      },
+      {
+       "text": "and then each color channel has its dataset average subtracted and gets",
+       "start": 63.735,
+       "end": 67.018
+      },
+      {
+       "text": "divided by its standard deviation, which puts the channels on a",
+       "start": 67.018,
+       "end": 70.05
+      },
+      {
+       "text": "similar scale around zero and usually makes training better behaved.",
+       "start": 70.05,
+       "end": 73.778
+      }
+     ]
+    },
+    {
+     "id": "cnn-3",
+     "audio": "audio/cnn-3-afd58e8538.mp3",
+     "start": 74.462,
+     "duration": 21.529,
+     "text": "The first real layer is a convolution. A filter is a 3 by 3 window over all three color channels, so it has 27 weights plus a bias. At each position it multiplies the values under it by its weights and adds everything up, and this panel is that exact calculation from our trained model. Slide the same window across every position and you get a new 32 by 32 map.",
+     "words": [
+      [
+       "The",
+       74.56
+      ],
+      [
+       "first",
+       74.625
+      ],
+      [
+       "real",
+       74.907
+      ],
+      [
+       "layer",
+       75.092
+      ],
+      [
+       "is",
+       75.527
+      ],
+      [
+       "a",
+       75.614
+      ],
+      [
+       "convolution.",
+       75.679
+      ],
+      [
+       "A",
+       76.657
+      ],
+      [
+       "filter",
+       76.723
+      ],
+      [
+       "is",
+       77.136
+      ],
+      [
+       "a",
+       77.277
+      ],
+      [
+       "3",
+       77.342
+      ],
+      [
+       "by",
+       77.668
+      ],
+      [
+       "3",
+       77.864
+      ],
+      [
+       "window",
+       78.114
+      ],
+      [
+       "over",
+       78.603
+      ],
+      [
+       "all",
+       78.896
+      ],
+      [
+       "three",
+       79.114
+      ],
+      [
+       "color",
+       79.429
+      ],
+      [
+       "channels,",
+       79.701
+      ],
+      [
+       "so",
+       80.375
+      ],
+      [
+       "it",
+       80.516
+      ],
+      [
+       "has",
+       80.581
+      ],
+      [
+       "27",
+       80.766
+      ],
+      [
+       "weights",
+       81.342
+      ],
+      [
+       "plus",
+       81.712
+      ],
+      [
+       "a",
+       82.005
+      ],
+      [
+       "bias.",
+       82.07
+      ],
+      [
+       "At",
+       82.918
+      ],
+      [
+       "each",
+       83.049
+      ],
+      [
+       "position",
+       83.212
+      ],
+      [
+       "it",
+       83.668
+      ],
+      [
+       "multiplies",
+       83.82
+      ],
+      [
+       "the",
+       84.451
+      ],
+      [
+       "values",
+       84.527
+      ],
+      [
+       "under",
+       84.973
+      ],
+      [
+       "it",
+       85.255
+      ],
+      [
+       "by",
+       85.364
+      ],
+      [
+       "its",
+       85.505
+      ],
+      [
+       "weights",
+       85.614
+      ],
+      [
+       "and",
+       86.233
+      ],
+      [
+       "adds",
+       86.396
+      ],
+      [
+       "everything",
+       86.831
+      ],
+      [
+       "up,",
+       87.223
+      ],
+      [
+       "and",
+       87.788
+      ],
+      [
+       "this",
+       87.886
+      ],
+      [
+       "panel",
+       88.049
+      ],
+      [
+       "is",
+       88.494
+      ],
+      [
+       "that",
+       88.581
+      ],
+      [
+       "exact",
+       88.723
+      ],
+      [
+       "calculation",
+       89.136
+      ],
+      [
+       "from",
+       89.777
+      ],
+      [
+       "our",
+       89.918
+      ],
+      [
+       "trained",
+       90.005
+      ],
+      [
+       "model.",
+       90.277
+      ],
+      [
+       "Slide",
+       90.951
+      ],
+      [
+       "the",
+       91.277
+      ],
+      [
+       "same",
+       91.353
+      ],
+      [
+       "window",
+       91.614
+      ],
+      [
+       "across",
+       91.929
+      ],
+      [
+       "every",
+       92.396
+      ],
+      [
+       "position",
+       92.603
+      ],
+      [
+       "and",
+       93.31
+      ],
+      [
+       "you",
+       93.418
+      ],
+      [
+       "get",
+       93.505
+      ],
+      [
+       "a",
+       93.636
+      ],
+      [
+       "new",
+       93.668
+      ],
+      [
+       "32",
+       93.918
+      ],
+      [
+       "by",
+       94.668
+      ],
+      [
+       "32",
+       94.82
+      ],
+      [
+       "map.",
+       95.299
+      ]
+     ],
+     "captions": [
+      {
+       "text": "The first real layer is a convolution.",
+       "start": 74.56,
+       "end": 76.657
+      },
+      {
+       "text": "A filter is a 3 by 3 window over all three color channels,",
+       "start": 76.657,
+       "end": 80.375
+      },
+      {
+       "text": "so it has 27 weights plus a bias.",
+       "start": 80.375,
+       "end": 82.918
+      },
+      {
+       "text": "At each position it multiplies the values under it",
+       "start": 82.918,
+       "end": 85.364
+      },
+      {
+       "text": "by its weights and adds everything up,",
+       "start": 85.364,
+       "end": 87.788
+      },
+      {
+       "text": "and this panel is that exact calculation from our trained model.",
+       "start": 87.788,
+       "end": 90.951
+      },
+      {
+       "text": "Slide the same window across every",
+       "start": 90.951,
+       "end": 92.603
+      },
+      {
+       "text": "position and you get a new 32 by 32 map.",
+       "start": 92.603,
+       "end": 95.99
+      }
+     ]
+    },
+    {
+     "id": "cnn-4",
+     "audio": "audio/cnn-4-0bfb416945.mp3",
+     "start": 96.177,
+     "duration": 11.737,
+     "text": "The filter uses the same weights at every position, so a pattern it learns in one spot can be picked up anywhere else in the image. That's also why all 32 filters in this layer only need 896 parameters.",
+     "words": [
+      [
+       "The",
+       96.275
+      ],
+      [
+       "filter",
+       96.351
+      ],
+      [
+       "uses",
+       96.721
+      ],
+      [
+       "the",
+       97.047
+      ],
+      [
+       "same",
+       97.156
+      ],
+      [
+       "weights",
+       97.46
+      ],
+      [
+       "at",
+       97.786
+      ],
+      [
+       "every",
+       98.101
+      ],
+      [
+       "position,",
+       98.319
+      ],
+      [
+       "so",
+       99.101
+      ],
+      [
+       "a",
+       99.243
+      ],
+      [
+       "pattern",
+       99.297
+      ],
+      [
+       "it",
+       99.623
+      ],
+      [
+       "learns",
+       99.732
+      ],
+      [
+       "in",
+       100.047
+      ],
+      [
+       "one",
+       100.166
+      ],
+      [
+       "spot",
+       100.362
+      ],
+      [
+       "can",
+       100.732
+      ],
+      [
+       "be",
+       100.851
+      ],
+      [
+       "picked",
+       100.971
+      ],
+      [
+       "up",
+       101.232
+      ],
+      [
+       "anywhere",
+       101.514
+      ],
+      [
+       "else",
+       101.851
+      ],
+      [
+       "in",
+       102.069
+      ],
+      [
+       "the",
+       102.134
+      ],
+      [
+       "image.",
+       102.199
+      ],
+      [
+       "That's",
+       102.993
+      ],
+      [
+       "also",
+       103.123
+      ],
+      [
+       "why",
+       103.416
+      ],
+      [
+       "all",
+       103.656
+      ],
+      [
+       "32",
+       103.884
+      ],
+      [
+       "filters",
+       104.351
+      ],
+      [
+       "in",
+       104.775
+      ],
+      [
+       "this",
+       104.851
+      ],
+      [
+       "layer",
+       105.014
+      ],
+      [
+       "only",
+       105.416
+      ],
+      [
+       "need",
+       105.666
+      ],
+      [
+       "896",
+       106.025
+      ],
+      [
+       "parameters.",
+       107.003
+      ]
+     ],
+     "captions": [
+      {
+       "text": "The filter uses the same weights at every position,",
+       "start": 96.275,
+       "end": 99.101
+      },
+      {
+       "text": "so a pattern it learns in one spot can be picked up anywhere else in the image.",
+       "start": 99.101,
+       "end": 102.993
+      },
+      {
+       "text": "That's also why all 32 filters in this layer only need 896 parameters.",
+       "start": 102.993,
+       "end": 107.914
+      }
+     ]
+    },
+    {
+     "id": "cnn-5",
+     "audio": "audio/cnn-5-1c6cc05e25.mp3",
+     "start": 108.03,
+     "duration": 7.897,
+     "text": "These are the actual filters our baseline learned, and the maps they produce for this frog. Nobody designed these weights by hand, training found all of them.",
+     "words": [
+      [
+       "These",
+       108.117
+      ],
+      [
+       "are",
+       108.28
+      ],
+      [
+       "the",
+       108.356
+      ],
+      [
+       "actual",
+       108.476
+      ],
+      [
+       "filters",
+       108.889
+      ],
+      [
+       "our",
+       109.313
+      ],
+      [
+       "baseline",
+       109.433
+      ],
+      [
+       "learned,",
+       109.922
+      ],
+      [
+       "and",
+       110.509
+      ],
+      [
+       "the",
+       110.585
+      ],
+      [
+       "maps",
+       110.65
+      ],
+      [
+       "they",
+       111.009
+      ],
+      [
+       "produce",
+       111.106
+      ],
+      [
+       "for",
+       111.487
+      ],
+      [
+       "this",
+       111.617
+      ],
+      [
+       "frog.",
+       111.77
+      ],
+      [
+       "Nobody",
+       112.498
+      ],
+      [
+       "designed",
+       112.846
+      ],
+      [
+       "these",
+       113.27
+      ],
+      [
+       "weights",
+       113.422
+      ],
+      [
+       "by",
+       113.693
+      ],
+      [
+       "hand,",
+       113.846
+      ],
+      [
+       "training",
+       114.465
+      ],
+      [
+       "found",
+       114.791
+      ],
+      [
+       "all",
+       115.139
+      ],
+      [
+       "of",
+       115.356
+      ],
+      [
+       "them.",
+       115.443
+      ]
+     ],
+     "captions": [
+      {
+       "text": "These are the actual filters our baseline learned,",
+       "start": 108.117,
+       "end": 110.509
+      },
+      {
+       "text": "and the maps they produce for this frog.",
+       "start": 110.509,
+       "end": 112.498
+      },
+      {
+       "text": "Nobody designed these weights by hand, training found all of them.",
+       "start": 112.498,
+       "end": 115.927
+      }
+     ]
+    },
+    {
+     "id": "cnn-6",
+     "audio": "audio/cnn-6-32776af1b9.mp3",
+     "start": 116.126,
+     "duration": 12.985,
+     "text": "After the convolution, ReLU replaces every negative number with zero, and then 2 by 2 max pooling keeps only the biggest value in each 2 by 2 block, which cuts the maps from 32 by 32 down to 16 by 16.",
+     "words": [
+      [
+       "After",
+       116.213
+      ],
+      [
+       "the",
+       116.453
+      ],
+      [
+       "convolution,",
+       116.529
+      ],
+      [
+       "ReLU",
+       117.42
+      ],
+      [
+       "replaces",
+       117.811
+      ],
+      [
+       "every",
+       118.442
+      ],
+      [
+       "negative",
+       118.692
+      ],
+      [
+       "number",
+       119.029
+      ],
+      [
+       "with",
+       119.257
+      ],
+      [
+       "zero,",
+       119.387
+      ],
+      [
+       "and",
+       120.061
+      ],
+      [
+       "then",
+       120.17
+      ],
+      [
+       "2",
+       120.333
+      ],
+      [
+       "by",
+       120.572
+      ],
+      [
+       "2",
+       120.746
+      ],
+      [
+       "max",
+       120.996
+      ],
+      [
+       "pooling",
+       121.29
+      ],
+      [
+       "keeps",
+       121.648
+      ],
+      [
+       "only",
+       122.04
+      ],
+      [
+       "the",
+       122.311
+      ],
+      [
+       "biggest",
+       122.496
+      ],
+      [
+       "value",
+       122.833
+      ],
+      [
+       "in",
+       123.213
+      ],
+      [
+       "each",
+       123.42
+      ],
+      [
+       "2",
+       123.626
+      ],
+      [
+       "by",
+       123.909
+      ],
+      [
+       "2",
+       124.061
+      ],
+      [
+       "block,",
+       124.279
+      ],
+      [
+       "which",
+       124.876
+      ],
+      [
+       "cuts",
+       125.029
+      ],
+      [
+       "the",
+       125.268
+      ],
+      [
+       "maps",
+       125.355
+      ],
+      [
+       "from",
+       125.648
+      ],
+      [
+       "32",
+       125.79
+      ],
+      [
+       "by",
+       126.529
+      ],
+      [
+       "32",
+       126.692
+      ],
+      [
+       "down",
+       127.159
+      ],
+      [
+       "to",
+       127.54
+      ],
+      [
+       "16",
+       127.637
+      ],
+      [
+       "by",
+       128.159
+      ],
+      [
+       "16.",
+       128.29
+      ]
+     ],
+     "captions": [
+      {
+       "text": "After the convolution, ReLU replaces every negative number with zero,",
+       "start": 116.213,
+       "end": 120.061
+      },
+      {
+       "text": "and then 2 by 2 max pooling keeps only the biggest value in each",
+       "start": 120.061,
+       "end": 123.626
+      },
+      {
+       "text": "2 by 2 block, which cuts the maps from 32 by 32 down to 16 by 16.",
+       "start": 123.626,
+       "end": 129.111
+      }
+     ]
+    },
+    {
+     "id": "cnn-7",
+     "audio": "audio/cnn-7-ef4363f9ce.mp3",
+     "start": 129.219,
+     "duration": 12.673,
+     "text": "The second block does the same thing with 64 filters, but now each filter reads all 32 maps from the first block, so it can combine simpler patterns into more complicated ones. Pooling then takes everything down to 8 by 8.",
+     "words": [
+      [
+       "The",
+       129.316
+      ],
+      [
+       "second",
+       129.382
+      ],
+      [
+       "block",
+       129.708
+      ],
+      [
+       "does",
+       130.099
+      ],
+      [
+       "the",
+       130.24
+      ],
+      [
+       "same",
+       130.338
+      ],
+      [
+       "thing",
+       130.621
+      ],
+      [
+       "with",
+       130.936
+      ],
+      [
+       "64",
+       131.088
+      ],
+      [
+       "filters,",
+       131.653
+      ],
+      [
+       "but",
+       132.393
+      ],
+      [
+       "now",
+       132.534
+      ],
+      [
+       "each",
+       132.773
+      ],
+      [
+       "filter",
+       132.969
+      ],
+      [
+       "reads",
+       133.371
+      ],
+      [
+       "all",
+       133.827
+      ],
+      [
+       "32",
+       134.066
+      ],
+      [
+       "maps",
+       134.588
+      ],
+      [
+       "from",
+       134.958
+      ],
+      [
+       "the",
+       135.088
+      ],
+      [
+       "first",
+       135.153
+      ],
+      [
+       "block,",
+       135.414
+      ],
+      [
+       "so",
+       136.001
+      ],
+      [
+       "it",
+       136.143
+      ],
+      [
+       "can",
+       136.208
+      ],
+      [
+       "combine",
+       136.316
+      ],
+      [
+       "simpler",
+       136.73
+      ],
+      [
+       "patterns",
+       137.034
+      ],
+      [
+       "into",
+       137.425
+      ],
+      [
+       "more",
+       137.643
+      ],
+      [
+       "complicated",
+       137.849
+      ],
+      [
+       "ones.",
+       138.414
+      ],
+      [
+       "Pooling",
+       139.208
+      ],
+      [
+       "then",
+       139.501
+      ],
+      [
+       "takes",
+       139.643
+      ],
+      [
+       "everything",
+       140.056
+      ],
+      [
+       "down",
+       140.414
+      ],
+      [
+       "to",
+       140.697
+      ],
+      [
+       "8",
+       140.86
+      ],
+      [
+       "by",
+       141.045
+      ],
+      [
+       "8.",
+       141.295
+      ]
+     ],
+     "captions": [
+      {
+       "text": "The second block does the same thing with 64 filters,",
+       "start": 129.316,
+       "end": 132.393
+      },
+      {
+       "text": "but now each filter reads all 32 maps from the first block,",
+       "start": 132.393,
+       "end": 136.001
+      },
+      {
+       "text": "so it can combine simpler patterns into more complicated ones.",
+       "start": 136.001,
+       "end": 139.208
+      },
+      {
+       "text": "Pooling then takes everything down to 8 by 8.",
+       "start": 139.208,
+       "end": 141.891
+      }
+     ]
+    },
+    {
+     "id": "cnn-8",
+     "audio": "audio/cnn-8-ce8ef10864.mp3",
+     "start": 141.996,
+     "duration": 13.441,
+     "text": "That leaves 64 maps of 8 by 8, which is 4,096 numbers. We flatten them into one long list, pass it through a hidden layer of 128 units, and the last layer gives us ten scores, one for each class.",
+     "words": [
+      [
+       "That",
+       142.083
+      ],
+      [
+       "leaves",
+       142.246
+      ],
+      [
+       "64",
+       142.528
+      ],
+      [
+       "maps",
+       143.191
+      ],
+      [
+       "of",
+       143.572
+      ],
+      [
+       "8",
+       143.811
+      ],
+      [
+       "by",
+       143.974
+      ],
+      [
+       "8,",
+       144.202
+      ],
+      [
+       "which",
+       144.735
+      ],
+      [
+       "is",
+       144.898
+      ],
+      [
+       "4,096",
+       144.996
+      ],
+      [
+       "numbers.",
+       146.278
+      ],
+      [
+       "We",
+       147.072
+      ],
+      [
+       "flatten",
+       147.191
+      ],
+      [
+       "them",
+       147.583
+      ],
+      [
+       "into",
+       147.756
+      ],
+      [
+       "one",
+       147.985
+      ],
+      [
+       "long",
+       148.256
+      ],
+      [
+       "list,",
+       148.528
+      ],
+      [
+       "pass",
+       149.126
+      ],
+      [
+       "it",
+       149.409
+      ],
+      [
+       "through",
+       149.517
+      ],
+      [
+       "a",
+       149.724
+      ],
+      [
+       "hidden",
+       149.778
+      ],
+      [
+       "layer",
+       150.072
+      ],
+      [
+       "of",
+       150.441
+      ],
+      [
+       "128",
+       150.55
+      ],
+      [
+       "units,",
+       151.43
+      ],
+      [
+       "and",
+       152.083
+      ],
+      [
+       "the",
+       152.18
+      ],
+      [
+       "last",
+       152.256
+      ],
+      [
+       "layer",
+       152.539
+      ],
+      [
+       "gives",
+       152.778
+      ],
+      [
+       "us",
+       152.974
+      ],
+      [
+       "ten",
+       153.104
+      ],
+      [
+       "scores,",
+       153.311
+      ],
+      [
+       "one",
+       154.017
+      ],
+      [
+       "for",
+       154.256
+      ],
+      [
+       "each",
+       154.463
+      ],
+      [
+       "class.",
+       154.604
+      ]
+     ],
+     "captions": [
+      {
+       "text": "That leaves 64 maps of 8 by 8, which is 4,096 numbers.",
+       "start": 142.083,
+       "end": 147.072
+      },
+      {
+       "text": "We flatten them into one long list, pass it through a hidden layer of 128 units,",
+       "start": 147.072,
+       "end": 152.083
+      },
+      {
+       "text": "and the last layer gives us ten scores, one for each class.",
+       "start": 152.083,
+       "end": 155.436
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "learn",
+   "title": "How it learns",
+   "start": 156.315,
+   "end": 267.441,
+   "segments": [
+    {
+     "id": "learn-1",
+     "audio": "audio/learn-1-225970bc26.mp3",
+     "start": 157.215,
+     "duration": 6.793,
+     "text": "Those ten scores are called logits. They can be any size, positive or negative, so on their own they aren't probabilities yet.",
+     "words": [
+      [
+       "Those",
+       157.313
+      ],
+      [
+       "ten",
+       157.487
+      ],
+      [
+       "scores",
+       157.65
+      ],
+      [
+       "are",
+       157.943
+      ],
+      [
+       "called",
+       158.02
+      ],
+      [
+       "logits.",
+       158.237
+      ],
+      [
+       "They",
+       159.139
+      ],
+      [
+       "can",
+       159.204
+      ],
+      [
+       "be",
+       159.313
+      ],
+      [
+       "any",
+       159.476
+      ],
+      [
+       "size,",
+       159.683
+      ],
+      [
+       "positive",
+       160.324
+      ],
+      [
+       "or",
+       161.009
+      ],
+      [
+       "negative,",
+       161.074
+      ],
+      [
+       "so",
+       161.846
+      ],
+      [
+       "on",
+       161.998
+      ],
+      [
+       "their",
+       162.085
+      ],
+      [
+       "own",
+       162.237
+      ],
+      [
+       "they",
+       162.443
+      ],
+      [
+       "aren't",
+       162.574
+      ],
+      [
+       "probabilities",
+       162.77
+      ],
+      [
+       "yet.",
+       163.422
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Those ten scores are called logits.",
+       "start": 157.313,
+       "end": 159.139
+      },
+      {
+       "text": "They can be any size, positive or negative,",
+       "start": 159.139,
+       "end": 161.846
+      },
+      {
+       "text": "so on their own they aren't probabilities yet.",
+       "start": 161.846,
+       "end": 164.008
+      }
+     ]
+    },
+    {
+     "id": "learn-2",
+     "audio": "audio/learn-2-1df41d3653.mp3",
+     "start": 164.123,
+     "duration": 9.481,
+     "text": "Softmax is what turns them into probabilities. You exponentiate each score, which makes everything positive, and then divide by the total so they all add up to one.",
+     "words": [
+      [
+       "Softmax",
+       164.22
+      ],
+      [
+       "is",
+       164.938
+      ],
+      [
+       "what",
+       165.047
+      ],
+      [
+       "turns",
+       165.199
+      ],
+      [
+       "them",
+       165.536
+      ],
+      [
+       "into",
+       165.829
+      ],
+      [
+       "probabilities.",
+       165.992
+      ],
+      [
+       "You",
+       167.144
+      ],
+      [
+       "exponentiate",
+       167.297
+      ],
+      [
+       "each",
+       168.09
+      ],
+      [
+       "score,",
+       168.286
+      ],
+      [
+       "which",
+       169.036
+      ],
+      [
+       "makes",
+       169.155
+      ],
+      [
+       "everything",
+       169.525
+      ],
+      [
+       "positive,",
+       169.873
+      ],
+      [
+       "and",
+       170.666
+      ],
+      [
+       "then",
+       170.731
+      ],
+      [
+       "divide",
+       170.873
+      ],
+      [
+       "by",
+       171.34
+      ],
+      [
+       "the",
+       171.46
+      ],
+      [
+       "total",
+       171.547
+      ],
+      [
+       "so",
+       172.112
+      ],
+      [
+       "they",
+       172.22
+      ],
+      [
+       "all",
+       172.383
+      ],
+      [
+       "add",
+       172.677
+      ],
+      [
+       "up",
+       172.786
+      ],
+      [
+       "to",
+       172.905
+      ],
+      [
+       "one.",
+       173.003
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Softmax is what turns them into probabilities.",
+       "start": 164.22,
+       "end": 167.144
+      },
+      {
+       "text": "You exponentiate each score, which makes everything positive,",
+       "start": 167.144,
+       "end": 170.666
+      },
+      {
+       "text": "and then divide by the total so they all add up to one.",
+       "start": 170.666,
+       "end": 173.603
+      }
+     ]
+    },
+    {
+     "id": "learn-3",
+     "audio": "audio/learn-3-b8de4d6ff5.mp3",
+     "start": 174.384,
+     "duration": 6.625,
+     "text": "Here the model puts about 74 percent on frog and about 14 percent on cat, so it's mostly right but not very sure.",
+     "words": [
+      [
+       "Here",
+       174.384
+      ],
+      [
+       "the",
+       174.677
+      ],
+      [
+       "model",
+       174.912
+      ],
+      [
+       "puts",
+       175.263
+      ],
+      [
+       "about",
+       175.556
+      ],
+      [
+       "74",
+       175.908
+      ],
+      [
+       "percent",
+       176.084
+      ],
+      [
+       "on",
+       176.553
+      ],
+      [
+       "frog",
+       176.729
+      ],
+      [
+       "and",
+       177.022
+      ],
+      [
+       "about",
+       177.257
+      ],
+      [
+       "14",
+       177.608
+      ],
+      [
+       "percent",
+       177.784
+      ],
+      [
+       "on",
+       178.253
+      ],
+      [
+       "cat,",
+       178.429
+      ],
+      [
+       "so",
+       178.722
+      ],
+      [
+       "it's",
+       178.898
+      ],
+      [
+       "mostly",
+       179.191
+      ],
+      [
+       "right",
+       179.602
+      ],
+      [
+       "but",
+       179.953
+      ],
+      [
+       "not",
+       180.188
+      ],
+      [
+       "very",
+       180.422
+      ],
+      [
+       "sure.",
+       180.715
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Here the model puts about 74 percent on frog and about",
+       "start": 174.384,
+       "end": 177.608
+      },
+      {
+       "text": "14 percent on cat, so it's mostly right but not very sure.",
+       "start": 177.608,
+       "end": 181.009
+      }
+     ]
+    },
+    {
+     "id": "learn-4",
+     "audio": "audio/learn-4-9ec9e02260.mp3",
+     "start": 181.128,
+     "duration": 18.505,
+     "text": "To train it, we need one number for how wrong it was, and that's the cross-entropy loss, the negative log of the probability it gave the correct class. Confident and right costs almost nothing, this frog only costs about 0.31. Confident and wrong costs a lot, so giving the right answer just 2 percent would cost about 3.9.",
+     "words": [
+      [
+       "To",
+       181.128
+      ],
+      [
+       "train",
+       181.3
+      ],
+      [
+       "it,",
+       181.644
+      ],
+      [
+       "we",
+       181.873
+      ],
+      [
+       "need",
+       182.045
+      ],
+      [
+       "one",
+       182.331
+      ],
+      [
+       "number",
+       182.56
+      ],
+      [
+       "for",
+       182.962
+      ],
+      [
+       "how",
+       183.191
+      ],
+      [
+       "wrong",
+       183.42
+      ],
+      [
+       "it",
+       183.764
+      ],
+      [
+       "was,",
+       183.935
+      ],
+      [
+       "and",
+       184.222
+      ],
+      [
+       "that's",
+       184.451
+      ],
+      [
+       "the",
+       184.852
+      ],
+      [
+       "cross-entropy",
+       185.081
+      ],
+      [
+       "loss,",
+       185.883
+      ],
+      [
+       "the",
+       186.227
+      ],
+      [
+       "negative",
+       186.456
+      ],
+      [
+       "log",
+       186.972
+      ],
+      [
+       "of",
+       187.201
+      ],
+      [
+       "the",
+       187.373
+      ],
+      [
+       "probability",
+       187.602
+      ],
+      [
+       "it",
+       188.29
+      ],
+      [
+       "gave",
+       188.461
+      ],
+      [
+       "the",
+       188.748
+      ],
+      [
+       "correct",
+       188.977
+      ],
+      [
+       "class.",
+       189.435
+      ],
+      [
+       "Confident",
+       189.836
+      ],
+      [
+       "and",
+       190.409
+      ],
+      [
+       "right",
+       190.638
+      ],
+      [
+       "costs",
+       190.982
+      ],
+      [
+       "almost",
+       191.326
+      ],
+      [
+       "nothing,",
+       191.727
+      ],
+      [
+       "this",
+       192.243
+      ],
+      [
+       "frog",
+       192.529
+      ],
+      [
+       "only",
+       192.815
+      ],
+      [
+       "costs",
+       193.102
+      ],
+      [
+       "about",
+       193.446
+      ],
+      [
+       "0.31.",
+       193.789
+      ],
+      [
+       "Confident",
+       194.133
+      ],
+      [
+       "and",
+       194.706
+      ],
+      [
+       "wrong",
+       194.935
+      ],
+      [
+       "costs",
+       195.279
+      ],
+      [
+       "a",
+       195.623
+      ],
+      [
+       "lot,",
+       195.737
+      ],
+      [
+       "so",
+       196.024
+      ],
+      [
+       "giving",
+       196.196
+      ],
+      [
+       "the",
+       196.597
+      ],
+      [
+       "right",
+       196.826
+      ],
+      [
+       "answer",
+       197.169
+      ],
+      [
+       "just",
+       197.571
+      ],
+      [
+       "2",
+       197.857
+      ],
+      [
+       "percent",
+       197.972
+      ],
+      [
+       "would",
+       198.43
+      ],
+      [
+       "cost",
+       198.774
+      ],
+      [
+       "about",
+       199.06
+      ],
+      [
+       "3.9.",
+       199.404
+      ]
+     ],
+     "captions": [
+      {
+       "text": "To train it, we need one number for how wrong it was,",
+       "start": 181.128,
+       "end": 184.222
+      },
+      {
+       "text": "and that's the cross-entropy loss,",
+       "start": 184.222,
+       "end": 186.227
+      },
+      {
+       "text": "the negative log of the probability it gave the correct class.",
+       "start": 186.227,
+       "end": 189.836
+      },
+      {
+       "text": "Confident and right costs almost nothing,",
+       "start": 189.836,
+       "end": 192.243
+      },
+      {
+       "text": "this frog only costs about 0.31.",
+       "start": 192.243,
+       "end": 194.133
+      },
+      {
+       "text": "Confident and wrong costs a lot,",
+       "start": 194.133,
+       "end": 196.024
+      },
+      {
+       "text": "so giving the right answer just 2 percent would cost about 3.9.",
+       "start": 196.024,
+       "end": 199.633
+      }
+     ]
+    },
+    {
+     "id": "learn-5",
+     "audio": "audio/learn-5-a9d07be319.mp3",
+     "start": 200.411,
+     "duration": 12.313,
+     "text": "One detail about PyTorch here. The model itself only outputs logits, and PyTorch's cross-entropy loss applies log-softmax internally, so softmax is just how we read the outputs, it isn't an extra layer in the model.",
+     "words": [
+      [
+       "One",
+       200.498
+      ],
+      [
+       "detail",
+       200.64
+      ],
+      [
+       "about",
+       200.998
+      ],
+      [
+       "PyTorch",
+       201.226
+      ],
+      [
+       "here.",
+       201.683
+      ],
+      [
+       "The",
+       202.303
+      ],
+      [
+       "model",
+       202.368
+      ],
+      [
+       "itself",
+       202.65
+      ],
+      [
+       "only",
+       203.118
+      ],
+      [
+       "outputs",
+       203.444
+      ],
+      [
+       "logits,",
+       203.89
+      ],
+      [
+       "and",
+       204.563
+      ],
+      [
+       "PyTorch's",
+       204.683
+      ],
+      [
+       "cross-entropy",
+       205.303
+      ],
+      [
+       "loss",
+       205.944
+      ],
+      [
+       "applies",
+       206.281
+      ],
+      [
+       "log-softmax",
+       206.65
+      ],
+      [
+       "internally,",
+       207.4
+      ],
+      [
+       "so",
+       208.15
+      ],
+      [
+       "softmax",
+       208.324
+      ],
+      [
+       "is",
+       208.966
+      ],
+      [
+       "just",
+       209.107
+      ],
+      [
+       "how",
+       209.346
+      ],
+      [
+       "we",
+       209.476
+      ],
+      [
+       "read",
+       209.618
+      ],
+      [
+       "the",
+       209.813
+      ],
+      [
+       "outputs,",
+       209.911
+      ],
+      [
+       "it",
+       210.759
+      ],
+      [
+       "isn't",
+       210.835
+      ],
+      [
+       "an",
+       211.074
+      ],
+      [
+       "extra",
+       211.281
+      ],
+      [
+       "layer",
+       211.585
+      ],
+      [
+       "in",
+       211.922
+      ],
+      [
+       "the",
+       211.987
+      ],
+      [
+       "model.",
+       212.053
+      ]
+     ],
+     "captions": [
+      {
+       "text": "One detail about PyTorch here.",
+       "start": 200.498,
+       "end": 202.303
+      },
+      {
+       "text": "The model itself only outputs logits, and PyTorch's cross-entropy",
+       "start": 202.303,
+       "end": 205.944
+      },
+      {
+       "text": "loss applies log-softmax internally, so softmax is just",
+       "start": 205.944,
+       "end": 209.346
+      },
+      {
+       "text": "how we read the outputs, it isn't an extra layer in the model.",
+       "start": 209.346,
+       "end": 212.724
+      }
+     ]
+    },
+    {
+     "id": "learn-6",
+     "audio": "audio/learn-6-357883190b.mp3",
+     "start": 212.91,
+     "duration": 12.793,
+     "text": "Backpropagation then uses the chain rule to work backwards from the loss through every layer, and gives each of the 545,098 parameters a gradient, which says how the loss would change if that parameter moved a tiny bit.",
+     "words": [
+      [
+       "Backpropagation",
+       213.007
+      ],
+      [
+       "then",
+       213.844
+      ],
+      [
+       "uses",
+       214.007
+      ],
+      [
+       "the",
+       214.344
+      ],
+      [
+       "chain",
+       214.442
+      ],
+      [
+       "rule",
+       214.757
+      ],
+      [
+       "to",
+       215.018
+      ],
+      [
+       "work",
+       215.138
+      ],
+      [
+       "backwards",
+       215.442
+      ],
+      [
+       "from",
+       215.91
+      ],
+      [
+       "the",
+       216.051
+      ],
+      [
+       "loss",
+       216.127
+      ],
+      [
+       "through",
+       216.464
+      ],
+      [
+       "every",
+       216.812
+      ],
+      [
+       "layer,",
+       217.083
+      ],
+      [
+       "and",
+       217.757
+      ],
+      [
+       "gives",
+       217.823
+      ],
+      [
+       "each",
+       218.149
+      ],
+      [
+       "of",
+       218.323
+      ],
+      [
+       "the",
+       218.388
+      ],
+      [
+       "545,098",
+       218.464
+      ],
+      [
+       "parameters",
+       220.616
+      ],
+      [
+       "a",
+       221.105
+      ],
+      [
+       "gradient,",
+       221.16
+      ],
+      [
+       "which",
+       221.953
+      ],
+      [
+       "says",
+       222.105
+      ],
+      [
+       "how",
+       222.301
+      ],
+      [
+       "the",
+       222.431
+      ],
+      [
+       "loss",
+       222.529
+      ],
+      [
+       "would",
+       222.801
+      ],
+      [
+       "change",
+       222.942
+      ],
+      [
+       "if",
+       223.605
+      ],
+      [
+       "that",
+       223.692
+      ],
+      [
+       "parameter",
+       223.855
+      ],
+      [
+       "moved",
+       224.475
+      ],
+      [
+       "a",
+       224.725
+      ],
+      [
+       "tiny",
+       224.768
+      ],
+      [
+       "bit.",
+       225.073
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Backpropagation then uses the chain rule to work backwards",
+       "start": 213.007,
+       "end": 215.91
+      },
+      {
+       "text": "from the loss through every layer, and gives each",
+       "start": 215.91,
+       "end": 218.323
+      },
+      {
+       "text": "of the 545,098 parameters a gradient, which says how the",
+       "start": 218.323,
+       "end": 222.529
+      },
+      {
+       "text": "loss would change if that parameter moved a tiny bit.",
+       "start": 222.529,
+       "end": 225.702
+      }
+     ]
+    },
+    {
+     "id": "learn-7",
+     "audio": "audio/learn-7-d884ccfbea.mp3",
+     "start": 226.386,
+     "duration": 17.089,
+     "text": "Gradient descent moves every weight a small step against its gradient, with the learning rate setting the step size. This surface is a real slice of the loss around our trained baseline, along two random directions in weight space, and the dashed path is just an illustration of stepping downhill, not steps we recorded.",
+     "words": [
+      [
+       "Gradient",
+       226.473
+      ],
+      [
+       "descent",
+       226.853
+      ],
+      [
+       "moves",
+       227.266
+      ],
+      [
+       "every",
+       227.745
+      ],
+      [
+       "weight",
+       228.016
+      ],
+      [
+       "a",
+       228.332
+      ],
+      [
+       "small",
+       228.386
+      ],
+      [
+       "step",
+       228.777
+      ],
+      [
+       "against",
+       229.158
+      ],
+      [
+       "its",
+       229.473
+      ],
+      [
+       "gradient,",
+       229.593
+      ],
+      [
+       "with",
+       230.332
+      ],
+      [
+       "the",
+       230.451
+      ],
+      [
+       "learning",
+       230.549
+      ],
+      [
+       "rate",
+       230.908
+      ],
+      [
+       "setting",
+       231.223
+      ],
+      [
+       "the",
+       231.495
+      ],
+      [
+       "step",
+       231.56
+      ],
+      [
+       "size.",
+       231.81
+      ],
+      [
+       "This",
+       232.614
+      ],
+      [
+       "surface",
+       232.799
+      ],
+      [
+       "is",
+       233.31
+      ],
+      [
+       "a",
+       233.429
+      ],
+      [
+       "real",
+       233.506
+      ],
+      [
+       "slice",
+       233.875
+      ],
+      [
+       "of",
+       234.332
+      ],
+      [
+       "the",
+       234.397
+      ],
+      [
+       "loss",
+       234.484
+      ],
+      [
+       "around",
+       234.799
+      ],
+      [
+       "our",
+       235.147
+      ],
+      [
+       "trained",
+       235.234
+      ],
+      [
+       "baseline,",
+       235.625
+      ],
+      [
+       "along",
+       236.386
+      ],
+      [
+       "two",
+       236.679
+      ],
+      [
+       "random",
+       236.951
+      ],
+      [
+       "directions",
+       237.288
+      ],
+      [
+       "in",
+       237.777
+      ],
+      [
+       "weight",
+       237.875
+      ],
+      [
+       "space,",
+       238.071
+      ],
+      [
+       "and",
+       238.81
+      ],
+      [
+       "the",
+       238.897
+      ],
+      [
+       "dashed",
+       238.984
+      ],
+      [
+       "path",
+       239.288
+      ],
+      [
+       "is",
+       239.745
+      ],
+      [
+       "just",
+       239.864
+      ],
+      [
+       "an",
+       240.125
+      ],
+      [
+       "illustration",
+       240.256
+      ],
+      [
+       "of",
+       240.951
+      ],
+      [
+       "stepping",
+       241.049
+      ],
+      [
+       "downhill,",
+       241.375
+      ],
+      [
+       "not",
+       242.169
+      ],
+      [
+       "steps",
+       242.332
+      ],
+      [
+       "we",
+       242.593
+      ],
+      [
+       "recorded.",
+       242.701
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Gradient descent moves every weight a small step against its gradient,",
+       "start": 226.473,
+       "end": 230.332
+      },
+      {
+       "text": "with the learning rate setting the step size.",
+       "start": 230.332,
+       "end": 232.614
+      },
+      {
+       "text": "This surface is a real slice of the loss around our trained baseline,",
+       "start": 232.614,
+       "end": 236.386
+      },
+      {
+       "text": "along two random directions in weight space, and the dashed path",
+       "start": 236.386,
+       "end": 239.745
+      },
+      {
+       "text": "is just an illustration of stepping downhill, not steps we recorded.",
+       "start": 239.745,
+       "end": 243.475
+      }
+     ]
+    },
+    {
+     "id": "learn-8",
+     "audio": "audio/learn-8-d35ba8ef3d.mp3",
+     "start": 244.167,
+     "duration": 8.905,
+     "text": "Each step uses a batch of 64 images, so one full pass through the 50,000 training images, which is called an epoch, takes 782 steps.",
+     "words": [
+      [
+       "Each",
+       244.254
+      ],
+      [
+       "step",
+       244.428
+      ],
+      [
+       "uses",
+       244.743
+      ],
+      [
+       "a",
+       245.036
+      ],
+      [
+       "batch",
+       245.102
+      ],
+      [
+       "of",
+       245.45
+      ],
+      [
+       "64",
+       245.547
+      ],
+      [
+       "images,",
+       246.167
+      ],
+      [
+       "so",
+       246.841
+      ],
+      [
+       "one",
+       246.993
+      ],
+      [
+       "full",
+       247.232
+      ],
+      [
+       "pass",
+       247.482
+      ],
+      [
+       "through",
+       247.852
+      ],
+      [
+       "the",
+       247.96
+      ],
+      [
+       "50,000",
+       248.047
+      ],
+      [
+       "training",
+       248.819
+      ],
+      [
+       "images,",
+       249.145
+      ],
+      [
+       "which",
+       249.776
+      ],
+      [
+       "is",
+       249.917
+      ],
+      [
+       "called",
+       250.004
+      ],
+      [
+       "an",
+       250.221
+      ],
+      [
+       "epoch,",
+       250.319
+      ],
+      [
+       "takes",
+       250.895
+      ],
+      [
+       "782",
+       251.156
+      ],
+      [
+       "steps.",
+       252.221
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Each step uses a batch of 64 images, so one full pass through the",
+       "start": 244.254,
+       "end": 248.047
+      },
+      {
+       "text": "50,000 training images, which is called an epoch, takes 782 steps.",
+       "start": 248.047,
+       "end": 253.072
+      }
+     ]
+    },
+    {
+     "id": "learn-9",
+     "audio": "audio/learn-9-a7b2e5c8e5.mp3",
+     "start": 253.172,
+     "duration": 13.321,
+     "text": "We trained for ten epochs with a learning rate of 0.01, and this baseline reached 63.68 percent test accuracy. That's a lot better than the 10 percent you'd get from guessing, but it's still wrong on more than a third of the test images.",
+     "words": [
+      [
+       "We",
+       253.172
+      ],
+      [
+       "trained",
+       253.341
+      ],
+      [
+       "for",
+       253.79
+      ],
+      [
+       "ten",
+       254.015
+      ],
+      [
+       "epochs",
+       254.24
+      ],
+      [
+       "with",
+       254.633
+      ],
+      [
+       "a",
+       254.914
+      ],
+      [
+       "learning",
+       255.027
+      ],
+      [
+       "rate",
+       255.533
+      ],
+      [
+       "of",
+       255.814
+      ],
+      [
+       "0.01,",
+       255.982
+      ],
+      [
+       "and",
+       256.32
+      ],
+      [
+       "this",
+       256.544
+      ],
+      [
+       "baseline",
+       256.825
+      ],
+      [
+       "reached",
+       257.331
+      ],
+      [
+       "63.68",
+       257.781
+      ],
+      [
+       "percent",
+       258.118
+      ],
+      [
+       "test",
+       258.568
+      ],
+      [
+       "accuracy.",
+       258.849
+      ],
+      [
+       "That's",
+       259.411
+      ],
+      [
+       "a",
+       259.804
+      ],
+      [
+       "lot",
+       259.917
+      ],
+      [
+       "better",
+       260.142
+      ],
+      [
+       "than",
+       260.535
+      ],
+      [
+       "the",
+       260.816
+      ],
+      [
+       "10",
+       261.041
+      ],
+      [
+       "percent",
+       261.21
+      ],
+      [
+       "you'd",
+       261.659
+      ],
+      [
+       "get",
+       261.996
+      ],
+      [
+       "from",
+       262.221
+      ],
+      [
+       "guessing,",
+       262.502
+      ],
+      [
+       "but",
+       263.064
+      ],
+      [
+       "it's",
+       263.289
+      ],
+      [
+       "still",
+       263.57
+      ],
+      [
+       "wrong",
+       263.907
+      ],
+      [
+       "on",
+       264.245
+      ],
+      [
+       "more",
+       264.413
+      ],
+      [
+       "than",
+       264.694
+      ],
+      [
+       "a",
+       264.975
+      ],
+      [
+       "third",
+       265.088
+      ],
+      [
+       "of",
+       265.425
+      ],
+      [
+       "the",
+       265.594
+      ],
+      [
+       "test",
+       265.818
+      ],
+      [
+       "images.",
+       266.099
+      ]
+     ],
+     "captions": [
+      {
+       "text": "We trained for ten epochs with a learning rate of 0.01,",
+       "start": 253.172,
+       "end": 256.32
+      },
+      {
+       "text": "and this baseline reached 63.68 percent test accuracy.",
+       "start": 256.32,
+       "end": 259.411
+      },
+      {
+       "text": "That's a lot better than the 10 percent you'd get from guessing,",
+       "start": 259.411,
+       "end": 263.064
+      },
+      {
+       "text": "but it's still wrong on more than a third of the test images.",
+       "start": 263.064,
+       "end": 266.493
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "batch",
+   "title": "Bigger batches",
+   "start": 267.441,
+   "end": 329.543,
+   "segments": [
+    {
+     "id": "batch-1",
+     "audio": "audio/batch-1-b06d99ce8b.mp3",
+     "start": 268.341,
+     "duration": 12.169,
+     "text": "The first thing we tried was making training faster. At batch size 64 the GPU was only busy about 42 percent of the time, so we tried batch size 512, and ten epochs finished in 5 seconds instead of 22.",
+     "words": [
+      [
+       "The",
+       268.341
+      ],
+      [
+       "first",
+       268.583
+      ],
+      [
+       "thing",
+       268.947
+      ],
+      [
+       "we",
+       269.31
+      ],
+      [
+       "tried",
+       269.492
+      ],
+      [
+       "was",
+       269.855
+      ],
+      [
+       "making",
+       270.097
+      ],
+      [
+       "training",
+       270.521
+      ],
+      [
+       "faster.",
+       271.066
+      ],
+      [
+       "At",
+       271.55
+      ],
+      [
+       "batch",
+       271.732
+      ],
+      [
+       "size",
+       272.095
+      ],
+      [
+       "64",
+       272.397
+      ],
+      [
+       "the",
+       272.579
+      ],
+      [
+       "GPU",
+       272.821
+      ],
+      [
+       "was",
+       273.063
+      ],
+      [
+       "only",
+       273.306
+      ],
+      [
+       "busy",
+       273.608
+      ],
+      [
+       "about",
+       273.911
+      ],
+      [
+       "42",
+       274.274
+      ],
+      [
+       "percent",
+       274.456
+      ],
+      [
+       "of",
+       274.94
+      ],
+      [
+       "the",
+       275.122
+      ],
+      [
+       "time,",
+       275.364
+      ],
+      [
+       "so",
+       275.727
+      ],
+      [
+       "we",
+       275.909
+      ],
+      [
+       "tried",
+       276.09
+      ],
+      [
+       "batch",
+       276.454
+      ],
+      [
+       "size",
+       276.817
+      ],
+      [
+       "512,",
+       277.12
+      ],
+      [
+       "and",
+       277.422
+      ],
+      [
+       "ten",
+       277.665
+      ],
+      [
+       "epochs",
+       277.907
+      ],
+      [
+       "finished",
+       278.33
+      ],
+      [
+       "in",
+       278.875
+      ],
+      [
+       "5",
+       279.057
+      ],
+      [
+       "seconds",
+       279.178
+      ],
+      [
+       "instead",
+       279.662
+      ],
+      [
+       "of",
+       280.147
+      ],
+      [
+       "22.",
+       280.328
+      ]
+     ],
+     "captions": [
+      {
+       "text": "The first thing we tried was making training faster.",
+       "start": 268.341,
+       "end": 271.55
+      },
+      {
+       "text": "At batch size 64 the GPU was only busy about 42",
+       "start": 271.55,
+       "end": 274.456
+      },
+      {
+       "text": "percent of the time, so we tried batch size 512,",
+       "start": 274.456,
+       "end": 277.422
+      },
+      {
+       "text": "and ten epochs finished in 5 seconds instead of 22.",
+       "start": 277.422,
+       "end": 280.51
+      }
+     ]
+    },
+    {
+     "id": "batch-2",
+     "audio": "audio/batch-2-edbfd08347.mp3",
+     "start": 280.607,
+     "duration": 16.705,
+     "text": "The catch was that test accuracy dropped to 48.58 percent. With the same number of epochs, a batch eight times bigger also means eight times fewer weight updates, 980 instead of 7,820 at the same learning rate, so our guess was that the model just hadn't taken enough steps.",
+     "words": [
+      [
+       "The",
+       280.607
+      ],
+      [
+       "catch",
+       280.851
+      ],
+      [
+       "was",
+       281.217
+      ],
+      [
+       "that",
+       281.461
+      ],
+      [
+       "test",
+       281.766
+      ],
+      [
+       "accuracy",
+       282.071
+      ],
+      [
+       "dropped",
+       282.619
+      ],
+      [
+       "to",
+       283.107
+      ],
+      [
+       "48.58",
+       283.29
+      ],
+      [
+       "percent.",
+       283.656
+      ],
+      [
+       "With",
+       284.204
+      ],
+      [
+       "the",
+       284.509
+      ],
+      [
+       "same",
+       284.753
+      ],
+      [
+       "number",
+       285.058
+      ],
+      [
+       "of",
+       285.485
+      ],
+      [
+       "epochs,",
+       285.668
+      ],
+      [
+       "a",
+       286.155
+      ],
+      [
+       "batch",
+       286.277
+      ],
+      [
+       "eight",
+       286.643
+      ],
+      [
+       "times",
+       287.009
+      ],
+      [
+       "bigger",
+       287.375
+      ],
+      [
+       "also",
+       287.801
+      ],
+      [
+       "means",
+       288.106
+      ],
+      [
+       "eight",
+       288.472
+      ],
+      [
+       "times",
+       288.838
+      ],
+      [
+       "fewer",
+       289.204
+      ],
+      [
+       "weight",
+       289.569
+      ],
+      [
+       "updates,",
+       289.996
+      ],
+      [
+       "980",
+       290.545
+      ],
+      [
+       "instead",
+       290.789
+      ],
+      [
+       "of",
+       291.276
+      ],
+      [
+       "7,820",
+       291.459
+      ],
+      [
+       "at",
+       291.825
+      ],
+      [
+       "the",
+       292.008
+      ],
+      [
+       "same",
+       292.252
+      ],
+      [
+       "learning",
+       292.557
+      ],
+      [
+       "rate,",
+       293.105
+      ],
+      [
+       "so",
+       293.471
+      ],
+      [
+       "our",
+       293.654
+      ],
+      [
+       "guess",
+       293.898
+      ],
+      [
+       "was",
+       294.264
+      ],
+      [
+       "that",
+       294.508
+      ],
+      [
+       "the",
+       294.812
+      ],
+      [
+       "model",
+       295.056
+      ],
+      [
+       "just",
+       295.422
+      ],
+      [
+       "hadn't",
+       295.727
+      ],
+      [
+       "taken",
+       296.154
+      ],
+      [
+       "enough",
+       296.519
+      ],
+      [
+       "steps.",
+       296.946
+      ]
+     ],
+     "captions": [
+      {
+       "text": "The catch was that test accuracy dropped to 48.58 percent.",
+       "start": 280.607,
+       "end": 284.204
+      },
+      {
+       "text": "With the same number of epochs, a batch eight times bigger also means",
+       "start": 284.204,
+       "end": 288.472
+      },
+      {
+       "text": "eight times fewer weight updates, 980 instead of 7,820 at the same learning rate,",
+       "start": 288.472,
+       "end": 293.471
+      },
+      {
+       "text": "so our guess was that the model just hadn't taken enough steps.",
+       "start": 293.471,
+       "end": 297.312
+      }
+     ]
+    },
+    {
+     "id": "batch-3",
+     "audio": "audio/batch-3-2e8aa74c50.mp3",
+     "start": 297.508,
+     "duration": 19.249,
+     "text": "To check that, we trained batch 512 for 80 epochs, which gives 7,840 updates, almost exactly the same as the baseline, and that run reached 67.67 percent. That fits the step count explanation, but it isn't a perfectly clean test, because this run also went through eight times as many images.",
+     "words": [
+      [
+       "To",
+       297.508
+      ],
+      [
+       "check",
+       297.705
+      ],
+      [
+       "that,",
+       298.101
+      ],
+      [
+       "we",
+       298.497
+      ],
+      [
+       "trained",
+       298.694
+      ],
+      [
+       "batch",
+       299.222
+      ],
+      [
+       "512",
+       299.617
+      ],
+      [
+       "for",
+       299.881
+      ],
+      [
+       "80",
+       300.145
+      ],
+      [
+       "epochs,",
+       300.342
+      ],
+      [
+       "which",
+       300.87
+      ],
+      [
+       "gives",
+       301.265
+      ],
+      [
+       "7,840",
+       301.661
+      ],
+      [
+       "updates,",
+       302.056
+      ],
+      [
+       "almost",
+       302.65
+      ],
+      [
+       "exactly",
+       303.111
+      ],
+      [
+       "the",
+       303.638
+      ],
+      [
+       "same",
+       303.902
+      ],
+      [
+       "as",
+       304.232
+      ],
+      [
+       "the",
+       304.429
+      ],
+      [
+       "baseline,",
+       304.693
+      ],
+      [
+       "and",
+       305.352
+      ],
+      [
+       "that",
+       305.616
+      ],
+      [
+       "run",
+       305.946
+      ],
+      [
+       "reached",
+       306.209
+      ],
+      [
+       "67.67",
+       306.737
+      ],
+      [
+       "percent.",
+       307.132
+      ],
+      [
+       "That",
+       307.725
+      ],
+      [
+       "fits",
+       308.055
+      ],
+      [
+       "the",
+       308.385
+      ],
+      [
+       "step",
+       308.648
+      ],
+      [
+       "count",
+       308.978
+      ],
+      [
+       "explanation,",
+       309.373
+      ],
+      [
+       "but",
+       310.23
+      ],
+      [
+       "it",
+       310.494
+      ],
+      [
+       "isn't",
+       310.692
+      ],
+      [
+       "a",
+       311.087
+      ],
+      [
+       "perfectly",
+       311.219
+      ],
+      [
+       "clean",
+       311.878
+      ],
+      [
+       "test,",
+       312.274
+      ],
+      [
+       "because",
+       312.669
+      ],
+      [
+       "this",
+       313.197
+      ],
+      [
+       "run",
+       313.526
+      ],
+      [
+       "also",
+       313.79
+      ],
+      [
+       "went",
+       314.12
+      ],
+      [
+       "through",
+       314.449
+      ],
+      [
+       "eight",
+       314.977
+      ],
+      [
+       "times",
+       315.372
+      ],
+      [
+       "as",
+       315.768
+      ],
+      [
+       "many",
+       315.965
+      ],
+      [
+       "images.",
+       316.295
+      ]
+     ],
+     "captions": [
+      {
+       "text": "To check that, we trained batch 512 for 80 epochs,",
+       "start": 297.508,
+       "end": 300.87
+      },
+      {
+       "text": "which gives 7,840 updates, almost exactly the same",
+       "start": 300.87,
+       "end": 304.232
+      },
+      {
+       "text": "as the baseline, and that run reached 67.67 percent.",
+       "start": 304.232,
+       "end": 307.725
+      },
+      {
+       "text": "That fits the step count explanation, but it isn't a perfectly clean test,",
+       "start": 307.725,
+       "end": 312.669
+      },
+      {
+       "text": "because this run also went through eight times as many images.",
+       "start": 312.669,
+       "end": 316.756
+      }
+     ]
+    },
+    {
+     "id": "batch-4",
+     "audio": "audio/batch-4-b7289e993b.mp3",
+     "start": 316.861,
+     "duration": 11.737,
+     "text": "So with matched steps, batch 512 ended up about 4 points higher, and it took 37 seconds instead of 22. These are single runs with one seed each, so the exact gap isn't something to lean on too hard.",
+     "words": [
+      [
+       "So",
+       316.861
+      ],
+      [
+       "with",
+       317.039
+      ],
+      [
+       "matched",
+       317.335
+      ],
+      [
+       "steps,",
+       317.809
+      ],
+      [
+       "batch",
+       318.224
+      ],
+      [
+       "512",
+       318.58
+      ],
+      [
+       "ended",
+       318.817
+      ],
+      [
+       "up",
+       319.173
+      ],
+      [
+       "about",
+       319.35
+      ],
+      [
+       "4",
+       319.706
+      ],
+      [
+       "points",
+       319.825
+      ],
+      [
+       "higher,",
+       320.24
+      ],
+      [
+       "and",
+       320.714
+      ],
+      [
+       "it",
+       320.951
+      ],
+      [
+       "took",
+       321.129
+      ],
+      [
+       "37",
+       321.425
+      ],
+      [
+       "seconds",
+       321.603
+      ],
+      [
+       "instead",
+       322.077
+      ],
+      [
+       "of",
+       322.551
+      ],
+      [
+       "22.",
+       322.729
+      ],
+      [
+       "These",
+       322.966
+      ],
+      [
+       "are",
+       323.322
+      ],
+      [
+       "single",
+       323.559
+      ],
+      [
+       "runs",
+       323.974
+      ],
+      [
+       "with",
+       324.27
+      ],
+      [
+       "one",
+       324.567
+      ],
+      [
+       "seed",
+       324.804
+      ],
+      [
+       "each,",
+       325.1
+      ],
+      [
+       "so",
+       325.456
+      ],
+      [
+       "the",
+       325.634
+      ],
+      [
+       "exact",
+       325.871
+      ],
+      [
+       "gap",
+       326.226
+      ],
+      [
+       "isn't",
+       326.464
+      ],
+      [
+       "something",
+       326.819
+      ],
+      [
+       "to",
+       327.412
+      ],
+      [
+       "lean",
+       327.59
+      ],
+      [
+       "on",
+       327.886
+      ],
+      [
+       "too",
+       328.064
+      ],
+      [
+       "hard.",
+       328.301
+      ]
+     ],
+     "captions": [
+      {
+       "text": "So with matched steps, batch 512 ended up about 4 points higher,",
+       "start": 316.861,
+       "end": 320.714
+      },
+      {
+       "text": "and it took 37 seconds instead of 22.",
+       "start": 320.714,
+       "end": 322.966
+      },
+      {
+       "text": "These are single runs with one seed each,",
+       "start": 322.966,
+       "end": 325.456
+      },
+      {
+       "text": "so the exact gap isn't something to lean on too hard.",
+       "start": 325.456,
+       "end": 328.598
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aug1",
+   "title": "Augmentation on the small network",
+   "start": 329.543,
+   "end": 412.491,
+   "segments": [
+    {
+     "id": "aug1-1",
+     "audio": "audio/aug1-1-878d16ed86.mp3",
+     "start": 330.443,
+     "duration": 15.745,
+     "text": "Next we tried data augmentation, which means every time the network sees a training image, it gets a randomly changed version of it. Flip it left to right half the time, or pad the border with 4 black pixels and crop a random 32 by 32 window, which shifts the image around a little.",
+     "words": [
+      [
+       "Next",
+       330.53
+      ],
+      [
+       "we",
+       330.715
+      ],
+      [
+       "tried",
+       330.813
+      ],
+      [
+       "data",
+       331.171
+      ],
+      [
+       "augmentation,",
+       331.454
+      ],
+      [
+       "which",
+       332.421
+      ],
+      [
+       "means",
+       332.563
+      ],
+      [
+       "every",
+       332.932
+      ],
+      [
+       "time",
+       333.15
+      ],
+      [
+       "the",
+       333.389
+      ],
+      [
+       "network",
+       333.454
+      ],
+      [
+       "sees",
+       333.834
+      ],
+      [
+       "a",
+       334.063
+      ],
+      [
+       "training",
+       334.117
+      ],
+      [
+       "image,",
+       334.53
+      ],
+      [
+       "it",
+       335.139
+      ],
+      [
+       "gets",
+       335.204
+      ],
+      [
+       "a",
+       335.378
+      ],
+      [
+       "randomly",
+       335.53
+      ],
+      [
+       "changed",
+       336.073
+      ],
+      [
+       "version",
+       336.465
+      ],
+      [
+       "of",
+       336.78
+      ],
+      [
+       "it.",
+       336.889
+      ],
+      [
+       "Flip",
+       337.454
+      ],
+      [
+       "it",
+       337.606
+      ],
+      [
+       "left",
+       337.704
+      ],
+      [
+       "to",
+       337.986
+      ],
+      [
+       "right",
+       338.106
+      ],
+      [
+       "half",
+       338.323
+      ],
+      [
+       "the",
+       338.552
+      ],
+      [
+       "time,",
+       338.628
+      ],
+      [
+       "or",
+       339.28
+      ],
+      [
+       "pad",
+       339.367
+      ],
+      [
+       "the",
+       339.617
+      ],
+      [
+       "border",
+       339.715
+      ],
+      [
+       "with",
+       340.008
+      ],
+      [
+       "4",
+       340.139
+      ],
+      [
+       "black",
+       340.443
+      ],
+      [
+       "pixels",
+       340.715
+      ],
+      [
+       "and",
+       341.389
+      ],
+      [
+       "crop",
+       341.508
+      ],
+      [
+       "a",
+       341.823
+      ],
+      [
+       "random",
+       341.878
+      ],
+      [
+       "32",
+       342.302
+      ],
+      [
+       "by",
+       343.041
+      ],
+      [
+       "32",
+       343.204
+      ],
+      [
+       "window,",
+       343.66
+      ],
+      [
+       "which",
+       344.356
+      ],
+      [
+       "shifts",
+       344.497
+      ],
+      [
+       "the",
+       344.878
+      ],
+      [
+       "image",
+       344.986
+      ],
+      [
+       "around",
+       345.258
+      ],
+      [
+       "a",
+       345.53
+      ],
+      [
+       "little.",
+       345.563
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Next we tried data augmentation, which means every time the network",
+       "start": 330.53,
+       "end": 333.834
+      },
+      {
+       "text": "sees a training image, it gets a randomly changed version of it.",
+       "start": 333.834,
+       "end": 337.454
+      },
+      {
+       "text": "Flip it left to right half the time,",
+       "start": 337.454,
+       "end": 339.28
+      },
+      {
+       "text": "or pad the border with 4 black pixels and crop a random 32 by 32 window,",
+       "start": 339.28,
+       "end": 344.356
+      },
+      {
+       "text": "which shifts the image around a little.",
+       "start": 344.356,
+       "end": 346.188
+      }
+     ]
+    },
+    {
+     "id": "aug1-2",
+     "audio": "audio/aug1-2-7207b1bbb1.mp3",
+     "start": 346.296,
+     "duration": 16.777,
+     "text": "A horse facing left is still a horse, so the label stays the same, and the hope is that the network learns to ignore things like direction and small shifts, which is called invariance. Seeing varied views of each image also makes it harder to just memorize the exact training images, so it works as a kind of regularization.",
+     "words": [
+      [
+       "A",
+       346.383
+      ],
+      [
+       "horse",
+       346.426
+      ],
+      [
+       "facing",
+       346.709
+      ],
+      [
+       "left",
+       347.079
+      ],
+      [
+       "is",
+       347.339
+      ],
+      [
+       "still",
+       347.437
+      ],
+      [
+       "a",
+       347.666
+      ],
+      [
+       "horse,",
+       347.709
+      ],
+      [
+       "so",
+       348.35
+      ],
+      [
+       "the",
+       348.448
+      ],
+      [
+       "label",
+       348.546
+      ],
+      [
+       "stays",
+       348.818
+      ],
+      [
+       "the",
+       349.122
+      ],
+      [
+       "same,",
+       349.209
+      ],
+      [
+       "and",
+       349.894
+      ],
+      [
+       "the",
+       349.948
+      ],
+      [
+       "hope",
+       350.024
+      ],
+      [
+       "is",
+       350.35
+      ],
+      [
+       "that",
+       350.448
+      ],
+      [
+       "the",
+       350.568
+      ],
+      [
+       "network",
+       350.644
+      ],
+      [
+       "learns",
+       351.122
+      ],
+      [
+       "to",
+       351.416
+      ],
+      [
+       "ignore",
+       351.524
+      ],
+      [
+       "things",
+       351.926
+      ],
+      [
+       "like",
+       352.318
+      ],
+      [
+       "direction",
+       352.503
+      ],
+      [
+       "and",
+       353.068
+      ],
+      [
+       "small",
+       353.176
+      ],
+      [
+       "shifts,",
+       353.481
+      ],
+      [
+       "which",
+       354.22
+      ],
+      [
+       "is",
+       354.361
+      ],
+      [
+       "called",
+       354.448
+      ],
+      [
+       "invariance.",
+       354.666
+      ],
+      [
+       "Seeing",
+       355.633
+      ],
+      [
+       "varied",
+       355.916
+      ],
+      [
+       "views",
+       356.231
+      ],
+      [
+       "of",
+       356.524
+      ],
+      [
+       "each",
+       356.633
+      ],
+      [
+       "image",
+       356.905
+      ],
+      [
+       "also",
+       357.329
+      ],
+      [
+       "makes",
+       357.633
+      ],
+      [
+       "it",
+       357.872
+      ],
+      [
+       "harder",
+       357.937
+      ],
+      [
+       "to",
+       358.361
+      ],
+      [
+       "just",
+       358.459
+      ],
+      [
+       "memorize",
+       358.753
+      ],
+      [
+       "the",
+       359.405
+      ],
+      [
+       "exact",
+       359.481
+      ],
+      [
+       "training",
+       359.959
+      ],
+      [
+       "images,",
+       360.318
+      ],
+      [
+       "so",
+       360.981
+      ],
+      [
+       "it",
+       361.133
+      ],
+      [
+       "works",
+       361.231
+      ],
+      [
+       "as",
+       361.481
+      ],
+      [
+       "a",
+       361.568
+      ],
+      [
+       "kind",
+       361.622
+      ],
+      [
+       "of",
+       361.872
+      ],
+      [
+       "regularization.",
+       361.959
+      ]
+     ],
+     "captions": [
+      {
+       "text": "A horse facing left is still a horse, so the label stays the same,",
+       "start": 346.383,
+       "end": 349.894
+      },
+      {
+       "text": "and the hope is that the network learns to ignore things",
+       "start": 349.894,
+       "end": 352.318
+      },
+      {
+       "text": "like direction and small shifts, which is called invariance.",
+       "start": 352.318,
+       "end": 355.633
+      },
+      {
+       "text": "Seeing varied views of each image also makes it harder to just memorize",
+       "start": 355.633,
+       "end": 359.405
+      },
+      {
+       "text": "the exact training images, so it works as a kind of regularization.",
+       "start": 359.405,
+       "end": 363.073
+      }
+     ]
+    },
+    {
+     "id": "aug1-3",
+     "audio": "audio/aug1-3-d7e2646778.mp3",
+     "start": 363.193,
+     "duration": 21.145,
+     "text": "We tested 15 different recipes on the small network with three seeds each, measuring test accuracy. No augmentation got 67.96 percent. Flip on its own helped a little, 68.77, and it improved every seed. Crop plus flip actually hurt, down to 66.38, and everything we added on top of it did worse than no augmentation.",
+     "words": [
+      [
+       "We",
+       363.193
+      ],
+      [
+       "tested",
+       363.393
+      ],
+      [
+       "15",
+       363.862
+      ],
+      [
+       "different",
+       364.062
+      ],
+      [
+       "recipes",
+       364.732
+      ],
+      [
+       "on",
+       365.267
+      ],
+      [
+       "the",
+       365.468
+      ],
+      [
+       "small",
+       365.735
+      ],
+      [
+       "network",
+       366.137
+      ],
+      [
+       "with",
+       366.672
+      ],
+      [
+       "three",
+       367.007
+      ],
+      [
+       "seeds",
+       367.408
+      ],
+      [
+       "each,",
+       367.81
+      ],
+      [
+       "measuring",
+       368.211
+      ],
+      [
+       "test",
+       368.88
+      ],
+      [
+       "accuracy.",
+       369.215
+      ],
+      [
+       "No",
+       369.884
+      ],
+      [
+       "augmentation",
+       370.085
+      ],
+      [
+       "got",
+       370.955
+      ],
+      [
+       "67.96",
+       371.222
+      ],
+      [
+       "percent.",
+       371.624
+      ],
+      [
+       "Flip",
+       372.226
+      ],
+      [
+       "on",
+       372.56
+      ],
+      [
+       "its",
+       372.761
+      ],
+      [
+       "own",
+       373.029
+      ],
+      [
+       "helped",
+       373.296
+      ],
+      [
+       "a",
+       373.765
+      ],
+      [
+       "little,",
+       373.899
+      ],
+      [
+       "68.77,",
+       374.434
+      ],
+      [
+       "and",
+       374.902
+      ],
+      [
+       "it",
+       375.17
+      ],
+      [
+       "improved",
+       375.371
+      ],
+      [
+       "every",
+       375.973
+      ],
+      [
+       "seed.",
+       376.375
+      ],
+      [
+       "Crop",
+       376.776
+      ],
+      [
+       "plus",
+       377.111
+      ],
+      [
+       "flip",
+       377.445
+      ],
+      [
+       "actually",
+       377.78
+      ],
+      [
+       "hurt,",
+       378.382
+      ],
+      [
+       "down",
+       378.783
+      ],
+      [
+       "to",
+       379.118
+      ],
+      [
+       "66.38,",
+       379.319
+      ],
+      [
+       "and",
+       379.787
+      ],
+      [
+       "everything",
+       380.055
+      ],
+      [
+       "we",
+       380.791
+      ],
+      [
+       "added",
+       380.992
+      ],
+      [
+       "on",
+       381.393
+      ],
+      [
+       "top",
+       381.594
+      ],
+      [
+       "of",
+       381.861
+      ],
+      [
+       "it",
+       382.062
+      ],
+      [
+       "did",
+       382.263
+      ],
+      [
+       "worse",
+       382.531
+      ],
+      [
+       "than",
+       382.932
+      ],
+      [
+       "no",
+       383.267
+      ],
+      [
+       "augmentation.",
+       383.467
+      ]
+     ],
+     "captions": [
+      {
+       "text": "We tested 15 different recipes on the small network",
+       "start": 363.193,
+       "end": 366.672
+      },
+      {
+       "text": "with three seeds each, measuring test accuracy.",
+       "start": 366.672,
+       "end": 369.884
+      },
+      {
+       "text": "No augmentation got 67.96 percent.",
+       "start": 369.884,
+       "end": 372.226
+      },
+      {
+       "text": "Flip on its own helped a little, 68.77, and it improved every seed.",
+       "start": 372.226,
+       "end": 376.776
+      },
+      {
+       "text": "Crop plus flip actually hurt, down to 66.38,",
+       "start": 376.776,
+       "end": 379.787
+      },
+      {
+       "text": "and everything we added on top of it did worse than no augmentation.",
+       "start": 379.787,
+       "end": 384.337
+      }
+     ]
+    },
+    {
+     "id": "aug1-4",
+     "audio": "audio/aug1-4-b0993cd729.mp3",
+     "start": 384.528,
+     "duration": 22.177,
+     "text": "Then there's the gap between training and test accuracy, which went from about 7 points without augmentation to under 1 with crop plus flip. A smaller gap can mean useful regularization, or it can just mean the model learned less, and since test accuracy went down, the gap alone doesn't show an improvement. Our best guess is that this small network on a short recipe couldn't fit the harder data, but we didn't test that.",
+     "words": [
+      [
+       "Then",
+       384.626
+      ],
+      [
+       "there's",
+       384.767
+      ],
+      [
+       "the",
+       384.973
+      ],
+      [
+       "gap",
+       385.071
+      ],
+      [
+       "between",
+       385.376
+      ],
+      [
+       "training",
+       385.691
+      ],
+      [
+       "and",
+       386.234
+      ],
+      [
+       "test",
+       386.343
+      ],
+      [
+       "accuracy,",
+       386.702
+      ],
+      [
+       "which",
+       387.528
+      ],
+      [
+       "went",
+       387.669
+      ],
+      [
+       "from",
+       387.865
+      ],
+      [
+       "about",
+       388.006
+      ],
+      [
+       "7",
+       388.234
+      ],
+      [
+       "points",
+       388.539
+      ],
+      [
+       "without",
+       388.821
+      ],
+      [
+       "augmentation",
+       389.158
+      ],
+      [
+       "to",
+       389.908
+      ],
+      [
+       "under",
+       390.017
+      ],
+      [
+       "1",
+       390.267
+      ],
+      [
+       "with",
+       390.647
+      ],
+      [
+       "crop",
+       390.756
+      ],
+      [
+       "plus",
+       391.049
+      ],
+      [
+       "flip.",
+       391.289
+      ],
+      [
+       "A",
+       391.963
+      ],
+      [
+       "smaller",
+       392.017
+      ],
+      [
+       "gap",
+       392.386
+      ],
+      [
+       "can",
+       392.767
+      ],
+      [
+       "mean",
+       392.908
+      ],
+      [
+       "useful",
+       393.136
+      ],
+      [
+       "regularization,",
+       393.539
+      ],
+      [
+       "or",
+       394.734
+      ],
+      [
+       "it",
+       394.832
+      ],
+      [
+       "can",
+       394.897
+      ],
+      [
+       "just",
+       395.017
+      ],
+      [
+       "mean",
+       395.267
+      ],
+      [
+       "the",
+       395.43
+      ],
+      [
+       "model",
+       395.495
+      ],
+      [
+       "learned",
+       395.854
+      ],
+      [
+       "less,",
+       396.082
+      ],
+      [
+       "and",
+       396.713
+      ],
+      [
+       "since",
+       396.81
+      ],
+      [
+       "test",
+       397.028
+      ],
+      [
+       "accuracy",
+       397.386
+      ],
+      [
+       "went",
+       397.854
+      ],
+      [
+       "down,",
+       398.049
+      ],
+      [
+       "the",
+       398.68
+      ],
+      [
+       "gap",
+       398.767
+      ],
+      [
+       "alone",
+       398.995
+      ],
+      [
+       "doesn't",
+       399.473
+      ],
+      [
+       "show",
+       399.745
+      ],
+      [
+       "an",
+       399.941
+      ],
+      [
+       "improvement.",
+       400.006
+      ],
+      [
+       "Our",
+       400.854
+      ],
+      [
+       "best",
+       400.984
+      ],
+      [
+       "guess",
+       401.256
+      ],
+      [
+       "is",
+       401.745
+      ],
+      [
+       "that",
+       401.843
+      ],
+      [
+       "this",
+       402.017
+      ],
+      [
+       "small",
+       402.191
+      ],
+      [
+       "network",
+       402.506
+      ],
+      [
+       "on",
+       402.93
+      ],
+      [
+       "a",
+       403.028
+      ],
+      [
+       "short",
+       403.071
+      ],
+      [
+       "recipe",
+       403.419
+      ],
+      [
+       "couldn't",
+       403.941
+      ],
+      [
+       "fit",
+       404.234
+      ],
+      [
+       "the",
+       404.506
+      ],
+      [
+       "harder",
+       404.582
+      ],
+      [
+       "data,",
+       404.886
+      ],
+      [
+       "but",
+       405.452
+      ],
+      [
+       "we",
+       405.56
+      ],
+      [
+       "didn't",
+       405.658
+      ],
+      [
+       "test",
+       405.854
+      ],
+      [
+       "that.",
+       406.115
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Then there's the gap between training and test accuracy,",
+       "start": 384.626,
+       "end": 387.528
+      },
+      {
+       "text": "which went from about 7 points without augmentation to under 1 with crop plus flip.",
+       "start": 387.528,
+       "end": 391.963
+      },
+      {
+       "text": "A smaller gap can mean useful regularization,",
+       "start": 391.963,
+       "end": 394.734
+      },
+      {
+       "text": "or it can just mean the model learned less, and since test accuracy went down,",
+       "start": 394.734,
+       "end": 398.68
+      },
+      {
+       "text": "the gap alone doesn't show an improvement.",
+       "start": 398.68,
+       "end": 400.854
+      },
+      {
+       "text": "Our best guess is that this small network on a short recipe",
+       "start": 400.854,
+       "end": 403.941
+      },
+      {
+       "text": "couldn't fit the harder data, but we didn't test that.",
+       "start": 403.941,
+       "end": 406.704
+      }
+     ]
+    },
+    {
+     "id": "aug1-5",
+     "audio": "audio/aug1-5-c43a3c48da.mp3",
+     "start": 406.906,
+     "duration": 4.633,
+     "text": "This suite also looked at the test set over and over, so these results are exploratory.",
+     "words": [
+      [
+       "This",
+       407.004
+      ],
+      [
+       "suite",
+       407.167
+      ],
+      [
+       "also",
+       407.515
+      ],
+      [
+       "looked",
+       407.809
+      ],
+      [
+       "at",
+       408.091
+      ],
+      [
+       "the",
+       408.167
+      ],
+      [
+       "test",
+       408.254
+      ],
+      [
+       "set",
+       408.58
+      ],
+      [
+       "over",
+       408.896
+      ],
+      [
+       "and",
+       409.156
+      ],
+      [
+       "over,",
+       409.265
+      ],
+      [
+       "so",
+       409.83
+      ],
+      [
+       "these",
+       409.939
+      ],
+      [
+       "results",
+       410.135
+      ],
+      [
+       "are",
+       410.461
+      ],
+      [
+       "exploratory.",
+       410.548
+      ]
+     ],
+     "captions": [
+      {
+       "text": "This suite also looked at the test set over and over,",
+       "start": 407.004,
+       "end": 409.83
+      },
+      {
+       "text": "so these results are exploratory.",
+       "start": 409.83,
+       "end": 411.539
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "recipe",
+   "title": "A stricter setup",
+   "start": 412.491,
+   "end": 487.676,
+   "segments": [
+    {
+     "id": "recipe-1",
+     "audio": "audio/recipe-1-27e0df13e0.mp3",
+     "start": 413.391,
+     "duration": 21.481,
+     "text": "Because of that, we got stricter about evaluation. We took 5,000 images out of the training set as a stratified validation set, 500 from each class, trained on the other 45,000, and made every decision on validation from then on. The test set was reserved for a final check of whichever model got selected, although it isn't a pristine holdout anymore, since the earlier suite already used it.",
+     "words": [
+      [
+       "Because",
+       413.478
+      ],
+      [
+       "of",
+       413.739
+      ],
+      [
+       "that,",
+       413.826
+      ],
+      [
+       "we",
+       414.336
+      ],
+      [
+       "got",
+       414.434
+      ],
+      [
+       "stricter",
+       414.597
+      ],
+      [
+       "about",
+       414.999
+      ],
+      [
+       "evaluation.",
+       415.195
+      ],
+      [
+       "We",
+       416.173
+      ],
+      [
+       "took",
+       416.271
+      ],
+      [
+       "5,000",
+       416.456
+      ],
+      [
+       "images",
+       417.217
+      ],
+      [
+       "out",
+       417.619
+      ],
+      [
+       "of",
+       417.782
+      ],
+      [
+       "the",
+       417.836
+      ],
+      [
+       "training",
+       417.902
+      ],
+      [
+       "set",
+       418.304
+      ],
+      [
+       "as",
+       418.597
+      ],
+      [
+       "a",
+       418.728
+      ],
+      [
+       "stratified",
+       418.782
+      ],
+      [
+       "validation",
+       419.402
+      ],
+      [
+       "set,",
+       419.934
+      ],
+      [
+       "500",
+       420.467
+      ],
+      [
+       "from",
+       421.01
+      ],
+      [
+       "each",
+       421.271
+      ],
+      [
+       "class,",
+       421.423
+      ],
+      [
+       "trained",
+       422.119
+      ],
+      [
+       "on",
+       422.38
+      ],
+      [
+       "the",
+       422.456
+      ],
+      [
+       "other",
+       422.576
+      ],
+      [
+       "45,000,",
+       422.826
+      ],
+      [
+       "and",
+       424.13
+      ],
+      [
+       "made",
+       424.206
+      ],
+      [
+       "every",
+       424.521
+      ],
+      [
+       "decision",
+       424.749
+      ],
+      [
+       "on",
+       425.293
+      ],
+      [
+       "validation",
+       425.413
+      ],
+      [
+       "from",
+       425.956
+      ],
+      [
+       "then",
+       426.086
+      ],
+      [
+       "on.",
+       426.217
+      ],
+      [
+       "The",
+       426.836
+      ],
+      [
+       "test",
+       426.913
+      ],
+      [
+       "set",
+       427.173
+      ],
+      [
+       "was",
+       427.369
+      ],
+      [
+       "reserved",
+       427.499
+      ],
+      [
+       "for",
+       427.902
+      ],
+      [
+       "a",
+       428.054
+      ],
+      [
+       "final",
+       428.097
+      ],
+      [
+       "check",
+       428.478
+      ],
+      [
+       "of",
+       428.869
+      ],
+      [
+       "whichever",
+       428.956
+      ],
+      [
+       "model",
+       429.38
+      ],
+      [
+       "got",
+       429.673
+      ],
+      [
+       "selected,",
+       429.847
+      ],
+      [
+       "although",
+       430.673
+      ],
+      [
+       "it",
+       430.891
+      ],
+      [
+       "isn't",
+       430.967
+      ],
+      [
+       "a",
+       431.195
+      ],
+      [
+       "pristine",
+       431.26
+      ],
+      [
+       "holdout",
+       431.695
+      ],
+      [
+       "anymore,",
+       432.152
+      ],
+      [
+       "since",
+       432.836
+      ],
+      [
+       "the",
+       433.01
+      ],
+      [
+       "earlier",
+       433.097
+      ],
+      [
+       "suite",
+       433.445
+      ],
+      [
+       "already",
+       433.826
+      ],
+      [
+       "used",
+       434.141
+      ],
+      [
+       "it.",
+       434.402
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Because of that, we got stricter about evaluation.",
+       "start": 413.478,
+       "end": 416.173
+      },
+      {
+       "text": "We took 5,000 images out of the training set as a stratified",
+       "start": 416.173,
+       "end": 419.402
+      },
+      {
+       "text": "validation set, 500 from each class, trained on the other 45,000,",
+       "start": 419.402,
+       "end": 424.13
+      },
+      {
+       "text": "and made every decision on validation from then on.",
+       "start": 424.13,
+       "end": 426.836
+      },
+      {
+       "text": "The test set was reserved for a final check of whichever",
+       "start": 426.836,
+       "end": 429.38
+      },
+      {
+       "text": "model got selected, although it isn't a pristine holdout anymore,",
+       "start": 429.38,
+       "end": 432.836
+      },
+      {
+       "text": "since the earlier suite already used it.",
+       "start": 432.836,
+       "end": 434.871
+      }
+     ]
+    },
+    {
+     "id": "recipe-2",
+     "audio": "audio/recipe-2-daf58ad0a1.mp3",
+     "start": 435.063,
+     "duration": 22.921,
+     "text": "We also switched to a stronger training recipe: batch 128, SGD with momentum and weight decay, batch norm after every convolution, and a learning rate that warms up for 5 epochs, then follows a cosine curve down over 160 epochs. Momentum smooths out the steps, weight decay keeps the weights small, and batch norm rescales each layer's outputs so deeper networks train more easily.",
+     "words": [
+      [
+       "We",
+       435.161
+      ],
+      [
+       "also",
+       435.291
+      ],
+      [
+       "switched",
+       435.585
+      ],
+      [
+       "to",
+       435.9
+      ],
+      [
+       "a",
+       436.009
+      ],
+      [
+       "stronger",
+       436.085
+      ],
+      [
+       "training",
+       436.541
+      ],
+      [
+       "recipe:",
+       436.9
+      ],
+      [
+       "batch",
+       437.683
+      ],
+      [
+       "128,",
+       437.965
+      ],
+      [
+       "SGD",
+       439.161
+      ],
+      [
+       "with",
+       439.737
+      ],
+      [
+       "momentum",
+       439.889
+      ],
+      [
+       "and",
+       440.487
+      ],
+      [
+       "weight",
+       440.585
+      ],
+      [
+       "decay,",
+       440.813
+      ],
+      [
+       "batch",
+       441.585
+      ],
+      [
+       "norm",
+       441.878
+      ],
+      [
+       "after",
+       442.28
+      ],
+      [
+       "every",
+       442.596
+      ],
+      [
+       "convolution,",
+       442.802
+      ],
+      [
+       "and",
+       443.769
+      ],
+      [
+       "a",
+       443.824
+      ],
+      [
+       "learning",
+       443.867
+      ],
+      [
+       "rate",
+       444.193
+      ],
+      [
+       "that",
+       444.465
+      ],
+      [
+       "warms",
+       444.639
+      ],
+      [
+       "up",
+       444.976
+      ],
+      [
+       "for",
+       445.106
+      ],
+      [
+       "5",
+       445.248
+      ],
+      [
+       "epochs,",
+       445.563
+      ],
+      [
+       "then",
+       446.237
+      ],
+      [
+       "follows",
+       446.422
+      ],
+      [
+       "a",
+       446.726
+      ],
+      [
+       "cosine",
+       446.791
+      ],
+      [
+       "curve",
+       447.269
+      ],
+      [
+       "down",
+       447.53
+      ],
+      [
+       "over",
+       447.846
+      ],
+      [
+       "160",
+       448.063
+      ],
+      [
+       "epochs.",
+       448.813
+      ],
+      [
+       "Momentum",
+       449.585
+      ],
+      [
+       "smooths",
+       450.009
+      ],
+      [
+       "out",
+       450.411
+      ],
+      [
+       "the",
+       450.563
+      ],
+      [
+       "steps,",
+       450.628
+      ],
+      [
+       "weight",
+       451.313
+      ],
+      [
+       "decay",
+       451.541
+      ],
+      [
+       "keeps",
+       452.063
+      ],
+      [
+       "the",
+       452.367
+      ],
+      [
+       "weights",
+       452.465
+      ],
+      [
+       "small,",
+       452.704
+      ],
+      [
+       "and",
+       453.378
+      ],
+      [
+       "batch",
+       453.487
+      ],
+      [
+       "norm",
+       453.813
+      ],
+      [
+       "rescales",
+       454.096
+      ],
+      [
+       "each",
+       454.726
+      ],
+      [
+       "layer's",
+       454.9
+      ],
+      [
+       "outputs",
+       455.215
+      ],
+      [
+       "so",
+       455.759
+      ],
+      [
+       "deeper",
+       455.965
+      ],
+      [
+       "networks",
+       456.259
+      ],
+      [
+       "train",
+       456.704
+      ],
+      [
+       "more",
+       457.03
+      ],
+      [
+       "easily.",
+       457.237
+      ]
+     ],
+     "captions": [
+      {
+       "text": "We also switched to a stronger training recipe: batch 128,",
+       "start": 435.161,
+       "end": 439.161
+      },
+      {
+       "text": "SGD with momentum and weight decay, batch norm after",
+       "start": 439.161,
+       "end": 442.596
+      },
+      {
+       "text": "every convolution, and a learning rate that warms up for 5 epochs,",
+       "start": 442.596,
+       "end": 446.237
+      },
+      {
+       "text": "then follows a cosine curve down over 160 epochs.",
+       "start": 446.237,
+       "end": 449.585
+      },
+      {
+       "text": "Momentum smooths out the steps, weight decay keeps",
+       "start": 449.585,
+       "end": 452.367
+      },
+      {
+       "text": "the weights small, and batch norm rescales each",
+       "start": 452.367,
+       "end": 454.9
+      },
+      {
+       "text": "layer's outputs so deeper networks train more easily.",
+       "start": 454.9,
+       "end": 457.984
+      }
+     ]
+    },
+    {
+     "id": "recipe-3",
+     "audio": "audio/recipe-3-6f485ad4c7.mp3",
+     "start": 458.17,
+     "duration": 12.049,
+     "text": "Every setup also ran with three different random seeds. A run's score is its average validation accuracy over the last ten epochs instead of its single best epoch, and the plus or minus is how much that score varies across seeds.",
+     "words": [
+      [
+       "Every",
+       458.257
+      ],
+      [
+       "setup",
+       458.463
+      ],
+      [
+       "also",
+       458.898
+      ],
+      [
+       "ran",
+       459.224
+      ],
+      [
+       "with",
+       459.507
+      ],
+      [
+       "three",
+       459.67
+      ],
+      [
+       "different",
+       459.974
+      ],
+      [
+       "random",
+       460.257
+      ],
+      [
+       "seeds.",
+       460.529
+      ],
+      [
+       "A",
+       461.289
+      ],
+      [
+       "run's",
+       461.333
+      ],
+      [
+       "score",
+       461.594
+      ],
+      [
+       "is",
+       461.931
+      ],
+      [
+       "its",
+       462.05
+      ],
+      [
+       "average",
+       462.279
+      ],
+      [
+       "validation",
+       462.637
+      ],
+      [
+       "accuracy",
+       463.181
+      ],
+      [
+       "over",
+       463.746
+      ],
+      [
+       "the",
+       463.887
+      ],
+      [
+       "last",
+       463.974
+      ],
+      [
+       "ten",
+       464.311
+      ],
+      [
+       "epochs",
+       464.561
+      ],
+      [
+       "instead",
+       464.887
+      ],
+      [
+       "of",
+       465.268
+      ],
+      [
+       "its",
+       465.333
+      ],
+      [
+       "single",
+       465.463
+      ],
+      [
+       "best",
+       465.844
+      ],
+      [
+       "epoch,",
+       466.148
+      ],
+      [
+       "and",
+       466.692
+      ],
+      [
+       "the",
+       466.757
+      ],
+      [
+       "plus",
+       466.844
+      ],
+      [
+       "or",
+       467.224
+      ],
+      [
+       "minus",
+       467.344
+      ],
+      [
+       "is",
+       467.822
+      ],
+      [
+       "how",
+       467.92
+      ],
+      [
+       "much",
+       468.116
+      ],
+      [
+       "that",
+       468.376
+      ],
+      [
+       "score",
+       468.529
+      ],
+      [
+       "varies",
+       468.898
+      ],
+      [
+       "across",
+       469.148
+      ],
+      [
+       "seeds.",
+       469.485
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Every setup also ran with three different random seeds.",
+       "start": 458.257,
+       "end": 461.289
+      },
+      {
+       "text": "A run's score is its average validation accuracy over the",
+       "start": 461.289,
+       "end": 463.974
+      },
+      {
+       "text": "last ten epochs instead of its single best epoch,",
+       "start": 463.974,
+       "end": 466.692
+      },
+      {
+       "text": "and the plus or minus is how much that score varies across seeds.",
+       "start": 466.692,
+       "end": 470.219
+      }
+     ]
+    },
+    {
+     "id": "recipe-4",
+     "audio": "audio/recipe-4-03e749e680.mp3",
+     "start": 470.418,
+     "duration": 16.297,
+     "text": "With this setup, the same two-convolution design plus batch norm scores 78.27 percent on validation, compared to 63.68 percent on test before. But the split, the metric, the epochs, and the optimizer all changed at once, so we can't say which change caused that jump.",
+     "words": [
+      [
+       "With",
+       470.418
+      ],
+      [
+       "this",
+       470.723
+      ],
+      [
+       "setup,",
+       471.029
+      ],
+      [
+       "the",
+       471.456
+      ],
+      [
+       "same",
+       471.7
+      ],
+      [
+       "two-convolution",
+       472.005
+      ],
+      [
+       "design",
+       472.982
+      ],
+      [
+       "plus",
+       473.409
+      ],
+      [
+       "batch",
+       473.714
+      ],
+      [
+       "norm",
+       474.08
+      ],
+      [
+       "scores",
+       474.386
+      ],
+      [
+       "78.27",
+       474.813
+      ],
+      [
+       "percent",
+       475.179
+      ],
+      [
+       "on",
+       475.667
+      ],
+      [
+       "validation,",
+       475.85
+      ],
+      [
+       "compared",
+       476.583
+      ],
+      [
+       "to",
+       477.132
+      ],
+      [
+       "63.68",
+       477.315
+      ],
+      [
+       "percent",
+       477.681
+      ],
+      [
+       "on",
+       478.17
+      ],
+      [
+       "test",
+       478.353
+      ],
+      [
+       "before.",
+       478.658
+      ],
+      [
+       "But",
+       479.146
+      ],
+      [
+       "the",
+       479.39
+      ],
+      [
+       "split,",
+       479.635
+      ],
+      [
+       "the",
+       480.062
+      ],
+      [
+       "metric,",
+       480.306
+      ],
+      [
+       "the",
+       480.794
+      ],
+      [
+       "epochs,",
+       481.038
+      ],
+      [
+       "and",
+       481.527
+      ],
+      [
+       "the",
+       481.771
+      ],
+      [
+       "optimizer",
+       482.015
+      ],
+      [
+       "all",
+       482.625
+      ],
+      [
+       "changed",
+       482.87
+      ],
+      [
+       "at",
+       483.358
+      ],
+      [
+       "once,",
+       483.541
+      ],
+      [
+       "so",
+       483.907
+      ],
+      [
+       "we",
+       484.09
+      ],
+      [
+       "can't",
+       484.273
+      ],
+      [
+       "say",
+       484.64
+      ],
+      [
+       "which",
+       484.884
+      ],
+      [
+       "change",
+       485.25
+      ],
+      [
+       "caused",
+       485.677
+      ],
+      [
+       "that",
+       486.104
+      ],
+      [
+       "jump.",
+       486.41
+      ]
+     ],
+     "captions": [
+      {
+       "text": "With this setup, the same two-convolution design plus batch norm scores",
+       "start": 470.418,
+       "end": 474.813
+      },
+      {
+       "text": "78.27 percent on validation, compared to 63.68 percent on test before.",
+       "start": 474.813,
+       "end": 479.146
+      },
+      {
+       "text": "But the split, the metric, the epochs, and the optimizer all",
+       "start": 479.146,
+       "end": 482.87
+      },
+      {
+       "text": "changed at once, so we can't say which change caused that jump.",
+       "start": 482.87,
+       "end": 486.715
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "depth",
+   "title": "Adding depth",
+   "start": 487.676,
+   "end": 558.081,
+   "segments": [
+    {
+     "id": "depth-1",
+     "audio": "audio/depth-1-7fab815596.mp3",
+     "start": 488.576,
+     "duration": 11.041,
+     "text": "Next we wanted to know if more convolutions would help. We kept the same two stages, the same pooling, and the same classifier, and only stacked more convolutions inside each stage, from 2 up to 32.",
+     "words": [
+      [
+       "Next",
+       488.663
+      ],
+      [
+       "we",
+       488.848
+      ],
+      [
+       "wanted",
+       488.924
+      ],
+      [
+       "to",
+       489.152
+      ],
+      [
+       "know",
+       489.207
+      ],
+      [
+       "if",
+       489.511
+      ],
+      [
+       "more",
+       489.631
+      ],
+      [
+       "convolutions",
+       489.816
+      ],
+      [
+       "would",
+       490.479
+      ],
+      [
+       "help.",
+       490.587
+      ],
+      [
+       "We",
+       491.25
+      ],
+      [
+       "kept",
+       491.348
+      ],
+      [
+       "the",
+       491.566
+      ],
+      [
+       "same",
+       491.652
+      ],
+      [
+       "two",
+       491.957
+      ],
+      [
+       "stages,",
+       492.163
+      ],
+      [
+       "the",
+       492.892
+      ],
+      [
+       "same",
+       492.989
+      ],
+      [
+       "pooling,",
+       493.261
+      ],
+      [
+       "and",
+       493.902
+      ],
+      [
+       "the",
+       493.968
+      ],
+      [
+       "same",
+       494.044
+      ],
+      [
+       "classifier,",
+       494.294
+      ],
+      [
+       "and",
+       495.163
+      ],
+      [
+       "only",
+       495.294
+      ],
+      [
+       "stacked",
+       495.533
+      ],
+      [
+       "more",
+       495.87
+      ],
+      [
+       "convolutions",
+       496.076
+      ],
+      [
+       "inside",
+       496.729
+      ],
+      [
+       "each",
+       497.229
+      ],
+      [
+       "stage,",
+       497.402
+      ],
+      [
+       "from",
+       498.131
+      ],
+      [
+       "2",
+       498.261
+      ],
+      [
+       "up",
+       498.5
+      ],
+      [
+       "to",
+       498.652
+      ],
+      [
+       "32.",
+       498.739
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Next we wanted to know if more convolutions would help.",
+       "start": 488.663,
+       "end": 491.25
+      },
+      {
+       "text": "We kept the same two stages, the same pooling, and the same classifier,",
+       "start": 491.25,
+       "end": 495.163
+      },
+      {
+       "text": "and only stacked more convolutions inside each stage, from 2 up to 32.",
+       "start": 495.163,
+       "end": 499.617
+      }
+     ]
+    },
+    {
+     "id": "depth-2",
+     "audio": "audio/depth-2-0d76f6d81d.mp3",
+     "start": 499.734,
+     "duration": 11.593,
+     "text": "Each extra 3 by 3 layer lets a unit see a slightly bigger part of the image, 5 by 5 after two layers, then 7 by 7 after three, and it gives the network more steps to build up complicated features.",
+     "words": [
+      [
+       "Each",
+       499.821
+      ],
+      [
+       "extra",
+       500.147
+      ],
+      [
+       "3",
+       500.44
+      ],
+      [
+       "by",
+       500.712
+      ],
+      [
+       "3",
+       500.886
+      ],
+      [
+       "layer",
+       501.136
+      ],
+      [
+       "lets",
+       501.473
+      ],
+      [
+       "a",
+       501.647
+      ],
+      [
+       "unit",
+       501.69
+      ],
+      [
+       "see",
+       502.006
+      ],
+      [
+       "a",
+       502.364
+      ],
+      [
+       "slightly",
+       502.408
+      ],
+      [
+       "bigger",
+       503.027
+      ],
+      [
+       "part",
+       503.31
+      ],
+      [
+       "of",
+       503.516
+      ],
+      [
+       "the",
+       503.582
+      ],
+      [
+       "image,",
+       503.658
+      ],
+      [
+       "5",
+       504.266
+      ],
+      [
+       "by",
+       504.582
+      ],
+      [
+       "5",
+       504.712
+      ],
+      [
+       "after",
+       505.06
+      ],
+      [
+       "two",
+       505.277
+      ],
+      [
+       "layers,",
+       505.451
+      ],
+      [
+       "then",
+       506.125
+      ],
+      [
+       "7",
+       506.288
+      ],
+      [
+       "by",
+       506.593
+      ],
+      [
+       "7",
+       506.723
+      ],
+      [
+       "after",
+       507.038
+      ],
+      [
+       "three,",
+       507.256
+      ],
+      [
+       "and",
+       507.897
+      ],
+      [
+       "it",
+       507.995
+      ],
+      [
+       "gives",
+       508.093
+      ],
+      [
+       "the",
+       508.31
+      ],
+      [
+       "network",
+       508.397
+      ],
+      [
+       "more",
+       508.821
+      ],
+      [
+       "steps",
+       509.038
+      ],
+      [
+       "to",
+       509.451
+      ],
+      [
+       "build",
+       509.549
+      ],
+      [
+       "up",
+       509.799
+      ],
+      [
+       "complicated",
+       509.951
+      ],
+      [
+       "features.",
+       510.495
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Each extra 3 by 3 layer lets a unit see a slightly bigger part of the image,",
+       "start": 499.821,
+       "end": 504.266
+      },
+      {
+       "text": "5 by 5 after two layers, then 7 by 7 after three,",
+       "start": 504.266,
+       "end": 507.897
+      },
+      {
+       "text": "and it gives the network more steps to build up complicated features.",
+       "start": 507.897,
+       "end": 511.327
+      }
+     ]
+    },
+    {
+     "id": "depth-3",
+     "audio": "audio/depth-3-79bc3fbfcf.mp3",
+     "start": 511.424,
+     "duration": 17.833,
+     "text": "On validation, two convolutions got 78.27, four got 84.53, eight got 86.90, and sixteen got 87.17, so the gains were shrinking but still positive. Then at 32 convolutions it dropped to 83.08, and all three seeds got worse.",
+     "words": [
+      [
+       "On",
+       511.511
+      ],
+      [
+       "validation,",
+       511.619
+      ],
+      [
+       "two",
+       512.402
+      ],
+      [
+       "convolutions",
+       512.587
+      ],
+      [
+       "got",
+       513.185
+      ],
+      [
+       "78.27,",
+       513.369
+      ],
+      [
+       "four",
+       515.011
+      ],
+      [
+       "got",
+       515.109
+      ],
+      [
+       "84.53,",
+       515.402
+      ],
+      [
+       "eight",
+       516.967
+      ],
+      [
+       "got",
+       517.098
+      ],
+      [
+       "86.90,",
+       517.38
+      ],
+      [
+       "and",
+       519.0
+      ],
+      [
+       "sixteen",
+       519.109
+      ],
+      [
+       "got",
+       519.565
+      ],
+      [
+       "87.17,",
+       519.859
+      ],
+      [
+       "so",
+       521.402
+      ],
+      [
+       "the",
+       521.511
+      ],
+      [
+       "gains",
+       521.609
+      ],
+      [
+       "were",
+       521.88
+      ],
+      [
+       "shrinking",
+       521.967
+      ],
+      [
+       "but",
+       522.511
+      ],
+      [
+       "still",
+       522.641
+      ],
+      [
+       "positive.",
+       522.88
+      ],
+      [
+       "Then",
+       523.706
+      ],
+      [
+       "at",
+       523.837
+      ],
+      [
+       "32",
+       523.946
+      ],
+      [
+       "convolutions",
+       524.424
+      ],
+      [
+       "it",
+       525.043
+      ],
+      [
+       "dropped",
+       525.174
+      ],
+      [
+       "to",
+       525.522
+      ],
+      [
+       "83.08,",
+       525.772
+      ],
+      [
+       "and",
+       527.456
+      ],
+      [
+       "all",
+       527.576
+      ],
+      [
+       "three",
+       527.739
+      ],
+      [
+       "seeds",
+       528.011
+      ],
+      [
+       "got",
+       528.315
+      ],
+      [
+       "worse.",
+       528.511
+      ]
+     ],
+     "captions": [
+      {
+       "text": "On validation, two convolutions got 78.27,",
+       "start": 511.511,
+       "end": 515.011
+      },
+      {
+       "text": "four got 84.53, eight got 86.90, and sixteen got 87.17,",
+       "start": 515.011,
+       "end": 521.402
+      },
+      {
+       "text": "so the gains were shrinking but still positive.",
+       "start": 521.402,
+       "end": 523.706
+      },
+      {
+       "text": "Then at 32 convolutions it dropped to 83.08,",
+       "start": 523.706,
+       "end": 527.456
+      },
+      {
+       "text": "and all three seeds got worse.",
+       "start": 527.456,
+       "end": 529.257
+      }
+     ]
+    },
+    {
+     "id": "depth-4",
+     "audio": "audio/depth-4-ceb35e6e01.mp3",
+     "start": 529.535,
+     "duration": 13.225,
+     "text": "Every depth reached 100 percent training accuracy, so the 32 layer network could still fit the training set, it just did worse on images it hadn't seen, and these runs alone can't tell us whether that came from optimization, generalization, or both.",
+     "words": [
+      [
+       "Every",
+       529.535
+      ],
+      [
+       "depth",
+       529.853
+      ],
+      [
+       "reached",
+       530.172
+      ],
+      [
+       "100",
+       530.597
+      ],
+      [
+       "percent",
+       530.809
+      ],
+      [
+       "training",
+       531.234
+      ],
+      [
+       "accuracy,",
+       531.712
+      ],
+      [
+       "so",
+       532.243
+      ],
+      [
+       "the",
+       532.403
+      ],
+      [
+       "32",
+       532.615
+      ],
+      [
+       "layer",
+       532.774
+      ],
+      [
+       "network",
+       533.093
+      ],
+      [
+       "could",
+       533.518
+      ],
+      [
+       "still",
+       533.837
+      ],
+      [
+       "fit",
+       534.155
+      ],
+      [
+       "the",
+       534.368
+      ],
+      [
+       "training",
+       534.58
+      ],
+      [
+       "set,",
+       535.058
+      ],
+      [
+       "it",
+       535.324
+      ],
+      [
+       "just",
+       535.483
+      ],
+      [
+       "did",
+       535.749
+      ],
+      [
+       "worse",
+       535.961
+      ],
+      [
+       "on",
+       536.28
+      ],
+      [
+       "images",
+       536.439
+      ],
+      [
+       "it",
+       536.811
+      ],
+      [
+       "hadn't",
+       536.97
+      ],
+      [
+       "seen,",
+       537.342
+      ],
+      [
+       "and",
+       537.661
+      ],
+      [
+       "these",
+       537.873
+      ],
+      [
+       "runs",
+       538.192
+      ],
+      [
+       "alone",
+       538.457
+      ],
+      [
+       "can't",
+       538.776
+      ],
+      [
+       "tell",
+       539.095
+      ],
+      [
+       "us",
+       539.36
+      ],
+      [
+       "whether",
+       539.52
+      ],
+      [
+       "that",
+       539.944
+      ],
+      [
+       "came",
+       540.21
+      ],
+      [
+       "from",
+       540.476
+      ],
+      [
+       "optimization,",
+       540.741
+      ],
+      [
+       "generalization,",
+       541.485
+      ],
+      [
+       "or",
+       542.334
+      ],
+      [
+       "both.",
+       542.494
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Every depth reached 100 percent training accuracy,",
+       "start": 529.535,
+       "end": 532.243
+      },
+      {
+       "text": "so the 32 layer network could still fit the training set,",
+       "start": 532.243,
+       "end": 535.324
+      },
+      {
+       "text": "it just did worse on images it hadn't seen, and these runs alone can't tell us",
+       "start": 535.324,
+       "end": 539.52
+      },
+      {
+       "text": "whether that came from optimization, generalization, or both.",
+       "start": 539.52,
+       "end": 542.759
+      }
+     ]
+    },
+    {
+     "id": "depth-5",
+     "audio": "audio/depth-5-9e58b838fe.mp3",
+     "start": 542.957,
+     "duration": 14.257,
+     "text": "That's different from the original ResNet paper, where deeper plain networks had higher training error. Ours trained fine and fell on validation. Residual connections are the standard fix for deep plain networks, so they were a natural next thing to try, even though we didn't know the cause.",
+     "words": [
+      [
+       "That's",
+       543.055
+      ],
+      [
+       "different",
+       543.239
+      ],
+      [
+       "from",
+       543.544
+      ],
+      [
+       "the",
+       543.674
+      ],
+      [
+       "original",
+       543.75
+      ],
+      [
+       "ResNet",
+       544.272
+      ],
+      [
+       "paper,",
+       544.631
+      ],
+      [
+       "where",
+       545.229
+      ],
+      [
+       "deeper",
+       545.37
+      ],
+      [
+       "plain",
+       545.674
+      ],
+      [
+       "networks",
+       545.913
+      ],
+      [
+       "had",
+       546.305
+      ],
+      [
+       "higher",
+       546.489
+      ],
+      [
+       "training",
+       546.881
+      ],
+      [
+       "error.",
+       547.239
+      ],
+      [
+       "Ours",
+       547.892
+      ],
+      [
+       "trained",
+       548.044
+      ],
+      [
+       "fine",
+       548.337
+      ],
+      [
+       "and",
+       548.783
+      ],
+      [
+       "fell",
+       548.859
+      ],
+      [
+       "on",
+       549.098
+      ],
+      [
+       "validation.",
+       549.207
+      ],
+      [
+       "Residual",
+       550.098
+      ],
+      [
+       "connections",
+       550.555
+      ],
+      [
+       "are",
+       551.076
+      ],
+      [
+       "the",
+       551.229
+      ],
+      [
+       "standard",
+       551.305
+      ],
+      [
+       "fix",
+       551.75
+      ],
+      [
+       "for",
+       552.087
+      ],
+      [
+       "deep",
+       552.25
+      ],
+      [
+       "plain",
+       552.468
+      ],
+      [
+       "networks,",
+       552.739
+      ],
+      [
+       "so",
+       553.489
+      ],
+      [
+       "they",
+       553.587
+      ],
+      [
+       "were",
+       553.707
+      ],
+      [
+       "a",
+       553.848
+      ],
+      [
+       "natural",
+       553.892
+      ],
+      [
+       "next",
+       554.337
+      ],
+      [
+       "thing",
+       554.566
+      ],
+      [
+       "to",
+       554.707
+      ],
+      [
+       "try,",
+       554.772
+      ],
+      [
+       "even",
+       555.479
+      ],
+      [
+       "though",
+       555.674
+      ],
+      [
+       "we",
+       555.816
+      ],
+      [
+       "didn't",
+       555.946
+      ],
+      [
+       "know",
+       556.174
+      ],
+      [
+       "the",
+       556.305
+      ],
+      [
+       "cause.",
+       556.392
+      ]
+     ],
+     "captions": [
+      {
+       "text": "That's different from the original ResNet paper,",
+       "start": 543.055,
+       "end": 545.229
+      },
+      {
+       "text": "where deeper plain networks had higher training error.",
+       "start": 545.229,
+       "end": 547.892
+      },
+      {
+       "text": "Ours trained fine and fell on validation.",
+       "start": 547.892,
+       "end": 550.098
+      },
+      {
+       "text": "Residual connections are the standard fix for deep",
+       "start": 550.098,
+       "end": 552.468
+      },
+      {
+       "text": "plain networks, so they were a natural next thing to try,",
+       "start": 552.468,
+       "end": 555.479
+      },
+      {
+       "text": "even though we didn't know the cause.",
+       "start": 555.479,
+       "end": 557.214
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "residual",
+   "title": "Residual connections",
+   "start": 558.081,
+   "end": 643.895,
+   "segments": [
+    {
+     "id": "residual-1",
+     "audio": "audio/residual-1-f1d54e2ff9.mp3",
+     "start": 558.981,
+     "duration": 7.441,
+     "text": "A residual block keeps the same two convolutions, but adds a shortcut that carries the block's input around them and adds it back at the end.",
+     "words": [
+      [
+       "A",
+       559.068
+      ],
+      [
+       "residual",
+       559.122
+      ],
+      [
+       "block",
+       559.557
+      ],
+      [
+       "keeps",
+       560.013
+      ],
+      [
+       "the",
+       560.274
+      ],
+      [
+       "same",
+       560.372
+      ],
+      [
+       "two",
+       560.72
+      ],
+      [
+       "convolutions,",
+       560.959
+      ],
+      [
+       "but",
+       561.97
+      ],
+      [
+       "adds",
+       562.111
+      ],
+      [
+       "a",
+       562.318
+      ],
+      [
+       "shortcut",
+       562.372
+      ],
+      [
+       "that",
+       562.861
+      ],
+      [
+       "carries",
+       562.992
+      ],
+      [
+       "the",
+       563.35
+      ],
+      [
+       "block's",
+       563.448
+      ],
+      [
+       "input",
+       563.829
+      ],
+      [
+       "around",
+       564.111
+      ],
+      [
+       "them",
+       564.448
+      ],
+      [
+       "and",
+       564.85
+      ],
+      [
+       "adds",
+       564.97
+      ],
+      [
+       "it",
+       565.209
+      ],
+      [
+       "back",
+       565.307
+      ],
+      [
+       "at",
+       565.568
+      ],
+      [
+       "the",
+       565.655
+      ],
+      [
+       "end.",
+       565.742
+      ]
+     ],
+     "captions": [
+      {
+       "text": "A residual block keeps the same two convolutions, but adds a shortcut",
+       "start": 559.068,
+       "end": 562.861
+      },
+      {
+       "text": "that carries the block's input around them and adds it back at the end.",
+       "start": 562.861,
+       "end": 566.421
+      }
+     ]
+    },
+    {
+     "id": "residual-2",
+     "audio": "audio/residual-2-7d151ae5b5.mp3",
+     "start": 566.519,
+     "duration": 9.385,
+     "text": "So the main path computes F of x, which is conv, batch norm, ReLU, conv, batch norm, and the block outputs ReLU of F of x plus the shortcut.",
+     "words": [
+      [
+       "So",
+       566.606
+      ],
+      [
+       "the",
+       566.693
+      ],
+      [
+       "main",
+       566.779
+      ],
+      [
+       "path",
+       566.997
+      ],
+      [
+       "computes",
+       567.29
+      ],
+      [
+       "F",
+       567.812
+      ],
+      [
+       "of",
+       567.986
+      ],
+      [
+       "x,",
+       568.084
+      ],
+      [
+       "which",
+       568.616
+      ],
+      [
+       "is",
+       568.779
+      ],
+      [
+       "conv,",
+       568.888
+      ],
+      [
+       "batch",
+       569.671
+      ],
+      [
+       "norm,",
+       569.964
+      ],
+      [
+       "ReLU,",
+       570.54
+      ],
+      [
+       "conv,",
+       571.279
+      ],
+      [
+       "batch",
+       572.029
+      ],
+      [
+       "norm,",
+       572.29
+      ],
+      [
+       "and",
+       572.921
+      ],
+      [
+       "the",
+       572.975
+      ],
+      [
+       "block",
+       573.062
+      ],
+      [
+       "outputs",
+       573.366
+      ],
+      [
+       "ReLU",
+       573.725
+      ],
+      [
+       "of",
+       574.149
+      ],
+      [
+       "F",
+       574.247
+      ],
+      [
+       "of",
+       574.443
+      ],
+      [
+       "x",
+       574.529
+      ],
+      [
+       "plus",
+       574.769
+      ],
+      [
+       "the",
+       575.019
+      ],
+      [
+       "shortcut.",
+       575.095
+      ]
+     ],
+     "captions": [
+      {
+       "text": "So the main path computes F of x, which is conv, batch norm, ReLU,",
+       "start": 566.606,
+       "end": 571.279
+      },
+      {
+       "text": "conv, batch norm, and the block outputs ReLU of F of x plus the shortcut.",
+       "start": 571.279,
+       "end": 575.903
+      }
+     ]
+    },
+    {
+     "id": "residual-3",
+     "audio": "audio/residual-3-9b45d400d9.mp3",
+     "start": 576.682,
+     "duration": 15.553,
+     "text": "When the number of channels doubles from 32 to 64, our shortcut just pads the input with 32 channels of zeros. That adds no learned weights, so every residual network has exactly the same number of parameters as its plain version, and the two start from the same initial weights.",
+     "words": [
+      [
+       "When",
+       576.769
+      ],
+      [
+       "the",
+       576.845
+      ],
+      [
+       "number",
+       576.91
+      ],
+      [
+       "of",
+       577.171
+      ],
+      [
+       "channels",
+       577.269
+      ],
+      [
+       "doubles",
+       577.66
+      ],
+      [
+       "from",
+       577.997
+      ],
+      [
+       "32",
+       578.193
+      ],
+      [
+       "to",
+       578.802
+      ],
+      [
+       "64,",
+       578.899
+      ],
+      [
+       "our",
+       579.932
+      ],
+      [
+       "shortcut",
+       580.008
+      ],
+      [
+       "just",
+       580.606
+      ],
+      [
+       "pads",
+       580.867
+      ],
+      [
+       "the",
+       581.258
+      ],
+      [
+       "input",
+       581.389
+      ],
+      [
+       "with",
+       581.78
+      ],
+      [
+       "32",
+       581.943
+      ],
+      [
+       "channels",
+       582.53
+      ],
+      [
+       "of",
+       582.91
+      ],
+      [
+       "zeros.",
+       582.986
+      ],
+      [
+       "That",
+       583.867
+      ],
+      [
+       "adds",
+       584.008
+      ],
+      [
+       "no",
+       584.226
+      ],
+      [
+       "learned",
+       584.476
+      ],
+      [
+       "weights,",
+       584.736
+      ],
+      [
+       "so",
+       585.356
+      ],
+      [
+       "every",
+       585.552
+      ],
+      [
+       "residual",
+       585.834
+      ],
+      [
+       "network",
+       586.269
+      ],
+      [
+       "has",
+       586.639
+      ],
+      [
+       "exactly",
+       586.802
+      ],
+      [
+       "the",
+       587.323
+      ],
+      [
+       "same",
+       587.421
+      ],
+      [
+       "number",
+       587.758
+      ],
+      [
+       "of",
+       588.03
+      ],
+      [
+       "parameters",
+       588.106
+      ],
+      [
+       "as",
+       588.834
+      ],
+      [
+       "its",
+       588.976
+      ],
+      [
+       "plain",
+       589.073
+      ],
+      [
+       "version,",
+       589.345
+      ],
+      [
+       "and",
+       589.965
+      ],
+      [
+       "the",
+       590.03
+      ],
+      [
+       "two",
+       590.106
+      ],
+      [
+       "start",
+       590.312
+      ],
+      [
+       "from",
+       590.639
+      ],
+      [
+       "the",
+       590.78
+      ],
+      [
+       "same",
+       590.856
+      ],
+      [
+       "initial",
+       591.139
+      ],
+      [
+       "weights.",
+       591.465
+      ]
+     ],
+     "captions": [
+      {
+       "text": "When the number of channels doubles from 32 to 64,",
+       "start": 576.769,
+       "end": 579.932
+      },
+      {
+       "text": "our shortcut just pads the input with 32 channels of zeros.",
+       "start": 579.932,
+       "end": 583.867
+      },
+      {
+       "text": "That adds no learned weights, so every residual network",
+       "start": 583.867,
+       "end": 586.639
+      },
+      {
+       "text": "has exactly the same number of parameters as its plain version,",
+       "start": 586.639,
+       "end": 589.965
+      },
+      {
+       "text": "and the two start from the same initial weights.",
+       "start": 589.965,
+       "end": 592.235
+      }
+     ]
+    },
+    {
+     "id": "residual-4",
+     "audio": "audio/residual-4-4a0188b0c6.mp3",
+     "start": 592.339,
+     "duration": 16.369,
+     "text": "The usual explanation is that if a block should barely change its input, a plain block has to learn to copy it through two convolutions, while a residual block just pushes F toward zero. During backprop, the shortcuts also give the gradient a direct path back. These pictures are schematics, not measurements.",
+     "words": [
+      [
+       "The",
+       592.437
+      ],
+      [
+       "usual",
+       592.492
+      ],
+      [
+       "explanation",
+       592.894
+      ],
+      [
+       "is",
+       593.579
+      ],
+      [
+       "that",
+       593.687
+      ],
+      [
+       "if",
+       593.818
+      ],
+      [
+       "a",
+       593.905
+      ],
+      [
+       "block",
+       593.97
+      ],
+      [
+       "should",
+       594.296
+      ],
+      [
+       "barely",
+       594.622
+      ],
+      [
+       "change",
+       594.937
+      ],
+      [
+       "its",
+       595.231
+      ],
+      [
+       "input,",
+       595.35
+      ],
+      [
+       "a",
+       596.079
+      ],
+      [
+       "plain",
+       596.122
+      ],
+      [
+       "block",
+       596.383
+      ],
+      [
+       "has",
+       596.644
+      ],
+      [
+       "to",
+       596.807
+      ],
+      [
+       "learn",
+       596.894
+      ],
+      [
+       "to",
+       597.155
+      ],
+      [
+       "copy",
+       597.231
+      ],
+      [
+       "it",
+       597.633
+      ],
+      [
+       "through",
+       597.785
+      ],
+      [
+       "two",
+       597.959
+      ],
+      [
+       "convolutions,",
+       598.22
+      ],
+      [
+       "while",
+       599.274
+      ],
+      [
+       "a",
+       599.394
+      ],
+      [
+       "residual",
+       599.448
+      ],
+      [
+       "block",
+       599.905
+      ],
+      [
+       "just",
+       600.35
+      ],
+      [
+       "pushes",
+       600.557
+      ],
+      [
+       "F",
+       601.003
+      ],
+      [
+       "toward",
+       601.198
+      ],
+      [
+       "zero.",
+       601.437
+      ],
+      [
+       "During",
+       602.176
+      ],
+      [
+       "backprop,",
+       602.372
+      ],
+      [
+       "the",
+       603.122
+      ],
+      [
+       "shortcuts",
+       603.198
+      ],
+      [
+       "also",
+       603.698
+      ],
+      [
+       "give",
+       603.992
+      ],
+      [
+       "the",
+       604.166
+      ],
+      [
+       "gradient",
+       604.242
+      ],
+      [
+       "a",
+       604.72
+      ],
+      [
+       "direct",
+       604.785
+      ],
+      [
+       "path",
+       605.166
+      ],
+      [
+       "back.",
+       605.481
+      ],
+      [
+       "These",
+       606.242
+      ],
+      [
+       "pictures",
+       606.416
+      ],
+      [
+       "are",
+       606.796
+      ],
+      [
+       "schematics,",
+       606.883
+      ],
+      [
+       "not",
+       607.644
+      ],
+      [
+       "measurements.",
+       607.807
+      ]
+     ],
+     "captions": [
+      {
+       "text": "The usual explanation is that if a block should barely change its input,",
+       "start": 592.437,
+       "end": 596.079
+      },
+      {
+       "text": "a plain block has to learn to copy it through two convolutions,",
+       "start": 596.079,
+       "end": 599.274
+      },
+      {
+       "text": "while a residual block just pushes F toward zero.",
+       "start": 599.274,
+       "end": 602.176
+      },
+      {
+       "text": "During backprop, the shortcuts also",
+       "start": 602.176,
+       "end": 603.992
+      },
+      {
+       "text": "give the gradient a direct path back.",
+       "start": 603.992,
+       "end": 606.242
+      },
+      {
+       "text": "These pictures are schematics, not measurements.",
+       "start": 606.242,
+       "end": 608.708
+      }
+     ]
+    },
+    {
+     "id": "residual-5",
+     "audio": "audio/residual-5-6ae0de6d7f.mp3",
+     "start": 608.903,
+     "duration": 10.297,
+     "text": "Residual 4 got 83.77 on validation, eight got 86.67, sixteen got 86.85, and thirty-two got 87.20.",
+     "words": [
+      [
+       "Residual",
+       608.99
+      ],
+      [
+       "4",
+       609.414
+      ],
+      [
+       "got",
+       609.686
+      ],
+      [
+       "83.77",
+       610.001
+      ],
+      [
+       "on",
+       611.414
+      ],
+      [
+       "validation,",
+       611.512
+      ],
+      [
+       "eight",
+       612.425
+      ],
+      [
+       "got",
+       612.555
+      ],
+      [
+       "86.67,",
+       612.859
+      ],
+      [
+       "sixteen",
+       614.414
+      ],
+      [
+       "got",
+       614.903
+      ],
+      [
+       "86.85,",
+       615.207
+      ],
+      [
+       "and",
+       616.653
+      ],
+      [
+       "thirty-two",
+       616.74
+      ],
+      [
+       "got",
+       617.392
+      ],
+      [
+       "87.20.",
+       617.664
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Residual 4 got 83.77 on validation, eight got 86.67,",
+       "start": 608.99,
+       "end": 614.414
+      },
+      {
+       "text": "sixteen got 86.85, and thirty-two got 87.20.",
+       "start": 614.414,
+       "end": 619.2
+      }
+     ]
+    },
+    {
+     "id": "residual-6",
+     "audio": "audio/residual-6-c8e10b487b.mp3",
+     "start": 619.299,
+     "duration": 23.641,
+     "text": "So at 32 layers the shortcuts clearly mattered, about 4 points over plain 32. But residual didn't beat plain at 4, 8, or 16, and residual 32 is only 0.03 points above plain 16, well inside the variation between seeds. It still had the highest average, so it was selected, and on the test set it scored 86.43 percent, plus or minus 0.49.",
+     "words": [
+      [
+       "So",
+       619.299
+      ],
+      [
+       "at",
+       619.511
+      ],
+      [
+       "32",
+       619.722
+      ],
+      [
+       "layers",
+       619.933
+      ],
+      [
+       "the",
+       620.425
+      ],
+      [
+       "shortcuts",
+       620.707
+      ],
+      [
+       "clearly",
+       621.41
+      ],
+      [
+       "mattered,",
+       621.973
+      ],
+      [
+       "about",
+       622.677
+      ],
+      [
+       "4",
+       623.099
+      ],
+      [
+       "points",
+       623.24
+      ],
+      [
+       "over",
+       623.732
+      ],
+      [
+       "plain",
+       624.084
+      ],
+      [
+       "32.",
+       624.506
+      ],
+      [
+       "But",
+       624.787
+      ],
+      [
+       "residual",
+       625.069
+      ],
+      [
+       "didn't",
+       625.702
+      ],
+      [
+       "beat",
+       626.195
+      ],
+      [
+       "plain",
+       626.546
+      ],
+      [
+       "at",
+       626.969
+      ],
+      [
+       "4,",
+       627.18
+      ],
+      [
+       "8,",
+       627.391
+      ],
+      [
+       "or",
+       627.602
+      ],
+      [
+       "16,",
+       627.813
+      ],
+      [
+       "and",
+       628.094
+      ],
+      [
+       "residual",
+       628.376
+      ],
+      [
+       "32",
+       629.009
+      ],
+      [
+       "is",
+       629.22
+      ],
+      [
+       "only",
+       629.431
+      ],
+      [
+       "0.03",
+       629.783
+      ],
+      [
+       "points",
+       630.135
+      ],
+      [
+       "above",
+       630.627
+      ],
+      [
+       "plain",
+       631.049
+      ],
+      [
+       "16,",
+       631.472
+      ],
+      [
+       "well",
+       631.753
+      ],
+      [
+       "inside",
+       632.105
+      ],
+      [
+       "the",
+       632.597
+      ],
+      [
+       "variation",
+       632.879
+      ],
+      [
+       "between",
+       633.582
+      ],
+      [
+       "seeds.",
+       634.145
+      ],
+      [
+       "It",
+       634.638
+      ],
+      [
+       "still",
+       634.849
+      ],
+      [
+       "had",
+       635.271
+      ],
+      [
+       "the",
+       635.552
+      ],
+      [
+       "highest",
+       635.834
+      ],
+      [
+       "average,",
+       636.397
+      ],
+      [
+       "so",
+       637.03
+      ],
+      [
+       "it",
+       637.241
+      ],
+      [
+       "was",
+       637.452
+      ],
+      [
+       "selected,",
+       637.734
+      ],
+      [
+       "and",
+       638.437
+      ],
+      [
+       "on",
+       638.719
+      ],
+      [
+       "the",
+       638.93
+      ],
+      [
+       "test",
+       639.211
+      ],
+      [
+       "set",
+       639.563
+      ],
+      [
+       "it",
+       639.844
+      ],
+      [
+       "scored",
+       640.055
+      ],
+      [
+       "86.43",
+       640.548
+      ],
+      [
+       "percent,",
+       640.97
+      ],
+      [
+       "plus",
+       641.603
+      ],
+      [
+       "or",
+       641.955
+      ],
+      [
+       "minus",
+       642.166
+      ],
+      [
+       "0.49.",
+       642.588
+      ]
+     ],
+     "captions": [
+      {
+       "text": "So at 32 layers the shortcuts clearly mattered,",
+       "start": 619.299,
+       "end": 622.677
+      },
+      {
+       "text": "about 4 points over plain 32.",
+       "start": 622.677,
+       "end": 624.787
+      },
+      {
+       "text": "But residual didn't beat plain at 4, 8, or 16, and residual 32 is only",
+       "start": 624.787,
+       "end": 629.783
+      },
+      {
+       "text": "0.03 points above plain 16, well inside the variation between seeds.",
+       "start": 629.783,
+       "end": 634.638
+      },
+      {
+       "text": "It still had the highest average, so it was selected,",
+       "start": 634.638,
+       "end": 638.437
+      },
+      {
+       "text": "and on the test set it scored 86.43 percent, plus or minus 0.49.",
+       "start": 638.437,
+       "end": 642.94
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aug2",
+   "title": "Augmentation on residual 32",
+   "start": 643.895,
+   "end": 687.013,
+   "segments": [
+    {
+     "id": "aug2-1",
+     "audio": "audio/aug2-1-c17ead467a.mp3",
+     "start": 644.795,
+     "duration": 9.889,
+     "text": "Since crop plus flip hurt the small network, we tried it again on residual 32, keeping the recipe, the seeds, and the starting weights the same, and only changing the augmentation.",
+     "words": [
+      [
+       "Since",
+       644.893
+      ],
+      [
+       "crop",
+       645.088
+      ],
+      [
+       "plus",
+       645.393
+      ],
+      [
+       "flip",
+       645.664
+      ],
+      [
+       "hurt",
+       645.947
+      ],
+      [
+       "the",
+       646.197
+      ],
+      [
+       "small",
+       646.284
+      ],
+      [
+       "network,",
+       646.588
+      ],
+      [
+       "we",
+       647.197
+      ],
+      [
+       "tried",
+       647.316
+      ],
+      [
+       "it",
+       647.588
+      ],
+      [
+       "again",
+       647.653
+      ],
+      [
+       "on",
+       647.925
+      ],
+      [
+       "residual",
+       648.045
+      ],
+      [
+       "32,",
+       648.479
+      ],
+      [
+       "keeping",
+       649.436
+      ],
+      [
+       "the",
+       649.708
+      ],
+      [
+       "recipe,",
+       649.784
+      ],
+      [
+       "the",
+       650.469
+      ],
+      [
+       "seeds,",
+       650.556
+      ],
+      [
+       "and",
+       651.262
+      ],
+      [
+       "the",
+       651.349
+      ],
+      [
+       "starting",
+       651.414
+      ],
+      [
+       "weights",
+       651.795
+      ],
+      [
+       "the",
+       652.023
+      ],
+      [
+       "same,",
+       652.121
+      ],
+      [
+       "and",
+       652.838
+      ],
+      [
+       "only",
+       652.947
+      ],
+      [
+       "changing",
+       653.208
+      ],
+      [
+       "the",
+       653.632
+      ],
+      [
+       "augmentation.",
+       653.708
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Since crop plus flip hurt the small network,",
+       "start": 644.893,
+       "end": 647.197
+      },
+      {
+       "text": "we tried it again on residual 32, keeping the recipe, the seeds,",
+       "start": 647.197,
+       "end": 651.262
+      },
+      {
+       "text": "and the starting weights the same, and only changing the augmentation.",
+       "start": 651.262,
+       "end": 654.683
+      }
+     ]
+    },
+    {
+     "id": "aug2-2",
+     "audio": "audio/aug2-2-615c7e6fbb.mp3",
+     "start": 654.8,
+     "duration": 13.297,
+     "text": "On validation, no augmentation got 87.20, flip got 90.31, and crop plus flip got 93.74. Crop plus flip improved all three seeds, by roughly 6 to 7 points each.",
+     "words": [
+      [
+       "On",
+       654.887
+      ],
+      [
+       "validation,",
+       654.996
+      ],
+      [
+       "no",
+       655.811
+      ],
+      [
+       "augmentation",
+       656.028
+      ],
+      [
+       "got",
+       656.691
+      ],
+      [
+       "87.20,",
+       656.985
+      ],
+      [
+       "flip",
+       658.496
+      ],
+      [
+       "got",
+       658.822
+      ],
+      [
+       "90.31,",
+       659.028
+      ],
+      [
+       "and",
+       660.365
+      ],
+      [
+       "crop",
+       660.441
+      ],
+      [
+       "plus",
+       660.691
+      ],
+      [
+       "flip",
+       660.93
+      ],
+      [
+       "got",
+       661.398
+      ],
+      [
+       "93.74.",
+       661.593
+      ],
+      [
+       "Crop",
+       663.398
+      ],
+      [
+       "plus",
+       663.648
+      ],
+      [
+       "flip",
+       663.909
+      ],
+      [
+       "improved",
+       664.289
+      ],
+      [
+       "all",
+       664.778
+      ],
+      [
+       "three",
+       664.996
+      ],
+      [
+       "seeds,",
+       665.267
+      ],
+      [
+       "by",
+       665.974
+      ],
+      [
+       "roughly",
+       666.104
+      ],
+      [
+       "6",
+       666.419
+      ],
+      [
+       "to",
+       666.789
+      ],
+      [
+       "7",
+       666.887
+      ],
+      [
+       "points",
+       667.169
+      ],
+      [
+       "each.",
+       667.452
+      ]
+     ],
+     "captions": [
+      {
+       "text": "On validation, no augmentation got 87.20,",
+       "start": 654.887,
+       "end": 658.496
+      },
+      {
+       "text": "flip got 90.31, and crop plus flip got 93.74.",
+       "start": 658.496,
+       "end": 663.398
+      },
+      {
+       "text": "Crop plus flip improved all three seeds, by roughly 6 to 7 points each.",
+       "start": 663.398,
+       "end": 668.097
+      }
+     ]
+    },
+    {
+     "id": "aug2-3",
+     "audio": "audio/aug2-3-3ad870a81e.mp3",
+     "start": 668.287,
+     "duration": 17.785,
+     "text": "So the same augmentation that cost the small network about 1.6 points gave residual 32 about 6.5. Our best guess is that a bigger network with a longer, stronger recipe has room to learn from the extra variety. We didn't prove that though, since the model, the recipe, and the split all changed between the two experiments.",
+     "words": [
+      [
+       "So",
+       668.385
+      ],
+      [
+       "the",
+       668.472
+      ],
+      [
+       "same",
+       668.559
+      ],
+      [
+       "augmentation",
+       668.82
+      ],
+      [
+       "that",
+       669.418
+      ],
+      [
+       "cost",
+       669.548
+      ],
+      [
+       "the",
+       669.885
+      ],
+      [
+       "small",
+       669.961
+      ],
+      [
+       "network",
+       670.244
+      ],
+      [
+       "about",
+       670.592
+      ],
+      [
+       "1.6",
+       670.896
+      ],
+      [
+       "points",
+       671.559
+      ],
+      [
+       "gave",
+       672.005
+      ],
+      [
+       "residual",
+       672.2
+      ],
+      [
+       "32",
+       672.613
+      ],
+      [
+       "about",
+       673.276
+      ],
+      [
+       "6.5.",
+       673.494
+      ],
+      [
+       "Our",
+       674.624
+      ],
+      [
+       "best",
+       674.755
+      ],
+      [
+       "guess",
+       675.048
+      ],
+      [
+       "is",
+       675.526
+      ],
+      [
+       "that",
+       675.613
+      ],
+      [
+       "a",
+       675.733
+      ],
+      [
+       "bigger",
+       675.852
+      ],
+      [
+       "network",
+       676.113
+      ],
+      [
+       "with",
+       676.472
+      ],
+      [
+       "a",
+       676.581
+      ],
+      [
+       "longer,",
+       676.624
+      ],
+      [
+       "stronger",
+       677.32
+      ],
+      [
+       "recipe",
+       677.7
+      ],
+      [
+       "has",
+       678.113
+      ],
+      [
+       "room",
+       678.287
+      ],
+      [
+       "to",
+       678.548
+      ],
+      [
+       "learn",
+       678.668
+      ],
+      [
+       "from",
+       679.005
+      ],
+      [
+       "the",
+       679.146
+      ],
+      [
+       "extra",
+       679.211
+      ],
+      [
+       "variety.",
+       679.559
+      ],
+      [
+       "We",
+       680.374
+      ],
+      [
+       "didn't",
+       680.461
+      ],
+      [
+       "prove",
+       680.646
+      ],
+      [
+       "that",
+       680.95
+      ],
+      [
+       "though,",
+       681.135
+      ],
+      [
+       "since",
+       681.689
+      ],
+      [
+       "the",
+       681.896
+      ],
+      [
+       "model,",
+       681.972
+      ],
+      [
+       "the",
+       682.57
+      ],
+      [
+       "recipe,",
+       682.657
+      ],
+      [
+       "and",
+       683.352
+      ],
+      [
+       "the",
+       683.429
+      ],
+      [
+       "split",
+       683.505
+      ],
+      [
+       "all",
+       683.896
+      ],
+      [
+       "changed",
+       684.092
+      ],
+      [
+       "between",
+       684.516
+      ],
+      [
+       "the",
+       684.798
+      ],
+      [
+       "two",
+       684.874
+      ],
+      [
+       "experiments.",
+       685.059
+      ]
+     ],
+     "captions": [
+      {
+       "text": "So the same augmentation that cost the small",
+       "start": 668.385,
+       "end": 670.244
+      },
+      {
+       "text": "network about 1.6 points gave residual 32 about 6.5.",
+       "start": 670.244,
+       "end": 674.624
+      },
+      {
+       "text": "Our best guess is that a bigger network with a longer,",
+       "start": 674.624,
+       "end": 677.32
+      },
+      {
+       "text": "stronger recipe has room to learn from the extra variety.",
+       "start": 677.32,
+       "end": 680.374
+      },
+      {
+       "text": "We didn't prove that though, since the model, the recipe,",
+       "start": 680.374,
+       "end": 683.352
+      },
+      {
+       "text": "and the split all changed between the two experiments.",
+       "start": 683.352,
+       "end": 686.072
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "resnet",
+   "title": "CIFAR ResNet-18",
+   "start": 687.013,
+   "end": 794.243,
+   "segments": [
+    {
+     "id": "resnet-1",
+     "audio": "audio/resnet-1-de9e010877.mp3",
+     "start": 687.913,
+     "duration": 9.289,
+     "text": "Last, we tried ResNet-18, which is a much bigger residual network, adapted for CIFAR and trained from random weights, so there's no pre-training on ImageNet.",
+     "words": [
+      [
+       "Last,",
+       688.0
+      ],
+      [
+       "we",
+       688.511
+      ],
+      [
+       "tried",
+       688.63
+      ],
+      [
+       "ResNet-18,",
+       688.946
+      ],
+      [
+       "which",
+       690.5
+      ],
+      [
+       "is",
+       690.652
+      ],
+      [
+       "a",
+       690.739
+      ],
+      [
+       "much",
+       690.783
+      ],
+      [
+       "bigger",
+       691.13
+      ],
+      [
+       "residual",
+       691.424
+      ],
+      [
+       "network,",
+       691.891
+      ],
+      [
+       "adapted",
+       692.511
+      ],
+      [
+       "for",
+       692.967
+      ],
+      [
+       "CIFAR",
+       693.098
+      ],
+      [
+       "and",
+       693.783
+      ],
+      [
+       "trained",
+       693.848
+      ],
+      [
+       "from",
+       694.185
+      ],
+      [
+       "random",
+       694.348
+      ],
+      [
+       "weights,",
+       694.652
+      ],
+      [
+       "so",
+       695.228
+      ],
+      [
+       "there's",
+       695.326
+      ],
+      [
+       "no",
+       695.489
+      ],
+      [
+       "pre-training",
+       695.674
+      ],
+      [
+       "on",
+       696.25
+      ],
+      [
+       "ImageNet.",
+       696.359
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Last, we tried ResNet-18, which is a much bigger residual network,",
+       "start": 688.0,
+       "end": 692.511
+      },
+      {
+       "text": "adapted for CIFAR and trained from random weights,",
+       "start": 692.511,
+       "end": 695.228
+      },
+      {
+       "text": "so there's no pre-training on ImageNet.",
+       "start": 695.228,
+       "end": 697.202
+      }
+     ]
+    },
+    {
+     "id": "resnet-2",
+     "audio": "audio/resnet-2-b93655ee77.mp3",
+     "start": 697.32,
+     "duration": 14.881,
+     "text": "The standard version starts with a 7 by 7 stride 2 convolution and a max pool, which is built for big ImageNet photos and would shrink our images to 8 by 8 before the blocks even start, so we swapped in one 3 by 3 stride 1 convolution and removed the max pool.",
+     "words": [
+      [
+       "The",
+       697.418
+      ],
+      [
+       "standard",
+       697.483
+      ],
+      [
+       "version",
+       697.831
+      ],
+      [
+       "starts",
+       698.179
+      ],
+      [
+       "with",
+       698.527
+      ],
+      [
+       "a",
+       698.657
+      ],
+      [
+       "7",
+       698.701
+      ],
+      [
+       "by",
+       699.027
+      ],
+      [
+       "7",
+       699.168
+      ],
+      [
+       "stride",
+       699.516
+      ],
+      [
+       "2",
+       699.973
+      ],
+      [
+       "convolution",
+       700.19
+      ],
+      [
+       "and",
+       700.962
+      ],
+      [
+       "a",
+       701.092
+      ],
+      [
+       "max",
+       701.136
+      ],
+      [
+       "pool,",
+       701.494
+      ],
+      [
+       "which",
+       702.081
+      ],
+      [
+       "is",
+       702.223
+      ],
+      [
+       "built",
+       702.342
+      ],
+      [
+       "for",
+       702.559
+      ],
+      [
+       "big",
+       702.755
+      ],
+      [
+       "ImageNet",
+       703.049
+      ],
+      [
+       "photos",
+       703.396
+      ],
+      [
+       "and",
+       704.038
+      ],
+      [
+       "would",
+       704.146
+      ],
+      [
+       "shrink",
+       704.266
+      ],
+      [
+       "our",
+       704.614
+      ],
+      [
+       "images",
+       704.886
+      ],
+      [
+       "to",
+       705.277
+      ],
+      [
+       "8",
+       705.473
+      ],
+      [
+       "by",
+       705.646
+      ],
+      [
+       "8",
+       705.918
+      ],
+      [
+       "before",
+       706.103
+      ],
+      [
+       "the",
+       706.429
+      ],
+      [
+       "blocks",
+       706.516
+      ],
+      [
+       "even",
+       706.831
+      ],
+      [
+       "start,",
+       707.005
+      ],
+      [
+       "so",
+       707.668
+      ],
+      [
+       "we",
+       707.777
+      ],
+      [
+       "swapped",
+       707.875
+      ],
+      [
+       "in",
+       708.223
+      ],
+      [
+       "one",
+       708.342
+      ],
+      [
+       "3",
+       708.559
+      ],
+      [
+       "by",
+       708.82
+      ],
+      [
+       "3",
+       709.016
+      ],
+      [
+       "stride",
+       709.331
+      ],
+      [
+       "1",
+       709.69
+      ],
+      [
+       "convolution",
+       709.907
+      ],
+      [
+       "and",
+       710.712
+      ],
+      [
+       "removed",
+       710.82
+      ],
+      [
+       "the",
+       711.233
+      ],
+      [
+       "max",
+       711.299
+      ],
+      [
+       "pool.",
+       711.581
+      ]
+     ],
+     "captions": [
+      {
+       "text": "The standard version starts with a 7 by 7 stride 2 convolution and a max pool,",
+       "start": 697.418,
+       "end": 702.081
+      },
+      {
+       "text": "which is built for big ImageNet photos and would",
+       "start": 702.081,
+       "end": 704.266
+      },
+      {
+       "text": "shrink our images to 8 by 8 before the blocks even start,",
+       "start": 704.266,
+       "end": 707.668
+      },
+      {
+       "text": "so we swapped in one 3 by 3 stride 1 convolution and removed the max pool.",
+       "start": 707.668,
+       "end": 712.201
+      }
+     ]
+    },
+    {
+     "id": "resnet-3",
+     "audio": "audio/resnet-3-7cd3c622cb.mp3",
+     "start": 712.304,
+     "duration": 22.561,
+     "text": "After that come eight basic residual blocks, two per stage, with 64, 128, 256, and 512 channels. The first stage stays at 32 by 32, and each of the next three halves the resolution, so the maps go from 32 to 16 to 8 to 4. Where the shape changes, the shortcut is a learned 1 by 1 convolution with batch norm instead of zero padding.",
+     "words": [
+      [
+       "After",
+       712.391
+      ],
+      [
+       "that",
+       712.652
+      ],
+      [
+       "come",
+       712.826
+      ],
+      [
+       "eight",
+       713.173
+      ],
+      [
+       "basic",
+       713.423
+      ],
+      [
+       "residual",
+       713.771
+      ],
+      [
+       "blocks,",
+       714.195
+      ],
+      [
+       "two",
+       714.88
+      ],
+      [
+       "per",
+       715.054
+      ],
+      [
+       "stage,",
+       715.206
+      ],
+      [
+       "with",
+       715.934
+      ],
+      [
+       "64,",
+       716.065
+      ],
+      [
+       "128,",
+       716.989
+      ],
+      [
+       "256,",
+       718.086
+      ],
+      [
+       "and",
+       719.304
+      ],
+      [
+       "512",
+       719.413
+      ],
+      [
+       "channels.",
+       720.163
+      ],
+      [
+       "The",
+       720.978
+      ],
+      [
+       "first",
+       721.054
+      ],
+      [
+       "stage",
+       721.326
+      ],
+      [
+       "stays",
+       721.619
+      ],
+      [
+       "at",
+       721.902
+      ],
+      [
+       "32",
+       721.989
+      ],
+      [
+       "by",
+       722.5
+      ],
+      [
+       "32,",
+       722.663
+      ],
+      [
+       "and",
+       723.532
+      ],
+      [
+       "each",
+       723.706
+      ],
+      [
+       "of",
+       723.869
+      ],
+      [
+       "the",
+       723.934
+      ],
+      [
+       "next",
+       724.0
+      ],
+      [
+       "three",
+       724.282
+      ],
+      [
+       "halves",
+       724.586
+      ],
+      [
+       "the",
+       724.815
+      ],
+      [
+       "resolution,",
+       724.891
+      ],
+      [
+       "so",
+       725.728
+      ],
+      [
+       "the",
+       725.847
+      ],
+      [
+       "maps",
+       725.923
+      ],
+      [
+       "go",
+       726.195
+      ],
+      [
+       "from",
+       726.347
+      ],
+      [
+       "32",
+       726.51
+      ],
+      [
+       "to",
+       727.097
+      ],
+      [
+       "16",
+       727.195
+      ],
+      [
+       "to",
+       727.869
+      ],
+      [
+       "8",
+       728.01
+      ],
+      [
+       "to",
+       728.195
+      ],
+      [
+       "4.",
+       728.271
+      ],
+      [
+       "Where",
+       728.989
+      ],
+      [
+       "the",
+       729.065
+      ],
+      [
+       "shape",
+       729.13
+      ],
+      [
+       "changes,",
+       729.391
+      ],
+      [
+       "the",
+       730.076
+      ],
+      [
+       "shortcut",
+       730.152
+      ],
+      [
+       "is",
+       730.673
+      ],
+      [
+       "a",
+       730.771
+      ],
+      [
+       "learned",
+       730.826
+      ],
+      [
+       "1",
+       731.163
+      ],
+      [
+       "by",
+       731.413
+      ],
+      [
+       "1",
+       731.576
+      ],
+      [
+       "convolution",
+       731.858
+      ],
+      [
+       "with",
+       732.619
+      ],
+      [
+       "batch",
+       732.782
+      ],
+      [
+       "norm",
+       733.119
+      ],
+      [
+       "instead",
+       733.51
+      ],
+      [
+       "of",
+       733.858
+      ],
+      [
+       "zero",
+       733.934
+      ],
+      [
+       "padding.",
+       734.195
+      ]
+     ],
+     "captions": [
+      {
+       "text": "After that come eight basic residual blocks,",
+       "start": 712.391,
+       "end": 714.88
+      },
+      {
+       "text": "two per stage, with 64, 128, 256, and 512 channels.",
+       "start": 714.88,
+       "end": 720.978
+      },
+      {
+       "text": "The first stage stays at 32 by 32, and each of the next three",
+       "start": 720.978,
+       "end": 724.586
+      },
+      {
+       "text": "halves the resolution, so the maps go from 32 to 16 to 8 to 4.",
+       "start": 724.586,
+       "end": 728.989
+      },
+      {
+       "text": "Where the shape changes, the shortcut is a learned 1 by",
+       "start": 728.989,
+       "end": 731.576
+      },
+      {
+       "text": "1 convolution with batch norm instead of zero padding.",
+       "start": 731.576,
+       "end": 734.865
+      }
+     ]
+    },
+    {
+     "id": "resnet-4",
+     "audio": "audio/resnet-4-b02edc9f90.mp3",
+     "start": 734.983,
+     "duration": 11.881,
+     "text": "At the end, global average pooling turns each 4 by 4 map into a single number, and one linear layer maps those 512 numbers to the ten classes, with no 128 unit hidden layer like before.",
+     "words": [
+      [
+       "At",
+       734.983
+      ],
+      [
+       "the",
+       735.176
+      ],
+      [
+       "end,",
+       735.433
+      ],
+      [
+       "global",
+       735.754
+      ],
+      [
+       "average",
+       736.203
+      ],
+      [
+       "pooling",
+       736.717
+      ],
+      [
+       "turns",
+       737.231
+      ],
+      [
+       "each",
+       737.616
+      ],
+      [
+       "4",
+       737.937
+      ],
+      [
+       "by",
+       738.066
+      ],
+      [
+       "4",
+       738.258
+      ],
+      [
+       "map",
+       738.387
+      ],
+      [
+       "into",
+       738.644
+      ],
+      [
+       "a",
+       738.965
+      ],
+      [
+       "single",
+       739.093
+      ],
+      [
+       "number,",
+       739.543
+      ],
+      [
+       "and",
+       740.056
+      ],
+      [
+       "one",
+       740.313
+      ],
+      [
+       "linear",
+       740.57
+      ],
+      [
+       "layer",
+       741.02
+      ],
+      [
+       "maps",
+       741.405
+      ],
+      [
+       "those",
+       741.726
+      ],
+      [
+       "512",
+       742.111
+      ],
+      [
+       "numbers",
+       742.368
+      ],
+      [
+       "to",
+       742.882
+      ],
+      [
+       "the",
+       743.075
+      ],
+      [
+       "ten",
+       743.332
+      ],
+      [
+       "classes,",
+       743.588
+      ],
+      [
+       "with",
+       744.166
+      ],
+      [
+       "no",
+       744.488
+      ],
+      [
+       "128",
+       744.68
+      ],
+      [
+       "unit",
+       744.937
+      ],
+      [
+       "hidden",
+       745.258
+      ],
+      [
+       "layer",
+       745.708
+      ],
+      [
+       "like",
+       746.093
+      ],
+      [
+       "before.",
+       746.414
+      ]
+     ],
+     "captions": [
+      {
+       "text": "At the end, global average pooling turns each 4 by 4 map into",
+       "start": 734.983,
+       "end": 738.965
+      },
+      {
+       "text": "a single number, and one linear layer maps those 512 numbers",
+       "start": 738.965,
+       "end": 742.882
+      },
+      {
+       "text": "to the ten classes, with no 128 unit hidden layer like before.",
+       "start": 742.882,
+       "end": 746.864
+      }
+     ]
+    },
+    {
+     "id": "resnet-5",
+     "audio": "audio/resnet-5-7c4fdeb377.mp3",
+     "start": 746.977,
+     "duration": 11.473,
+     "text": "The 18 comes from counting the layers with weights along the main path. The stem is one, the blocks have 16 convolutions, and the classifier makes 18. The projection shortcuts aren't counted, by convention.",
+     "words": [
+      [
+       "The",
+       747.064
+      ],
+      [
+       "18",
+       747.162
+      ],
+      [
+       "comes",
+       747.619
+      ],
+      [
+       "from",
+       747.879
+      ],
+      [
+       "counting",
+       748.043
+      ],
+      [
+       "the",
+       748.379
+      ],
+      [
+       "layers",
+       748.466
+      ],
+      [
+       "with",
+       748.793
+      ],
+      [
+       "weights",
+       748.934
+      ],
+      [
+       "along",
+       749.369
+      ],
+      [
+       "the",
+       749.64
+      ],
+      [
+       "main",
+       749.706
+      ],
+      [
+       "path.",
+       749.912
+      ],
+      [
+       "The",
+       750.706
+      ],
+      [
+       "stem",
+       750.771
+      ],
+      [
+       "is",
+       751.206
+      ],
+      [
+       "one,",
+       751.325
+      ],
+      [
+       "the",
+       751.956
+      ],
+      [
+       "blocks",
+       752.043
+      ],
+      [
+       "have",
+       752.369
+      ],
+      [
+       "16",
+       752.499
+      ],
+      [
+       "convolutions,",
+       752.977
+      ],
+      [
+       "and",
+       753.966
+      ],
+      [
+       "the",
+       754.043
+      ],
+      [
+       "classifier",
+       754.119
+      ],
+      [
+       "makes",
+       754.706
+      ],
+      [
+       "18.",
+       754.945
+      ],
+      [
+       "The",
+       755.695
+      ],
+      [
+       "projection",
+       755.749
+      ],
+      [
+       "shortcuts",
+       756.206
+      ],
+      [
+       "aren't",
+       756.76
+      ],
+      [
+       "counted,",
+       756.956
+      ],
+      [
+       "by",
+       757.51
+      ],
+      [
+       "convention.",
+       757.662
+      ]
+     ],
+     "captions": [
+      {
+       "text": "The 18 comes from counting the layers with weights along the main path.",
+       "start": 747.064,
+       "end": 750.706
+      },
+      {
+       "text": "The stem is one, the blocks have 16 convolutions,",
+       "start": 750.706,
+       "end": 753.966
+      },
+      {
+       "text": "and the classifier makes 18.",
+       "start": 753.966,
+       "end": 755.695
+      },
+      {
+       "text": "The projection shortcuts aren't counted, by convention.",
+       "start": 755.695,
+       "end": 758.45
+      }
+     ]
+    },
+    {
+     "id": "resnet-6",
+     "audio": "audio/resnet-6-7610d052a2.mp3",
+     "start": 758.649,
+     "duration": 21.337,
+     "text": "So compared with residual 32, a lot more changed than the layer count. ResNet-18 keeps higher resolution for longer, has many more channels, learned shortcuts, a global pooling head, and about 11.2 million parameters, roughly nine times as many. It also trained for 200 epochs instead of 160, so this compares whole recipes, not just architectures.",
+     "words": [
+      [
+       "So",
+       758.747
+      ],
+      [
+       "compared",
+       758.856
+      ],
+      [
+       "with",
+       759.193
+      ],
+      [
+       "residual",
+       759.345
+      ],
+      [
+       "32,",
+       759.758
+      ],
+      [
+       "a",
+       760.671
+      ],
+      [
+       "lot",
+       760.715
+      ],
+      [
+       "more",
+       760.943
+      ],
+      [
+       "changed",
+       761.128
+      ],
+      [
+       "than",
+       761.552
+      ],
+      [
+       "the",
+       761.66
+      ],
+      [
+       "layer",
+       761.736
+      ],
+      [
+       "count.",
+       761.976
+      ],
+      [
+       "ResNet-18",
+       762.66
+      ],
+      [
+       "keeps",
+       763.921
+      ],
+      [
+       "higher",
+       764.182
+      ],
+      [
+       "resolution",
+       764.552
+      ],
+      [
+       "for",
+       765.041
+      ],
+      [
+       "longer,",
+       765.171
+      ],
+      [
+       "has",
+       765.834
+      ],
+      [
+       "many",
+       765.965
+      ],
+      [
+       "more",
+       766.269
+      ],
+      [
+       "channels,",
+       766.454
+      ],
+      [
+       "learned",
+       767.204
+      ],
+      [
+       "shortcuts,",
+       767.389
+      ],
+      [
+       "a",
+       768.204
+      ],
+      [
+       "global",
+       768.269
+      ],
+      [
+       "pooling",
+       768.639
+      ],
+      [
+       "head,",
+       768.965
+      ],
+      [
+       "and",
+       769.497
+      ],
+      [
+       "about",
+       769.563
+      ],
+      [
+       "11.2",
+       769.791
+      ],
+      [
+       "million",
+       770.649
+      ],
+      [
+       "parameters,",
+       770.954
+      ],
+      [
+       "roughly",
+       771.802
+      ],
+      [
+       "nine",
+       772.139
+      ],
+      [
+       "times",
+       772.476
+      ],
+      [
+       "as",
+       772.834
+      ],
+      [
+       "many.",
+       772.932
+      ],
+      [
+       "It",
+       773.563
+      ],
+      [
+       "also",
+       773.649
+      ],
+      [
+       "trained",
+       773.932
+      ],
+      [
+       "for",
+       774.269
+      ],
+      [
+       "200",
+       774.421
+      ],
+      [
+       "epochs",
+       774.899
+      ],
+      [
+       "instead",
+       775.247
+      ],
+      [
+       "of",
+       775.595
+      ],
+      [
+       "160,",
+       775.671
+      ],
+      [
+       "so",
+       776.813
+      ],
+      [
+       "this",
+       776.921
+      ],
+      [
+       "compares",
+       777.084
+      ],
+      [
+       "whole",
+       777.497
+      ],
+      [
+       "recipes,",
+       777.726
+      ],
+      [
+       "not",
+       778.53
+      ],
+      [
+       "just",
+       778.747
+      ],
+      [
+       "architectures.",
+       778.943
+      ]
+     ],
+     "captions": [
+      {
+       "text": "So compared with residual 32, a lot more changed than the layer count.",
+       "start": 758.747,
+       "end": 762.66
+      },
+      {
+       "text": "ResNet-18 keeps higher resolution for longer,",
+       "start": 762.66,
+       "end": 765.834
+      },
+      {
+       "text": "has many more channels, learned shortcuts, a global pooling head,",
+       "start": 765.834,
+       "end": 769.497
+      },
+      {
+       "text": "and about 11.2 million parameters, roughly nine times as many.",
+       "start": 769.497,
+       "end": 773.563
+      },
+      {
+       "text": "It also trained for 200 epochs instead of 160,",
+       "start": 773.563,
+       "end": 776.813
+      },
+      {
+       "text": "so this compares whole recipes, not just architectures.",
+       "start": 776.813,
+       "end": 779.986
+      }
+     ]
+    },
+    {
+     "id": "resnet-7",
+     "audio": "audio/resnet-7-8888186178.mp3",
+     "start": 780.18,
+     "duration": 13.105,
+     "text": "Across three seeds, it averaged 95.77 percent validation accuracy over the last ten epochs, plus or minus 0.11, compared to 93.74 for residual 32 with the same augmentation.",
+     "words": [
+      [
+       "Across",
+       780.18
+      ],
+      [
+       "three",
+       780.711
+      ],
+      [
+       "seeds,",
+       781.165
+      ],
+      [
+       "it",
+       781.695
+      ],
+      [
+       "averaged",
+       781.923
+      ],
+      [
+       "95.77",
+       782.604
+      ],
+      [
+       "percent",
+       783.059
+      ],
+      [
+       "validation",
+       783.665
+      ],
+      [
+       "accuracy",
+       784.498
+      ],
+      [
+       "over",
+       785.18
+      ],
+      [
+       "the",
+       785.559
+      ],
+      [
+       "last",
+       785.862
+      ],
+      [
+       "ten",
+       786.24
+      ],
+      [
+       "epochs,",
+       786.543
+      ],
+      [
+       "plus",
+       787.149
+      ],
+      [
+       "or",
+       787.528
+      ],
+      [
+       "minus",
+       787.755
+      ],
+      [
+       "0.11,",
+       788.21
+      ],
+      [
+       "compared",
+       788.664
+      ],
+      [
+       "to",
+       789.346
+      ],
+      [
+       "93.74",
+       789.573
+      ],
+      [
+       "for",
+       790.028
+      ],
+      [
+       "residual",
+       790.331
+      ],
+      [
+       "32",
+       791.013
+      ],
+      [
+       "with",
+       791.24
+      ],
+      [
+       "the",
+       791.619
+      ],
+      [
+       "same",
+       791.922
+      ],
+      [
+       "augmentation.",
+       792.3
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Across three seeds, it averaged 95.77 percent validation",
+       "start": 780.18,
+       "end": 784.498
+      },
+      {
+       "text": "accuracy over the last ten epochs, plus or minus 0.11,",
+       "start": 784.498,
+       "end": 788.664
+      },
+      {
+       "text": "compared to 93.74 for residual 32 with the same augmentation.",
+       "start": 788.664,
+       "end": 793.285
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "title": "What the results support",
+   "start": 794.243,
+   "end": 874.047,
+   "segments": [
+    {
+     "id": "end-1",
+     "audio": "audio/end-1-3d9fdb4c56.mp3",
+     "start": 795.143,
+     "duration": 14.089,
+     "text": "When the queue finished, it picked ResNet-18 with crop plus flip based on validation, and only then did we run that model on the test set. It got 95.21 percent test accuracy, plus or minus 0.02 across the three seeds.",
+     "words": [
+      [
+       "When",
+       795.143
+      ],
+      [
+       "the",
+       795.468
+      ],
+      [
+       "queue",
+       795.727
+      ],
+      [
+       "finished,",
+       796.117
+      ],
+      [
+       "it",
+       796.766
+      ],
+      [
+       "picked",
+       796.961
+      ],
+      [
+       "ResNet-18",
+       797.415
+      ],
+      [
+       "with",
+       798.065
+      ],
+      [
+       "crop",
+       798.389
+      ],
+      [
+       "plus",
+       798.714
+      ],
+      [
+       "flip",
+       799.038
+      ],
+      [
+       "based",
+       799.363
+      ],
+      [
+       "on",
+       799.753
+      ],
+      [
+       "validation,",
+       799.947
+      ],
+      [
+       "and",
+       800.726
+      ],
+      [
+       "only",
+       800.986
+      ],
+      [
+       "then",
+       801.311
+      ],
+      [
+       "did",
+       801.635
+      ],
+      [
+       "we",
+       801.895
+      ],
+      [
+       "run",
+       802.09
+      ],
+      [
+       "that",
+       802.35
+      ],
+      [
+       "model",
+       802.674
+      ],
+      [
+       "on",
+       803.064
+      ],
+      [
+       "the",
+       803.259
+      ],
+      [
+       "test",
+       803.518
+      ],
+      [
+       "set.",
+       803.843
+      ],
+      [
+       "It",
+       804.167
+      ],
+      [
+       "got",
+       804.362
+      ],
+      [
+       "95.21",
+       804.622
+      ],
+      [
+       "percent",
+       805.012
+      ],
+      [
+       "test",
+       805.531
+      ],
+      [
+       "accuracy,",
+       805.856
+      ],
+      [
+       "plus",
+       806.505
+      ],
+      [
+       "or",
+       806.829
+      ],
+      [
+       "minus",
+       807.024
+      ],
+      [
+       "0.02",
+       807.414
+      ],
+      [
+       "across",
+       807.738
+      ],
+      [
+       "the",
+       808.193
+      ],
+      [
+       "three",
+       808.453
+      ],
+      [
+       "seeds.",
+       808.842
+      ]
+     ],
+     "captions": [
+      {
+       "text": "When the queue finished, it picked ResNet-18 with crop plus flip based",
+       "start": 795.143,
+       "end": 799.753
+      },
+      {
+       "text": "on validation, and only then did we run that model on the test set.",
+       "start": 799.753,
+       "end": 804.167
+      },
+      {
+       "text": "It got 95.21 percent test accuracy,",
+       "start": 804.167,
+       "end": 806.505
+      },
+      {
+       "text": "plus or minus 0.02 across the three seeds.",
+       "start": 806.505,
+       "end": 809.232
+      }
+     ]
+    },
+    {
+     "id": "end-2",
+     "audio": "audio/end-2-8619eec929.mp3",
+     "start": 809.424,
+     "duration": 24.073,
+     "text": "Putting the whole path together, the classroom baseline got 63.68 on test, and then on validation the stricter recipe got 78.27, depth and shortcuts got 87.20, crop and flip got 93.74, and ResNet-18 got 95.77. The metrics and setups changed along the way, so these numbers show the order things happened in, not a leaderboard, and they shouldn't be added up.",
+     "words": [
+      [
+       "Putting",
+       809.522
+      ],
+      [
+       "the",
+       809.706
+      ],
+      [
+       "whole",
+       809.782
+      ],
+      [
+       "path",
+       810.032
+      ],
+      [
+       "together,",
+       810.326
+      ],
+      [
+       "the",
+       810.924
+      ],
+      [
+       "classroom",
+       811.011
+      ],
+      [
+       "baseline",
+       811.456
+      ],
+      [
+       "got",
+       811.946
+      ],
+      [
+       "63.68",
+       812.141
+      ],
+      [
+       "on",
+       813.478
+      ],
+      [
+       "test,",
+       813.63
+      ],
+      [
+       "and",
+       814.315
+      ],
+      [
+       "then",
+       814.38
+      ],
+      [
+       "on",
+       814.489
+      ],
+      [
+       "validation",
+       814.619
+      ],
+      [
+       "the",
+       815.141
+      ],
+      [
+       "stricter",
+       815.217
+      ],
+      [
+       "recipe",
+       815.576
+      ],
+      [
+       "got",
+       816.174
+      ],
+      [
+       "78.27,",
+       816.337
+      ],
+      [
+       "depth",
+       817.956
+      ],
+      [
+       "and",
+       818.196
+      ],
+      [
+       "shortcuts",
+       818.272
+      ],
+      [
+       "got",
+       818.772
+      ],
+      [
+       "87.20,",
+       819.054
+      ],
+      [
+       "crop",
+       820.532
+      ],
+      [
+       "and",
+       820.924
+      ],
+      [
+       "flip",
+       821.011
+      ],
+      [
+       "got",
+       821.402
+      ],
+      [
+       "93.74,",
+       821.587
+      ],
+      [
+       "and",
+       823.196
+      ],
+      [
+       "ResNet-18",
+       823.293
+      ],
+      [
+       "got",
+       824.5
+      ],
+      [
+       "95.77.",
+       824.696
+      ],
+      [
+       "The",
+       826.38
+      ],
+      [
+       "metrics",
+       826.435
+      ],
+      [
+       "and",
+       826.869
+      ],
+      [
+       "setups",
+       826.967
+      ],
+      [
+       "changed",
+       827.435
+      ],
+      [
+       "along",
+       827.815
+      ],
+      [
+       "the",
+       828.065
+      ],
+      [
+       "way,",
+       828.152
+      ],
+      [
+       "so",
+       828.696
+      ],
+      [
+       "these",
+       828.815
+      ],
+      [
+       "numbers",
+       829.011
+      ],
+      [
+       "show",
+       829.337
+      ],
+      [
+       "the",
+       829.598
+      ],
+      [
+       "order",
+       829.717
+      ],
+      [
+       "things",
+       829.967
+      ],
+      [
+       "happened",
+       830.228
+      ],
+      [
+       "in,",
+       830.598
+      ],
+      [
+       "not",
+       831.098
+      ],
+      [
+       "a",
+       831.217
+      ],
+      [
+       "leaderboard,",
+       831.25
+      ],
+      [
+       "and",
+       832.13
+      ],
+      [
+       "they",
+       832.185
+      ],
+      [
+       "shouldn't",
+       832.261
+      ],
+      [
+       "be",
+       832.587
+      ],
+      [
+       "added",
+       832.717
+      ],
+      [
+       "up.",
+       832.946
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Putting the whole path together, the classroom baseline got 63.68 on test,",
+       "start": 809.522,
+       "end": 814.315
+      },
+      {
+       "text": "and then on validation the stricter recipe got 78.27,",
+       "start": 814.315,
+       "end": 817.956
+      },
+      {
+       "text": "depth and shortcuts got 87.20, crop and flip got 93.74, and ResNet-18 got 95.77.",
+       "start": 817.956,
+       "end": 826.38
+      },
+      {
+       "text": "The metrics and setups changed along the way,",
+       "start": 826.38,
+       "end": 828.696
+      },
+      {
+       "text": "so these numbers show the order things happened in,",
+       "start": 828.696,
+       "end": 831.098
+      },
+      {
+       "text": "not a leaderboard, and they shouldn't be added up.",
+       "start": 831.098,
+       "end": 833.497
+      }
+     ]
+    },
+    {
+     "id": "end-3",
+     "audio": "audio/end-3-b80b7d9077.mp3",
+     "start": 833.683,
+     "duration": 11.881,
+     "text": "This is the strongest result we measured in this project, and it's not the best ResNet out there. Wider and deeper residual networks and other training recipes get higher accuracy on CIFAR-10, so this isn't state of the art.",
+     "words": [
+      [
+       "This",
+       833.781
+      ],
+      [
+       "is",
+       833.922
+      ],
+      [
+       "the",
+       834.02
+      ],
+      [
+       "strongest",
+       834.118
+      ],
+      [
+       "result",
+       834.65
+      ],
+      [
+       "we",
+       834.966
+      ],
+      [
+       "measured",
+       835.063
+      ],
+      [
+       "in",
+       835.455
+      ],
+      [
+       "this",
+       835.531
+      ],
+      [
+       "project,",
+       835.672
+      ],
+      [
+       "and",
+       836.4
+      ],
+      [
+       "it's",
+       836.466
+      ],
+      [
+       "not",
+       836.585
+      ],
+      [
+       "the",
+       836.781
+      ],
+      [
+       "best",
+       836.889
+      ],
+      [
+       "ResNet",
+       837.216
+      ],
+      [
+       "out",
+       837.542
+      ],
+      [
+       "there.",
+       837.726
+      ],
+      [
+       "Wider",
+       838.346
+      ],
+      [
+       "and",
+       838.737
+      ],
+      [
+       "deeper",
+       838.9
+      ],
+      [
+       "residual",
+       839.259
+      ],
+      [
+       "networks",
+       839.683
+      ],
+      [
+       "and",
+       840.281
+      ],
+      [
+       "other",
+       840.466
+      ],
+      [
+       "training",
+       840.683
+      ],
+      [
+       "recipes",
+       841.02
+      ],
+      [
+       "get",
+       841.531
+      ],
+      [
+       "higher",
+       841.694
+      ],
+      [
+       "accuracy",
+       842.096
+      ],
+      [
+       "on",
+       842.792
+      ],
+      [
+       "CIFAR-10,",
+       842.933
+      ],
+      [
+       "so",
+       843.966
+      ],
+      [
+       "this",
+       844.074
+      ],
+      [
+       "isn't",
+       844.248
+      ],
+      [
+       "state",
+       844.466
+      ],
+      [
+       "of",
+       844.737
+      ],
+      [
+       "the",
+       844.813
+      ],
+      [
+       "art.",
+       844.9
+      ]
+     ],
+     "captions": [
+      {
+       "text": "This is the strongest result we measured in this project,",
+       "start": 833.781,
+       "end": 836.4
+      },
+      {
+       "text": "and it's not the best ResNet out there.",
+       "start": 836.4,
+       "end": 838.346
+      },
+      {
+       "text": "Wider and deeper residual networks and other training recipes",
+       "start": 838.346,
+       "end": 841.531
+      },
+      {
+       "text": "get higher accuracy on CIFAR-10, so this isn't state of the art.",
+       "start": 841.531,
+       "end": 845.564
+      }
+     ]
+    },
+    {
+     "id": "end-4",
+     "audio": "audio/end-4-e7707dab20.mp3",
+     "start": 845.746,
+     "duration": 16.057,
+     "text": "If we did this again, we'd keep comparing runs by optimizer steps and not just epochs, deciding on validation across seeds, not treating a smaller train-test gap as an improvement by itself, and retesting a technique when the model or recipe changes, since crop plus flip went from hurting to helping.",
+     "words": [
+      [
+       "If",
+       845.833
+      ],
+      [
+       "we",
+       845.942
+      ],
+      [
+       "did",
+       846.04
+      ],
+      [
+       "this",
+       846.203
+      ],
+      [
+       "again,",
+       846.355
+      ],
+      [
+       "we'd",
+       846.931
+      ],
+      [
+       "keep",
+       847.116
+      ],
+      [
+       "comparing",
+       847.312
+      ],
+      [
+       "runs",
+       847.822
+      ],
+      [
+       "by",
+       848.072
+      ],
+      [
+       "optimizer",
+       848.312
+      ],
+      [
+       "steps",
+       848.888
+      ],
+      [
+       "and",
+       849.355
+      ],
+      [
+       "not",
+       849.518
+      ],
+      [
+       "just",
+       849.757
+      ],
+      [
+       "epochs,",
+       850.138
+      ],
+      [
+       "deciding",
+       850.79
+      ],
+      [
+       "on",
+       851.181
+      ],
+      [
+       "validation",
+       851.301
+      ],
+      [
+       "across",
+       851.822
+      ],
+      [
+       "seeds,",
+       852.159
+      ],
+      [
+       "not",
+       852.822
+      ],
+      [
+       "treating",
+       853.018
+      ],
+      [
+       "a",
+       853.344
+      ],
+      [
+       "smaller",
+       853.399
+      ],
+      [
+       "train-test",
+       853.801
+      ],
+      [
+       "gap",
+       854.344
+      ],
+      [
+       "as",
+       854.757
+      ],
+      [
+       "an",
+       854.888
+      ],
+      [
+       "improvement",
+       854.953
+      ],
+      [
+       "by",
+       855.442
+      ],
+      [
+       "itself,",
+       855.583
+      ],
+      [
+       "and",
+       856.322
+      ],
+      [
+       "retesting",
+       856.431
+      ],
+      [
+       "a",
+       856.909
+      ],
+      [
+       "technique",
+       856.964
+      ],
+      [
+       "when",
+       857.583
+      ],
+      [
+       "the",
+       857.67
+      ],
+      [
+       "model",
+       857.735
+      ],
+      [
+       "or",
+       858.127
+      ],
+      [
+       "recipe",
+       858.257
+      ],
+      [
+       "changes,",
+       858.605
+      ],
+      [
+       "since",
+       859.333
+      ],
+      [
+       "crop",
+       859.518
+      ],
+      [
+       "plus",
+       859.79
+      ],
+      [
+       "flip",
+       860.04
+      ],
+      [
+       "went",
+       860.518
+      ],
+      [
+       "from",
+       860.681
+      ],
+      [
+       "hurting",
+       860.822
+      ],
+      [
+       "to",
+       861.083
+      ],
+      [
+       "helping.",
+       861.149
+      ]
+     ],
+     "captions": [
+      {
+       "text": "If we did this again, we'd keep comparing runs by optimizer",
+       "start": 845.833,
+       "end": 848.888
+      },
+      {
+       "text": "steps and not just epochs, deciding on validation across seeds,",
+       "start": 848.888,
+       "end": 852.822
+      },
+      {
+       "text": "not treating a smaller train-test gap as an improvement by itself,",
+       "start": 852.822,
+       "end": 856.322
+      },
+      {
+       "text": "and retesting a technique when the model or recipe changes,",
+       "start": 856.322,
+       "end": 859.333
+      },
+      {
+       "text": "since crop plus flip went from hurting to helping.",
+       "start": 859.333,
+       "end": 861.803
+      }
+     ]
+    },
+    {
+     "id": "end-5",
+     "audio": "audio/end-5-ce0819ea51.mp3",
+     "start": 861.995,
+     "duration": 9.865,
+     "text": "Going from 63.68 to 95.21 percent on test took a lot of changes stacked together, and these experiments don't split up exactly how much each one contributed.",
+     "words": [
+      [
+       "Going",
+       861.995
+      ],
+      [
+       "from",
+       862.372
+      ],
+      [
+       "63.68",
+       862.686
+      ],
+      [
+       "to",
+       863.063
+      ],
+      [
+       "95.21",
+       863.251
+      ],
+      [
+       "percent",
+       863.628
+      ],
+      [
+       "on",
+       864.131
+      ],
+      [
+       "test",
+       864.319
+      ],
+      [
+       "took",
+       864.634
+      ],
+      [
+       "a",
+       864.948
+      ],
+      [
+       "lot",
+       865.073
+      ],
+      [
+       "of",
+       865.325
+      ],
+      [
+       "changes",
+       865.513
+      ],
+      [
+       "stacked",
+       866.016
+      ],
+      [
+       "together,",
+       866.519
+      ],
+      [
+       "and",
+       867.147
+      ],
+      [
+       "these",
+       867.398
+      ],
+      [
+       "experiments",
+       867.775
+      ],
+      [
+       "don't",
+       868.529
+      ],
+      [
+       "split",
+       868.906
+      ],
+      [
+       "up",
+       869.283
+      ],
+      [
+       "exactly",
+       869.472
+      ],
+      [
+       "how",
+       869.974
+      ],
+      [
+       "much",
+       870.226
+      ],
+      [
+       "each",
+       870.54
+      ],
+      [
+       "one",
+       870.854
+      ],
+      [
+       "contributed.",
+       871.105
+      ]
+     ],
+     "captions": [
+      {
+       "text": "Going from 63.68 to 95.21 percent on test took a lot",
+       "start": 861.995,
+       "end": 865.325
+      },
+      {
+       "text": "of changes stacked together, and these experiments",
+       "start": 865.325,
+       "end": 868.529
+      },
+      {
+       "text": "don't split up exactly how much each one contributed.",
+       "start": 868.529,
+       "end": 871.859
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "duration": 874.047,
+ "durationInFrames": 26221
+}

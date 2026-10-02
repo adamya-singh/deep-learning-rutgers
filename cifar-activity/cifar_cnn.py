@@ -2,6 +2,7 @@
 import argparse
 import contextlib
 import csv
+import hashlib
 import json
 import math
 import os
@@ -15,6 +16,7 @@ import numpy as np
 import torch
 from torch import nn
 from torchvision import datasets
+from augmentations import Augmenter, RECIPES
 
 RUN_NAME = "2 conv CNN, 10 ep"
 EPOCHS, BATCH_SIZE, LEARNING_RATE, SEED = 10, 64, 0.01, 0
@@ -46,7 +48,8 @@ def arguments():
     p.add_argument("--data-dir", type=Path, default=Path("data"))
     p.add_argument("--entity", default="7adamyasingh-rutgers-university")
     p.add_argument("--project", default="cifar-activity")
-    p.add_argument("--group", choices=("baseline", "tuned", "smoke"), default="baseline")
+    p.add_argument("--group", choices=("baseline", "tuned", "smoke", "augmentation"), default="baseline")
+    p.add_argument("--augmentation", choices=tuple(RECIPES), default="none")
     p.add_argument("--no-wandb", action="store_true")
     p.add_argument("--resume", action="store_true")
     p.add_argument("--benchmark", action="store_true")
@@ -70,7 +73,7 @@ def setup(seed, device, precision):
         torch.backends.cudnn.allow_tf32 = precision == "tf32"
 
 
-def load_cifar10(data_dir, device, layout):
+def load_cifar10(data_dir, device, layout, include_raw=False):
     train = datasets.CIFAR10(str(data_dir), train=True, download=True)
     test = datasets.CIFAR10(str(data_dir), train=False, download=True)
     mean = torch.tensor(MEAN, device=device).view(1, 3, 1, 1)
@@ -81,7 +84,11 @@ def load_cifar10(data_dir, device, layout):
         if layout == "channels_last":
             x = x.contiguous(memory_format=torch.channels_last)
         return x, torch.tensor(dataset.targets, dtype=torch.long, device=device)
-    return (*prepare(train), *prepare(test))
+    data = (*prepare(train), *prepare(test))
+    if include_raw:
+        raw = torch.from_numpy(train.data).permute(0, 3, 1, 2).to(device).contiguous()
+        return (*data, raw)
+    return data
 
 
 def autocast(device, precision):
@@ -144,9 +151,9 @@ def make_model(args, device):
 
 def train_epoch(model, optimizer, scaler, loss_fn, x, y, args, device, max_batches=None, check_gradients=False):
     model.train()
-    order = torch.randperm(len(x), device=device)
+    order = torch.randperm(len(x), device=device, generator=getattr(args, "shuffle_generator", None))
     loss_sum = torch.zeros((), device=device)
-    correct = torch.zeros((), dtype=torch.long, device=device)
+    correct = torch.zeros((), device=device)
     batches = math.ceil(len(x) / args.batch_size)
     if max_batches is not None:
         batches = min(batches, max_batches)
@@ -155,7 +162,13 @@ def train_epoch(model, optimizer, scaler, loss_fn, x, y, args, device, max_batch
     started = time.perf_counter()
     for i in range(batches):
         indices = order[i * args.batch_size:(i + 1) * args.batch_size]
-        xb, yb = x[indices], y[indices]
+        yb = y[indices]
+        if getattr(args, "augmenter", None) is not None:
+            xb, yb = args.augmenter(args.raw_train[indices], yb)
+        else:
+            xb = x[indices]
+        if args.layout == "channels_last":
+            xb = xb.contiguous(memory_format=torch.channels_last)
         optimizer.zero_grad(set_to_none=True)
         with autocast(device, args.precision):
             logits = model(xb)
@@ -168,7 +181,8 @@ def train_epoch(model, optimizer, scaler, loss_fn, x, y, args, device, max_batch
         scaler.step(optimizer)
         scaler.update()
         loss_sum += loss.detach() * len(indices)
-        correct += (logits.detach().argmax(1) == yb).sum()
+        prediction = logits.detach().argmax(1)
+        correct += (yb.gather(1, prediction[:, None]).sum() if yb.ndim == 2 else (prediction == yb).sum())
         seen += len(indices)
     sync(device)
     seconds = time.perf_counter() - started
@@ -208,7 +222,26 @@ def config(args, device):
     return {"run_name": args.run_name, "batch_size": args.batch_size, "eval_batch_size": args.eval_batch_size,
             "lr": args.lr, "seed": args.seed, "device": device.type, "precision": args.precision,
             "layout": args.layout, "compile": args.compile, "entity": args.entity,
-            "project": args.project, "group": args.group}
+            "project": args.project, "group": args.group,
+            "augmentation": args.augmentation, "augmentation_params": RECIPES[args.augmentation],
+            "augmentation_backend": "hybrid-v1" if args.augmentation != "none" else "none",
+            "rng_policy": "isolated-v1" if args.group == "augmentation" or args.augmentation != "none" else "legacy"}
+
+
+def compatible_config(saved):
+    saved = dict(saved)
+    saved.setdefault("augmentation", "none")
+    saved.setdefault("augmentation_params", {})
+    saved.setdefault("augmentation_backend", "none")
+    saved.setdefault("rng_policy", "legacy")
+    return saved
+
+
+def setup_training_randomness(args, device, data):
+    isolated = config(args, device)["rng_policy"] == "isolated-v1"
+    args.shuffle_generator = torch.Generator(device=device).manual_seed(args.seed) if isolated else None
+    args.augmenter = Augmenter(args.augmentation, args.seed, device, MEAN, STD) if args.augmentation != "none" else None
+    args.raw_train = data[4] if args.augmenter else None
 
 
 def save_checkpoint(path, state):
@@ -219,12 +252,13 @@ def save_checkpoint(path, state):
 
 
 def benchmark(args, device, data):
-    x, y, _, _ = data
+    x, y = data[:2]
     setup(args.seed, device, args.precision)
     if device.type == "cuda":
         torch.cuda.reset_peak_memory_stats()
     start = time.perf_counter()
     reference_model, model, optimizer, scaler = make_model(args, device)
+    setup_training_randomness(args, device, data)
     loss_fn = nn.CrossEntropyLoss()
     train_epoch(model, optimizer, scaler, loss_fn, x, y, args, device, max_batches=6, check_gradients=True)
     evaluate(model, loss_fn, x[:8192], y[:8192], args, device)
@@ -260,7 +294,7 @@ def benchmark(args, device, data):
 
 
 def record_result(path, row):
-    fields = ("run_id", "run", "group", "batch_size", "epochs", "lr", "train_acc", "test_acc", "seconds", "wandb_url")
+    fields = ("run_id", "run", "group", "batch_size", "epochs", "lr", "train_acc", "test_acc", "seconds", "wandb_url", "augmentation", "seed")
     rows = []
     if path.exists():
         with path.open(newline="") as file:
@@ -273,7 +307,10 @@ def record_result(path, row):
 
 
 def main():
+    process_started = time.perf_counter()
     args = arguments()
+    if args.augmentation != "none":
+        torch.set_num_threads(1)
     device = torch.device("cuda" if args.device == "auto" and torch.cuda.is_available() else
                           "cpu" if args.device == "auto" else args.device)
     if device.type == "cuda" and not torch.cuda.is_available():
@@ -287,28 +324,33 @@ def main():
     setup(args.seed, device, args.precision)
     path = args.output_dir / "last.pt"
     checkpoint = torch.load(path, map_location="cpu", weights_only=False) if args.resume else None
+    if not args.resume and path.exists() and not args.benchmark:
+        raise ValueError(f"checkpoint already exists at {path}; use --resume or a new output directory")
     current_config = config(args, device)
     if checkpoint:
-        if current_config != checkpoint["config"]:
+        if current_config != compatible_config(checkpoint["config"]):
             raise ValueError(f"resume settings differ: {current_config} != {checkpoint['config']}")
         if args.epochs < checkpoint["epoch"]:
             raise ValueError("target epochs are before checkpoint epoch")
-    data = load_cifar10(args.data_dir, device, args.layout)
+    data = load_cifar10(args.data_dir, device, args.layout, include_raw=args.augmentation != "none")
     if args.benchmark:
         return benchmark(args, device, data)
-    x_train, y_train, x_test, y_test = data
+    x_train, y_train, x_test, y_test = data[:4]
     model, forward, optimizer, scaler = make_model(args, device)
+    setup_training_randomness(args, device, data)
     loss_fn = nn.CrossEntropyLoss()
     run = None
     if not args.no_wandb:
         import wandb
         git_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+        source_hash = hashlib.sha256(Path(__file__).read_bytes() + Path(__file__).with_name("augmentations.py").read_bytes()).hexdigest()
         run = wandb.init(entity=args.entity, project=args.project, group=args.group,
                          name=args.run_name, id=checkpoint["wandb_id"] if checkpoint else None,
                          resume="must" if checkpoint else None, tags=[args.group, "cifar10"],
                          config={**current_config, "epochs": args.epochs,
                                  "params": sum(p.numel() for p in model.parameters()),
                                  "torch_version": torch.__version__, "git_commit": git_commit,
+                                 "source_sha256": source_hash,
                                  "gpu": torch.cuda.get_device_name() if device.type == "cuda" else "cpu"})
         run.define_metric("epoch")
         for pattern in ("train/*", "eval/*", "performance/*", "system/*"):
@@ -322,13 +364,20 @@ def main():
         random.setstate(checkpoint["python_rng"])
         if device.type == "cuda":
             torch.cuda.set_rng_state_all(checkpoint["cuda_rng"])
+        if args.shuffle_generator is not None:
+            args.shuffle_generator.set_state(checkpoint["shuffle_rng"])
+        if args.augmenter is not None:
+            args.augmenter.load_state_dict(checkpoint["augmentation_rng"])
         first_epoch, steps, elapsed = checkpoint["epoch"] + 1, checkpoint["steps"], checkpoint["elapsed"]
+        training_seconds = checkpoint.get("training_seconds", 0.0)
+        training_images = checkpoint.get("training_images", 0)
         if run and checkpoint.get("pending_metrics") and int(run.summary.get("last_epoch", 0)) < checkpoint["epoch"]:
             run.log(checkpoint["pending_metrics"])
             run.summary["last_epoch"] = checkpoint["epoch"]
         print(f"Resuming at epoch {first_epoch} from {path}", flush=True)
     else:
         first_epoch, steps, elapsed = 1, 0, 0.0
+        training_seconds, training_images = 0.0, 0
     if device.type == "cuda":
         torch.cuda.reset_peak_memory_stats()
     final_train = final_test = None
@@ -342,6 +391,8 @@ def main():
         sampler.start()
         train = train_epoch(forward, optimizer, scaler, loss_fn, x_train, y_train, args, device, check_gradients=epoch == first_epoch)
         steps += train["steps"]
+        training_seconds += train["seconds"]
+        training_images += len(x_train)
         train_eval = evaluate(forward, loss_fn, x_train, y_train, args, device)
         test_eval = evaluate(forward, loss_fn, x_test, y_test, args, device, diagnostics=epoch == args.epochs)
         system_metrics = sampler.finish()
@@ -355,12 +406,17 @@ def main():
                    "performance/elapsed_seconds": elapsed, "performance/optimizer_steps": steps,
                    "system/peak_gpu_memory_mb": torch.cuda.max_memory_allocated() / 1024**2 if device.type == "cuda" else 0,
                    **system_metrics}
+        if args.augmentation in ("mixup", "cutmix"):
+            metrics["train/mixed_target_accuracy"] = metrics.pop("train/batch_accuracy")
         state = {"epoch": epoch, "steps": steps, "elapsed": elapsed, "config": current_config,
+                 "training_seconds": training_seconds, "training_images": training_images,
                  "wandb_id": run.id if run else None, "model": model.state_dict(),
                  "optimizer": optimizer.state_dict(), "scaler": scaler.state_dict(),
                  "torch_rng": torch.get_rng_state(), "numpy_rng": np.random.get_state(),
                  "python_rng": random.getstate(),
                  "cuda_rng": torch.cuda.get_rng_state_all() if device.type == "cuda" else None,
+                 "shuffle_rng": args.shuffle_generator.get_state() if args.shuffle_generator is not None else None,
+                 "augmentation_rng": args.augmenter.state_dict() if args.augmenter is not None else None,
                  "pending_metrics": metrics}
         save_started = time.perf_counter()
         save_checkpoint(path, state)
@@ -398,10 +454,20 @@ def main():
             "group": args.group, "batch_size": args.batch_size, "epochs": args.epochs,
             "lr": args.lr, "train_acc": f"{final_train['accuracy']:.2f}",
             "test_acc": f"{final_test['accuracy']:.2f}", "seconds": f"{elapsed:.1f}",
-            "wandb_url": run.url if run else ""})
+            "wandb_url": run.url if run else "", "augmentation": args.augmentation, "seed": args.seed})
     if run:
         print(f"W&B: {run.url}", flush=True)
         run.finish()
+    if final_test:
+        summary = {"config": current_config, "epochs": args.epochs,
+                   "train_accuracy": final_train["accuracy"], "test_accuracy": final_test["accuracy"],
+                   "train_loss": final_train["loss"], "test_loss": final_test["loss"],
+                   "elapsed_seconds": elapsed, "process_seconds": time.perf_counter() - process_started,
+                   "mean_train_images_per_second": training_images / training_seconds if training_seconds else 0,
+                   "optimizer_steps": steps, "wandb_url": run.url if run else ""}
+        temp = args.output_dir / "summary.tmp"
+        temp.write_text(json.dumps(summary, indent=2) + "\n")
+        os.replace(temp, args.output_dir / "summary.json")
 
 
 if __name__ == "__main__":

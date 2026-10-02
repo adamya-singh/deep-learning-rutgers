@@ -1,6 +1,6 @@
 # The CIFAR-10 journey: a narrated Remotion film
 
-A ~10-minute, 1920×1080, 30 fps explanatory film about this project's CIFAR-10
+A ~14.6-minute, 1920×1080, 30 fps explanatory film about this project's CIFAR-10
 experiments. It runs from the 545,098-parameter classroom CNN to the
 validation-selected CIFAR ResNet-18, using real images, real learned filters and
 activations, a measured loss slice, and real learning curves from `../runs`.
@@ -12,12 +12,14 @@ Written and built by Claude Code (Claude Opus 5.5).
 | --- | --- |
 | `out/cifar-journey.mp4` | The full film (H.264 + AAC, 1080p30) |
 | `out/cifar-journey-trailer.mp4` | Short narrated trailer cut from the same composition |
-| `out/qa/*.mp4` | Motion-QA clips (sliding conv, backprop + loss slice, residual routes, ResNet build) |
+| `out/qa/trailer-t*.mp4` | Narrated excerpts (also motion QA: input split, sliding conv, loss slice, depth chart, augmentation curves, ResNet build, final result) |
 | `out/cifar-journey.srt`, `.vtt` | Captions (also burned into the video) |
-| `script/script.md` | Chaptered narration script + storyboard with source paths |
+| `script/script.md` | Chaptered narration script + storyboard with source paths (generated) |
+| `script/teaching-plan.md` | Content plan the narration was written from: what each chapter must teach, what the data can and can't support, cue constraints |
+| `script/voice-revision-notes.md` | How the narration was revised, with before/after examples |
 | `script/narration.json` | Machine-readable script (input to TTS) |
 | `out/mp4-contact-sheet.jpg` | One frame per chapter decoded from the final MP4 |
-| `out/contact-sheet-*.jpg`, `out/frames/` | Inspected preview stills (segment stills from the pre-refresh timeline; ResNet/End rechecked after refresh) |
+| `out/contact-sheet-*.jpg`, `out/frames/` | Inspected preview stills, one per narration segment of the current timeline |
 | `public/data/results.json`, `public/data/static.json` | Frozen evidence the film renders from |
 | `data/frozen/` | Verbatim copies of the source comparison/queue JSON at freeze time |
 | `sources.md` | References |
@@ -35,7 +37,8 @@ npm run render                          # full 1080p MP4 → out/cifar-journey.m
 node tools/stills.mjs                   # one still per narration segment → out/frames/
 node tools/stills.mjs 1663 4556         # specific frames
 tools/render_clips.sh name:1557-1797    # short motion clip → out/qa/name.mp4
-.venv-tools/bin/python tools/make_trailer.py   # out/qa/trailer-*.mp4 → out/cifar-journey-trailer.mp4
+tools/render_clips.sh $(.venv-tools/bin/python tools/make_trailer.py --plan)   # trailer excerpts, ranges from the timeline
+.venv-tools/bin/python tools/make_trailer.py   # out/qa/trailer-t*.mp4 → out/cifar-journey-trailer.mp4
 .venv-tools/bin/python tools/verify_render.py  # checks the final MP4 against the timeline
 .venv-tools/bin/python tools/contact_sheet.py
 ```
@@ -66,12 +69,19 @@ numpy and pillow. It is local to this folder; the parent `.venv` is never modifi
 
 ## Narration
 
-The narration uses Microsoft Edge neural TTS (`edge-tts`, voice `en-US-AndrewNeural`, rate +15%).
-It is a stock synthetic voice, not a clone of anyone. A local writing reference
-was used only as tone evidence (direct, first-person, plain, honest about
-limits); that personal reference is excluded from the repository, and no biography from it appears in the film. Each line's audio length
-drives its timing. Visual cues are keyed to word-level timestamps, so numbers
-appear on screen when they are spoken.
+The narration text lives in `tools/build_script.py` (the only place to edit it).
+That generator writes `script/narration.json` and `script/script.md`, and every
+spoken number is pulled from the frozen JSON. The content was planned first in
+`script/teaching-plan.md`. The wording was then written in Adamya's voice with the
+`write-as-adamya` skill, which uses a personal writing corpus kept outside this
+repository. No biography appears in the film. `script/voice-revision-notes.md`
+records that process.
+
+The voice is Microsoft Edge neural TTS (`edge-tts`, voice `en-US-AndrewNeural`,
+rate +15%). It's a stock synthetic voice, not a clone of anyone. Each line's audio
+length drives its timing, and visual cues are keyed to word-level timestamps, so
+numbers appear on screen when they're spoken. Lines that override pronunciation
+(CIFAR is spoken as "SIFAR ten") are aligned to the real spoken word boundaries.
 
 ## What is real and what is schematic
 
@@ -111,10 +121,22 @@ comparison is a bundled recipe comparison, not an isolated architecture ablation
 
 ## Verification of the delivered MP4
 
-`tools/verify_render.py out/cifar-journey.mp4` → all PASS: H.264 1920×1080 at
-30 fps; 598.55 s vs timeline 598.53 s; AAC narration at mean −23.5 dB (peak
-−5.0 dB); no silence ≥ 4 s; a frame decodes from every chapter. Rendered on
-CPU (swiftshader, concurrency 4) in 13 minutes. The GPU training queue was only
-read, never modified.
+Current film (revised narration, rendered 2026-10-02):
 
-Independent final check: the complete delivered MP4, including both video and audio, decoded through FFmpeg with exit code 0 and no errors.
+- `tools/verify_render.py` → all PASS:
+  - H.264 1920×1080 at 30 fps
+  - 874.05 s against a 874.03 s timeline (14.6 min)
+  - AAC narration at mean −23.4 dB (peak −4.7 dB)
+  - no silence ≥ 4 s
+  - a frame decodes from every chapter (`out/mp4-contact-sheet.jpg`)
+- File size 86.0 MB.
+- Rendered on CPU (swiftshader, concurrency 4) in 20.7 minutes, first to a
+  temporary file. It replaced the previous movie only after the checks passed.
+- Full decode of video and audio through FFmpeg: exit 0, no error output.
+- Content check: the film's audio was compared against the narration clips at five
+  segment positions. Loudness-envelope correlation was 0.97–0.99 against the
+  revised clips and 0.06–0.29 against the previous narration's clips.
+- Trailer `out/cifar-journey-trailer.mp4`: 132.9 s, seven segment-aligned excerpts,
+  1080p30 H.264 + AAC, mean −23.3 dB, full decode clean.
+
+The GPU and the training queue were never used or modified.

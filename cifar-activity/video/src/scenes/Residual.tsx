@@ -63,7 +63,7 @@ export const Residual: React.FC = () => {
   const resReveal = [0, prog(f, word(4, '83.77') - 6, 14), prog(f, word(4, 'Eight'), 14), prog(f, word(4, 'Sixteen'), 14), prog(f, word(4, 'Thirty'), 14)];
   const cx = lerp(380, 150, shrink), cw = lerp(1160, 780, shrink);
   const notes = [
-    {t: word(5, 'matters') - 6, c: C.cyan, body: <>At 32 conv: <b>{dep('plain', 32).mean.toFixed(2)}</b> → <b>{dep('residual', 32).mean.toFixed(2)}</b> (+{(dep('residual', 32).mean - dep('plain', 32).mean).toFixed(2)} pp)</>},
+    {t: word(5, 'mattered') - 6, c: C.cyan, body: <>At 32 conv: <b>{dep('plain', 32).mean.toFixed(2)}</b> → <b>{dep('residual', 32).mean.toFixed(2)}</b> (+{(dep('residual', 32).mean - dep('plain', 32).mean).toFixed(2)} pp)</>},
     {t: word(5, 'didnt') - 4, c: C.cream, body: <>At 4, 8, 16: residual did not beat plain ({[4, 8, 16].map((d) => `${dep('residual', d).mean.toFixed(2)} vs ${dep('plain', d).mean.toFixed(2)}`).join(' · ')})</>},
     {t: word(5, '0.03') - 4, c: C.amber, body: <>Winner residual 32 ({dep('residual', 32).mean.toFixed(2)} ± {dep('residual', 32).sd.toFixed(2)}) vs plain 16 ({dep('plain', 16).mean.toFixed(2)} ± {dep('plain', 16).sd.toFixed(2)}): Δ 0.03 pp, inside seed spread</>},
   ];

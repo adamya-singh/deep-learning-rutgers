@@ -1,595 +1,751 @@
 WEBVTT
 
-00:00:00.987 --> 00:00:01.954
-This is a frog.
+00:00:00.987 --> 00:00:03.585
+This is a frog from the CIFAR-10 test set.
 
-00:00:01.954 --> 00:00:04.837
-Our network has to figure that out from nothing but numbers.
+00:00:03.585 --> 00:00:05.585
+We wanted a neural network that could look at images
 
-00:00:04.949 --> 00:00:09.913
-CIFAR-10 is 60,000 tiny photos in ten classes, from airplanes to trucks.
+00:00:05.585 --> 00:00:07.454
+like this and say what's in them,
 
-00:00:09.913 --> 00:00:13.517
-50,000 for training, and 10,000 held out for testing.
+00:00:07.454 --> 00:00:10.861
+even though it never really sees a picture, it only sees numbers.
 
-00:00:13.726 --> 00:00:15.845
-Zoom in and the frog disappears.
+00:00:11.068 --> 00:00:15.275
+CIFAR-10 has 60,000 tiny color photos split across ten classes,
 
-00:00:15.845 --> 00:00:21.780
-Each pixel is three numbers, red, green, and blue, from 0 to 255.
+00:00:15.275 --> 00:00:18.612
+things like airplanes, cats, frogs, and trucks.
 
-00:00:21.780 --> 00:00:23.878
-32 by 32 by 3.
+00:00:18.612 --> 00:00:20.960
+The official split gives us 50,000 images to
 
-00:00:23.878 --> 00:00:26.023
-3,072 numbers.
+00:00:20.960 --> 00:00:23.931
+train on and keeps 10,000 aside for testing.
 
-00:00:26.289 --> 00:00:28.224
-So, what actually makes a network better at
+00:00:24.139 --> 00:00:26.736
+If you zoom in on the frog, it's really just a 32 by
 
-00:00:28.224 --> 00:00:30.283
-turning those numbers into the right answer?
+00:00:26.736 --> 00:00:30.204
+32 grid of pixels, and each pixel is three numbers between
 
-00:00:32.219 --> 00:00:34.654
-We started with a small convolutional network.
+00:00:30.204 --> 00:00:35.128
+0 and 255 for how much red, green, and blue it has.
 
-00:00:34.654 --> 00:00:38.205
-545,098 trainable parameters.
+00:00:35.128 --> 00:00:41.044
+So every image is 32 times 32 times 3, which is 3,072 numbers.
 
-00:00:38.463 --> 00:00:39.920
-First, normalization.
+00:00:41.343 --> 00:00:44.441
+The rest of this goes through the experiments we ran to figure out what
 
-00:00:39.920 --> 00:00:42.540
-Each color channel has its dataset mean subtracted,
+00:00:44.441 --> 00:00:47.942
+makes a network better at turning those numbers into the right label.
 
-00:00:42.540 --> 00:00:44.251
-then gets divided by its spread.
+00:00:49.882 --> 00:00:52.230
+The network we started with is a small convolutional
 
-00:00:45.027 --> 00:00:46.429
-Then, convolution.
+00:00:52.230 --> 00:00:56.936
+network from class, with 545,098 trainable parameters,
 
-00:00:46.429 --> 00:00:49.951
-A filter is a 3 by 3 window through all three channels.
+00:00:56.936 --> 00:00:59.145
+which are the numbers it adjusts while it learns.
 
-00:00:49.951 --> 00:00:52.168
-27 weights, plus a bias.
+00:00:59.355 --> 00:01:03.735
+Before anything else, every pixel value gets divided by 255,
 
-00:00:52.168 --> 00:00:54.886
-At each position, it multiplies and sums.
+00:01:03.735 --> 00:01:07.018
+and then each color channel has its dataset average subtracted and gets
 
-00:00:54.886 --> 00:00:57.205
-Slide it everywhere, and you get a new map.
+00:01:07.018 --> 00:01:10.050
+divided by its standard deviation, which puts the channels on a
 
-00:00:57.482 --> 00:00:59.895
-The same weights are reused at every position,
+00:01:10.050 --> 00:01:13.778
+similar scale around zero and usually makes training better behaved.
 
-00:00:59.895 --> 00:01:03.409
-so a pattern only has to be learned once, wherever it shows up.
+00:01:14.560 --> 00:01:16.657
+The first real layer is a convolution.
 
-00:01:03.617 --> 00:01:06.476
-With 32 filters, we get 32 maps.
+00:01:16.657 --> 00:01:20.375
+A filter is a 3 by 3 window over all three color channels,
 
-00:01:06.476 --> 00:01:08.726
-These are the real filters our baseline learned,
+00:01:20.375 --> 00:01:22.918
+so it has 27 weights plus a bias.
 
-00:01:08.726 --> 00:01:10.552
-and their real maps for this frog.
+00:01:22.918 --> 00:01:25.364
+At each position it multiplies the values under it
 
-00:01:10.552 --> 00:01:12.617
-Nobody hardcoded edge detectors.
+00:01:25.364 --> 00:01:27.788
+by its weights and adds everything up,
 
-00:01:12.617 --> 00:01:13.744
-Training found these.
+00:01:27.788 --> 00:01:30.951
+and this panel is that exact calculation from our trained model.
 
-00:01:14.029 --> 00:01:17.594
-ReLU zeroes the negatives, and 2 by 2 max pooling keeps
+00:01:30.951 --> 00:01:32.603
+Slide the same window across every
 
-00:01:17.594 --> 00:01:22.270
-each block's strongest value, 32 by 32 down to 16 by 16.
+00:01:32.603 --> 00:01:35.990
+position and you get a new 32 by 32 map.
 
-00:01:22.480 --> 00:01:26.903
-The second block repeats this with 64 filters reading all 32 maps,
+00:01:36.275 --> 00:01:39.101
+The filter uses the same weights at every position,
 
-00:01:26.903 --> 00:01:28.990
-combining simple patterns into parts.
+00:01:39.101 --> 00:01:42.993
+so a pattern it learns in one spot can be picked up anywhere else in the image.
 
-00:01:28.990 --> 00:01:30.662
-Pooling takes it to 8 by 8.
+00:01:42.993 --> 00:01:47.914
+That's also why all 32 filters in this layer only need 896 parameters.
 
-00:01:30.865 --> 00:01:33.126
-That's 4,096 numbers.
+00:01:48.117 --> 00:01:50.509
+These are the actual filters our baseline learned,
 
-00:01:33.126 --> 00:01:36.170
-Flatten them, 128 hidden units with ReLU,
+00:01:50.509 --> 00:01:52.498
+and the maps they produce for this frog.
 
-00:01:36.170 --> 00:01:38.664
-and out come ten scores, one per class.
+00:01:52.498 --> 00:01:55.927
+Nobody designed these weights by hand, training found all of them.
 
-00:01:40.530 --> 00:01:42.074
-Those ten scores are logits.
+00:01:56.213 --> 00:02:00.061
+After the convolution, ReLU replaces every negative number with zero,
 
-00:01:42.074 --> 00:01:44.302
-Any size, positive or negative.
+00:02:00.061 --> 00:02:03.626
+and then 2 by 2 max pooling keeps only the biggest value in each
 
-00:01:44.302 --> 00:01:45.665
-Not probabilities yet.
+00:02:03.626 --> 00:02:09.111
+2 by 2 block, which cuts the maps from 32 by 32 down to 16 by 16.
 
-00:01:45.851 --> 00:01:48.601
-Softmax turns them into probabilities.
+00:02:09.316 --> 00:02:12.393
+The second block does the same thing with 64 filters,
 
-00:01:48.601 --> 00:01:51.688
-Exponentiate each one, then divide by the total.
+00:02:12.393 --> 00:02:16.001
+but now each filter reads all 32 maps from the first block,
 
-00:01:51.688 --> 00:01:53.685
-Now they're positive, and they sum to one.
+00:02:16.001 --> 00:02:19.208
+so it can combine simpler patterns into more complicated ones.
 
-00:01:54.590 --> 00:01:58.384
-For this frog, the baseline bets mostly on frog, but not all in.
+00:02:19.208 --> 00:02:21.891
+Pooling then takes everything down to 8 by 8.
 
-00:01:58.585 --> 00:02:00.357
-Cross-entropy is the negative log of
+00:02:22.083 --> 00:02:27.072
+That leaves 64 maps of 8 by 8, which is 4,096 numbers.
 
-00:02:00.357 --> 00:02:02.367
-the probability on the right answer.
+00:02:27.072 --> 00:02:32.083
+We flatten them into one long list, pass it through a hidden layer of 128 units,
 
-00:02:02.367 --> 00:02:04.596
-Confident and right costs almost nothing.
+00:02:32.083 --> 00:02:35.436
+and the last layer gives us ten scores, one for each class.
 
-00:02:04.596 --> 00:02:06.539
-Confident and wrong costs a lot.
+00:02:37.313 --> 00:02:39.139
+Those ten scores are called logits.
 
-00:02:07.433 --> 00:02:08.313
-One detail.
+00:02:39.139 --> 00:02:41.846
+They can be any size, positive or negative,
 
-00:02:08.313 --> 00:02:10.694
-The network itself only outputs logits.
+00:02:41.846 --> 00:02:44.008
+so on their own they aren't probabilities yet.
 
-00:02:10.694 --> 00:02:13.966
-PyTorch's cross-entropy applies log-softmax internally.
+00:02:44.220 --> 00:02:47.144
+Softmax is what turns them into probabilities.
 
-00:02:13.966 --> 00:02:17.224
-Softmax here is for reading outputs, not an extra layer.
+00:02:47.144 --> 00:02:50.666
+You exponentiate each score, which makes everything positive,
 
-00:02:17.518 --> 00:02:20.823
-Backpropagation uses the chain rule to send that loss backwards,
+00:02:50.666 --> 00:02:53.603
+and then divide by the total so they all add up to one.
 
-00:02:20.823 --> 00:02:23.181
-telling every parameter which way would lower it.
+00:02:54.384 --> 00:02:57.608
+Here the model puts about 74 percent on frog and about
 
-00:02:23.951 --> 00:02:27.201
-This is a real slice of the loss around our trained baseline,
+00:02:57.608 --> 00:03:01.009
+14 percent on cat, so it's mostly right but not very sure.
 
-00:02:27.201 --> 00:02:29.788
-along two random directions in weight space.
+00:03:01.128 --> 00:03:04.222
+To train it, we need one number for how wrong it was,
 
-00:02:29.788 --> 00:02:31.516
-Gradient descent steps downhill.
+00:03:04.222 --> 00:03:06.227
+and that's the cross-entropy loss,
 
-00:02:31.516 --> 00:02:34.665
-The path drawn here is illustrative, not recorded steps.
+00:03:06.227 --> 00:03:09.836
+the negative log of the probability it gave the correct class.
 
-00:02:35.450 --> 00:02:38.069
-Each step uses a batch of 64 images.
+00:03:09.836 --> 00:03:12.243
+Confident and right costs almost nothing,
 
-00:02:38.069 --> 00:02:42.323
-One pass over the training set, an epoch, is 782 steps.
+00:03:12.243 --> 00:03:14.133
+this frog only costs about 0.31.
 
-00:02:42.433 --> 00:02:46.407
-Ten epochs at learning rate 0.01 gave our first baseline.
+00:03:14.133 --> 00:03:16.024
+Confident and wrong costs a lot,
 
-00:02:46.407 --> 00:02:47.983
-63.68 percent on test.
+00:03:16.024 --> 00:03:19.633
+so giving the right answer just 2 percent would cost about 3.9.
 
-00:02:47.983 --> 00:02:50.450
-Wrong more than a third of the time.
+00:03:20.498 --> 00:03:22.303
+One detail about PyTorch here.
 
-00:02:52.298 --> 00:02:54.535
-First, we tried going faster.
+00:03:22.303 --> 00:03:25.944
+The model itself only outputs logits, and PyTorch's cross-entropy
 
-00:02:54.535 --> 00:02:58.563
-At batch 512, ten epochs took 5 seconds instead of 22.
+00:03:25.944 --> 00:03:29.346
+loss applies log-softmax internally, so softmax is just
 
-00:02:58.673 --> 00:03:01.657
-But accuracy fell to 48.58 percent.
+00:03:29.346 --> 00:03:32.724
+how we read the outputs, it isn't an extra layer in the model.
 
-00:03:01.657 --> 00:03:05.221
-Turns out bigger batches mean fewer steps.
+00:03:33.007 --> 00:03:35.910
+Backpropagation then uses the chain rule to work backwards
 
-00:03:05.221 --> 00:03:07.625
-980 updates instead of 7,820.
+00:03:35.910 --> 00:03:38.323
+from the loss through every layer, and gives each
 
-00:03:07.823 --> 00:03:10.734
-With 80 epochs, 7,840 updates,
+00:03:38.323 --> 00:03:42.529
+of the 545,098 parameters a gradient, which says how the
 
-00:03:10.734 --> 00:03:15.336
-almost exactly matched, it reached 67.67 percent.
+00:03:42.529 --> 00:03:45.702
+loss would change if that parameter moved a tiny bit.
 
-00:03:15.546 --> 00:03:18.122
-But each step used eight times as many images.
+00:03:46.473 --> 00:03:50.332
+Gradient descent moves every weight a small step against its gradient,
 
-00:03:18.122 --> 00:03:19.546
-Bigger batches aren't magic.
+00:03:50.332 --> 00:03:52.614
+with the learning rate setting the step size.
 
-00:03:19.546 --> 00:03:21.953
-They trade more work per step for fewer steps.
+00:03:52.614 --> 00:03:56.386
+This surface is a real slice of the loss around our trained baseline,
 
-00:03:23.889 --> 00:03:25.313
-Next, augmentation.
+00:03:56.386 --> 00:03:59.745
+along two random directions in weight space, and the dashed path
 
-00:03:25.313 --> 00:03:28.715
-Show a variation of each photo instead of the exact same one.
+00:03:59.745 --> 00:04:03.475
+is just an illustration of stepping downhill, not steps we recorded.
 
-00:03:28.715 --> 00:03:31.808
-Flip it, or pad the border and crop a shifted window.
+00:04:04.254 --> 00:04:08.047
+Each step uses a batch of 64 images, so one full pass through the
 
-00:03:32.013 --> 00:03:34.035
-A horse facing left is still a horse.
+00:04:08.047 --> 00:04:13.072
+50,000 training images, which is called an epoch, takes 782 steps.
 
-00:03:34.035 --> 00:03:36.394
-This teaches invariance, and makes memorizing
+00:04:13.172 --> 00:04:16.320
+We trained for ten epochs with a learning rate of 0.01,
 
-00:03:36.394 --> 00:03:39.511
-single images harder, a form of regularization.
+00:04:16.320 --> 00:04:19.411
+and this baseline reached 63.68 percent test accuracy.
 
-00:03:39.627 --> 00:03:45.163
-We tested 15 recipes, three seeds each, on the small network.
+00:04:19.411 --> 00:04:23.064
+That's a lot better than the 10 percent you'd get from guessing,
 
-00:03:45.163 --> 00:03:48.020
-No augmentation, 67.96 percent.
+00:04:23.064 --> 00:04:26.493
+but it's still wrong on more than a third of the test images.
 
-00:03:48.020 --> 00:03:50.609
-Flip helped a little, 68.77.
+00:04:28.341 --> 00:04:31.550
+The first thing we tried was making training faster.
 
-00:03:50.609 --> 00:03:53.020
-Crop plus flip hurt, 66.38.
+00:04:31.550 --> 00:04:34.456
+At batch size 64 the GPU was only busy about 42
 
-00:03:53.310 --> 00:03:54.267
-The subtle part.
+00:04:34.456 --> 00:04:37.422
+percent of the time, so we tried batch size 512,
 
-00:03:54.267 --> 00:03:58.539
-Crop plus flip shrank the train-test gap from about 7 points to under 1.
+00:04:37.422 --> 00:04:40.510
+and ten epochs finished in 5 seconds instead of 22.
 
-00:03:58.539 --> 00:04:01.387
-But a smaller gap can mean useful regularization,
+00:04:40.607 --> 00:04:44.204
+The catch was that test accuracy dropped to 48.58 percent.
 
-00:04:01.387 --> 00:04:03.137
-or a model that just learned less.
+00:04:44.204 --> 00:04:48.472
+With the same number of epochs, a batch eight times bigger also means
 
-00:04:03.137 --> 00:04:07.061
-Test accuracy fell, so the gap alone isn't evidence of improvement.
+00:04:48.472 --> 00:04:53.471
+eight times fewer weight updates, 980 instead of 7,820 at the same learning rate,
 
-00:04:07.352 --> 00:04:09.917
-This suite also checked the test set repeatedly,
+00:04:53.471 --> 00:04:57.312
+so our guess was that the model just hadn't taken enough steps.
 
-00:04:09.917 --> 00:04:11.743
-so treat it as exploratory.
+00:04:57.508 --> 00:05:00.870
+To check that, we trained batch 512 for 80 epochs,
 
-00:04:13.695 --> 00:04:14.782
-Then we got stricter.
+00:05:00.870 --> 00:05:04.232
+which gives 7,840 updates, almost exactly the same
 
-00:04:14.782 --> 00:04:18.217
-We held out a stratified validation set of 5,000 images,
+00:05:04.232 --> 00:05:07.725
+as the baseline, and that run reached 67.67 percent.
 
-00:04:18.217 --> 00:04:22.250
-trained on 45,000, and made every decision on validation.
+00:05:07.725 --> 00:05:12.669
+That fits the step count explanation, but it isn't a perfectly clean test,
 
-00:04:22.250 --> 00:04:24.206
-Test was reserved for final assessment,
+00:05:12.669 --> 00:05:16.756
+because this run also went through eight times as many images.
 
-00:04:24.206 --> 00:04:27.662
-but the earlier suite had used it, so it's not a pristine holdout.
+00:05:16.861 --> 00:05:20.714
+So with matched steps, batch 512 ended up about 4 points higher,
 
-00:04:27.943 --> 00:04:29.074
-And a new recipe.
+00:05:20.714 --> 00:05:22.966
+and it took 37 seconds instead of 22.
 
-00:04:29.074 --> 00:04:34.096
-Batch 128, SGD with momentum and weight decay, a warmup then cosine
+00:05:22.966 --> 00:05:25.456
+These are single runs with one seed each,
 
-00:04:34.096 --> 00:04:38.657
-learning rate over 160 epochs, and batch norm after every convolution.
+00:05:25.456 --> 00:05:28.598
+so the exact gap isn't something to lean on too hard.
 
-00:04:38.931 --> 00:04:41.105
-Every setup runs three seeds.
+00:05:30.530 --> 00:05:33.834
+Next we tried data augmentation, which means every time the network
 
-00:04:41.105 --> 00:04:43.583
-Scores average the last ten validation epochs,
+00:05:33.834 --> 00:05:37.454
+sees a training image, it gets a randomly changed version of it.
 
-00:04:43.583 --> 00:04:47.101
-not the luckiest one, and plus or minus is the seed spread.
+00:05:37.454 --> 00:05:39.280
+Flip it left to right half the time,
 
-00:04:47.397 --> 00:04:50.331
-The same two-convolution design, plus batch norm,
+00:05:39.280 --> 00:05:44.356
+or pad the border with 4 black pixels and crop a random 32 by 32 window,
 
-00:04:50.331 --> 00:04:56.484
-now scores 78.27 on validation, versus 63.68 on test before.
+00:05:44.356 --> 00:05:46.188
+which shifts the image around a little.
 
-00:04:56.484 --> 00:04:59.799
-But the split, the metric, and several knobs all changed,
+00:05:46.383 --> 00:05:49.894
+A horse facing left is still a horse, so the label stays the same,
 
-00:04:59.799 --> 00:05:01.699
-so that's not an isolated ablation.
+00:05:49.894 --> 00:05:52.318
+and the hope is that the network learns to ignore things
 
-00:05:03.631 --> 00:05:05.685
-Now, what if we stack more convolutions?
+00:05:52.318 --> 00:05:55.633
+like direction and small shifts, which is called invariance.
 
-00:05:05.685 --> 00:05:07.914
-Same stages, pooling, and head.
+00:05:55.633 --> 00:05:59.405
+Seeing varied views of each image also makes it harder to just memorize
 
-00:05:07.914 --> 00:05:08.897
-Just more layers.
+00:05:59.405 --> 00:06:03.073
+the exact training images, so it works as a kind of regularization.
 
-00:05:09.104 --> 00:05:13.625
-Each extra 3 by 3 layer widens what a unit can see, 5 by 5,
+00:06:03.193 --> 00:06:06.672
+We tested 15 different recipes on the small network
 
-00:05:13.625 --> 00:05:17.201
-then 7 by 7, and lets it compose more complex functions.
+00:06:06.672 --> 00:06:09.884
+with three seeds each, measuring test accuracy.
 
-00:05:17.402 --> 00:05:20.228
-Two convolutions, 78.27.
+00:06:09.884 --> 00:06:12.226
+No augmentation got 67.96 percent.
 
-00:05:20.228 --> 00:05:22.174
-Four, 84.53.
+00:06:12.226 --> 00:06:16.776
+Flip on its own helped a little, 68.77, and it improved every seed.
 
-00:05:22.174 --> 00:05:24.348
-Eight, 86.90.
+00:06:16.776 --> 00:06:19.787
+Crop plus flip actually hurt, down to 66.38,
 
-00:05:24.348 --> 00:05:26.815
-Sixteen, 87.17.
+00:06:19.787 --> 00:06:24.337
+and everything we added on top of it did worse than no augmentation.
 
-00:05:26.815 --> 00:05:28.826
-Smaller gains, but still going up.
+00:06:24.626 --> 00:06:27.528
+Then there's the gap between training and test accuracy,
 
-00:05:28.826 --> 00:05:32.305
-Then at 32, it drops to 83.08.
+00:06:27.528 --> 00:06:31.963
+which went from about 7 points without augmentation to under 1 with crop plus flip.
 
-00:05:32.567 --> 00:05:36.035
-Every network fits its training labels, almost 100 percent.
+00:06:31.963 --> 00:06:34.734
+A smaller gap can mean useful regularization,
 
-00:05:36.035 --> 00:05:37.884
-But fitting isn't generalizing.
+00:06:34.734 --> 00:06:38.680
+or it can just mean the model learned less, and since test accuracy went down,
 
-00:05:37.884 --> 00:05:40.889
-These results alone can't say whether optimization,
+00:06:38.680 --> 00:06:40.854
+the gap alone doesn't show an improvement.
 
-00:05:40.889 --> 00:05:43.200
-generalization, or both caused the drop.
+00:06:40.854 --> 00:06:43.941
+Our best guess is that this small network on a short recipe
 
-00:05:43.468 --> 00:05:45.555
-And unlike the original ResNet paper,
+00:06:43.941 --> 00:06:46.704
+couldn't fit the harder data, but we didn't test that.
 
-00:05:45.555 --> 00:05:48.783
-where deeper plain nets had higher training error, ours didn't.
+00:06:47.004 --> 00:06:49.830
+This suite also looked at the test set over and over,
 
-00:05:48.783 --> 00:05:52.286
-Residuals are a plausible fix to test, not a diagnosis.
+00:06:49.830 --> 00:06:51.539
+so these results are exploratory.
 
-00:05:54.133 --> 00:05:57.014
-A residual block keeps the same two convolutions,
+00:06:53.478 --> 00:06:56.173
+Because of that, we got stricter about evaluation.
 
-00:05:57.014 --> 00:06:00.791
-but adds a shortcut that skips around them and gets added back at the end.
+00:06:56.173 --> 00:06:59.402
+We took 5,000 images out of the training set as a stratified
 
-00:06:00.975 --> 00:06:02.856
-So the block computes F of x.
+00:06:59.402 --> 00:07:04.130
+validation set, 500 from each class, trained on the other 45,000,
 
-00:06:02.856 --> 00:06:07.030
-Conv, batch norm, ReLU, conv, batch norm.
+00:07:04.130 --> 00:07:06.836
+and made every decision on validation from then on.
 
-00:06:07.030 --> 00:06:10.465
-And the output is ReLU of F of x, plus the shortcut.
+00:07:06.836 --> 00:07:09.380
+The test set was reserved for a final check of whichever
 
-00:06:11.334 --> 00:06:14.617
-When channels grow, our shortcut is padded with zeros.
+00:07:09.380 --> 00:07:12.836
+model got selected, although it isn't a pristine holdout anymore,
 
-00:06:14.617 --> 00:06:16.889
-No learned weights, so each residual network
+00:07:12.836 --> 00:07:14.871
+since the earlier suite already used it.
 
-00:06:16.889 --> 00:06:19.744
-matches its plain twin's parameters exactly.
+00:07:15.161 --> 00:07:19.161
+We also switched to a stronger training recipe: batch 128,
 
-00:06:19.959 --> 00:06:20.916
-Why might that help?
+00:07:19.161 --> 00:07:22.596
+SGD with momentum and weight decay, batch norm after
 
-00:06:20.916 --> 00:06:24.448
-A block that should do nearly nothing just pushes F toward zero,
+00:07:22.596 --> 00:07:26.237
+every convolution, and a learning rate that warms up for 5 epochs,
 
-00:06:24.448 --> 00:06:26.394
-instead of learning to copy its input.
+00:07:26.237 --> 00:07:29.585
+then follows a cosine curve down over 160 epochs.
 
-00:06:26.394 --> 00:06:29.764
-And in backprop, the shortcuts give gradients a direct route.
+00:07:29.585 --> 00:07:32.367
+Momentum smooths out the steps, weight decay keeps
 
-00:06:29.764 --> 00:06:31.238
-Schematic, not measured.
+00:07:32.367 --> 00:07:34.900
+the weights small, and batch norm rescales each
 
-00:06:31.523 --> 00:06:33.979
-Matched seeds, identical starting weights.
+00:07:34.900 --> 00:07:37.984
+layer's outputs so deeper networks train more easily.
 
-00:06:33.979 --> 00:06:36.903
-Residual 4, 83.77.
+00:07:38.257 --> 00:07:41.289
+Every setup also ran with three different random seeds.
 
-00:06:36.903 --> 00:06:38.903
-Eight, 86.67.
+00:07:41.289 --> 00:07:43.974
+A run's score is its average validation accuracy over the
 
-00:06:38.903 --> 00:06:41.099
-Sixteen, 86.85.
+00:07:43.974 --> 00:07:46.692
+last ten epochs instead of its single best epoch,
 
-00:06:41.099 --> 00:06:43.628
-Thirty-two, 87.20.
+00:07:46.692 --> 00:07:50.219
+and the plus or minus is how much that score varies across seeds.
 
-00:06:43.734 --> 00:06:48.708
-At 32 layers, the shortcut matters, 83.08 up to 87.20.
+00:07:50.418 --> 00:07:54.813
+With this setup, the same two-convolution design plus batch norm scores
 
-00:06:48.708 --> 00:06:52.415
-But it didn't beat plain at 4, 8, or 16,
+00:07:54.813 --> 00:07:59.146
+78.27 percent on validation, compared to 63.68 percent on test before.
 
-00:06:52.415 --> 00:06:58.383
-and it's only 0.03 points above plain 16, inside the seed spread.
+00:07:59.146 --> 00:08:02.870
+But the split, the metric, the epochs, and the optimizer all
 
-00:06:58.383 --> 00:07:03.175
-On test, it scored 86.43 percent, plus or minus 0.49.
+00:08:02.870 --> 00:08:06.715
+changed at once, so we can't say which change caused that jump.
 
-00:07:05.121 --> 00:07:06.121
-Now the twist.
+00:08:08.663 --> 00:08:11.250
+Next we wanted to know if more convolutions would help.
 
-00:07:06.121 --> 00:07:10.147
-Crop plus flip, which hurt the tiny network, on residual 32.
+00:08:11.250 --> 00:08:15.163
+We kept the same two stages, the same pooling, and the same classifier,
 
-00:07:10.354 --> 00:07:13.224
-No augmentation, 87.20.
+00:08:15.163 --> 00:08:19.617
+and only stacked more convolutions inside each stage, from 2 up to 32.
 
-00:07:13.224 --> 00:07:15.017
-Flip, 90.31.
+00:08:19.821 --> 00:08:24.266
+Each extra 3 by 3 layer lets a unit see a slightly bigger part of the image,
 
-00:07:15.017 --> 00:07:17.854
-Crop plus flip, 93.74.
+00:08:24.266 --> 00:08:27.897
+5 by 5 after two layers, then 7 by 7 after three,
 
-00:07:17.854 --> 00:07:21.332
-About six and a half points, and it held for all three seeds.
+00:08:27.897 --> 00:08:31.327
+and it gives the network more steps to build up complicated features.
 
-00:07:21.603 --> 00:07:23.766
-Same augmentation, opposite result.
+00:08:31.511 --> 00:08:35.011
+On validation, two convolutions got 78.27,
 
-00:07:23.766 --> 00:07:27.603
-Plausibly, a bigger model with a stronger recipe can use that variety.
+00:08:35.011 --> 00:08:41.402
+four got 84.53, eight got 86.90, and sixteen got 87.17,
 
-00:07:27.603 --> 00:07:31.635
-We didn't prove that, and model, recipe, and split all changed together.
+00:08:41.402 --> 00:08:43.706
+so the gains were shrinking but still positive.
 
-00:07:31.635 --> 00:07:33.852
-A technique's value depends on what it's paired with.
+00:08:43.706 --> 00:08:47.456
+Then at 32 convolutions it dropped to 83.08,
 
-00:07:35.848 --> 00:07:40.924
-Finally, ResNet-18, adapted for CIFAR and trained from random weights.
+00:08:47.456 --> 00:08:49.257
+and all three seeds got worse.
 
-00:07:40.924 --> 00:07:42.403
-No ImageNet pre-training.
+00:08:49.535 --> 00:08:52.243
+Every depth reached 100 percent training accuracy,
 
-00:07:42.603 --> 00:07:47.592
-The stem is one 3 by 3 convolution, 3 to 64 channels, stride 1.
+00:08:52.243 --> 00:08:55.324
+so the 32 layer network could still fit the training set,
 
-00:07:47.592 --> 00:07:51.810
-ImageNet's 7 by 7 stride 2 stem and max pool would crush a 32
+00:08:55.324 --> 00:08:59.520
+it just did worse on images it hadn't seen, and these runs alone can't tell us
 
-00:07:51.810 --> 00:07:55.970
-by 32 image to 8 by 8, so we swapped one and dropped the other.
+00:08:59.520 --> 00:09:02.759
+whether that came from optimization, generalization, or both.
 
-00:07:56.174 --> 00:07:58.141
-Then eight basic residual blocks,
+00:09:03.055 --> 00:09:05.229
+That's different from the original ResNet paper,
 
-00:07:58.141 --> 00:08:04.184
-two per stage, at 64, 128, 256, and 512 channels.
+00:09:05.229 --> 00:09:07.892
+where deeper plain networks had higher training error.
 
-00:08:04.184 --> 00:08:05.858
-Each stage halves resolution.
+00:09:07.892 --> 00:09:10.098
+Ours trained fine and fell on validation.
 
-00:08:05.858 --> 00:08:08.706
-32, 16, 8, 4.
+00:09:10.098 --> 00:09:12.468
+Residual connections are the standard fix for deep
 
-00:08:08.706 --> 00:08:10.478
-Where shapes change, the shortcut is a
+00:09:12.468 --> 00:09:15.479
+plain networks, so they were a natural next thing to try,
 
-00:08:10.478 --> 00:08:13.343
-learned 1 by 1 convolution with batch norm.
+00:09:15.479 --> 00:09:17.214
+even though we didn't know the cause.
 
-00:08:13.559 --> 00:08:17.505
-Global average pooling turns each 4 by 4 map into one number,
+00:09:19.068 --> 00:09:22.861
+A residual block keeps the same two convolutions, but adds a shortcut
 
-00:08:17.505 --> 00:08:21.385
-and one linear layer maps 512 features to ten classes.
+00:09:22.861 --> 00:09:26.421
+that carries the block's input around them and adds it back at the end.
 
-00:08:21.385 --> 00:08:23.158
-No hidden 128 layer.
+00:09:26.606 --> 00:09:31.279
+So the main path computes F of x, which is conv, batch norm, ReLU,
 
-00:08:23.347 --> 00:08:24.271
-Why 18?
+00:09:31.279 --> 00:09:35.903
+conv, batch norm, and the block outputs ReLU of F of x plus the shortcut.
 
-00:08:24.271 --> 00:08:29.347
-The stem plus 16 block convolutions is 17, and the classifier makes 18.
+00:09:36.769 --> 00:09:39.932
+When the number of channels doubles from 32 to 64,
 
-00:08:29.347 --> 00:08:31.997
-By convention, shortcut projections don't count.
+00:09:39.932 --> 00:09:43.867
+our shortcut just pads the input with 32 channels of zeros.
 
-00:08:32.291 --> 00:08:33.704
-So it's not just layer count.
+00:09:43.867 --> 00:09:46.639
+That adds no learned weights, so every residual network
 
-00:08:33.704 --> 00:08:36.639
-It keeps resolution longer, has far more channels,
+00:09:46.639 --> 00:09:49.965
+has exactly the same number of parameters as its plain version,
 
-00:08:36.639 --> 00:08:41.910
-about 11.2 million parameters, nine times residual 32, and pools globally.
+00:09:49.965 --> 00:09:52.235
+and the two start from the same initial weights.
 
-00:08:41.910 --> 00:08:44.878
-And it trained 200 epochs, not 160.
+00:09:52.437 --> 00:09:56.079
+The usual explanation is that if a block should barely change its input,
 
-00:08:44.878 --> 00:08:47.770
-A recipe comparison, not a clean architecture test.
+00:09:56.079 --> 00:09:59.274
+a plain block has to learn to copy it through two convolutions,
 
-00:08:47.963 --> 00:08:51.881
+00:09:59.274 --> 00:10:02.176
+while a residual block just pushes F toward zero.
+
+00:10:02.176 --> 00:10:03.992
+During backprop, the shortcuts also
+
+00:10:03.992 --> 00:10:06.242
+give the gradient a direct path back.
+
+00:10:06.242 --> 00:10:08.708
+These pictures are schematics, not measurements.
+
+00:10:08.990 --> 00:10:14.414
+Residual 4 got 83.77 on validation, eight got 86.67,
+
+00:10:14.414 --> 00:10:19.200
+sixteen got 86.85, and thirty-two got 87.20.
+
+00:10:19.299 --> 00:10:22.677
+So at 32 layers the shortcuts clearly mattered,
+
+00:10:22.677 --> 00:10:24.787
+about 4 points over plain 32.
+
+00:10:24.787 --> 00:10:29.783
+But residual didn't beat plain at 4, 8, or 16, and residual 32 is only
+
+00:10:29.783 --> 00:10:34.638
+0.03 points above plain 16, well inside the variation between seeds.
+
+00:10:34.638 --> 00:10:38.437
+It still had the highest average, so it was selected,
+
+00:10:38.437 --> 00:10:42.940
+and on the test set it scored 86.43 percent, plus or minus 0.49.
+
+00:10:44.893 --> 00:10:47.197
+Since crop plus flip hurt the small network,
+
+00:10:47.197 --> 00:10:51.262
+we tried it again on residual 32, keeping the recipe, the seeds,
+
+00:10:51.262 --> 00:10:54.683
+and the starting weights the same, and only changing the augmentation.
+
+00:10:54.887 --> 00:10:58.496
+On validation, no augmentation got 87.20,
+
+00:10:58.496 --> 00:11:03.398
+flip got 90.31, and crop plus flip got 93.74.
+
+00:11:03.398 --> 00:11:08.097
+Crop plus flip improved all three seeds, by roughly 6 to 7 points each.
+
+00:11:08.385 --> 00:11:10.244
+So the same augmentation that cost the small
+
+00:11:10.244 --> 00:11:14.624
+network about 1.6 points gave residual 32 about 6.5.
+
+00:11:14.624 --> 00:11:17.320
+Our best guess is that a bigger network with a longer,
+
+00:11:17.320 --> 00:11:20.374
+stronger recipe has room to learn from the extra variety.
+
+00:11:20.374 --> 00:11:23.352
+We didn't prove that though, since the model, the recipe,
+
+00:11:23.352 --> 00:11:26.072
+and the split all changed between the two experiments.
+
+00:11:28.000 --> 00:11:32.511
+Last, we tried ResNet-18, which is a much bigger residual network,
+
+00:11:32.511 --> 00:11:35.228
+adapted for CIFAR and trained from random weights,
+
+00:11:35.228 --> 00:11:37.202
+so there's no pre-training on ImageNet.
+
+00:11:37.418 --> 00:11:42.081
+The standard version starts with a 7 by 7 stride 2 convolution and a max pool,
+
+00:11:42.081 --> 00:11:44.266
+which is built for big ImageNet photos and would
+
+00:11:44.266 --> 00:11:47.668
+shrink our images to 8 by 8 before the blocks even start,
+
+00:11:47.668 --> 00:11:52.201
+so we swapped in one 3 by 3 stride 1 convolution and removed the max pool.
+
+00:11:52.391 --> 00:11:54.880
+After that come eight basic residual blocks,
+
+00:11:54.880 --> 00:12:00.978
+two per stage, with 64, 128, 256, and 512 channels.
+
+00:12:00.978 --> 00:12:04.586
+The first stage stays at 32 by 32, and each of the next three
+
+00:12:04.586 --> 00:12:08.989
+halves the resolution, so the maps go from 32 to 16 to 8 to 4.
+
+00:12:08.989 --> 00:12:11.576
+Where the shape changes, the shortcut is a learned 1 by
+
+00:12:11.576 --> 00:12:14.865
+1 convolution with batch norm instead of zero padding.
+
+00:12:14.983 --> 00:12:18.965
+At the end, global average pooling turns each 4 by 4 map into
+
+00:12:18.965 --> 00:12:22.882
+a single number, and one linear layer maps those 512 numbers
+
+00:12:22.882 --> 00:12:26.864
+to the ten classes, with no 128 unit hidden layer like before.
+
+00:12:27.064 --> 00:12:30.706
+The 18 comes from counting the layers with weights along the main path.
+
+00:12:30.706 --> 00:12:33.966
+The stem is one, the blocks have 16 convolutions,
+
+00:12:33.966 --> 00:12:35.695
+and the classifier makes 18.
+
+00:12:35.695 --> 00:12:38.450
+The projection shortcuts aren't counted, by convention.
+
+00:12:38.747 --> 00:12:42.660
+So compared with residual 32, a lot more changed than the layer count.
+
+00:12:42.660 --> 00:12:45.834
+ResNet-18 keeps higher resolution for longer,
+
+00:12:45.834 --> 00:12:49.497
+has many more channels, learned shortcuts, a global pooling head,
+
+00:12:49.497 --> 00:12:53.563
+and about 11.2 million parameters, roughly nine times as many.
+
+00:12:53.563 --> 00:12:56.813
+It also trained for 200 epochs instead of 160,
+
+00:12:56.813 --> 00:12:59.986
+so this compares whole recipes, not just architectures.
+
+00:13:00.180 --> 00:13:04.498
 Across three seeds, it averaged 95.77 percent validation
 
-00:08:51.881 --> 00:08:55.662
-accuracy over the last ten epochs, plus or minus 0.11.
+00:13:04.498 --> 00:13:08.664
+accuracy over the last ten epochs, plus or minus 0.11,
 
-00:08:55.662 --> 00:08:59.580
-We score the final ten epochs, never the single best one.
+00:13:08.664 --> 00:13:13.285
+compared to 93.74 for residual 32 with the same augmentation.
 
-00:09:01.437 --> 00:09:04.461
-The queue has now finished and selected
+00:13:15.143 --> 00:13:19.753
+When the queue finished, it picked ResNet-18 with crop plus flip based
 
-00:09:04.461 --> 00:09:07.864
-ResNet-18 with crop plus flip by validation.
+00:13:19.753 --> 00:13:24.167
+on validation, and only then did we run that model on the test set.
 
-00:09:07.864 --> 00:09:12.477
-Its final test accuracy is 95.21 percent, plus or minus 0.02.
+00:13:24.167 --> 00:13:26.505
+It got 95.21 percent test accuracy,
 
-00:09:12.761 --> 00:09:13.728
-The whole path.
+00:13:26.505 --> 00:13:29.232
+plus or minus 0.02 across the three seeds.
 
-00:09:13.728 --> 00:09:16.750
-63.68 for the classroom baseline.
+00:13:29.522 --> 00:13:34.315
+Putting the whole path together, the classroom baseline got 63.68 on test,
 
-00:09:16.750 --> 00:09:19.457
-78.27 with a stricter recipe.
+00:13:34.315 --> 00:13:37.956
+and then on validation the stricter recipe got 78.27,
 
-00:09:19.457 --> 00:09:22.424
-87.20 with depth and shortcuts.
+00:13:37.956 --> 00:13:46.380
+depth and shortcuts got 87.20, crop and flip got 93.74, and ResNet-18 got 95.77.
 
-00:09:22.424 --> 00:09:25.141
-93.74 with augmentation.
+00:13:46.380 --> 00:13:48.696
+The metrics and setups changed along the way,
 
-00:09:25.141 --> 00:09:28.294
-95.77 with ResNet-18.
+00:13:48.696 --> 00:13:51.098
+so these numbers show the order things happened in,
 
-00:09:28.294 --> 00:09:32.091
-Test and validation are mixed, so it's a story, not a leaderboard.
+00:13:51.098 --> 00:13:53.497
+not a leaderboard, and they shouldn't be added up.
 
-00:09:32.357 --> 00:09:35.998
-It's the strongest we've measured, not the best ResNet that exists.
+00:13:53.781 --> 00:13:56.400
+This is the strongest result we measured in this project,
 
-00:09:35.998 --> 00:09:39.118
-Wider and deeper variants and other recipes do better.
+00:13:56.400 --> 00:13:58.346
+and it's not the best ResNet out there.
 
-00:09:39.118 --> 00:09:40.503
-This isn't state of the art.
+00:13:58.346 --> 00:14:01.531
+Wider and deeper residual networks and other training recipes
 
-00:09:40.779 --> 00:09:42.236
-The lessons generalize.
+00:14:01.531 --> 00:14:05.564
+get higher accuracy on CIFAR-10, so this isn't state of the art.
 
-00:09:42.236 --> 00:09:44.638
-Count optimizer steps, not just epochs.
+00:14:05.833 --> 00:14:08.888
+If we did this again, we'd keep comparing runs by optimizer
 
-00:09:44.638 --> 00:09:46.910
-Decide on validation, across seeds.
+00:14:08.888 --> 00:14:12.822
+steps and not just epochs, deciding on validation across seeds,
 
-00:09:46.910 --> 00:09:49.105
-A smaller gap isn't better performance.
+00:14:12.822 --> 00:14:16.322
+not treating a smaller train-test gap as an improvement by itself,
 
-00:09:49.105 --> 00:09:51.722
-And a technique's value depends on everything around it.
+00:14:16.322 --> 00:14:19.333
+and retesting a technique when the model or recipe changes,
 
-00:09:52.006 --> 00:09:53.527
-No single trick did this.
+00:14:19.333 --> 00:14:21.803
+since crop plus flip went from hurting to helping.
 
-00:09:53.527 --> 00:09:56.335
-It was the design and the recipe, working together.
+00:14:21.995 --> 00:14:25.325
+Going from 63.68 to 95.21 percent on test took a lot
+
+00:14:25.325 --> 00:14:28.529
+of changes stacked together, and these experiments
+
+00:14:28.529 --> 00:14:31.859
+don't split up exactly how much each one contributed.

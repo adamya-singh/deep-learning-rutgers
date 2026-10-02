@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1160" viewBox="0 0 900 1160">
+  <title>CIFAR-10 CNN architecture</title>
+  <desc>Bottom-to-top diagram of the current two-convolution CNN: normalized 3 by 32 by 32 RGB images, convolution 3 to 32, ReLU, max pooling, convolution 32 to 64, ReLU, max pooling, flatten, linear 4096 to 128, ReLU, and linear 128 to 10 logits. There are 545098 trainable parameters.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#222"/></marker>
+    <style>
+      text { font-family: 'Times New Roman', 'Liberation Serif', serif; fill: #171717; }
+      .title { font-size: 28px; font-weight: bold; }
+      .label { font-size: 22px; text-anchor: middle; }
+      .detail { font-size: 17px; text-anchor: middle; }
+      .shape { font-size: 19px; }
+      .group-label { font-size: 18px; fill: #444; }
+      .note { font-size: 16px; text-anchor: middle; fill: #444; }
+      .box { stroke: #222; stroke-width: 1.5; rx: 9; }
+      .wire { fill: none; stroke: #222; stroke-width: 1.6; marker-end: url(#arrow); }
+      .guide { fill: none; stroke: #777; stroke-width: 1; }
+    </style>
+  </defs>
+  <rect width="900" height="1160" fill="white"/>
+  <text x="450" y="39" class="title" text-anchor="middle">CIFAR-10 CNN</text>
+  <text x="450" y="66" class="note">Current network architecture · 545,098 trainable parameters</text>
+
+  <!-- Light gray enclosing stacks echo the layout of Figure 1 in Attention Is All You Need. -->
+  <rect x="207" y="124" width="365" height="221" rx="14" fill="#f2f2f2" stroke="#888" stroke-width="1.2"/>
+  <rect x="207" y="443" width="365" height="217" rx="14" fill="#f2f2f2" stroke="#888" stroke-width="1.2"/>
+  <rect x="207" y="690" width="365" height="217" rx="14" fill="#f2f2f2" stroke="#888" stroke-width="1.2"/>
+  <text x="178" y="242" class="group-label" text-anchor="end">Classifier</text>
+  <text x="178" y="555" class="group-label" text-anchor="end">Conv block 2</text>
+  <text x="178" y="802" class="group-label" text-anchor="end">Conv block 1</text>
+  <text x="637" y="105" class="group-label">Output shape</text>
+
+  <!-- Arrows point upward, following the Transformer paper's reading direction. -->
+  <path d="M 389 1022 L 389 1003" class="wire"/>
+  <path d="M 389 949 L 389 890" class="wire"/>
+  <path d="M 389 832 L 389 812" class="wire"/>
+  <path d="M 389 772 L 389 752" class="wire"/>
+  <path d="M 389 708 L 389 643" class="wire"/>
+  <path d="M 389 585 L 389 565" class="wire"/>
+  <path d="M 389 525 L 389 505" class="wire"/>
+  <path d="M 389 461 L 389 414" class="wire"/>
+  <path d="M 389 370 L 389 326" class="wire"/>
+  <path d="M 389 272 L 389 251" class="wire"/>
+  <path d="M 389 211 L 389 192" class="wire"/>
+  <path d="M 389 138 L 389 108" class="wire"/>
+  <text x="389" y="101" class="label">10 class logits</text>
+
+  <!-- Classifier. -->
+  <rect x="242" y="138" width="294" height="54" fill="#d9cce3" class="box"/>
+  <text x="389" y="161" class="label">Linear</text>
+  <text x="389" y="182" class="detail">128 → 10</text>
+  <rect x="242" y="211" width="294" height="40" fill="#fff2cc" class="box"/>
+  <text x="389" y="238" class="label">ReLU</text>
+  <rect x="242" y="272" width="294" height="54" fill="#d9cce3" class="box"/>
+  <text x="389" y="295" class="label">Linear</text>
+  <text x="389" y="316" class="detail">4,096 → 128</text>
+  <rect x="242" y="370" width="294" height="44" fill="#e5e5e5" class="box"/>
+  <text x="389" y="398" class="label">Flatten</text>
+
+  <!-- Second convolution block. -->
+  <rect x="242" y="461" width="294" height="44" fill="#f5d8de" class="box"/>
+  <text x="389" y="489" class="label">MaxPool 2 × 2</text>
+  <rect x="242" y="525" width="294" height="40" fill="#fff2cc" class="box"/>
+  <text x="389" y="552" class="label">ReLU</text>
+  <rect x="242" y="585" width="294" height="58" fill="#d5e8f4" class="box"/>
+  <text x="389" y="610" class="label">Conv 3 × 3</text>
+  <text x="389" y="632" class="detail">32 → 64 channels · padding 1</text>
+
+  <!-- First convolution block. -->
+  <rect x="242" y="708" width="294" height="44" fill="#f5d8de" class="box"/>
+  <text x="389" y="736" class="label">MaxPool 2 × 2</text>
+  <rect x="242" y="772" width="294" height="40" fill="#fff2cc" class="box"/>
+  <text x="389" y="799" class="label">ReLU</text>
+  <rect x="242" y="832" width="294" height="58" fill="#d5e8f4" class="box"/>
+  <text x="389" y="857" class="label">Conv 3 × 3</text>
+  <text x="389" y="879" class="detail">3 → 32 channels · padding 1</text>
+
+  <!-- Data preprocessing and input. -->
+  <rect x="242" y="949" width="294" height="54" fill="#e1efd9" class="box"/>
+  <text x="389" y="972" class="label">Channel normalization</text>
+  <text x="389" y="993" class="detail">(image / 255 − mean) / std</text>
+  <rect x="242" y="1022" width="294" height="54" fill="#f4dfc8" class="box"/>
+  <text x="389" y="1045" class="label">RGB image</text>
+  <text x="389" y="1066" class="detail">CIFAR-10 input</text>
+
+  <!-- Tensor dimensions after each stage (batch dimension omitted). -->
+  <g class="shape">
+    <text x="637" y="171">10</text><text x="637" y="237">128</text>
+    <text x="637" y="307">128</text><text x="637" y="397">4,096</text>
+    <text x="637" y="489">64 × 8 × 8</text><text x="637" y="551">64 × 16 × 16</text>
+    <text x="637" y="619">64 × 16 × 16</text>
+    <text x="637" y="736">32 × 16 × 16</text><text x="637" y="798">32 × 32 × 32</text>
+    <text x="637" y="866">32 × 32 × 32</text>
+    <text x="637" y="982">3 × 32 × 32</text><text x="637" y="1055">3 × 32 × 32</text>
+  </g>
+  <g class="guide">
+    <path d="M 551 165 H 618"/><path d="M 551 231 H 618"/><path d="M 551 301 H 618"/>
+    <path d="M 551 391 H 618"/><path d="M 551 483 H 618"/><path d="M 551 545 H 618"/>
+    <path d="M 551 613 H 618"/><path d="M 551 730 H 618"/><path d="M 551 792 H 618"/>
+    <path d="M 551 860 H 618"/><path d="M 551 976 H 618"/><path d="M 551 1049 H 618"/>
+  </g>
+  <text x="450" y="1111" class="note">Flow: bottom → top. Shapes are channels × height × width; batch dimension omitted.</text>
+  <text x="450" y="1136" class="note">CrossEntropyLoss consumes the logits directly. Convolutions have stride 1; pooling has stride 2.</text>
+</svg>
