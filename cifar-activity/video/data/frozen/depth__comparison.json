@@ -1,0 +1,3327 @@
+{
+  "plain_decision": {
+    "visited": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "comparisons": [
+      {
+        "from": 2,
+        "to": 4,
+        "paired_differences_pp": [
+          6.39600067138673,
+          6.3659980773925895,
+          6.037998962402355
+        ],
+        "mean_gain_pp": 6.266665903727225,
+        "plateau_streak": 0
+      },
+      {
+        "from": 4,
+        "to": 8,
+        "paired_differences_pp": [
+          2.5819953918456946,
+          1.7839988708496008,
+          2.7399978637695312
+        ],
+        "mean_gain_pp": 2.368664042154942,
+        "plateau_streak": 0
+      },
+      {
+        "from": 8,
+        "to": 16,
+        "paired_differences_pp": [
+          0.3440002441406307,
+          0.404000854492196,
+          0.06600036621092897
+        ],
+        "mean_gain_pp": 0.27133382161458525,
+        "plateau_streak": 1
+      },
+      {
+        "from": 16,
+        "to": 32,
+        "paired_differences_pp": [
+          -3.4799972534179773,
+          -3.781996917724612,
+          -5.027999114990237
+        ],
+        "mean_gain_pp": -4.096664428710942,
+        "plateau_streak": 2
+      }
+    ],
+    "stop": "decline",
+    "next_depth": null
+  },
+  "candidates": [
+    {
+      "variant": "plain",
+      "depth": 2,
+      "seeds": 3,
+      "mean_score": 78.26733296712239,
+      "score_std": 0.41464332930368514,
+      "paired_residual_gains_pp": [],
+      "runs": [
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 2,
+            "seed": 0,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 77.80800018310546,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.006236303597688675,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.005523998755961657,
+            "eval/validation_accuracy": 77.73999786376953,
+            "eval/validation_loss": 0.8194440007209778,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 190.02852674410678,
+            "performance/train_seconds": 1.0415427521802485,
+            "performance/train_images_per_second": 43205.13959297596,
+            "performance/eval_seconds": 0.1177527578547597,
+            "performance/peak_gpu_memory_mb": 737.99853515625
+          },
+          "params": 545194,
+          "process_seconds": 198.63037158595398,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/3xobt14i"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 2,
+            "seed": 1,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 78.37999877929687,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.006385761313140392,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.00572899030521512,
+            "eval/validation_accuracy": 78.37999725341797,
+            "eval/validation_loss": 0.8086115717887878,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 186.0123913763091,
+            "performance/train_seconds": 1.024377831025049,
+            "performance/train_images_per_second": 43929.10373213613,
+            "performance/eval_seconds": 0.11957512586377561,
+            "performance/peak_gpu_memory_mb": 737.99853515625
+          },
+          "params": 545194,
+          "process_seconds": 195.0092225149274,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/jdo1lvw4"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 2,
+            "seed": 2,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 78.61399993896484,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.006342597305774689,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.00571645051240921,
+            "eval/validation_accuracy": 78.63999938964844,
+            "eval/validation_loss": 0.8077093362808228,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 184.0103339671623,
+            "performance/train_seconds": 1.0029348251409829,
+            "performance/train_images_per_second": 44868.31932840136,
+            "performance/eval_seconds": 0.14380292873829603,
+            "performance/peak_gpu_memory_mb": 737.99853515625
+          },
+          "params": 545194,
+          "process_seconds": 192.83805679506622,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/1zlcdfp3"
+        }
+      ]
+    },
+    {
+      "variant": "plain",
+      "depth": 4,
+      "seeds": 3,
+      "mean_score": 84.53399887084962,
+      "score_std": 0.289625485758879,
+      "paired_residual_gains_pp": [
+        -0.14599838256836506,
+        -1.7039970397949276,
+        -0.4479988098144645
+      ],
+      "runs": [
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 4,
+            "seed": 0,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 84.2040008544922,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0036023834254592657,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0031635966151952744,
+            "eval/validation_accuracy": 84.23999786376953,
+            "eval/validation_loss": 0.5545754432678223,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 275.57654583011754,
+            "performance/train_seconds": 1.5670403509866446,
+            "performance/train_images_per_second": 28716.554727941093,
+            "performance/eval_seconds": 0.24847609386779368,
+            "performance/peak_gpu_memory_mb": 802.53466796875
+          },
+          "params": 591466,
+          "process_seconds": 284.5862956359051,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/0cssiv13"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 4,
+            "seed": 1,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 84.74599685668946,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.003561143297702074,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.003133052494376898,
+            "eval/validation_accuracy": 84.69999694824219,
+            "eval/validation_loss": 0.531682014465332,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 277.8791749603115,
+            "performance/train_seconds": 1.4814092020969838,
+            "performance/train_images_per_second": 30376.48202556121,
+            "performance/eval_seconds": 0.25421785074286163,
+            "performance/peak_gpu_memory_mb": 802.53466796875
+          },
+          "params": 591466,
+          "process_seconds": 286.7991357939318,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/njggmh89"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 4,
+            "seed": 2,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 84.6519989013672,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0035454363096505404,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.003149355761706829,
+            "eval/validation_accuracy": 84.65999603271484,
+            "eval/validation_loss": 0.5447796583175659,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 277.32162725552917,
+            "performance/train_seconds": 1.4618219460826367,
+            "performance/train_images_per_second": 30783.502820292284,
+            "performance/eval_seconds": 0.251499786041677,
+            "performance/peak_gpu_memory_mb": 802.53466796875
+          },
+          "params": 591466,
+          "process_seconds": 286.53021351085044,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/ur00xb6q"
+        }
+      ]
+    },
+    {
+      "variant": "plain",
+      "depth": 8,
+      "seeds": 3,
+      "mean_score": 86.90266291300456,
+      "score_std": 0.44268474170474464,
+      "paired_residual_gains_pp": [
+        -0.332000732421875,
+        0.48600082397460653,
+        -0.8620002746582145
+      ],
+      "runs": [
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 8,
+            "seed": 0,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 86.78599624633789,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0026680356822907925,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0022545242682099342,
+            "eval/validation_accuracy": 86.79999542236328,
+            "eval/validation_loss": 0.4689067304134369,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 508.41916517191567,
+            "performance/train_seconds": 2.564171927049756,
+            "performance/train_images_per_second": 17549.525258150446,
+            "performance/eval_seconds": 0.5179043121170253,
+            "performance/peak_gpu_memory_mb": 867.60693359375
+          },
+          "params": 684010,
+          "process_seconds": 518.516079949215,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/pk8xfyo5"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 8,
+            "seed": 1,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 86.52999572753906,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0026592647191137075,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0022661834955215454,
+            "eval/validation_accuracy": 86.5999984741211,
+            "eval/validation_loss": 0.48012787103652954,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 505.425009613391,
+            "performance/train_seconds": 2.5554103278554976,
+            "performance/train_images_per_second": 17609.696380058085,
+            "performance/eval_seconds": 0.5143762419465929,
+            "performance/peak_gpu_memory_mb": 867.60693359375
+          },
+          "params": 684010,
+          "process_seconds": 515.5166202140972,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/auvnr79f"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 8,
+            "seed": 2,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 87.39199676513672,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.00269143283367157,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0022994903847575188,
+            "eval/validation_accuracy": 87.31999969482422,
+            "eval/validation_loss": 0.46455711126327515,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 493.03732005297206,
+            "performance/train_seconds": 2.6505595680791885,
+            "performance/train_images_per_second": 16977.547134551165,
+            "performance/eval_seconds": 0.540603828150779,
+            "performance/peak_gpu_memory_mb": 867.60693359375
+          },
+          "params": 684010,
+          "process_seconds": 503.15369870793074,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/edm5eyft"
+        }
+      ]
+    },
+    {
+      "variant": "plain",
+      "depth": 16,
+      "seeds": 3,
+      "mean_score": 87.17399673461914,
+      "score_std": 0.26475679412301684,
+      "paired_residual_gains_pp": [
+        -0.7320007324218807,
+        -0.08799972534180256,
+        -0.16399917602538494
+      ],
+      "runs": [
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 16,
+            "seed": 0,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 87.12999649047852,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0018797001102939248,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0014810116263106465,
+            "eval/validation_accuracy": 87.07999420166016,
+            "eval/validation_loss": 0.4945847988128662,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 1000.4106421491597,
+            "performance/train_seconds": 5.158092647092417,
+            "performance/train_images_per_second": 8724.155046995173,
+            "performance/eval_seconds": 1.030520750908181,
+            "performance/peak_gpu_memory_mb": 1046.85302734375
+          },
+          "params": 869098,
+          "process_seconds": 1011.6673156239558,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/ftreifzc"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 16,
+            "seed": 1,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 86.93399658203126,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0016979072242975235,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.001352963736280799,
+            "eval/validation_accuracy": 86.95999908447266,
+            "eval/validation_loss": 0.49309998750686646,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 998.8127585970797,
+            "performance/train_seconds": 5.154645032947883,
+            "performance/train_images_per_second": 8729.99007931008,
+            "performance/eval_seconds": 1.0509477069135755,
+            "performance/peak_gpu_memory_mb": 1046.85302734375
+          },
+          "params": 869098,
+          "process_seconds": 1010.6123740959447,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/0v4ncvih"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 16,
+            "seed": 2,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 87.45799713134765,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.001995977945625782,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.001593702589161694,
+            "eval/validation_accuracy": 87.5,
+            "eval/validation_loss": 0.4752825200557709,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 990.6017983201891,
+            "performance/train_seconds": 4.9412241720128804,
+            "performance/train_images_per_second": 9107.054938911744,
+            "performance/eval_seconds": 1.011835542973131,
+            "performance/peak_gpu_memory_mb": 1046.85302734375
+          },
+          "params": 869098,
+          "process_seconds": 1002.3426468400285,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/5lk90ff9"
+        }
+      ]
+    },
+    {
+      "variant": "plain",
+      "depth": 32,
+      "seeds": 3,
+      "mean_score": 83.0773323059082,
+      "score_std": 0.6134184179146644,
+      "paired_residual_gains_pp": [
+        4.037998962402355,
+        3.4219970703125,
+        4.901998901367193
+      ],
+      "runs": [
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 32,
+            "seed": 0,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 83.64999923706054,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0030372324399650097,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0025392549578100443,
+            "eval/validation_accuracy": 83.63999938964844,
+            "eval/validation_loss": 0.6007353663444519,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 1977.569005302852,
+            "performance/train_seconds": 10.254260720917955,
+            "performance/train_images_per_second": 4388.41972373525,
+            "performance/eval_seconds": 2.2038763042073697,
+            "performance/peak_gpu_memory_mb": 1433.73583984375
+          },
+          "params": 1239274,
+          "process_seconds": 1991.7549568458926,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/jfml9rdo"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 32,
+            "seed": 1,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 83.15199966430664,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0030995947308838367,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0026721484027802944,
+            "eval/validation_accuracy": 83.08000183105469,
+            "eval/validation_loss": 0.6086192727088928,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 1989.5497557602357,
+            "performance/train_seconds": 11.732603343902156,
+            "performance/train_images_per_second": 3835.465896269993,
+            "performance/eval_seconds": 2.7813417052384466,
+            "performance/peak_gpu_memory_mb": 1433.73583984375
+          },
+          "params": 1239274,
+          "process_seconds": 2056.335727574071,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/otcotur2"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "plain",
+            "depth": 32,
+            "seed": 2,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "none"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 82.42999801635742,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.003137417370453477,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0025954474695026875,
+            "eval/validation_accuracy": 82.4000015258789,
+            "eval/validation_loss": 0.6430315375328064,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 2003.0262883298565,
+            "performance/train_seconds": 10.563182924874127,
+            "performance/train_images_per_second": 4260.07959154378,
+            "performance/eval_seconds": 2.1386694330722094,
+            "performance/peak_gpu_memory_mb": 1433.73583984375
+          },
+          "params": 1239274,
+          "process_seconds": 2017.8217941490002,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/7u1kjhiy"
+        }
+      ]
+    },
+    {
+      "variant": "residual",
+      "depth": 4,
+      "seeds": 3,
+      "mean_score": 83.76800079345703,
+      "score_std": 0.6329588372963932,
+      "paired_residual_gains_pp": [
+        -0.14599838256836506,
+        -1.7039970397949276,
+        -0.4479988098144645
+      ],
+      "runs": [
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 4,
+            "seed": 0,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 84.05800247192383,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0036961964797228575,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.003295046277344227,
+            "eval/validation_accuracy": 83.9800033569336,
+            "eval/validation_loss": 0.5823999047279358,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 318.6129257653374,
+            "performance/train_seconds": 1.7721047229133546,
+            "performance/train_images_per_second": 25393.533135005495,
+            "performance/eval_seconds": 0.3134323819540441,
+            "performance/peak_gpu_memory_mb": 802.53466796875
+          },
+          "params": 591466,
+          "process_seconds": 327.991717020981,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/nhc5dx96"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 4,
+            "seed": 1,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 83.04199981689453,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0037159472703933716,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0033185998909175396,
+            "eval/validation_accuracy": 83.0,
+            "eval/validation_loss": 0.6064758896827698,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 312.5818193529267,
+            "performance/train_seconds": 1.5988340980838984,
+            "performance/train_images_per_second": 28145.50931452466,
+            "performance/eval_seconds": 0.3268259228207171,
+            "performance/peak_gpu_memory_mb": 802.53466796875
+          },
+          "params": 591466,
+          "process_seconds": 322.11269271583296,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/wl1pl5sh"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 4,
+            "seed": 2,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 84.20400009155273,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.00349884619936347,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0031242475379258394,
+            "eval/validation_accuracy": 84.22000122070312,
+            "eval/validation_loss": 0.5567708611488342,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 313.2232416162733,
+            "performance/train_seconds": 1.5977834381628782,
+            "performance/train_images_per_second": 28164.017053362833,
+            "performance/eval_seconds": 0.308952066116035,
+            "performance/peak_gpu_memory_mb": 802.53466796875
+          },
+          "params": 591466,
+          "process_seconds": 323.1219936788548,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/grwur3d1"
+        }
+      ]
+    },
+    {
+      "variant": "residual",
+      "depth": 8,
+      "seeds": 3,
+      "mean_score": 86.66666285196939,
+      "score_std": 0.30490910504210594,
+      "paired_residual_gains_pp": [
+        -0.332000732421875,
+        0.48600082397460653,
+        -0.8620002746582145
+      ],
+      "runs": [
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 8,
+            "seed": 0,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 86.45399551391601,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0021434547379612923,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0018476913683116436,
+            "eval/validation_accuracy": 86.39999389648438,
+            "eval/validation_loss": 0.47520002722740173,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 537.4218858981039,
+            "performance/train_seconds": 2.615710937883705,
+            "performance/train_images_per_second": 17203.735836501943,
+            "performance/eval_seconds": 0.5889853916596621,
+            "performance/peak_gpu_memory_mb": 867.60693359375
+          },
+          "params": 684010,
+          "process_seconds": 548.0752372418065,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/ehu86xff"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 8,
+            "seed": 1,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 87.01599655151367,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0020980481058359146,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.001786614186130464,
+            "eval/validation_accuracy": 87.03999328613281,
+            "eval/validation_loss": 0.4848847985267639,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 532.3964359494857,
+            "performance/train_seconds": 2.698979433858767,
+            "performance/train_images_per_second": 16672.968839804347,
+            "performance/eval_seconds": 0.5938543591182679,
+            "performance/peak_gpu_memory_mb": 867.60693359375
+          },
+          "params": 684010,
+          "process_seconds": 543.2271194651257,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/h6i6lk0n"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 8,
+            "seed": 2,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 86.52999649047851,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.002079974627122283,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0017974846996366978,
+            "eval/validation_accuracy": 86.47999572753906,
+            "eval/validation_loss": 0.48782816529273987,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 535.0250706924126,
+            "performance/train_seconds": 2.655589303933084,
+            "performance/train_images_per_second": 16945.391342461106,
+            "performance/eval_seconds": 0.5974213660228997,
+            "performance/peak_gpu_memory_mb": 867.60693359375
+          },
+          "params": 684010,
+          "process_seconds": 544.996886447072,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/ea4sv2km"
+        }
+      ]
+    },
+    {
+      "variant": "residual",
+      "depth": 16,
+      "seeds": 3,
+      "mean_score": 86.84599685668945,
+      "score_std": 0.44800109863281534,
+      "paired_residual_gains_pp": [
+        -0.7320007324218807,
+        -0.08799972534180256,
+        -0.16399917602538494
+      ],
+      "runs": [
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 16,
+            "seed": 0,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 86.39799575805664,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0015685909893363714,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0013050284469500184,
+            "eval/validation_accuracy": 86.41999816894531,
+            "eval/validation_loss": 0.523393452167511,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 1057.685503127519,
+            "performance/train_seconds": 5.4690190649125725,
+            "performance/train_images_per_second": 8228.166599144844,
+            "performance/eval_seconds": 1.2161906759720296,
+            "performance/peak_gpu_memory_mb": 1054.97802734375
+          },
+          "params": 869098,
+          "process_seconds": 1069.109443333,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/uvr8gvq1"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 16,
+            "seed": 1,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 86.84599685668945,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.001240555546246469,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0010208562016487122,
+            "eval/validation_accuracy": 86.83999633789062,
+            "eval/validation_loss": 0.5100998878479004,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 1063.299050006317,
+            "performance/train_seconds": 5.307578417938203,
+            "performance/train_images_per_second": 8478.442795665906,
+            "performance/eval_seconds": 1.1778929447755218,
+            "performance/peak_gpu_memory_mb": 1054.97802734375
+          },
+          "params": 869098,
+          "process_seconds": 1074.8761117029935,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/2bykrlyb"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 16,
+            "seed": 2,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 87.29399795532227,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.00148092582821846,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.0012543288758024573,
+            "eval/validation_accuracy": 87.33999633789062,
+            "eval/validation_loss": 0.5006906986236572,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 1058.054572039051,
+            "performance/train_seconds": 5.4250078671611845,
+            "performance/train_images_per_second": 8294.918846550492,
+            "performance/eval_seconds": 1.2854857249185443,
+            "performance/peak_gpu_memory_mb": 1054.97802734375
+          },
+          "params": 869098,
+          "process_seconds": 1069.6597158971708,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/35bwnpnx"
+        }
+      ]
+    },
+    {
+      "variant": "residual",
+      "depth": 32,
+      "seeds": 3,
+      "mean_score": 87.19799728393555,
+      "score_std": 0.5689611079065144,
+      "paired_residual_gains_pp": [
+        4.037998962402355,
+        3.4219970703125,
+        4.901998901367193
+      ],
+      "runs": [
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 32,
+            "seed": 0,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 87.6879981994629,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.001234595780260861,
+            "train/batch_accuracy": 100.0,
+            "train/eval_accuracy": 100.0,
+            "train/eval_loss": 0.001015946501865983,
+            "eval/validation_accuracy": 87.68000030517578,
+            "eval/validation_loss": 0.4812856912612915,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 2126.537802234292,
+            "performance/train_seconds": 12.42992278910242,
+            "performance/train_images_per_second": 3620.296019815382,
+            "performance/eval_seconds": 3.138013659976423,
+            "performance/peak_gpu_memory_mb": 1441.86083984375
+          },
+          "params": 1239274,
+          "process_seconds": 2141.4328462018166,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/ddaz3vwj"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 32,
+            "seed": 1,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 86.57399673461914,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.001333319814875722,
+            "train/batch_accuracy": 99.9977798461914,
+            "train/eval_accuracy": 99.9977798461914,
+            "train/eval_loss": 0.0011114125372841954,
+            "eval/validation_accuracy": 86.5999984741211,
+            "eval/validation_loss": 0.541929304599762,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 2126.4724834067747,
+            "performance/train_seconds": 10.610326861031353,
+            "performance/train_images_per_second": 4241.151152965129,
+            "performance/eval_seconds": 2.4186526800040156,
+            "performance/peak_gpu_memory_mb": 1441.86083984375
+          },
+          "params": 1239274,
+          "process_seconds": 2142.0907810789067,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/47ogod0p"
+        },
+        {
+          "config": {
+            "manifest": {
+              "version": 1,
+              "depths": [
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "seeds": [
+                0,
+                1,
+                2
+              ],
+              "epochs": 160,
+              "score_epochs": 10,
+              "batch_size": 128,
+              "eval_batch_size": 512,
+              "lr_start": 0.01,
+              "lr_peak": 0.1,
+              "lr_min": 0.0001,
+              "warmup_epochs": 5,
+              "momentum": 0.9,
+              "weight_decay": 0.0005,
+              "split_seed": 42,
+              "validation_per_class": 500,
+              "plateau_gain_pp": 0.3,
+              "plateau_patience": 2,
+              "decline_pp": -1.0,
+              "declining_seeds": 2,
+              "augmentation": "none",
+              "precision": "fp32",
+              "layout": "contiguous"
+            },
+            "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+            "variant": "residual",
+            "depth": 32,
+            "seed": 2,
+            "device": "cuda",
+            "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+            "architecture": {
+              "channels": [
+                32,
+                64
+              ],
+              "pooling": "max-2-after-each-stage",
+              "head": [
+                4096,
+                128,
+                10
+              ],
+              "batch_norm": true,
+              "shortcut": "zero-pad-channels"
+            },
+            "normalization": {
+              "mean": [
+                0.4914,
+                0.4822,
+                0.4465
+              ],
+              "std": [
+                0.247,
+                0.2435,
+                0.2616
+              ]
+            },
+            "torch_version": "2.7.1+cu126",
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity"
+          },
+          "epochs": 160,
+          "score": 87.33199691772461,
+          "final": {
+            "epoch": 160,
+            "optimizer/lr": 0.0001,
+            "train/loss": 0.0011047555599361658,
+            "train/batch_accuracy": 99.9977798461914,
+            "train/eval_accuracy": 99.9977798461914,
+            "train/eval_loss": 0.0008934098295867443,
+            "eval/validation_accuracy": 87.39999389648438,
+            "eval/validation_loss": 0.5188199281692505,
+            "performance/optimizer_steps": 56320,
+            "performance/elapsed_seconds": 2118.4212846709415,
+            "performance/train_seconds": 10.61765015590936,
+            "performance/train_images_per_second": 4238.225910556565,
+            "performance/eval_seconds": 2.340695610968396,
+            "performance/peak_gpu_memory_mb": 1441.86083984375
+          },
+          "params": 1239274,
+          "process_seconds": 2133.1413014500868,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/wwvpvr19"
+        }
+      ]
+    }
+  ],
+  "selection": {
+    "variant": "residual",
+    "depth": 32,
+    "score": 87.19799728393555,
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "test_results": [
+    {
+      "config": {
+        "manifest": {
+          "version": 1,
+          "depths": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "seeds": [
+            0,
+            1,
+            2
+          ],
+          "epochs": 160,
+          "score_epochs": 10,
+          "batch_size": 128,
+          "eval_batch_size": 512,
+          "lr_start": 0.01,
+          "lr_peak": 0.1,
+          "lr_min": 0.0001,
+          "warmup_epochs": 5,
+          "momentum": 0.9,
+          "weight_decay": 0.0005,
+          "split_seed": 42,
+          "validation_per_class": 500,
+          "plateau_gain_pp": 0.3,
+          "plateau_patience": 2,
+          "decline_pp": -1.0,
+          "declining_seeds": 2,
+          "augmentation": "none",
+          "precision": "fp32",
+          "layout": "contiguous"
+        },
+        "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+        "variant": "residual",
+        "depth": 32,
+        "seed": 0,
+        "device": "cuda",
+        "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+        "architecture": {
+          "channels": [
+            32,
+            64
+          ],
+          "pooling": "max-2-after-each-stage",
+          "head": [
+            4096,
+            128,
+            10
+          ],
+          "batch_norm": true,
+          "shortcut": "zero-pad-channels"
+        },
+        "normalization": {
+          "mean": [
+            0.4914,
+            0.4822,
+            0.4465
+          ],
+          "std": [
+            0.247,
+            0.2435,
+            0.2616
+          ]
+        },
+        "torch_version": "2.7.1+cu126",
+        "entity": "7adamyasingh-rutgers-university",
+        "project": "cifar-activity"
+      },
+      "epoch": 160,
+      "accuracy": 86.77999877929688,
+      "loss": 0.5249443054199219,
+      "matrix": [
+        [
+          877,
+          11,
+          19,
+          14,
+          8,
+          0,
+          5,
+          7,
+          38,
+          21
+        ],
+        [
+          7,
+          942,
+          2,
+          2,
+          1,
+          0,
+          3,
+          0,
+          4,
+          39
+        ],
+        [
+          39,
+          1,
+          791,
+          28,
+          53,
+          29,
+          32,
+          15,
+          6,
+          6
+        ],
+        [
+          13,
+          4,
+          42,
+          737,
+          34,
+          97,
+          38,
+          17,
+          9,
+          9
+        ],
+        [
+          5,
+          1,
+          30,
+          36,
+          863,
+          15,
+          20,
+          26,
+          3,
+          1
+        ],
+        [
+          5,
+          1,
+          29,
+          86,
+          30,
+          810,
+          10,
+          27,
+          0,
+          2
+        ],
+        [
+          4,
+          1,
+          25,
+          35,
+          13,
+          8,
+          906,
+          5,
+          2,
+          1
+        ],
+        [
+          7,
+          1,
+          12,
+          19,
+          25,
+          23,
+          2,
+          904,
+          2,
+          5
+        ],
+        [
+          33,
+          9,
+          3,
+          5,
+          1,
+          3,
+          2,
+          2,
+          927,
+          15
+        ],
+        [
+          15,
+          36,
+          1,
+          2,
+          4,
+          2,
+          2,
+          3,
+          14,
+          921
+        ]
+      ]
+    },
+    {
+      "config": {
+        "manifest": {
+          "version": 1,
+          "depths": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "seeds": [
+            0,
+            1,
+            2
+          ],
+          "epochs": 160,
+          "score_epochs": 10,
+          "batch_size": 128,
+          "eval_batch_size": 512,
+          "lr_start": 0.01,
+          "lr_peak": 0.1,
+          "lr_min": 0.0001,
+          "warmup_epochs": 5,
+          "momentum": 0.9,
+          "weight_decay": 0.0005,
+          "split_seed": 42,
+          "validation_per_class": 500,
+          "plateau_gain_pp": 0.3,
+          "plateau_patience": 2,
+          "decline_pp": -1.0,
+          "declining_seeds": 2,
+          "augmentation": "none",
+          "precision": "fp32",
+          "layout": "contiguous"
+        },
+        "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+        "variant": "residual",
+        "depth": 32,
+        "seed": 1,
+        "device": "cuda",
+        "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+        "architecture": {
+          "channels": [
+            32,
+            64
+          ],
+          "pooling": "max-2-after-each-stage",
+          "head": [
+            4096,
+            128,
+            10
+          ],
+          "batch_norm": true,
+          "shortcut": "zero-pad-channels"
+        },
+        "normalization": {
+          "mean": [
+            0.4914,
+            0.4822,
+            0.4465
+          ],
+          "std": [
+            0.247,
+            0.2435,
+            0.2616
+          ]
+        },
+        "torch_version": "2.7.1+cu126",
+        "entity": "7adamyasingh-rutgers-university",
+        "project": "cifar-activity"
+      },
+      "epoch": 160,
+      "accuracy": 85.8699951171875,
+      "loss": 0.5585591197013855,
+      "matrix": [
+        [
+          870,
+          8,
+          32,
+          16,
+          5,
+          0,
+          4,
+          6,
+          42,
+          17
+        ],
+        [
+          8,
+          937,
+          2,
+          3,
+          1,
+          0,
+          2,
+          0,
+          8,
+          39
+        ],
+        [
+          47,
+          2,
+          782,
+          33,
+          47,
+          33,
+          31,
+          16,
+          7,
+          2
+        ],
+        [
+          15,
+          5,
+          50,
+          728,
+          35,
+          97,
+          42,
+          17,
+          7,
+          4
+        ],
+        [
+          6,
+          0,
+          25,
+          39,
+          860,
+          18,
+          23,
+          22,
+          6,
+          1
+        ],
+        [
+          12,
+          0,
+          29,
+          103,
+          22,
+          792,
+          10,
+          28,
+          1,
+          3
+        ],
+        [
+          8,
+          3,
+          23,
+          31,
+          20,
+          12,
+          897,
+          3,
+          1,
+          2
+        ],
+        [
+          13,
+          0,
+          18,
+          17,
+          33,
+          15,
+          1,
+          896,
+          0,
+          7
+        ],
+        [
+          45,
+          11,
+          10,
+          2,
+          1,
+          3,
+          4,
+          3,
+          910,
+          11
+        ],
+        [
+          14,
+          44,
+          1,
+          3,
+          3,
+          0,
+          2,
+          4,
+          14,
+          915
+        ]
+      ]
+    },
+    {
+      "config": {
+        "manifest": {
+          "version": 1,
+          "depths": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "seeds": [
+            0,
+            1,
+            2
+          ],
+          "epochs": 160,
+          "score_epochs": 10,
+          "batch_size": 128,
+          "eval_batch_size": 512,
+          "lr_start": 0.01,
+          "lr_peak": 0.1,
+          "lr_min": 0.0001,
+          "warmup_epochs": 5,
+          "momentum": 0.9,
+          "weight_decay": 0.0005,
+          "split_seed": 42,
+          "validation_per_class": 500,
+          "plateau_gain_pp": 0.3,
+          "plateau_patience": 2,
+          "decline_pp": -1.0,
+          "declining_seeds": 2,
+          "augmentation": "none",
+          "precision": "fp32",
+          "layout": "contiguous"
+        },
+        "implementation": "716024bb1afc52578c9805a852536a28629d89b9050dc9ca5518d2042f02798b",
+        "variant": "residual",
+        "depth": 32,
+        "seed": 2,
+        "device": "cuda",
+        "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+        "architecture": {
+          "channels": [
+            32,
+            64
+          ],
+          "pooling": "max-2-after-each-stage",
+          "head": [
+            4096,
+            128,
+            10
+          ],
+          "batch_norm": true,
+          "shortcut": "zero-pad-channels"
+        },
+        "normalization": {
+          "mean": [
+            0.4914,
+            0.4822,
+            0.4465
+          ],
+          "std": [
+            0.247,
+            0.2435,
+            0.2616
+          ]
+        },
+        "torch_version": "2.7.1+cu126",
+        "entity": "7adamyasingh-rutgers-university",
+        "project": "cifar-activity"
+      },
+      "epoch": 160,
+      "accuracy": 86.62999725341797,
+      "loss": 0.5468153953552246,
+      "matrix": [
+        [
+          888,
+          10,
+          26,
+          7,
+          6,
+          1,
+          10,
+          8,
+          29,
+          15
+        ],
+        [
+          7,
+          944,
+          0,
+          3,
+          1,
+          1,
+          0,
+          1,
+          8,
+          35
+        ],
+        [
+          40,
+          0,
+          783,
+          33,
+          54,
+          26,
+          35,
+          16,
+          7,
+          6
+        ],
+        [
+          16,
+          2,
+          44,
+          745,
+          33,
+          95,
+          36,
+          16,
+          5,
+          8
+        ],
+        [
+          8,
+          1,
+          36,
+          38,
+          853,
+          16,
+          18,
+          25,
+          5,
+          0
+        ],
+        [
+          5,
+          2,
+          30,
+          107,
+          26,
+          795,
+          9,
+          21,
+          3,
+          2
+        ],
+        [
+          5,
+          3,
+          30,
+          26,
+          9,
+          10,
+          910,
+          3,
+          2,
+          2
+        ],
+        [
+          10,
+          1,
+          10,
+          19,
+          33,
+          24,
+          2,
+          897,
+          1,
+          3
+        ],
+        [
+          35,
+          8,
+          4,
+          2,
+          0,
+          0,
+          6,
+          4,
+          931,
+          10
+        ],
+        [
+          15,
+          37,
+          4,
+          7,
+          2,
+          1,
+          1,
+          2,
+          14,
+          917
+        ]
+      ]
+    }
+  ]
+}

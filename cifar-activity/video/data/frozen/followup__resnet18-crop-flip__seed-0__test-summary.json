@@ -1,0 +1,186 @@
+{
+  "config": {
+    "spec": {
+      "id": "resnet18-crop-flip",
+      "architecture": "resnet18-cifar",
+      "augmentation": "crop-flip",
+      "training": {
+        "version": 1,
+        "depths": [
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "epochs": 200,
+        "score_epochs": 10,
+        "batch_size": 128,
+        "eval_batch_size": 512,
+        "lr_start": 0.01,
+        "lr_peak": 0.1,
+        "lr_min": 0.0001,
+        "warmup_epochs": 5,
+        "momentum": 0.9,
+        "weight_decay": 0.0005,
+        "split_seed": 42,
+        "validation_per_class": 500,
+        "plateau_gain_pp": 0.3,
+        "plateau_patience": 2,
+        "decline_pp": -1.0,
+        "declining_seeds": 2,
+        "augmentation": "crop-flip",
+        "precision": "fp32",
+        "layout": "contiguous"
+      }
+    },
+    "seed": 0,
+    "device": "cuda",
+    "split_hash": "789e73697e909e621a68ab93474c877a17999b95d61bc5ef81d51b7be3de738d",
+    "implementation": "f8a9d71372febd5ab6985002994c591d759a2920e36864e62b6aaebb0c9a0646",
+    "augmentation_params": {
+      "crop": {
+        "size": 32,
+        "padding": 4,
+        "fill": 0
+      },
+      "flip": {
+        "p": 0.5
+      }
+    },
+    "torch_version": "2.7.1+cu126",
+    "torchvision_version": "0.22.1+cu126",
+    "entity": "7adamyasingh-rutgers-university",
+    "project": "cifar-activity"
+  },
+  "epoch": 200,
+  "accuracy": 95.19000244140625,
+  "loss": 0.18084828555583954,
+  "matrix": [
+    [
+      963,
+      1,
+      9,
+      6,
+      2,
+      0,
+      1,
+      1,
+      12,
+      5
+    ],
+    [
+      1,
+      977,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      4,
+      17
+    ],
+    [
+      13,
+      0,
+      927,
+      9,
+      13,
+      16,
+      13,
+      5,
+      3,
+      1
+    ],
+    [
+      6,
+      1,
+      18,
+      886,
+      8,
+      62,
+      12,
+      2,
+      4,
+      1
+    ],
+    [
+      3,
+      0,
+      3,
+      10,
+      966,
+      7,
+      1,
+      9,
+      0,
+      1
+    ],
+    [
+      4,
+      1,
+      9,
+      49,
+      6,
+      924,
+      2,
+      5,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      7,
+      12,
+      6,
+      0,
+      971,
+      0,
+      0,
+      1
+    ],
+    [
+      4,
+      0,
+      2,
+      5,
+      9,
+      8,
+      0,
+      971,
+      1,
+      0
+    ],
+    [
+      15,
+      6,
+      3,
+      3,
+      0,
+      1,
+      0,
+      0,
+      964,
+      8
+    ],
+    [
+      3,
+      15,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      11,
+      970
+    ]
+  ]
+}

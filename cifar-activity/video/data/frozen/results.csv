@@ -1,0 +1,7 @@
+run_id,run,group,batch_size,epochs,lr,train_acc,test_acc,seconds,wandb_url
+eykmwnbn,GPU integration smoke,smoke,64,2,0.01,48.76,48.57,6.4,https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/eykmwnbn
+reference,GPU integration smoke,smoke,64,2,0.01,48.62,48.33,5.3,
+sampler-smoke,GPU sampler smoke,smoke,64,1,0.01,33.89,34.03,3.1,
+812pre34,Template baseline: batch 64,baseline,64,10,0.01,67.76,63.68,22.4,https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/812pre34
+oqsh0d4a,Throughput tuned: batch 512,tuned,512,10,0.01,48.65,48.58,5.2,https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/oqsh0d4a
+5j92g6cx,Batch 512: matched optimizer updates,tuned,512,80,0.01,74.18,67.67,36.8,https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/5j92g6cx

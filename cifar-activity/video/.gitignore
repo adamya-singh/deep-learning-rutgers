@@ -1,5 +1,9 @@
 node_modules/
 .venv-tools/
+!data/
+!data/**
+!public/data/
+!public/data/**
 out/*.mp4
 !out/cifar-journey.mp4
 !out/cifar-journey-trailer.mp4

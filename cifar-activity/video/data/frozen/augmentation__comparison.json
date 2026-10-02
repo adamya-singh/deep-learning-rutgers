@@ -1,0 +1,2289 @@
+{
+  "completed": 45,
+  "expected": 45,
+  "recipes": [
+    {
+      "recipe": "crop-flip",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 66.38333129882812,
+      "test_accuracy_sample_std": 1.0066443892633565,
+      "paired_differences": {
+        "none": [
+          -1.279998779296875,
+          -1.7999954223632812,
+          -1.6500015258789062
+        ],
+        "crop-flip": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: crop-flip, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "crop-flip",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 66.75199890136719,
+          "test_accuracy": 66.25,
+          "train_loss": 0.961840808391571,
+          "test_loss": 0.9847837686538696,
+          "elapsed_seconds": 38.93555797194131,
+          "process_seconds": 56.78410029713996,
+          "mean_train_images_per_second": 137018.09647716166,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/88qfok6b"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: crop-flip, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "crop-flip",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 66.41400146484375,
+          "test_accuracy": 65.44999694824219,
+          "train_loss": 0.9640949964523315,
+          "test_loss": 0.9939457774162292,
+          "elapsed_seconds": 38.89528544759378,
+          "process_seconds": 50.20116947591305,
+          "mean_train_images_per_second": 138808.91290889328,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/b8vppiqs"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: crop-flip, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "crop-flip",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 68.20600128173828,
+          "test_accuracy": 67.44999694824219,
+          "train_loss": 0.9225654602050781,
+          "test_loss": 0.9491032958030701,
+          "elapsed_seconds": 38.45046857697889,
+          "process_seconds": 50.05389058217406,
+          "mean_train_images_per_second": 141136.16127096722,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/fnxflfr4"
+        }
+      ]
+    },
+    {
+      "recipe": "none",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 67.95999654134114,
+      "test_accuracy_sample_std": 0.9971480342875763,
+      "paired_differences": {
+        "none": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "crop-flip": [
+          1.279998779296875,
+          1.7999954223632812,
+          1.6500015258789062
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: none, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "none",
+            "augmentation_params": {},
+            "augmentation_backend": "none",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 74.01200103759766,
+          "test_accuracy": 67.52999877929688,
+          "train_loss": 0.7471075057983398,
+          "test_loss": 0.9592965841293335,
+          "elapsed_seconds": 35.376417107880116,
+          "process_seconds": 45.46143072494306,
+          "mean_train_images_per_second": 156368.1221921225,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/9vwqhv9t"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: none, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "none",
+            "augmentation_params": {},
+            "augmentation_backend": "none",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 75.28799438476562,
+          "test_accuracy": 67.24999237060547,
+          "train_loss": 0.7242175340652466,
+          "test_loss": 0.9453043937683105,
+          "elapsed_seconds": 35.78408570191823,
+          "process_seconds": 46.572412266163155,
+          "mean_train_images_per_second": 154077.62373365223,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/132c95yo"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: none, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "none",
+            "augmentation_params": {},
+            "augmentation_backend": "none",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 76.57600402832031,
+          "test_accuracy": 69.0999984741211,
+          "train_loss": 0.6879567503929138,
+          "test_loss": 0.8914874792098999,
+          "elapsed_seconds": 36.13626541313715,
+          "process_seconds": 46.5246693470981,
+          "mean_train_images_per_second": 153867.76192904354,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/coie4q4g"
+        }
+      ]
+    },
+    {
+      "recipe": "flip",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 68.77333068847656,
+      "test_accuracy_sample_std": 1.197388683185098,
+      "paired_differences": {
+        "none": [
+          0.12999725341796875,
+          1.3700027465820312,
+          0.94000244140625
+        ],
+        "crop-flip": [
+          1.4099960327148438,
+          3.1699981689453125,
+          2.5900039672851562
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: flip, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "flip",
+            "augmentation_params": {
+              "flip": {
+                "p": 0.5
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 70.66199493408203,
+          "test_accuracy": 67.65999603271484,
+          "train_loss": 0.8440430164337158,
+          "test_loss": 0.9442480206489563,
+          "elapsed_seconds": 38.50046307151206,
+          "process_seconds": 51.04815638810396,
+          "mean_train_images_per_second": 139725.33570088955,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/dhu1aiwh"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: flip, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "flip",
+            "augmentation_params": {
+              "flip": {
+                "p": 0.5
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 73.01599884033203,
+          "test_accuracy": 68.6199951171875,
+          "train_loss": 0.7951849102973938,
+          "test_loss": 0.904651939868927,
+          "elapsed_seconds": 38.63992088078521,
+          "process_seconds": 50.29695342294872,
+          "mean_train_images_per_second": 139085.7055480427,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/fmb65l6j"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: flip, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "flip",
+            "augmentation_params": {
+              "flip": {
+                "p": 0.5
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 73.33200073242188,
+          "test_accuracy": 70.04000091552734,
+          "train_loss": 0.7699169516563416,
+          "test_loss": 0.8663179278373718,
+          "elapsed_seconds": 37.53431368758902,
+          "process_seconds": 49.35114533291198,
+          "mean_train_images_per_second": 146286.07584517176,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/kumzjtcx"
+        }
+      ]
+    },
+    {
+      "recipe": "crop",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 66.71999867757161,
+      "test_accuracy_sample_std": 0.5381456537314548,
+      "paired_differences": {
+        "none": [
+          -0.970001220703125,
+          -0.9699935913085938,
+          -1.779998779296875
+        ],
+        "crop-flip": [
+          0.30999755859375,
+          0.8300018310546875,
+          -0.12999725341796875
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: crop, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "crop",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 67.60199737548828,
+          "test_accuracy": 66.55999755859375,
+          "train_loss": 0.9388558864593506,
+          "test_loss": 0.9784919619560242,
+          "elapsed_seconds": 39.17062664870173,
+          "process_seconds": 52.00808557891287,
+          "mean_train_images_per_second": 136605.3093720582,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/uqm1ama5"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: crop, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "crop",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 67.8759994506836,
+          "test_accuracy": 66.27999877929688,
+          "train_loss": 0.9285503625869751,
+          "test_loss": 0.9752399325370789,
+          "elapsed_seconds": 38.42928227223456,
+          "process_seconds": 50.59880397305824,
+          "mean_train_images_per_second": 140047.46780399446,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/et0kud05"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: crop, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "crop",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 68.45600128173828,
+          "test_accuracy": 67.31999969482422,
+          "train_loss": 0.9128071069717407,
+          "test_loss": 0.9541800618171692,
+          "elapsed_seconds": 39.20789980539121,
+          "process_seconds": 51.86982530611567,
+          "mean_train_images_per_second": 136320.2081479719,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/7a8torsx"
+        }
+      ]
+    },
+    {
+      "recipe": "color-jitter",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 66.43999989827473,
+      "test_accuracy_sample_std": 1.0558847631579649,
+      "paired_differences": {
+        "none": [
+          -1.1399993896484375,
+          -1.8399887084960938,
+          -1.5800018310546875
+        ],
+        "crop-flip": [
+          0.1399993896484375,
+          -0.0399932861328125,
+          0.06999969482421875
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: color-jitter, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "color-jitter",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "color_jitter": {
+                "brightness": 0.2,
+                "contrast": 0.2,
+                "saturation": 0.2,
+                "hue": 0.05
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 66.60999298095703,
+          "test_accuracy": 66.38999938964844,
+          "train_loss": 0.9666886329650879,
+          "test_loss": 0.985110342502594,
+          "elapsed_seconds": 2877.2503335129004,
+          "process_seconds": 2889.448954191059,
+          "mean_train_images_per_second": 1402.933521370416,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/hexupuz4"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: color-jitter, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "color-jitter",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "color_jitter": {
+                "brightness": 0.2,
+                "contrast": 0.2,
+                "saturation": 0.2,
+                "hue": 0.05
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 66.0,
+          "test_accuracy": 65.41000366210938,
+          "train_loss": 0.9777858853340149,
+          "test_loss": 1.0008982419967651,
+          "elapsed_seconds": 3113.612209989922,
+          "process_seconds": 3126.9155501278583,
+          "mean_train_images_per_second": 1296.4990058508927,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/36ilhl68"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: color-jitter, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "color-jitter",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "color_jitter": {
+                "brightness": 0.2,
+                "contrast": 0.2,
+                "saturation": 0.2,
+                "hue": 0.05
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 67.94200134277344,
+          "test_accuracy": 67.5199966430664,
+          "train_loss": 0.9395357370376587,
+          "test_loss": 0.9584270119667053,
+          "elapsed_seconds": 3159.0058600548655,
+          "process_seconds": 3174.137746865861,
+          "mean_train_images_per_second": 1277.431050743078,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/pve9cbb3"
+        }
+      ]
+    },
+    {
+      "recipe": "rotation",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 61.68666458129883,
+      "test_accuracy_sample_std": 1.4288930578916041,
+      "paired_differences": {
+        "none": [
+          -5.1100006103515625,
+          -7.209995269775391,
+          -6.5
+        ],
+        "crop-flip": [
+          -3.8300018310546875,
+          -5.409999847412109,
+          -4.849998474121094
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: rotation, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "rotation",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "rotation": {
+                "degrees": 15
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 62.99799728393555,
+          "test_accuracy": 62.41999816894531,
+          "train_loss": 1.0630971193313599,
+          "test_loss": 1.083525538444519,
+          "elapsed_seconds": 1136.1608759765513,
+          "process_seconds": 1150.1860985790845,
+          "mean_train_images_per_second": 3609.9756533989644,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/vs3bctgg"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: rotation, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "rotation",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "rotation": {
+                "degrees": 15
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 60.94399642944336,
+          "test_accuracy": 60.03999710083008,
+          "train_loss": 1.1053721904754639,
+          "test_loss": 1.1269041299819946,
+          "elapsed_seconds": 1167.9268242807593,
+          "process_seconds": 1180.291049407795,
+          "mean_train_images_per_second": 3505.3696286111845,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/0aq2q6y9"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: rotation, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "rotation",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "rotation": {
+                "degrees": 15
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 63.05999755859375,
+          "test_accuracy": 62.599998474121094,
+          "train_loss": 1.055357575416565,
+          "test_loss": 1.0706837177276611,
+          "elapsed_seconds": 1135.6722268911544,
+          "process_seconds": 1147.8130365521647,
+          "mean_train_images_per_second": 3611.8373115498807,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/rw6jsm1k"
+        }
+      ]
+    },
+    {
+      "recipe": "erasing",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 65.33666737874348,
+      "test_accuracy_sample_std": 0.9676944097716708,
+      "paired_differences": {
+        "none": [
+          -1.5999984741210938,
+          -3.0299911499023438,
+          -3.2399978637695312
+        ],
+        "crop-flip": [
+          -0.31999969482421875,
+          -1.2299957275390625,
+          -1.589996337890625
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: erasing, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "erasing",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "erasing": {
+                "p": 0.5,
+                "scale": [
+                  0.02,
+                  0.2
+                ],
+                "ratio": [
+                  0.3,
+                  3.3
+                ],
+                "value": 0
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 66.50599670410156,
+          "test_accuracy": 65.93000030517578,
+          "train_loss": 0.9679291248321533,
+          "test_loss": 0.9903976321220398,
+          "elapsed_seconds": 366.50363415805623,
+          "process_seconds": 378.48023258312605,
+          "mean_train_images_per_second": 11550.900203392555,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/bk5zo1re"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: erasing, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "erasing",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "erasing": {
+                "p": 0.5,
+                "scale": [
+                  0.02,
+                  0.2
+                ],
+                "ratio": [
+                  0.3,
+                  3.3
+                ],
+                "value": 0
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 65.03199768066406,
+          "test_accuracy": 64.22000122070312,
+          "train_loss": 0.9942271709442139,
+          "test_loss": 1.0196373462677002,
+          "elapsed_seconds": 357.6633572310675,
+          "process_seconds": 370.0132920409087,
+          "mean_train_images_per_second": 11922.763395468128,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/wpwpol5a"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: erasing, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "erasing",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "erasing": {
+                "p": 0.5,
+                "scale": [
+                  0.02,
+                  0.2
+                ],
+                "ratio": [
+                  0.3,
+                  3.3
+                ],
+                "value": 0
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 66.62999725341797,
+          "test_accuracy": 65.86000061035156,
+          "train_loss": 0.956265926361084,
+          "test_loss": 0.9805455803871155,
+          "elapsed_seconds": 375.9815434424672,
+          "process_seconds": 388.0390468828846,
+          "mean_train_images_per_second": 11232.379543469293,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/6mk4hgti"
+        }
+      ]
+    },
+    {
+      "recipe": "mixup",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 64.45999908447266,
+      "test_accuracy_sample_std": 1.0093555229840778,
+      "paired_differences": {
+        "none": [
+          -2.7099990844726562,
+          -3.92999267578125,
+          -3.8600006103515625
+        ],
+        "crop-flip": [
+          -1.4300003051757812,
+          -2.1299972534179688,
+          -2.2099990844726562
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: mixup, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "mixup",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "mixup": {
+                "alpha": 0.2,
+                "num_classes": 10
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 65.03199768066406,
+          "test_accuracy": 64.81999969482422,
+          "train_loss": 1.0237635374069214,
+          "test_loss": 1.0379624366760254,
+          "elapsed_seconds": 46.745239736745134,
+          "process_seconds": 59.32745303702541,
+          "mean_train_images_per_second": 110295.6902770382,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/i2lv1fzz"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: mixup, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "mixup",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "mixup": {
+                "alpha": 0.2,
+                "num_classes": 10
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 64.2719955444336,
+          "test_accuracy": 63.31999969482422,
+          "train_loss": 1.0503178834915161,
+          "test_loss": 1.07058846950531,
+          "elapsed_seconds": 47.47670262004249,
+          "process_seconds": 60.69426331203431,
+          "mean_train_images_per_second": 109216.03710606045,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/k70c68bq"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: mixup, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "mixup",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "mixup": {
+                "alpha": 0.2,
+                "num_classes": 10
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 65.60800170898438,
+          "test_accuracy": 65.23999786376953,
+          "train_loss": 1.0162628889083862,
+          "test_loss": 1.0320463180541992,
+          "elapsed_seconds": 45.64508440438658,
+          "process_seconds": 59.43221519398503,
+          "mean_train_images_per_second": 113858.72948988398,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/854feys6"
+        }
+      ]
+    },
+    {
+      "recipe": "cutmix",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 58.94333267211914,
+      "test_accuracy_sample_std": 1.3176651080933044,
+      "paired_differences": {
+        "none": [
+          -7.069995880126953,
+          -8.95999526977539,
+          -11.020000457763672
+        ],
+        "crop-flip": [
+          -5.789997100830078,
+          -7.159999847412109,
+          -9.369998931884766
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: cutmix, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "cutmix",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "cutmix": {
+                "alpha": 1.0,
+                "num_classes": 10
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 60.284000396728516,
+          "test_accuracy": 60.46000289916992,
+          "train_loss": 1.2274693250656128,
+          "test_loss": 1.2288048267364502,
+          "elapsed_seconds": 48.64769593323581,
+          "process_seconds": 62.52134905708954,
+          "mean_train_images_per_second": 104993.57906572476,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/onatmmp3"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: cutmix, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "cutmix",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "cutmix": {
+                "alpha": 1.0,
+                "num_classes": 10
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 58.50600051879883,
+          "test_accuracy": 58.28999710083008,
+          "train_loss": 1.2736446857452393,
+          "test_loss": 1.2747244834899902,
+          "elapsed_seconds": 47.6853181689512,
+          "process_seconds": 62.53686922695488,
+          "mean_train_images_per_second": 107709.02769753186,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/i6dta38s"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: cutmix, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "cutmix",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "cutmix": {
+                "alpha": 1.0,
+                "num_classes": 10
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 58.369998931884766,
+          "test_accuracy": 58.07999801635742,
+          "train_loss": 1.2685569524765015,
+          "test_loss": 1.2666888236999512,
+          "elapsed_seconds": 47.95306792855263,
+          "process_seconds": 61.75102333188988,
+          "mean_train_images_per_second": 106902.32713361611,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/pduj7n4j"
+        }
+      ]
+    },
+    {
+      "recipe": "randaugment",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 64.01333363850911,
+      "test_accuracy_sample_std": 1.0312279141635963,
+      "paired_differences": {
+        "none": [
+          -3.0400009155273438,
+          -4.419990539550781,
+          -4.379997253417969
+        ],
+        "crop-flip": [
+          -1.7600021362304688,
+          -2.6199951171875,
+          -2.7299957275390625
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: randaugment, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "randaugment",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "randaugment": {
+                "num_ops": 2,
+                "magnitude": 9,
+                "num_magnitude_bins": 31
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 65.01799774169922,
+          "test_accuracy": 64.48999786376953,
+          "train_loss": 1.038870096206665,
+          "test_loss": 1.048578143119812,
+          "elapsed_seconds": 1705.978044806281,
+          "process_seconds": 1717.8460067918058,
+          "mean_train_images_per_second": 2384.6480740439592,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/7pprevtf"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: randaugment, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "randaugment",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "randaugment": {
+                "num_ops": 2,
+                "magnitude": 9,
+                "num_magnitude_bins": 31
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 64.01000213623047,
+          "test_accuracy": 62.83000183105469,
+          "train_loss": 1.0536835193634033,
+          "test_loss": 1.0651650428771973,
+          "elapsed_seconds": 1727.4029414819088,
+          "process_seconds": 1753.40158960619,
+          "mean_train_images_per_second": 2352.6378388315184,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/nzyj24uj"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: randaugment, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "randaugment",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "randaugment": {
+                "num_ops": 2,
+                "magnitude": 9,
+                "num_magnitude_bins": 31
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 65.58000183105469,
+          "test_accuracy": 64.72000122070312,
+          "train_loss": 1.0114092826843262,
+          "test_loss": 1.0227100849151611,
+          "elapsed_seconds": 1702.5934890848584,
+          "process_seconds": 1714.994161906885,
+          "mean_train_images_per_second": 2389.004968674551,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/f10cny97"
+        }
+      ]
+    },
+    {
+      "recipe": "resized-crop",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 66.37999725341797,
+      "test_accuracy_sample_std": 0.5456165459074087,
+      "paired_differences": {
+        "none": [
+          -0.8300018310546875,
+          -1.4999923706054688,
+          -2.410003662109375
+        ],
+        "crop-flip": [
+          0.4499969482421875,
+          0.3000030517578125,
+          -0.7600021362304688
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: resized-crop, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "resized-crop",
+            "augmentation_params": {
+              "resized_crop": {
+                "size": [
+                  32,
+                  32
+                ],
+                "scale": [
+                  0.8,
+                  1.0
+                ],
+                "ratio": [
+                  0.9,
+                  1.1
+                ],
+                "antialias": true
+              },
+              "flip": {
+                "p": 0.5
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 68.94599914550781,
+          "test_accuracy": 66.69999694824219,
+          "train_loss": 0.8963963985443115,
+          "test_loss": 0.9665659070014954,
+          "elapsed_seconds": 681.6965405286755,
+          "process_seconds": 699.6808628530707,
+          "mean_train_images_per_second": 6098.353128672677,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/28g4hzzu"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: resized-crop, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "resized-crop",
+            "augmentation_params": {
+              "resized_crop": {
+                "size": [
+                  32,
+                  32
+                ],
+                "scale": [
+                  0.8,
+                  1.0
+                ],
+                "ratio": [
+                  0.9,
+                  1.1
+                ],
+                "antialias": true
+              },
+              "flip": {
+                "p": 0.5
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 68.88999938964844,
+          "test_accuracy": 65.75,
+          "train_loss": 0.893039345741272,
+          "test_loss": 0.9695107936859131,
+          "elapsed_seconds": 711.3028811493423,
+          "process_seconds": 727.2444173980039,
+          "mean_train_images_per_second": 5835.615656804068,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/zpy621kf"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: resized-crop, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "resized-crop",
+            "augmentation_params": {
+              "resized_crop": {
+                "size": [
+                  32,
+                  32
+                ],
+                "scale": [
+                  0.8,
+                  1.0
+                ],
+                "ratio": [
+                  0.9,
+                  1.1
+                ],
+                "antialias": true
+              },
+              "flip": {
+                "p": 0.5
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 69.41799926757812,
+          "test_accuracy": 66.68999481201172,
+          "train_loss": 0.8831296563148499,
+          "test_loss": 0.9529207944869995,
+          "elapsed_seconds": 691.3837817688473,
+          "process_seconds": 704.4939806589391,
+          "mean_train_images_per_second": 5995.868220837712,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/v516vhyc"
+        }
+      ]
+    },
+    {
+      "recipe": "affine",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 58.32333119710287,
+      "test_accuracy_sample_std": 3.0458553430377657,
+      "paired_differences": {
+        "none": [
+          -7.590000152587891,
+          -12.439994812011719,
+          -8.880001068115234
+        ],
+        "crop-flip": [
+          -6.310001373291016,
+          -10.639999389648438,
+          -7.229999542236328
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: affine, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "affine",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "affine": {
+                "degrees": 10,
+                "translate": [
+                  0.1,
+                  0.1
+                ],
+                "scale": [
+                  0.9,
+                  1.1
+                ],
+                "shear": [
+                  -5,
+                  5
+                ]
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 60.74199676513672,
+          "test_accuracy": 59.939998626708984,
+          "train_loss": 1.1166712045669556,
+          "test_loss": 1.1312462091445923,
+          "elapsed_seconds": 1354.8660386640113,
+          "process_seconds": 1368.671173132956,
+          "mean_train_images_per_second": 3013.0067982674705,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/dirq4fqq"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: affine, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "affine",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "affine": {
+                "degrees": 10,
+                "translate": [
+                  0.1,
+                  0.1
+                ],
+                "scale": [
+                  0.9,
+                  1.1
+                ],
+                "shear": [
+                  -5,
+                  5
+                ]
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 55.41999816894531,
+          "test_accuracy": 54.80999755859375,
+          "train_loss": 1.2685762643814087,
+          "test_loss": 1.2827651500701904,
+          "elapsed_seconds": 1350.004417484859,
+          "process_seconds": 1362.114927955903,
+          "mean_train_images_per_second": 3020.3977389978736,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/16l0p19j"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: affine, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "affine",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "affine": {
+                "degrees": 10,
+                "translate": [
+                  0.1,
+                  0.1
+                ],
+                "scale": [
+                  0.9,
+                  1.1
+                ],
+                "shear": [
+                  -5,
+                  5
+                ]
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 60.95000076293945,
+          "test_accuracy": 60.21999740600586,
+          "train_loss": 1.1064565181732178,
+          "test_loss": 1.122598648071289,
+          "elapsed_seconds": 1364.9973638791125,
+          "process_seconds": 1378.209384220885,
+          "mean_train_images_per_second": 2988.1937738611696,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/3qb2oagg"
+        }
+      ]
+    },
+    {
+      "recipe": "grayscale",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 66.38666534423828,
+      "test_accuracy_sample_std": 0.8003324529983739,
+      "paired_differences": {
+        "none": [
+          -1.1699981689453125,
+          -1.649993896484375,
+          -1.9000015258789062
+        ],
+        "crop-flip": [
+          0.1100006103515625,
+          0.15000152587890625,
+          -0.25
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: grayscale, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "grayscale",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "grayscale": {
+                "p": 0.1
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 66.7239990234375,
+          "test_accuracy": 66.36000061035156,
+          "train_loss": 0.9575494527816772,
+          "test_loss": 0.9782193899154663,
+          "elapsed_seconds": 160.36951080337167,
+          "process_seconds": 172.05451610707678,
+          "mean_train_images_per_second": 27452.969371154046,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/h1dwtaj6"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: grayscale, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "grayscale",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "grayscale": {
+                "p": 0.1
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 66.45599365234375,
+          "test_accuracy": 65.5999984741211,
+          "train_loss": 0.9654302597045898,
+          "test_loss": 0.9926555156707764,
+          "elapsed_seconds": 163.2974928964395,
+          "process_seconds": 174.83361649606377,
+          "mean_train_images_per_second": 26975.663291565263,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/2svdoecf"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: grayscale, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "grayscale",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "grayscale": {
+                "p": 0.1
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 68.18000030517578,
+          "test_accuracy": 67.19999694824219,
+          "train_loss": 0.9238759875297546,
+          "test_loss": 0.9487259387969971,
+          "elapsed_seconds": 158.4546303146053,
+          "process_seconds": 170.12815763708204,
+          "mean_train_images_per_second": 27769.547609636396,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/czynoaaj"
+        }
+      ]
+    },
+    {
+      "recipe": "blur",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 65.28666432698567,
+      "test_accuracy_sample_std": 1.5991354971945597,
+      "paired_differences": {
+        "none": [
+          -1.4899978637695312,
+          -3.7999954223632812,
+          -2.7300033569335938
+        ],
+        "crop-flip": [
+          -0.20999908447265625,
+          -2.0,
+          -1.0800018310546875
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: blur, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "blur",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "blur": {
+                "p": 0.2,
+                "kernel_size": 3,
+                "sigma": [
+                  0.1,
+                  1.0
+                ]
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 66.71400451660156,
+          "test_accuracy": 66.04000091552734,
+          "train_loss": 0.962378203868866,
+          "test_loss": 0.9869827032089233,
+          "elapsed_seconds": 353.50248223845847,
+          "process_seconds": 366.62844399386086,
+          "mean_train_images_per_second": 12042.078249509383,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/c3ryftoq"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: blur, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "blur",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "blur": {
+                "p": 0.2,
+                "kernel_size": 3,
+                "sigma": [
+                  0.1,
+                  1.0
+                ]
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 64.31800079345703,
+          "test_accuracy": 63.44999694824219,
+          "train_loss": 1.0061115026474,
+          "test_loss": 1.036138892173767,
+          "elapsed_seconds": 343.9167754347436,
+          "process_seconds": 362.8508505951613,
+          "mean_train_images_per_second": 12360.834985952626,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/2mgd83i9"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: blur, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "blur",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "blur": {
+                "p": 0.2,
+                "kernel_size": 3,
+                "sigma": [
+                  0.1,
+                  1.0
+                ]
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 67.25999450683594,
+          "test_accuracy": 66.3699951171875,
+          "train_loss": 0.9404915571212769,
+          "test_loss": 0.9666924476623535,
+          "elapsed_seconds": 337.75628631492145,
+          "process_seconds": 349.96906348783523,
+          "mean_train_images_per_second": 12566.531291385321,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/vcfmo5tp"
+        }
+      ]
+    },
+    {
+      "recipe": "autoaugment",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_accuracy_mean": 63.790000915527344,
+      "test_accuracy_sample_std": 0.8574962969605326,
+      "paired_differences": {
+        "none": [
+          -3.470001220703125,
+          -4.419990539550781,
+          -4.6199951171875
+        ],
+        "crop-flip": [
+          -2.19000244140625,
+          -2.6199951171875,
+          -2.9699935913085938
+        ]
+      },
+      "runs": [
+        {
+          "config": {
+            "run_name": "Augmentation: autoaugment, seed 0",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 0,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "autoaugment",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "autoaugment": {
+                "policy": "CIFAR10"
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 64.7439956665039,
+          "test_accuracy": 64.05999755859375,
+          "train_loss": 1.0664920806884766,
+          "test_loss": 1.0758233070373535,
+          "elapsed_seconds": 1093.1775953855831,
+          "process_seconds": 1105.683428948978,
+          "mean_train_images_per_second": 3753.120870555789,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/0o9ghixj"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: autoaugment, seed 1",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 1,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "autoaugment",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "autoaugment": {
+                "policy": "CIFAR10"
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 63.4319953918457,
+          "test_accuracy": 62.83000183105469,
+          "train_loss": 1.0946059226989746,
+          "test_loss": 1.1034924983978271,
+          "elapsed_seconds": 1127.8752439795062,
+          "process_seconds": 1139.9320461919997,
+          "mean_train_images_per_second": 3633.9510806192116,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/8s0lrz97"
+        },
+        {
+          "config": {
+            "run_name": "Augmentation: autoaugment, seed 2",
+            "batch_size": 512,
+            "eval_batch_size": 1024,
+            "lr": 0.01,
+            "seed": 2,
+            "device": "cuda",
+            "precision": "fp32",
+            "layout": "contiguous",
+            "compile": false,
+            "entity": "7adamyasingh-rutgers-university",
+            "project": "cifar-activity",
+            "group": "augmentation",
+            "augmentation": "autoaugment",
+            "augmentation_params": {
+              "crop": {
+                "size": 32,
+                "padding": 4,
+                "fill": 0
+              },
+              "flip": {
+                "p": 0.5
+              },
+              "autoaugment": {
+                "policy": "CIFAR10"
+              }
+            },
+            "augmentation_backend": "hybrid-v1",
+            "rng_policy": "isolated-v1"
+          },
+          "epochs": 80,
+          "train_accuracy": 65.2979965209961,
+          "test_accuracy": 64.4800033569336,
+          "train_loss": 1.0461714267730713,
+          "test_loss": 1.0551904439926147,
+          "elapsed_seconds": 1088.4763369970024,
+          "process_seconds": 1102.3132786310744,
+          "mean_train_images_per_second": 3767.3602989890196,
+          "optimizer_steps": 7840,
+          "wandb_url": "https://wandb.ai/7adamyasingh-rutgers-university/cifar-activity/runs/zbn21nl5"
+        }
+      ]
+    }
+  ]
+}
