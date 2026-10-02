@@ -1,0 +1,17 @@
+node_modules/
+.venv-tools/
+out/*.mp4
+!out/cifar-journey.mp4
+!out/cifar-journey-trailer.mp4
+out/frames/
+out/qa/
+out/contact-sheet-*.jpg
+claude-build*.jsonl
+claude-build*.stderr.log
+adamya-voice-reference.txt
+experiment-teaching-reference.md
+CLAUDE_BRIEF.md
+REVIEW_NOTES.md
+FINAL_RENDER_CHECKLIST.md
+__pycache__/
+*.pyc

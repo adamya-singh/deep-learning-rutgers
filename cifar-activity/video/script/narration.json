@@ -1,0 +1,502 @@
+{
+ "snapshot_utc": "2026-10-02T01:27:30Z",
+ "followup_status": {
+  "winner-flip/seed-0": "completed",
+  "winner-flip/seed-1": "completed",
+  "winner-flip/seed-2": "completed",
+  "winner-crop-flip/seed-0": "completed",
+  "winner-crop-flip/seed-1": "completed",
+  "winner-crop-flip/seed-2": "completed",
+  "resnet18-crop-flip/seed-0": "completed",
+  "resnet18-crop-flip/seed-1": "completed",
+  "resnet18-crop-flip/seed-2": "completed"
+ },
+ "chapters": [
+  {
+   "id": "task",
+   "title": "Ten classes, 3,072 numbers",
+   "segments": [
+    {
+     "id": "task-1",
+     "text": "This is a frog. Our network has to figure that out from nothing but numbers.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Real CIFAR-10 test images fill the frame; the frog is centered."
+    },
+    {
+     "id": "task-2",
+     "text": "CIFAR-10 is 60,000 tiny photos in ten classes, from airplanes to trucks. 50,000 for training, and 10,000 held out for testing.",
+     "say": "SIFAR ten is 60,000 tiny photos in ten classes, from airplanes to trucks. 50,000 for training, and 10,000 held out for testing.",
+     "pause": 0.4,
+     "visual": "10x8 gallery of real test images with class labels; split bar 50,000 / 10,000."
+    },
+    {
+     "id": "task-3",
+     "text": "Zoom in and the frog disappears. Each pixel is three numbers, red, green, and blue, from 0 to 255. 32 by 32 by 3. 3,072 numbers.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Camera pushes into the frog: real pixel values, then R, G, B slabs separate."
+    },
+    {
+     "id": "task-4",
+     "text": "So, what actually makes a network better at turning those numbers into the right answer?",
+     "say": null,
+     "pause": 0.7,
+     "visual": "Question resolves over the slabs."
+    }
+   ]
+  },
+  {
+   "id": "cnn",
+   "title": "The starting network",
+   "segments": [
+    {
+     "id": "cnn-1",
+     "text": "We started with a small convolutional network. 545,098 trainable parameters.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Full architecture strip: 3@32² → 32@32² → pool → 64@16² → pool → 4096 → 128 → 10."
+    },
+    {
+     "id": "cnn-2",
+     "text": "First, normalization. Each color channel has its dataset mean subtracted, then gets divided by its spread.",
+     "say": null,
+     "pause": 0.9,
+     "visual": "Equation x̂ = (x − μ)/σ with the real CIFAR channel statistics."
+    },
+    {
+     "id": "cnn-3",
+     "text": "Then, convolution. A filter is a 3 by 3 window through all three channels. 27 weights, plus a bias. At each position, it multiplies and sums. Slide it everywhere, and you get a new map.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Window sweeps the frog; real multiply-sum numbers; output map fills in behind it."
+    },
+    {
+     "id": "cnn-4",
+     "text": "The same weights are reused at every position, so a pattern only has to be learned once, wherever it shows up.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Several windows linked to one shared kernel."
+    },
+    {
+     "id": "cnn-5",
+     "text": "With 32 filters, we get 32 maps. These are the real filters our baseline learned, and their real maps for this frog. Nobody hardcoded edge detectors. Training found these.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Real conv1 filters and activations from ../runs/baseline/last.pt."
+    },
+    {
+     "id": "cnn-6",
+     "text": "ReLU zeroes the negatives, and 2 by 2 max pooling keeps each block's strongest value, 32 by 32 down to 16 by 16.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Number grid: negatives → 0, then 2x2 max."
+    },
+    {
+     "id": "cnn-7",
+     "text": "The second block repeats this with 64 filters reading all 32 maps, combining simple patterns into parts. Pooling takes it to 8 by 8.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Real conv2 activations; slab shrinks to 8x8."
+    },
+    {
+     "id": "cnn-8",
+     "text": "That's 4,096 numbers. Flatten them, 128 hidden units with ReLU, and out come ten scores, one per class.",
+     "say": null,
+     "pause": 0.6,
+     "visual": "Slab dissolves into a 4096 column, particles flow to 128 then 10."
+    }
+   ]
+  },
+  {
+   "id": "learn",
+   "title": "How it learns",
+   "segments": [
+    {
+     "id": "learn-1",
+     "text": "Those ten scores are logits. Any size, positive or negative. Not probabilities yet.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Real logits for the frog as signed bars."
+    },
+    {
+     "id": "learn-2",
+     "text": "Softmax turns them into probabilities. Exponentiate each one, then divide by the total. Now they're positive, and they sum to one.",
+     "say": null,
+     "pause": 1.0,
+     "visual": "Softmax equation; bars morph into real probabilities."
+    },
+    {
+     "id": "learn-3",
+     "text": "For this frog, the baseline bets mostly on frog, but not all in.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Frog probability highlighted."
+    },
+    {
+     "id": "learn-4",
+     "text": "Cross-entropy is the negative log of the probability on the right answer. Confident and right costs almost nothing. Confident and wrong costs a lot.",
+     "say": null,
+     "pause": 1.0,
+     "visual": "L = −log p_y curve with the real frog point."
+    },
+    {
+     "id": "learn-5",
+     "text": "One detail. The network itself only outputs logits. PyTorch's cross-entropy applies log-softmax internally. Softmax here is for reading outputs, not an extra layer.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "nn.CrossEntropyLoss(z, y) = −log softmax(z)_y; no softmax layer in build_model."
+    },
+    {
+     "id": "learn-6",
+     "text": "Backpropagation uses the chain rule to send that loss backwards, telling every parameter which way would lower it.",
+     "say": null,
+     "pause": 0.9,
+     "visual": "Forward particles, then gradient pulses flow backward; chain-rule equation."
+    },
+    {
+     "id": "learn-7",
+     "text": "This is a real slice of the loss around our trained baseline, along two random directions in weight space. Gradient descent steps downhill. The path drawn here is illustrative, not recorded steps.",
+     "say": null,
+     "pause": 0.9,
+     "visual": "Measured 25x25 loss slice (tools/extract_static.py); path labelled illustrative; update rule w ← w − η∇L."
+    },
+    {
+     "id": "learn-8",
+     "text": "Each step uses a batch of 64 images. One pass over the training set, an epoch, is 782 steps.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "782 batch tiles fill up one epoch."
+    },
+    {
+     "id": "learn-9",
+     "text": "Ten epochs at learning rate 0.01 gave our first baseline. 63.68 percent on test. Wrong more than a third of the time.",
+     "say": null,
+     "pause": 0.7,
+     "visual": "Real per-epoch test curve from ../runs/baseline.log."
+    }
+   ]
+  },
+  {
+   "id": "batch",
+   "title": "Faster isn't better",
+   "segments": [
+    {
+     "id": "batch-1",
+     "text": "First, we tried going faster. At batch 512, ten epochs took 5 seconds instead of 22.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Two lanes: batch 64 vs batch 512; timers 22.39 s vs 5.21 s."
+    },
+    {
+     "id": "batch-2",
+     "text": "But accuracy fell to 48.58 percent. Turns out bigger batches mean fewer steps. 980 updates instead of 7,820.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Step dots: 7,820 vs 980; illustrative step paths (labelled) on the measured loss slice."
+    },
+    {
+     "id": "batch-3",
+     "text": "With 80 epochs, 7,840 updates, almost exactly matched, it reached 67.67 percent.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Real test curves plotted against optimizer updates."
+    },
+    {
+     "id": "batch-4",
+     "text": "But each step used eight times as many images. Bigger batches aren't magic. They trade more work per step for fewer steps.",
+     "say": null,
+     "pause": 0.7,
+     "visual": "Image-pass bars: 0.5M vs 4M."
+    }
+   ]
+  },
+  {
+   "id": "aug1",
+   "title": "Augmentation, round one",
+   "segments": [
+    {
+     "id": "aug1-1",
+     "text": "Next, augmentation. Show a variation of each photo instead of the exact same one. Flip it, or pad the border and crop a shifted window.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Real horse: flip, pad with 4 black pixels, crop windows."
+    },
+    {
+     "id": "aug1-2",
+     "text": "A horse facing left is still a horse. This teaches invariance, and makes memorizing single images harder, a form of regularization.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "All views map to one label."
+    },
+    {
+     "id": "aug1-3",
+     "text": "We tested 15 recipes, three seeds each, on the small network. No augmentation, 67.96 percent. Flip helped a little, 68.77. Crop plus flip hurt, 66.38.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Real bar chart of all 15 recipes with seed error bars."
+    },
+    {
+     "id": "aug1-4",
+     "text": "The subtle part. Crop plus flip shrank the train-test gap from about 7 points to under 1. But a smaller gap can mean useful regularization, or a model that just learned less. Test accuracy fell, so the gap alone isn't evidence of improvement.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Real train/test curves; gap 7.33 vs 0.74 points."
+    },
+    {
+     "id": "aug1-5",
+     "text": "This suite also checked the test set repeatedly, so treat it as exploratory.",
+     "say": null,
+     "pause": 0.7,
+     "visual": "Caveat tag."
+    }
+   ]
+  },
+  {
+   "id": "recipe",
+   "title": "A stricter recipe",
+   "segments": [
+    {
+     "id": "recipe-1",
+     "text": "Then we got stricter. We held out a stratified validation set of 5,000 images, trained on 45,000, and made every decision on validation. Test was reserved for final assessment, but the earlier suite had used it, so it's not a pristine holdout.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "50k bar splits into 45k train / 5k validation; test set reserved, tagged 'previously used in exploration'."
+    },
+    {
+     "id": "recipe-2",
+     "text": "And a new recipe. Batch 128, SGD with momentum and weight decay, a warmup then cosine learning rate over 160 epochs, and batch norm after every convolution.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Real learning-rate schedule; recipe card with exact values."
+    },
+    {
+     "id": "recipe-3",
+     "text": "Every setup runs three seeds. Scores average the last ten validation epochs, not the luckiest one, and plus or minus is the seed spread.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Three real seed curves; final-10 window."
+    },
+    {
+     "id": "recipe-4",
+     "text": "The same two-convolution design, plus batch norm, now scores 78.27 on validation, versus 63.68 on test before. But the split, the metric, and several knobs all changed, so that's not an isolated ablation.",
+     "say": null,
+     "pause": 0.7,
+     "visual": "63.68 (test, classroom) vs 78.27 (validation, new recipe)."
+    }
+   ]
+  },
+  {
+   "id": "depth",
+   "title": "Going deeper",
+   "segments": [
+    {
+     "id": "depth-1",
+     "text": "Now, what if we stack more convolutions? Same stages, pooling, and head. Just more layers.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Architecture grows 2 → 4 → 8 → 16 → 32 convolutions."
+    },
+    {
+     "id": "depth-2",
+     "text": "Each extra 3 by 3 layer widens what a unit can see, 5 by 5, then 7 by 7, and lets it compose more complex functions.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Receptive field grows on the frog (schematic)."
+    },
+    {
+     "id": "depth-3",
+     "text": "Two convolutions, 78.27. Four, 84.53. Eight, 86.90. Sixteen, 87.17. Smaller gains, but still going up. Then at 32, it drops to 83.08.",
+     "say": null,
+     "pause": 0.6,
+     "visual": "Real validation accuracy vs depth with seed spread; the 32-layer point falls."
+    },
+    {
+     "id": "depth-4",
+     "text": "Every network fits its training labels, almost 100 percent. But fitting isn't generalizing. These results alone can't say whether optimization, generalization, or both caused the drop.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Real final train accuracy ≈100% for all depths; real curves 16 vs 32."
+    },
+    {
+     "id": "depth-5",
+     "text": "And unlike the original ResNet paper, where deeper plain nets had higher training error, ours didn't. Residuals are a plausible fix to test, not a diagnosis.",
+     "say": null,
+     "pause": 0.6,
+     "visual": "Paper (training error) vs ours (validation); transition to residual block."
+    }
+   ]
+  },
+  {
+   "id": "residual",
+   "title": "Residual connections",
+   "segments": [
+    {
+     "id": "residual-1",
+     "text": "A residual block keeps the same two convolutions, but adds a shortcut that skips around them and gets added back at the end.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Plain block and residual block side by side; shortcut draws."
+    },
+    {
+     "id": "residual-2",
+     "text": "So the block computes F of x. Conv, batch norm, ReLU, conv, batch norm. And the output is ReLU of F of x, plus the shortcut.",
+     "say": null,
+     "pause": 1.0,
+     "visual": "y = ReLU(F(x) + shortcut(x))."
+    },
+    {
+     "id": "residual-3",
+     "text": "When channels grow, our shortcut is padded with zeros. No learned weights, so each residual network matches its plain twin's parameters exactly.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "32 channels + 32 zero channels → 64."
+    },
+    {
+     "id": "residual-4",
+     "text": "Why might that help? A block that should do nearly nothing just pushes F toward zero, instead of learning to copy its input. And in backprop, the shortcuts give gradients a direct route. Schematic, not measured.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Vector diagram x + F(x) = y, then gradient pulses on both paths (schematic)."
+    },
+    {
+     "id": "residual-5",
+     "text": "Matched seeds, identical starting weights. Residual 4, 83.77. Eight, 86.67. Sixteen, 86.85. Thirty-two, 87.20.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Real residual line joins the plain line."
+    },
+    {
+     "id": "residual-6",
+     "text": "At 32 layers, the shortcut matters, 83.08 up to 87.20. But it didn't beat plain at 4, 8, or 16, and it's only 0.03 points above plain 16, inside the seed spread. On test, it scored 86.43 percent, plus or minus 0.49.",
+     "say": null,
+     "pause": 0.7,
+     "visual": "Gap at 32 highlighted; spread band; test card."
+    }
+   ]
+  },
+  {
+   "id": "aug2",
+   "title": "Augmentation, round two",
+   "segments": [
+    {
+     "id": "aug2-1",
+     "text": "Now the twist. Crop plus flip, which hurt the tiny network, on residual 32.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Augmented horse views return beside the residual-32 stack."
+    },
+    {
+     "id": "aug2-2",
+     "text": "No augmentation, 87.20. Flip, 90.31. Crop plus flip, 93.74. About six and a half points, and it held for all three seeds.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Real validation curves and paired seed dots."
+    },
+    {
+     "id": "aug2-3",
+     "text": "Same augmentation, opposite result. Plausibly, a bigger model with a stronger recipe can use that variety. We didn't prove that, and model, recipe, and split all changed together. A technique's value depends on what it's paired with.",
+     "say": null,
+     "pause": 0.7,
+     "visual": "Small CNN −1.58 vs residual-32 +6.54; caveat."
+    }
+   ]
+  },
+  {
+   "id": "resnet",
+   "title": "Building ResNet-18",
+   "segments": [
+    {
+     "id": "resnet-1",
+     "text": "Finally, ResNet-18, adapted for CIFAR and trained from random weights. No ImageNet pre-training.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Empty pipeline; 'weights=None'."
+    },
+    {
+     "id": "resnet-2",
+     "text": "The stem is one 3 by 3 convolution, 3 to 64 channels, stride 1. ImageNet's 7 by 7 stride 2 stem and max pool would crush a 32 by 32 image to 8 by 8, so we swapped one and dropped the other.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Stem slab; ghosted ImageNet stem crossed out."
+    },
+    {
+     "id": "resnet-3",
+     "text": "Then eight basic residual blocks, two per stage, at 64, 128, 256, and 512 channels. Each stage halves resolution. 32, 16, 8, 4. Where shapes change, the shortcut is a learned 1 by 1 convolution with batch norm.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "Blocks appear stage by stage; amber projection shortcuts."
+    },
+    {
+     "id": "resnet-4",
+     "text": "Global average pooling turns each 4 by 4 map into one number, and one linear layer maps 512 features to ten classes. No hidden 128 layer.",
+     "say": null,
+     "pause": 0.4,
+     "visual": "512x4x4 → 512 → 10."
+    },
+    {
+     "id": "resnet-5",
+     "text": "Why 18? The stem plus 16 block convolutions is 17, and the classifier makes 18. By convention, shortcut projections don't count.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Counter 1 + 16 + 1 = 18."
+    },
+    {
+     "id": "resnet-6",
+     "text": "So it's not just layer count. It keeps resolution longer, has far more channels, about 11.2 million parameters, nine times residual 32, and pools globally. And it trained 200 epochs, not 160. A recipe comparison, not a clean architecture test.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Side-by-side comparison card."
+    },
+    {
+     "id": "resnet-7",
+     "text": "Across three seeds, it averaged 95.77 percent validation accuracy over the last ten epochs, plus or minus 0.11. We score the final ten epochs, never the single best one.",
+     "say": null,
+     "pause": 0.7,
+     "visual": "Real ResNet-18 validation curve vs residual-32 crop+flip; final-10 window."
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "title": "What we can actually claim",
+   "segments": [
+    {
+     "id": "end-1",
+     "text": "The queue has now finished and selected ResNet-18 with crop plus flip by validation. Its final test accuracy is 95.21 percent, plus or minus 0.02.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Queue status from runs/followup/queue-state.json at snapshot."
+    },
+    {
+     "id": "end-2",
+     "text": "The whole path. 63.68 for the classroom baseline. 78.27 with a stricter recipe. 87.20 with depth and shortcuts. 93.74 with augmentation. 95.77 with ResNet-18. Test and validation are mixed, so it's a story, not a leaderboard.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Staircase of real results with metric tags."
+    },
+    {
+     "id": "end-3",
+     "text": "It's the strongest we've measured, not the best ResNet that exists. Wider and deeper variants and other recipes do better. This isn't state of the art.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Scope note."
+    },
+    {
+     "id": "end-4",
+     "text": "The lessons generalize. Count optimizer steps, not just epochs. Decide on validation, across seeds. A smaller gap isn't better performance. And a technique's value depends on everything around it.",
+     "say": null,
+     "pause": 0.5,
+     "visual": "Four lessons appear one at a time."
+    },
+    {
+     "id": "end-5",
+     "text": "No single trick did this. It was the design and the recipe, working together.",
+     "say": null,
+     "pause": 1.8,
+     "visual": "Final frame."
+    }
+   ]
+  }
+ ]
+}
